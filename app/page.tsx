@@ -62,7 +62,7 @@ const LANG_LIST = [
 
 // --- 2. ЛОГИКА СВЯЗИ С GEMINI ---
 async function askGemini(prompt: string, system: string) {
-  const key = process.env.NEXT_PUBLIC_GEMINI_API_KEY;
+  const key = "AIzaSyAPMIfRTnWcyWa_c73DpKhkzmiZVsdBpUg";
   if (!key) return "Ошибка: API ключ не настроен в Vercel.";
 
   try {
