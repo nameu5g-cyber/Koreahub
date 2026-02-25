@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import {
   ShieldAlert, Smartphone, MessageSquare, Languages,
-  MapPin, QrCode, Zap, ChevronDown, ChevronUp,
+  MapPin, QrCode, Zap, ChevronDown, ChevronUp, ChevronRight,
   Send, Phone, Globe, Camera, X, CheckCircle2, Info, HeartHandshake, Laptop, Users
 } from 'lucide-react';
 
