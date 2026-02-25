@@ -7,6 +7,8 @@ import {
   Send, Phone, Globe, Camera, X, CheckCircle2, Info, HeartHandshake, Laptop, Users
 } from 'lucide-react';
 
+// Остальной код (translations и т.д.) оставляй как есть
+
 // --- ДАННЫЕ ЛОКАЛИЗАЦИИ ---
 const translations = {
   ru: {
