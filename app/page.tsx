@@ -62,79 +62,35 @@ const LANG_LIST = [
 
 // --- 2. ЛОГИКА СВЯЗИ С GEMINI ---
 async function askGemini(prompt: string, system: string) {
-  const key = "AIzaSyAPMIfRTnWcyWa_c73DpKhkzmiZVsdBpUg";
-  if (!key) return "Ошибка: API ключ не настроен в Vercel.";
+  // 1. Проверяем, есть ли вообще ключ
+  const key = process.env.NEXT_PUBLIC_GEMINI_API_KEY || "AIzaSyAPMIfRTnWcyWa_c73DpKhkzmiZVsdBpUg";
+
+  if (!key || key.length < 10) {
+    return "ОШИБКА: Ключ ИИ не найден или слишком короткий.";
+  }
 
   try {
     const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${key}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        contents: [{ parts: [{ text: `System Instruction: ${system}\n\nUser: ${prompt}` }] }]
+        contents: [{ parts: [{ text: `${system}\n\nПользователь: ${prompt}` }] }]
       })
     });
+
     const data = await response.json();
+
+    // 2. Если Google вернул ошибку (например, ключ недействителен)
+    if (data.error) {
+      console.error("Google API Error:", data.error);
+      return `ОШИБКА ИИ: ${data.error.message}`;
+    }
+
     return data.candidates[0].content.parts[0].text;
-  } catch (e) {
-    return "Сбой связи с ИИ. Проверьте интернет или лимиты ключа.";
+  } catch (e: any) {
+    // 3. Если произошла сетевая ошибка
+    return `СЕТЕВАЯ ОШИБКА: ${e.message}`;
   }
-}
-
-export default function KoreaHubApp() {
-  const [hasAccepted, setHasAccepted] = useState(false);
-  const [uiLang, setUiLang] = useState('ru');
-  const [activeTab, setActiveTab] = useState('hub');
-  const [isLangOpen, setIsLangOpen] = useState(false);
-
-  const t = (key: string) => (translations as any)[uiLang]?.[key] || (translations as any)['en']?.[key] || key;
-
-  if (!hasAccepted) {
-    return (
-      <div className="fixed inset-0 bg-white z-[999] flex flex-col items-center justify-center p-8 text-center animate-in fade-in">
-        <ShieldAlert size={60} className="text-blue-600 mb-6" />
-        <h1 className="text-3xl font-black text-blue-600 mb-4 italic uppercase">KoreaHub</h1>
-        <p className="text-sm text-gray-500 mb-10 leading-relaxed">{t('disclaimer')}</p>
-        <button onClick={() => setHasAccepted(true)} className="w-full py-5 bg-blue-600 text-white rounded-[28px] font-bold shadow-xl active:scale-95 transition-all uppercase">{t('accept')}</button>
-      </div>
-    );
-  }
-
-  return (
-    <div className="flex justify-center min-h-screen bg-[#F2F4F7] font-sans antialiased">
-      <div className="w-full max-w-md bg-white shadow-2xl flex flex-col h-screen overflow-hidden relative">
-        <header className="px-6 py-4 border-b border-gray-100 flex justify-between items-center bg-white sticky top-0 z-[100]">
-          <h1 className="text-xl font-extrabold text-blue-600 italic">KoreaHub</h1>
-          <div className="relative">
-            <button onClick={() => setIsLangOpen(!isLangOpen)} className="flex items-center gap-2 bg-gray-50 px-3 py-1.5 rounded-xl border">
-              <span className="text-lg leading-none">{LANG_LIST.find(l => l.code === uiLang)?.flag}</span>
-              <ChevronDown size={14} className={`text-gray-400 ${isLangOpen ? 'rotate-180' : ''}`} />
-            </button>
-            {isLangOpen && (
-              <div className="absolute right-0 mt-2 w-40 bg-white rounded-[24px] shadow-2xl border p-2 z-[110] animate-in slide-in-from-top-2">
-                {LANG_LIST.map(l => (
-                  <button key={l.code} onClick={() => { setUiLang(l.code); setIsLangOpen(false); }} className={`w-full flex items-center gap-3 px-4 py-3 text-sm font-semibold rounded-xl ${uiLang === l.code ? 'bg-blue-50 text-blue-600' : 'text-gray-600 hover:bg-gray-50'}`}>
-                    <span>{l.flag}</span>{l.code.toUpperCase()}
-                  </button>
-                ))}
-              </div>
-            )}
-          </div>
-        </header>
-
-        <main className="flex-grow overflow-y-auto no-scrollbar bg-gray-50/30 pb-32">
-          {activeTab === 'hub' && <LifeHub t={t} />}
-          {activeTab === 'chat' && <AssistantScreen t={t} uiLang={uiLang} />}
-          {activeTab === 'trans' && <TranslatorScreen t={t} uiLang={uiLang} />}
-        </main>
-
-        <nav className="fixed bottom-0 w-full max-w-md bg-white border-t border-gray-100 px-6 py-4 pb-8 flex justify-between z-50">
-          <NavBtn active={activeTab === 'hub'} onClick={() => setActiveTab('hub')} label={t('hub')} icon={<Smartphone />} />
-          <NavBtn active={activeTab === 'chat'} onClick={() => setActiveTab('chat')} label={t('chat')} icon={<MessageSquare />} />
-          <NavBtn active={activeTab === 'trans'} onClick={() => setActiveTab('trans')} label={t('trans')} icon={<Languages />} />
-        </nav>
-      </div>
-    </div>
-  );
 }
 
 // --- ПОДМОДУЛИ (С РЕАЛЬНОЙ ЛОГИКОЙ t(key)) ---
