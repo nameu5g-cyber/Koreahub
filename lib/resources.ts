@@ -5,6 +5,7 @@ export type ResourceItem = {
     link?: string;
     phone?: string;
     location?: string;
+    tags?: Record<string, string[]>;
 };
 
 export type ResourceCategory = {
@@ -18,9 +19,9 @@ export const RESOURCES_DATA: ResourceCategory[] = [
         id: 'gov',
         title: { ru: 'Гос. органы', en: 'Gov Portals' },
         items: [
-            { name: 'HiKorea', desc: { ru: 'Главный портал иммиграции (ARC, визы)', en: 'Main immigration portal (ARC, visas)' }, langs: ['ru', 'en', 'ko'], link: 'https://www.hikorea.go.kr' },
-            { name: '1345 Contact Center', desc: { ru: 'Справочная иммиграции (есть RU)', en: 'Immigration hotline' }, langs: ['ru', 'en', 'ko', 'uz', 'kz'], phone: '1345' },
-            { name: 'Danuri Helpline', desc: { ru: 'Поддержка мигрантов 24/7 (RU)', en: 'Migrant support (24/7)' }, langs: ['ru', 'en', 'ko', 'uz', 'kz'], phone: '1577-1366' }
+            { name: 'HiKorea', desc: { ru: 'Главный портал иммиграции (ARC, визы)', en: 'Main immigration portal (ARC, visas)' }, langs: ['ru', 'en', 'ko'], link: 'https://www.hikorea.go.kr', tags: { ru: ['Визы', 'Запись'], en: ['Visas', 'Booking'] } },
+            { name: '1345 Contact Center', desc: { ru: 'Справочная иммиграции (есть RU)', en: 'Immigration hotline' }, langs: ['ru', 'en', 'ko', 'uz', 'kz'], phone: '1345', tags: { ru: ['Горячая линия', 'Помощь'], en: ['Hotline', 'Help'] } },
+            { name: 'Danuri Helpline', desc: { ru: 'Поддержка мигрантов 24/7 (RU)', en: 'Migrant support (24/7)' }, langs: ['ru', 'en', 'ko', 'uz', 'kz'], phone: '1577-1366', tags: { ru: ['Круглосуточно'], en: ['24/7 Support'] } }
         ]
     },
     {
@@ -80,30 +81,29 @@ export const RESOURCES_DATA: ResourceCategory[] = [
         id: 'food',
         title: { ru: 'Еда и Доставка', en: 'Food & Delivery' },
         items: [
-            { name: 'Baemin (배달의민족)', desc: { ru: '№1 приложение для доставки еды в Корее.', en: 'Main food delivery app in Korea.' }, langs: ['ko'], link: 'https://www.baemin.com' },
-            { name: 'Coupang Eats', desc: { ru: 'Быстрая доставка еды от Coupang.', en: 'Fast delivery by Coupang.' }, langs: ['ru', 'en', 'ko'], link: 'https://www.coupangeats.com' },
-            { name: 'Shuttle Delivery', desc: { ru: 'Доставка из ресторанов (EN).', en: 'Expat-friendly food delivery.' }, langs: ['en'], link: 'https://www.shuttledelivery.co.kr' },
-            { name: 'Vo! (Во!)', desc: { ru: 'Популярное кафе с корейской и СНГ кухней.', en: 'CIS-friendly cafe.' }, langs: ['ru'], location: 'Hwaseong (Palan) / Incheon' },
-            { name: 'Blin (Блин)', desc: { ru: 'Специализированная блинная и домашняя кухня.', en: 'Pancake & home-style cafe.' }, langs: ['ru'], location: 'Hwaseong (Palan) / Incheon' },
-            { name: 'Pizza Taki (Пицца Таки)', desc: { ru: 'Пиццерия с любимыми вкусами в Палане.', en: 'Popular pizza spot in Palan.' }, langs: ['ru'], location: 'Hwaseong (Palan)' },
-            { name: 'Family (Семья)', desc: { ru: 'Ресторан русской кухни в Кванджу (Корё-ин маыль).', en: 'Russian restaurant in Gwangju village.' }, langs: ['ru'], location: 'Gwangju (Wolkok-dong)' },
-            { name: 'Samarkand (Кванджу)', desc: { ru: 'Узбекская кухня, лагман и плов.', en: 'Uzbek cuisine in Gwangju.' }, langs: ['ru', 'uz'], location: 'Gwangju (Wolkok-dong)' },
-            { name: 'Troika (Итхэвон)', desc: { ru: 'Русская кухня в Сеуле.', en: 'Russian restaurant.' }, langs: ['ru', 'en', 'ko'], location: 'Seoul' }
+            { name: 'Baemin (배달의민족)', desc: { ru: '№1 приложение для доставки еды в Корее.', en: 'Main food delivery app in Korea.' }, langs: ['ko'], link: 'https://www.baemin.com', tags: { ru: ['Доставка', 'Топ 1'], en: ['Delivery', 'Top 1'] } },
+            { name: 'Coupang Eats', desc: { ru: 'Быстрая доставка еды от Coupang.', en: 'Fast delivery by Coupang.' }, langs: ['ru', 'en', 'ko'], link: 'https://www.coupangeats.com', tags: { ru: ['Быстрая доставка'], en: ['Fast Delivery'] } },
+            { name: 'Shuttle Delivery', desc: { ru: 'Доставка из ресторанов (EN).', en: 'Expat-friendly food delivery.' }, langs: ['en'], link: 'https://www.shuttledelivery.co.kr', tags: { ru: ['На английском', 'Доставка'], en: ['English Support', 'Delivery'] } },
+            { name: 'Vo, blin! (Во, блин!)', desc: { ru: 'Популярное кафе с корейской и СНГ кухней. Специализируется на блинах.', en: 'CIS-friendly cafe specialized in pancakes.' }, langs: ['ru'], location: 'Incheon', tags: { ru: ['Кафе', 'СНГ Кухня', 'Блины'], en: ['Cafe', 'CIS Food', 'Pancakes'] } },
+            { name: 'Pizza Taki (Пицца Таки)', desc: { ru: 'Популярная пиццерия. Доставка по Ансану (Сонбудон, Теколь и др.).', en: 'Popular pizza spot in Ansan.' }, langs: ['ru'], location: 'Ansan', tags: { ru: ['Пицца', 'Фастфуд', 'Доставка'], en: ['Pizza', 'Fast Food', 'Delivery'] } },
+            { name: 'Family (Семья)', desc: { ru: 'Ресторан русской кухни в Кванджу (Корё-ин маыль).', en: 'Russian restaurant in Gwangju village.' }, langs: ['ru'], location: 'Gwangju (Wolkok-dong)', tags: { ru: ['Ресторан', 'Русская кухня'], en: ['Restaurant', 'Russian Food'] } },
+            { name: 'Samarkand (Кванджу)', desc: { ru: 'Узбекская кухня, лагман и плов.', en: 'Uzbek cuisine in Gwangju.' }, langs: ['ru', 'uz'], location: 'Gwangju (Wolkok-dong)', tags: { ru: ['Узбекская кухня', 'Плов', 'Халяль'], en: ['Uzbek Food', 'Pilaf', 'Halal'] } },
+            { name: 'Troika (Итхэвон)', desc: { ru: 'Русская кухня в Сеуле.', en: 'Russian restaurant.' }, langs: ['ru', 'en', 'ko'], location: 'Seoul', tags: { ru: ['Ресторан', 'Сеул'], en: ['Restaurant', 'Seoul'] } }
         ]
     },
     {
         id: 'stores',
         title: { ru: 'Магазины и Пекарни', en: 'CIS Stores & Bakeries' },
         items: [
-            { name: 'Melnitsa (Мельница)', desc: { ru: 'Крупнейшая сеть и онлайн-магазин продуктов СНГ.', en: 'Leading CIS grocery chain & online store.' }, langs: ['ru'], link: 'https://melnitsa.store', location: 'Gimhae / Online' },
-            { name: 'IMPERIA FOODS', desc: { ru: 'СНГ-продукты, собственное производство.', en: 'CIS grocery & production.' }, langs: ['ru'], link: 'https://www.instagram.com/imperiafoods', location: 'Ansan / Online' },
-            { name: 'Assorti (Ассорти)', desc: { ru: 'Сеть магазинов «Ассорти»: продукты и опт.', en: 'Assorti chain: groceries & wholesale.' }, langs: ['ru'], location: 'Incheon / Ansan', phone: '010-8001-4470' },
-            { name: 'Medovik (Медовик)', desc: { ru: 'Гастроном в Сеуле: торты, хлеб, колбасы.', en: 'Seoul gourmet: cakes & bread.' }, langs: ['ru'], location: 'Seoul (Jung-gu)', phone: '02-2285-4700' },
-            { name: 'Maria Bakery (Dream Bakery)', desc: { ru: 'Популярная пекарня в Хамбаке (Инчхон).', en: 'Famous bakery in Hambak district.' }, langs: ['ru'], location: 'Incheon (Hambak)' },
-            { name: 'Lepeshka (Лепёшка)', desc: { ru: 'Сеть узбекских пекарен: свежие лепешки и самса.', en: 'Uzbek bakery network: fresh bread & samsa.' }, langs: ['ru'], location: 'Gimhae / Incheon / Ansan' },
-            { name: 'Master\'s (Ансан)', desc: { ru: 'Российские продукты и выпечка в районе Вонгок.', en: 'CIS products & bakery in Wongok.' }, langs: ['ru'], location: 'Ansan (Wongok)' },
-            { name: 'Raduga (Радуга)', desc: { ru: 'Продуктовый магазин в районе Хамбак.', en: 'Grocery store in Hambak district.' }, langs: ['ru'], location: 'Incheon (Hambak)' },
-            { name: 'Tandyr (Тандыр)', desc: { ru: 'Узбекские продукты, свежие лепешки и мясо.', en: 'Uzbek groceries & fresh bread.' }, langs: ['ru'], location: 'Gimhae (Gwangmyeong)' }
+            { name: 'Melnitsa (Мельница)', desc: { ru: 'Крупнейшая сеть и онлайн-магазин продуктов СНГ.', en: 'Leading CIS grocery chain & online store.' }, langs: ['ru'], link: 'https://melnitsa.store', location: 'Gimhae / Online', tags: { ru: ['Доставка по Корее', 'Онлайн'], en: ['Online Store', 'Delivery'] } },
+            { name: 'IMPERIA FOODS', desc: { ru: 'СНГ-продукты, собственное производство.', en: 'CIS grocery & production.' }, langs: ['ru'], link: 'https://www.instagram.com/imperiafoods', location: 'Ansan / Online', tags: { ru: ['Свое производство', 'Доставка'], en: ['Own Production', 'Delivery'] } },
+            { name: 'Assorti (Ассорти)', desc: { ru: 'Сеть магазинов «Ассорти»: продукты и опт.', en: 'Assorti chain: groceries & wholesale.' }, langs: ['ru'], location: 'Incheon / Ansan', phone: '010-8001-4470', tags: { ru: ['Опт и розница'], en: ['Wholesale'] } },
+            { name: 'Medovik (Медовик)', desc: { ru: 'Гастроном в Сеуле: торты, хлеб, колбасы.', en: 'Seoul gourmet: cakes & bread.' }, langs: ['ru'], location: 'Seoul (Jung-gu)', phone: '02-2285-4700', tags: { ru: ['Кондитерские изделия', 'Колбасы'], en: ['Sweets', 'Sausages'] } },
+            { name: 'Maria Bakery (Dream Bakery)', desc: { ru: 'Популярная пекарня в Хамбаке (Инчхон).', en: 'Famous bakery in Hambak district.' }, langs: ['ru'], location: 'Incheon (Hambak)', tags: { ru: ['Выпечка', 'Хлеб'], en: ['Bakery'] } },
+            { name: 'Lepeshka (Лепёшка)', desc: { ru: 'Сеть узбекских пекарен: свежие лепешки и самса.', en: 'Uzbek bakery network: fresh bread & samsa.' }, langs: ['ru'], location: 'Gimhae / Incheon / Ansan', tags: { ru: ['Узбекская кухня', 'Самса'], en: ['Uzbek', 'Samsa'] } },
+            { name: 'Master\'s (Ансан)', desc: { ru: 'Российские продукты и выпечка в районе Вонгок.', en: 'CIS products & bakery in Wongok.' }, langs: ['ru'], location: 'Ansan (Wongok)', tags: { ru: ['Магазин'], en: ['Store'] } },
+            { name: 'Raduga (Радуга)', desc: { ru: 'Продуктовый магазин в районе Хамбак.', en: 'Grocery store in Hambak district.' }, langs: ['ru'], location: 'Incheon (Hambak)', tags: { ru: ['Рядом с домом'], en: ['Local Store'] } },
+            { name: 'Tandyr (Тандыр)', desc: { ru: 'Узбекские продукты, свежие лепешки и мясо.', en: 'Uzbek groceries & fresh bread.' }, langs: ['ru'], location: 'Gimhae (Gwangmyeong)', tags: { ru: ['Мясо', 'Халяль'], en: ['Halal', 'Meat'] } }
         ]
     },
     {
