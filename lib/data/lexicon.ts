@@ -249,6 +249,48 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Общий термин', en: 'General Term', uz: 'Umumiy atama', kk: 'Жалпы термин' }
     },
     {
+        id: 'fin_6a',
+        category: { ru: 'Оплата и Скидки', en: 'Payments & Discounts', uz: 'To\'lovlar va chegirmalar', kk: 'Төлемдер мен жеңілдіктер' },
+        termKo: '후불 (Hu-bul)',
+        termTrans: { ru: 'Постоплата (Postpaid)', en: 'Postpaid', uz: 'Keyin to\'lash', kk: 'Кейін төлеу' },
+        meaning: {
+            ru: 'Обычная контрактная система оплаты: сначала пользуетесь связью месяц, потом оплачиваете счет.',
+            en: 'Standard contract billing: use services for a month, pay the bill afterwards.',
+            uz: 'Standart shartnoma tizimi: aloqadan bir oy foydalanasiz, so\'ngra hisobni to\'laysiz.',
+            kk: 'Стандартты келісімшарт жүйесі: байланысты бір ай пайдаланасыз, содан кейін шотты төлейсіз.'
+        },
+        riskLevel: 'safe',
+        riskLabel: { ru: 'Стандарт', en: 'Standard', uz: 'Standart', kk: 'Стандартты' }
+    },
+    {
+        id: 'fin_6b',
+        category: { ru: 'Оплата и Скидки', en: 'Payments & Discounts', uz: 'To\'lovlar va chegirmalar', kk: 'Төлемдер мен жеңілдіктер' },
+        termKo: '충전 (Chung-jeon)',
+        termTrans: { ru: 'Пополнение баланса', en: 'Recharge / Top-up', uz: 'Balansni to\'ldirish', kk: 'Теңгерімді толтыру' },
+        meaning: {
+            ru: 'Закинуть деньги на счет. Чаще всего используется для 선불폰 (предоплатных сим-карт).',
+            en: 'Adding money to your account balance. Mostly used for prepaid SIM cards.',
+            uz: 'Hisobga pul kiritish. Asosan oldindan to\'lovli SIM kartalar uchun ishlatiladi.',
+            kk: 'Шотқа ақша салу. Көбінесе алдын ала төлейтін SIM карталар үшін қолданылады.'
+        },
+        riskLevel: 'info',
+        riskLabel: { ru: 'Для предоплаты', en: 'For Prepaid', uz: 'Oldindan to\'lov uchun', kk: 'Алдын ала төлеуге арналған' }
+    },
+    {
+        id: 'fin_6c',
+        category: { ru: 'Оплата и Скидки', en: 'Payments & Discounts', uz: 'To\'lovlar va chegirmalar', kk: 'Төлемдер мен жеңілдіктер' },
+        termKo: '환불 (Hwan-bul)',
+        termTrans: { ru: 'Возврат средств', en: 'Refund', uz: 'Pulni qaytarish', kk: 'Ақшаны қайтару' },
+        meaning: {
+            ru: 'Возврат ваших денег при отмене сделки, возврате товара или ошибочном списании.',
+            en: 'Getting your money back for a canceled deal, returned product, or billing error.',
+            uz: 'Bitim bekor qilinganda, mahsulot qaytarilganda yoki xato yechib olinganda pulni qaytarish.',
+            kk: 'Мәміле бұзылғанда, тауар қайтарылғанда немесе қате шегерілгенде ақшаңызды қайтару.'
+        },
+        riskLevel: 'info',
+        riskLabel: { ru: 'Знать свои права', en: 'Know Your Rights', uz: 'Huquqlarni bilish', kk: 'Құқықтарды білу' }
+    },
+    {
         id: 'fin_7',
         category: { ru: 'Оплата и Скидки', en: 'Payments & Discounts', uz: 'To\'lovlar va chegirmalar', kk: 'Төлемдер мен жеңілдіктер' },
         termKo: '징 (Jing)',
