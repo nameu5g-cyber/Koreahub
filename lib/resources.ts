@@ -1,7 +1,7 @@
 export type ResourceItem = {
     name: string;
     desc: Record<string, string>;
-    langs: string[]; // ['ru', 'en', 'ko', 'uz', 'kz']
+    langs: string[];
     link?: string;
     phone?: string;
     location?: string;
@@ -16,369 +16,110 @@ export type ResourceCategory = {
 export const RESOURCES_DATA: ResourceCategory[] = [
     {
         id: 'gov',
-        title: { ru: 'Гос. порталы', en: 'Gov Portals' },
+        title: { ru: 'Гос. органы', en: 'Gov Portals' },
         items: [
-            {
-                name: 'HiKorea',
-                desc: {
-                    ru: 'Главный портал иммиграции (ARC, визы)',
-                    en: 'Main immigration portal (ARC, visas, extensions)'
-                },
-                langs: ['ru', 'en', 'ko'],
-                link: 'https://www.hikorea.go.kr'
-            },
-            {
-                name: 'Visa.go.kr',
-                desc: {
-                    ru: 'Официальный портал корейских виз',
-                    en: 'Official Korean Visa Portal'
-                },
-                langs: ['ru', 'en', 'ko'],
-                link: 'https://www.visa.go.kr'
-            },
-            {
-                name: '1345 Contact Center',
-                desc: {
-                    ru: 'Справочная иммиграции (есть RU)',
-                    en: 'Immigration hotline (Support in 20+ languages)'
-                },
-                langs: ['ru', 'en', 'ko', 'uz', 'kz'],
-                phone: '1345'
-            },
-            {
-                name: 'Gov.kr (정부24)',
-                desc: {
-                    ru: 'Государственные услуги для иностранцев',
-                    en: 'Government services portal for foreigners'
-                },
-                langs: ['ru', 'en', 'ko'],
-                link: 'https://www.gov.kr/portal/forForeignerGuidance'
-            }
+            { name: 'HiKorea', desc: { ru: 'Главный портал иммиграции (ARC, визы)', en: 'Main immigration portal (ARC, visas)' }, langs: ['ru', 'en', 'ko'], link: 'https://www.hikorea.go.kr' },
+            { name: '1345 Contact Center', desc: { ru: 'Справочная иммиграции (есть RU)', en: 'Immigration hotline' }, langs: ['ru', 'en', 'ko', 'uz', 'kz'], phone: '1345' },
+            { name: 'Danuri Helpline', desc: { ru: 'Поддержка мигрантов 24/7 (RU)', en: 'Migrant support (24/7)' }, langs: ['ru', 'en', 'ko', 'uz', 'kz'], phone: '1577-1366' }
         ]
     },
     {
-        id: 'emergency',
-        title: { ru: 'Экстренная помощь', en: 'Emergency' },
+        id: 'assistance',
+        title: { ru: 'Центры помощи', en: 'Assistance Centers' },
         items: [
-            {
-                name: 'Danuri Helpline',
-                desc: {
-                    ru: 'Поддержка семей и мигрантов (RU 24/7)',
-                    en: 'Family & migrant support (24/7, multi-language)'
-                },
-                langs: ['ru', 'en', 'ko', 'uz', 'kz'],
-                phone: '1577-1366'
-            },
-            {
-                name: 'BGC Call Center',
-                desc: {
-                    ru: 'Переводчики для гос. органов (Пусан)',
-                    en: 'Busan interpretation for public services'
-                },
-                langs: ['ru', 'en', 'ko'],
-                phone: '1577-7716'
-            }
+            { name: 'Seoul Global Center', desc: { ru: 'Консультации (RU), курсы, право, бизнес.', en: 'Law, courses, business support.' }, langs: ['ru', 'en', 'ko'], phone: '02-2075-4180' },
+            { name: 'Incheon Foreigners Center', desc: { ru: 'Центр поддержки (Hambak). Обучение, консультации.', en: 'Support in Incheon Area.' }, langs: ['ru', 'en', 'ko'], phone: '1833-6333' },
+            { name: 'Busan Counseling Center', desc: { ru: 'Центр поддержки в Пусане (есть RU).', en: 'Support in Busan area.' }, langs: ['ru', 'en', 'ko'], phone: '1577-7716 (нажать 5)' },
+            { name: 'Gyeongju Support Center', desc: { ru: 'Центр поддержки рабочих в Кёнджу.', en: 'Foreign Workers Support in Gyeongju.' }, langs: ['ru', 'ko'], phone: '054-778-2518' },
+            { name: 'Gimpo Support Center', desc: { ru: 'Центр поддержки мигрантов в Кимпхо.', en: 'Support center in Gimpo.' }, langs: ['ru', 'ko'], phone: '031-986-7660' }
         ]
     },
     {
-        id: 'support',
-        title: { ru: 'Центры поддержки', en: 'Support Centers' },
+        id: 'admin_services',
+        title: { ru: 'Столы услуг', en: 'Admin Services' },
         items: [
-            {
-                name: 'Incheon Foreigners Center',
-                desc: {
-                    ru: 'Главный офис (Saemaul Centre)',
-                    en: 'Intercultural association (Counseling, classes)'
-                },
-                langs: ['ru', 'en', 'ko'],
-                phone: '1833-6333'
-            },
-            {
-                name: 'Seoul Global Center',
-                desc: {
-                    ru: 'Консультации (RU), курсы, бизнес',
-                    en: 'Comprehensive support (Law, business, daily life)'
-                },
-                langs: ['ru', 'en', 'ko'],
-                phone: '02-2075-4180'
-            },
-            {
-                name: 'Asan Foreigner Center',
-                desc: {
-                    ru: 'Поддержка в Дунпо',
-                    en: 'Regional center in Dunpo area'
-                },
-                langs: ['ru', 'en'],
-                link: 'https://vseokoree.com'
-            },
-            {
-                name: 'Global Gangnam',
-                desc: {
-                    ru: 'Центр поддержки в Каннаме',
-                    en: 'Support center for Gangnam residents'
-                },
-                langs: ['en', 'ko'],
-                link: 'https://www.globalgangnam.com'
-            }
+            { name: 'Russian Consulate (Busan)', desc: { ru: 'Генконсульство РФ в Пусане.', en: 'Consulate General in Busan.' }, langs: ['ru'], phone: '051-441-9904', location: 'Busan (Jung-gu)' },
+            { name: 'KOMPASS (Дунпо/Инчхон/Синчанг)', desc: { ru: 'Визы, Переводы, Нотариус, Апостиль, Открытие ИП.', en: 'Visas, Apostille, Business registration.' }, langs: ['ru', 'uz', 'kz'], link: 'https://www.tiktok.com/@kompass' },
+            { name: 'Siberia Consult', desc: { ru: 'Регистрация ООО/ИП, бухгалтерия, открытие счетов.', en: 'Business registration & accounting.' }, langs: ['ru'], link: 'https://siberiaconsult.ru' }
         ]
     },
     {
-        id: 'legal',
-        title: { ru: 'Юр. помощь и визы', en: 'Legal & Visas' },
+        id: 'insurance',
+        title: { ru: 'Страхование', en: 'Insurance' },
         items: [
-            {
-                name: 'СТОЛ УСЛУГ В КОРЕЕ | KOMPASS (Дунпо/Синчанг/Инчхон)',
-                desc: {
-                    ru: 'Устные и письменные переводы, Нотариус/Апостиль, Открытие ИП, Бухгалтерия, Визы (F4, H2, F1, F2, F5), Продление ID, Смена адреса, Регистрация в школу.',
-                    en: 'Translation, Apostille, Business registration, Accounting, Visas (F4, H2, F1, F2, F5), ARC extension, School registration.'
-                },
-                langs: ['ru', 'uz', 'kz'],
-                location: 'Дунпо/Синчанг/Инчхон',
-                link: 'https://www.tiktok.com/@kompass'
-            },
-            {
-                name: 'Advokatorium',
-                desc: {
-                    ru: 'Адвокаты: уголовка, депорт, споры',
-                    en: 'Legal services: criminal, labor, deportation'
-                },
-                langs: ['ru'],
-                link: 'https://www.advokatorium.com'
-            },
-            {
-                name: 'Siberia Consult',
-                desc: {
-                    ru: 'Регистрация ООО/ИП, счета',
-                    en: 'Business registration & accounting'
-                },
-                langs: ['ru'],
-                link: 'https://siberiaconsult.ru'
-            },
-            {
-                name: 'Pearson & Partners',
-                desc: {
-                    ru: 'Визы E-7/D-8, бизнес-сопровождение',
-                    en: 'Business-consulting & visa experts'
-                },
-                langs: ['en', 'ko'],
-                link: 'https://pearsonkorea.com'
-            }
+            { name: 'Samsung Life (Елена Иловская)', desc: { ru: 'Частное страхование (Silbi), консультации.', en: 'Private insurance & claims.' }, langs: ['ru'], link: 'https://www.instagram.com/elena.ilovskaya.samsung' },
+            { name: 'Mega Center Korea', desc: { ru: 'Страхование (RU): авто, медицина, жизнь.', en: 'Insurance: auto, medical, life 24/7.' }, langs: ['ru'], link: 'https://megacentrekorea.com' }
+        ]
+    },
+    {
+        id: 'finance',
+        title: { ru: 'Банки', en: 'Banks' },
+        items: [
+            { name: 'Woori Bank Global', desc: { ru: 'Отделения с поддержкой иностранцев (RU).', en: 'Expat-friendly branches.' }, langs: ['ru', 'en', 'ko'], link: 'https://www.wooribank.com' },
+            { name: 'WowPASS', desc: { ru: 'Карта для оплат и транспорта (T-money).', en: 'Payment & T-money card.' }, langs: ['ru', 'en', 'ko'], link: 'https://www.wowpass.io' }
+        ]
+    },
+    {
+        id: 'medical',
+        title: { ru: 'Больницы', en: 'Medical' },
+        items: [
+            { name: 'Medical Korea', desc: { ru: 'Гос. инфо-центр для пациентов.', en: 'Global medical information center.' }, langs: ['ru', 'en', 'ko'], link: 'https://www.medicalkorea.or.kr' },
+            { name: 'Asan Medical Center', desc: { ru: 'Международный центр (Сеул).', en: 'International Healthcare Center.' }, langs: ['ru', 'en', 'ko'], link: 'https://eng.amc.seoul.kr' }
         ]
     },
     {
         id: 'jobs',
         title: { ru: 'Работа', en: 'Jobs' },
         items: [
-            {
-                name: 'Dunpo (Тунпхо)',
-                desc: {
-                    ru: 'Кадровые бюро (самушили) в Дунпо',
-                    en: 'Staffing agencies (samushil) in Dunpo'
-                },
-                langs: ['ru'],
-                location: 'г. Асан'
-            },
-            {
-                name: 'KoWork',
-                desc: {
-                    ru: 'Вакансии для профессионалов (E-7)',
-                    en: 'Job portal for skilled professionals'
-                },
-                langs: ['en', 'ko'],
-                link: 'https://kowork.kr/en'
-            }
-        ]
-    },
-    {
-        id: 'auto',
-        title: { ru: 'Автомобили', en: 'Auto Sector' },
-        items: [
-            {
-                name: 'PROKOREA',
-                desc: {
-                    ru: 'Доставка автомобилей под ключ',
-                    en: 'Car export and delivery services'
-                },
-                langs: ['ru'],
-                link: 'https://prokorea.trading'
-            },
-            {
-                name: 'Autowini',
-                desc: {
-                    ru: 'B2B авто-площадка (RU)',
-                    en: '№1 Global B2B marketplace for used cars'
-                },
-                langs: ['ru', 'en'],
-                link: 'https://www.autowini.com'
-            },
-            {
-                name: 'KOMPASS | Автострахование',
-                desc: {
-                    ru: 'Автострахование, страхование водителя, сопровождение при обмене прав.',
-                    en: 'Auto insurance, driver insurance, driver\'s license exchange support.'
-                },
-                langs: ['ru'],
-                location: 'Дунпо/Синчанг/Инчхон',
-                link: 'https://www.tiktok.com/@kompass'
-            },
-            {
-                name: 'Елена Иловская | Samsung Life',
-                desc: {
-                    ru: 'Частное страхование (Самсунг), автострахование, консультации по выплатам.',
-                    en: 'Private insurance (Samsung), car insurance, claims consultation.'
-                },
-                langs: ['ru'],
-                link: 'https://www.instagram.com/elena.ilovskaya.samsung'
-            }
-        ]
-    },
-    {
-        id: 'logistics',
-        title: { ru: 'Логистика/Карго', en: 'Logistics' },
-        items: [
-            {
-                name: 'CDEK Korea',
-                desc: {
-                    ru: 'Посылки, документы, личные вещи',
-                    en: 'Express delivery to CIS countries'
-                },
-                langs: ['ru'],
-                link: 'http://www.cdek.co.kr'
-            },
-            {
-                name: 'Карго Альянс',
-                desc: {
-                    ru: 'Контейнерные перевозки',
-                    en: 'Sea & Air freight services'
-                },
-                langs: ['ru'],
-                link: 'https://cargoalliance.ru/korea'
-            }
-        ]
-    },
-    {
-        id: 'medical',
-        title: { ru: 'Медицина', en: 'Medical' },
-        items: [
-            {
-                name: 'Medical Korea',
-                desc: {
-                    ru: 'Гос. инфо-центр для пациентов СНГ',
-                    en: 'Global medical information center'
-                },
-                langs: ['ru', 'en', 'ko'],
-                link: 'https://www.medicalkorea.or.kr'
-            },
-            {
-                name: 'Asan Medical Center',
-                desc: {
-                    ru: 'Russian Desk (Каннам)',
-                    en: 'International Healthcare Center (English)'
-                },
-                langs: ['ru', 'en', 'ko'],
-                link: 'https://eng.amc.seoul.kr'
-            },
-            {
-                name: 'KOMPASS | Медстрахование и Сопровождение',
-                desc: {
-                    ru: 'Медстрахование, медсопровождение, частное страхование, страхование имущества/недвижимости.',
-                    en: 'Medical insurance, medical escort, private insurance, property insurance.'
-                },
-                langs: ['ru'],
-                location: 'Дунпо/Синчанг/Инчхон',
-                link: 'https://www.tiktok.com/@kompass'
-            },
-            {
-                name: 'Mega Center Korea',
-                desc: {
-                    ru: 'Крупный центр страхования: медицина, жизнь, авто. Поддержка 24/7.',
-                    en: 'Large insurance center: medical, life, auto. 24/7 Russian support.'
-                },
-                langs: ['ru'],
-                link: 'https://megacentrekorea.com'
-            }
+            { name: 'Dunpo Samushils', desc: { ru: 'Кадровые бюро в Дунпо.', en: 'Staffing agencies in Dunpo.' }, langs: ['ru'], location: 'Asan/Dunpo' },
+            { name: 'KoWork', desc: { ru: 'Вакансии для виз E-7/D-10.', en: 'Job portal for visa holders.' }, langs: ['en', 'ko'], link: 'https://kowork.kr/en' },
+            { name: 'Albamon', desc: { ru: 'Поиск подработки (Альба).', en: 'Part-time job portal.' }, langs: ['ko'], link: 'https://www.albamon.com' }
         ]
     },
     {
         id: 'food',
-        title: { ru: 'Еда/Ритейл', en: 'Food & Retail' },
+        title: { ru: 'Еда и Доставка', en: 'Food & Delivery' },
         items: [
-            {
-                name: 'IMPERIA FOODS',
-                desc: {
-                    ru: 'Сеть супермаркетов и производство',
-                    en: 'CIS/Russian grocery network'
-                },
-                langs: ['ru'],
-                link: 'https://www.instagram.com/imperiafoods'
-            },
-            {
-                name: 'Troika',
-                desc: {
-                    ru: 'Русская кухня',
-                    en: 'Authentic Russian restaurant in Itaewon'
-                },
-                langs: ['ru', 'en', 'ko'],
-                location: 'Сеул (Итхэвон)',
-                link: 'https://www.instagram.com/troika_seoul'
-            }
+            { name: 'Baemin (배달의민족)', desc: { ru: '№1 приложение для доставки еды в Корее.', en: 'Main food delivery app in Korea.' }, langs: ['ko'], link: 'https://www.baemin.com' },
+            { name: 'Coupang Eats', desc: { ru: 'Быстрая доставка еды от Coupang.', en: 'Fast delivery by Coupang.' }, langs: ['ru', 'en', 'ko'], link: 'https://www.coupangeats.com' },
+            { name: 'Shuttle Delivery', desc: { ru: 'Доставка из ресторанов (EN).', en: 'Expat-friendly food delivery.' }, langs: ['en'], link: 'https://www.shuttledelivery.co.kr' },
+            { name: 'Vo! (Во!)', desc: { ru: 'Популярное кафе с корейской и СНГ кухней.', en: 'CIS-friendly cafe.' }, langs: ['ru'], location: 'Hwaseong (Palan) / Incheon' },
+            { name: 'Blin (Блин)', desc: { ru: 'Специализированная блинная и домашняя кухня.', en: 'Pancake & home-style cafe.' }, langs: ['ru'], location: 'Hwaseong (Palan) / Incheon' },
+            { name: 'Pizza Taki (Пицца Таки)', desc: { ru: 'Пиццерия с любимыми вкусами в Палане.', en: 'Popular pizza spot in Palan.' }, langs: ['ru'], location: 'Hwaseong (Palan)' },
+            { name: 'Family (Семья)', desc: { ru: 'Ресторан русской кухни в Кванджу (Корё-ин маыль).', en: 'Russian restaurant in Gwangju village.' }, langs: ['ru'], location: 'Gwangju (Wolkok-dong)' },
+            { name: 'Samarkand (Кванджу)', desc: { ru: 'Узбекская кухня, лагман и плов.', en: 'Uzbek cuisine in Gwangju.' }, langs: ['ru', 'uz'], location: 'Gwangju (Wolkok-dong)' },
+            { name: 'Troika (Итхэвон)', desc: { ru: 'Русская кухня в Сеуле.', en: 'Russian restaurant.' }, langs: ['ru', 'en', 'ko'], location: 'Seoul' }
         ]
     },
     {
-        id: 'community',
-        title: { ru: 'Сообщества', en: 'Communities' },
+        id: 'stores',
+        title: { ru: 'Магазины и Пекарни', en: 'CIS Stores & Bakeries' },
         items: [
-            {
-                name: 'Всё о Корее',
-                desc: {
-                    ru: 'База знаний, объявления',
-                    en: 'Russian-speaking knowledge base'
-                },
-                langs: ['ru'],
-                link: 'https://vseokoree.com'
-            },
-            {
-                name: 'K-Life',
-                desc: {
-                    ru: 'Сообщество экспатов №1',
-                    en: '#1 expat community platform'
-                },
-                langs: ['en'],
-                link: 'https://k-life.co'
-            },
-            {
-                name: '90 Day Korean',
-                desc: {
-                    ru: 'Курсы языка и адаптации',
-                    en: 'Korean language & culture courses'
-                },
-                langs: ['en'],
-                link: 'https://www.90daykorean.com'
-            }
+            { name: 'Melnitsa (Мельница)', desc: { ru: 'Крупнейшая сеть и онлайн-магазин продуктов СНГ.', en: 'Leading CIS grocery chain & online store.' }, langs: ['ru'], link: 'https://melnitsa.store', location: 'Gimhae / Online' },
+            { name: 'IMPERIA FOODS', desc: { ru: 'СНГ-продукты, собственное производство.', en: 'CIS grocery & production.' }, langs: ['ru'], link: 'https://www.instagram.com/imperiafoods', location: 'Ansan / Online' },
+            { name: 'Assorti (Ассорти)', desc: { ru: 'Сеть магазинов «Ассорти»: продукты и опт.', en: 'Assorti chain: groceries & wholesale.' }, langs: ['ru'], location: 'Incheon / Ansan', phone: '010-8001-4470' },
+            { name: 'Medovik (Медовик)', desc: { ru: 'Гастроном в Сеуле: торты, хлеб, колбасы.', en: 'Seoul gourmet: cakes & bread.' }, langs: ['ru'], location: 'Seoul (Jung-gu)', phone: '02-2285-4700' },
+            { name: 'Maria Bakery (Dream Bakery)', desc: { ru: 'Популярная пекарня в Хамбаке (Инчхон).', en: 'Famous bakery in Hambak district.' }, langs: ['ru'], location: 'Incheon (Hambak)' },
+            { name: 'Lepeshka (Лепёшка)', desc: { ru: 'Сеть узбекских пекарен: свежие лепешки и самса.', en: 'Uzbek bakery network: fresh bread & samsa.' }, langs: ['ru'], location: 'Gimhae / Incheon / Ansan' },
+            { name: 'Master\'s (Ансан)', desc: { ru: 'Российские продукты и выпечка в районе Вонгок.', en: 'CIS products & bakery in Wongok.' }, langs: ['ru'], location: 'Ansan (Wongok)' },
+            { name: 'Raduga (Радуга)', desc: { ru: 'Продуктовый магазин в районе Хамбак.', en: 'Grocery store in Hambak district.' }, langs: ['ru'], location: 'Incheon (Hambak)' },
+            { name: 'Tandyr (Тандыр)', desc: { ru: 'Узбекские продукты, свежие лепешки и мясо.', en: 'Uzbek groceries & fresh bread.' }, langs: ['ru'], location: 'Gimhae (Gwangmyeong)' }
         ]
     },
     {
-        id: 'finance',
-        title: { ru: 'Финансы и Карты', en: 'Finance & Cards' },
+        id: 'logistics',
+        title: { ru: 'Логистика и Карго', en: 'Logistics & Cargo' },
         items: [
-            {
-                name: 'Woori Bank Global Desk',
-                desc: {
-                    ru: 'Отделения с поддержкой иностранцев (Ансан, Инчхон и др.). Помощь с картами.',
-                    en: 'Branches with expat support (Ansan, Incheon, etc.). Card assistance.'
-                },
-                langs: ['ru', 'en', 'ko'],
-                link: 'https://www.wooribank.com'
-            },
-            {
-                name: 'WowPASS',
-                desc: {
-                    ru: 'Универсальная карта для туристов и экспатов (оплата + транспорт).',
-                    en: 'All-in-one card for tourists & expats (Payment + T-money).'
-                },
-                langs: ['ru', 'en', 'ko'],
-                link: 'https://www.wowpass.io'
-            }
+            { name: 'CDEK Korea', desc: { ru: 'Посылки и документы в СНГ.', en: 'Express delivery to CIS.' }, langs: ['ru'], link: 'http://www.cdek.co.kr' },
+            { name: 'Cargo Alliance', desc: { ru: 'Международные перевозки (обычные грузы).', en: 'International cargo services.' }, langs: ['ru'], link: 'https://cargoalliance.ru/korea' }
+        ]
+    },
+    {
+        id: 'sights',
+        title: { ru: 'Достопримечательности', en: 'Attractions' },
+        items: [
+            { name: 'Gyeongbokgung', desc: { ru: 'Королевский дворец.', en: 'Royal Palace.' }, langs: ['en', 'ko'] },
+            { name: 'Lotte World', desc: { ru: 'Парк аттракционов.', en: 'Theme park.' }, langs: ['en', 'ko'] }
         ]
     }
 ];
