@@ -404,5 +404,105 @@ export const telecomLexicon: LexiconTerm[] = [
         },
         riskLevel: 'neutral',
         riskLabel: { ru: 'Меньше скидок', en: 'Fewer Discounts', uz: 'Kam chegirmalar', kk: 'Аз жеңілдіктер' }
+    },
+
+    // --- Базовые Понятия ---
+    {
+        id: 'bas_1',
+        category: { ru: 'База', en: 'Basics', uz: 'Asosiy', kk: 'Негізгі' },
+        termKo: '요금제 (Yo-geum-je)',
+        termTrans: { ru: 'Тарифный план', en: 'Tariff Plan', uz: 'Tarif rejasi', kk: 'Тарифтік жоспар' },
+        meaning: {
+            ru: 'Ваш ежемесячный тариф на связь и интернет. Обычно оплачивается в конце месяца.',
+            en: 'Your monthly cell and data plan. Usually billed at the end of the month.',
+            uz: 'Sizning oylik aloqa va internet tarifi. Odatda oy oxirida to\'lanadi.',
+            kk: 'Сіздің ай сайынғы байланыс және интернет тарифіңіз. Әдетте айдың соңында төленеді.'
+        },
+        riskLevel: 'safe',
+        riskLabel: { ru: 'Основа', en: 'Foundation', uz: 'Asos', kk: 'Негіз' }
+    },
+    {
+        id: 'bas_2',
+        category: { ru: 'База', en: 'Basics', uz: 'Asosiy', kk: 'Негізгі' },
+        termKo: '약정 (Yak-jeong)',
+        termTrans: { ru: 'Договор (Срок)', en: 'Contract Period', uz: 'Shartnoma (Muddat)', kk: 'Келісімшарт (Мерзім)' },
+        meaning: {
+            ru: 'Обязательный срок контракта (обычно 1 или 2 года), за который вам дают скидку на телефон или тариф.',
+            en: 'Mandatory contract period (usually 1/2 years) in exchange for device or plan discounts.',
+            uz: 'Telefon yoki tarifga chegirma beriladigan majburiy shartnoma muddati (odatda 1-2 yil).',
+            kk: 'Телефонға немесе тарифке жеңілдік берілетін міндетті келісімшарт мерзімі (әдетте 1 немесе 2 жыл).'
+        },
+        riskLevel: 'neutral',
+        riskLabel: { ru: 'Срок контракта', en: 'Contract Length', uz: 'Shartnoma muddati', kk: 'Келісімшарт мерзімі' }
+    },
+    {
+        id: 'bas_3',
+        category: { ru: 'База', en: 'Basics', uz: 'Asosiy', kk: 'Негізгі' },
+        termKo: '위약금 (Wi-yak-geum)',
+        termTrans: { ru: 'Неустойка (Штраф)', en: 'Cancellation Penalty', uz: 'Jarima (Bekor qilish uchun)', kk: 'Айыппұл (Шартты бұзғаны үшін)' },
+        meaning: {
+            ru: 'Штраф, который вы платите оператору, если расторгаете контракт (약정) раньше оговоренного срока.',
+            en: 'Penalty fee you must pay to the carrier if you cancel your contract early.',
+            uz: 'Shartnomani belgilangan muddatdan oldin bekor qilsangiz, operatorga to\'lanadigan jarima.',
+            kk: 'Келісімшарт мерзімінен бұрын бұзылған жағдайда операторға төленетін айыппұл.'
+        },
+        riskLevel: 'warning',
+        riskLabel: { ru: 'Дополнительные расходы', en: 'Extra Costs', uz: 'Qo\'shimcha xarajatlar', kk: 'Қосымша шығындар' }
+    },
+    {
+        id: 'bas_4',
+        category: { ru: 'База', en: 'Basics', uz: 'Asosiy', kk: 'Негізгі' },
+        termKo: '부가세 (Bu-ga-se)',
+        termTrans: { ru: 'НДС (Налог 10%)', en: 'VAT (10% Tax)', uz: 'QQS (10% Soliq)', kk: 'ҚҚС (10% Салық)' },
+        meaning: {
+            ru: 'Налог на добавленную стоимость. Часто продавцы называют сумму тарифа "до" налога. Всегда прибавляйте 10%.',
+            en: 'Value Added Tax. Sellers often quote prices without it. Always add 10%.',
+            uz: 'Qo\'shilgan qiymat solig\'i. Ko\'pincha soliqsiz narx aytiladi. Doim 10% qo\'shing.',
+            kk: 'Қосылған құн салығы. Сатушылар жиі салықсыз бағаны атайды. Әрқашан 10% қосыңыз.'
+        },
+        riskLevel: 'info',
+        riskLabel: { ru: 'Обратите внимание', en: 'Take Note', uz: 'E\'tibor bering', kk: 'Назар аударыңыз' }
+    },
+    {
+        id: 'bas_5',
+        category: { ru: 'База', en: 'Basics', uz: 'Asosiy', kk: 'Негізгі' },
+        termKo: '데이터 무제한 (De-i-teo Mu-je-han)',
+        termTrans: { ru: 'Безлимитный интернет', en: 'Unlimited Data', uz: 'Cheksiz internet', kk: 'Шексіз интернет' },
+        meaning: {
+            ru: 'Тариф, где после исчерпания основного трафика на высокой скорости, скорость падает (например до 1Mbps-5Mbps), но интернет не отключается и доплаты нет.',
+            en: 'Plan where after high-speed data runs out, speed drops but internet remains free and unlimited.',
+            uz: 'Asosiy trafik tugagach tezlik pasayadi, lekin internet o\'chmaydi va bepul qoladi.',
+            kk: 'Негізгі трафик таусылғаннан кейін жылдамдық төмендейтін, бірақ интернет өшпейтін және тегін қалатын тариф.'
+        },
+        riskLevel: 'safe',
+        riskLabel: { ru: 'Без доплат', en: 'No Extra Fees', uz: 'Qo\'shimcha to\'lovsiz', kk: 'Қосымша төлемсіз' }
+    },
+    {
+        id: 'bas_6',
+        category: { ru: 'База', en: 'Basics', uz: 'Asosiy', kk: 'Негізгі' },
+        termKo: '선불폰 (Seon-bul-pon)',
+        termTrans: { ru: 'Предоплата (Prepaid)', en: 'Prepaid Phone', uz: 'Oldindan to\'lov (Prepaid)', kk: 'Күні бұрын төлеу (Prepaid)' },
+        meaning: {
+            ru: 'Вы кладете деньги на счет заранее (как дорожный билет). Идеально для туристов, нелегалов или людей с плохой кредиткой.',
+            en: 'You pay upfront for texts/data. Ideal for tourists, or people without credit history.',
+            uz: 'Siz oldindan pul kiritasiz. Turistlar, vizasizlar yoki kredit tarixi yomonlar uchun mos.',
+            kk: 'Ақшаны алдын ала саласыз. Туристерге, заңсыз жүргендерге немесе несие тарихы нашар адамдарға қолайлы.'
+        },
+        riskLevel: 'neutral',
+        riskLabel: { ru: 'Всем доступно', en: 'Accessible to All', uz: 'Barchaga ochiq', kk: 'Барлығына қолжетімді' }
+    },
+    {
+        id: 'bas_7',
+        category: { ru: 'База', en: 'Basics', uz: 'Asosiy', kk: 'Негізгі' },
+        termKo: '가족결합 (Ga-jok-gyeol-hap)',
+        termTrans: { ru: 'Семейная скидка', en: 'Family Discount', uz: 'Oila chegirmasi', kk: 'Отбасылық жеңілдік' },
+        meaning: {
+            ru: 'Привязка номеров и интернета членов семьи к одному оператору (SK, KT, LG). Дает мощную скидку (до 50%) всем участникам.',
+            en: 'Linking family lines/internet to one carrier for huge combined discounts (up to 50%).',
+            uz: 'Oila a\'zolari raqamlarini bitta operatorga bog\'lash orqali barchaga katta chegirma (50% gacha).',
+            kk: 'Отбасы мүшелерінің телефондары мен интернеттерін бір операторға біріктіру (SK, KT, LG). Бәріне үлкен жеңілдік береді (50%-ға дейін).'
+        },
+        riskLevel: 'safe',
+        riskLabel: { ru: 'Очень выгодно', en: 'Highly Profitable', uz: 'Juda foydali', kk: 'Өте тиімді' }
     }
 ];
