@@ -202,7 +202,7 @@ export const telecomLexicon: LexiconTerm[] = [
             uz: 'Dilerning o\'z komissiyasidan yashirin chegirmasi.',
             kk: 'Дилердің өз комиссиялық маржасымен жасайтын жасырын жеңілдігі.'
         },
-        riskLevel: 'neutral',
+        riskLevel: 'warning',
         riskLabel: { ru: 'Скрытая скидка', en: 'Hidden Discount', uz: 'Yashirin chegirma', kk: 'Жасырын жеңілдік' }
     },
     {
