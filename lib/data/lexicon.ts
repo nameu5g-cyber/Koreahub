@@ -291,6 +291,160 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Знать свои права', en: 'Know Your Rights', uz: 'Huquqlarni bilish', kk: 'Құқықтарды білу' }
     },
     {
+        id: 'fin_6d',
+        category: { ru: 'Оплата и Скидки', en: 'Payments & Discounts', uz: 'To\'lovlar va chegirmalar', kk: 'Төлемдер мен жеңілдіктер' },
+        termKo: '가상계좌 (Ga-sang-gye-jwa)',
+        termTrans: { ru: 'Виртуальный счет', en: 'Virtual Account', uz: 'Virtual hisob', kk: 'Виртуалды шот' },
+        meaning: {
+            ru: 'Специальный временный номер банковского счета, который выдают только для оплаты конкретной услуги или телефона.',
+            en: 'A temporary bank account number issued only for paying a specific service or phone bill.',
+            uz: 'Faqat ma\'lum bir xizmat yoki telefon uchun to\'lashga beriladigan maxsus vaqtinchalik bank hisobi raqami.',
+            kk: 'Тек белгілі бір қызмет немесе телефон үшін төлеуге берілетін арнайы уақытша банктік шот нөмірі.'
+        },
+        riskLevel: 'info',
+        riskLabel: { ru: 'Для оплаты', en: 'For Payment', uz: 'To\'lov uchun', kk: 'Төлем үшін' }
+    },
+    {
+        id: 'fin_6e',
+        category: { ru: 'Оплата и Скидки', en: 'Payments & Discounts', uz: 'To\'lovlar va chegirmalar', kk: 'Төлемдер мен жеңілдіктер' },
+        termKo: '입금 (Ip-geum)',
+        termTrans: { ru: 'Депозит / Внесение денег', en: 'Deposit / Payment', uz: 'Pul kiritish', kk: 'Ақша салу' },
+        meaning: {
+            ru: 'Процесс внесения или перевода денег на счет (например, оплата за телефон).',
+            en: 'The act of depositing or transferring money into an account (e.g., paying for a phone).',
+            uz: 'Hisobga pul kiritish yoki o\'tkazish jarayoni.',
+            kk: 'Шотқа ақша салу немесе аудару процесі.'
+        },
+        riskLevel: 'safe',
+        riskLabel: { ru: 'Оплата', en: 'Payment', uz: 'To\'lov', kk: 'Төлем' }
+    },
+    {
+        id: 'fin_6f',
+        category: { ru: 'Оплата и Скидки', en: 'Payments & Discounts', uz: 'To\'lovlar va chegirmalar', kk: 'Төлемдер мен жеңілдіктер' },
+        termKo: '납부 (Nap-bu)',
+        termTrans: { ru: 'Уплата / Погашение', en: 'Payment / Settlement', uz: 'To\'lash / Qoplash', kk: 'Төлеу / Өтеу' },
+        meaning: {
+            ru: 'Процесс оплаты счетов, налогов или долгов (например, 방통비 납부 - оплата связи).',
+            en: 'The process of paying bills, taxes, or debts (e.g., paying the telecom bill).',
+            uz: 'Hisoblar, soliqlar yoki qarzlarni to\'lash jarayoni.',
+            kk: 'Шоттарды, салықтарды немесе қарыздарды төлеу процесі.'
+        },
+        riskLevel: 'info',
+        riskLabel: { ru: 'Оплата счетов', en: 'Bill Payment', uz: 'Hisob to\'lovi', kk: 'Шот төлемі' }
+    },
+    {
+        id: 'fin_6g',
+        category: { ru: 'Оплата и Скидки', en: 'Payments & Discounts', uz: 'To\'lovlar va chegirmalar', kk: 'Төлемдер мен жеңілдіктер' },
+        termKo: '결제 (Gyeol-je)',
+        termTrans: { ru: 'Оплата (Картой/Со счета)', en: 'Payment / Checkout', uz: 'To\'lov (Karta bilan)', kk: 'Төлем (Картамен)' },
+        meaning: {
+            ru: 'Списание средств за покупку или услугу, чаще всего безналичным расчетом.',
+            en: 'Processing a transaction for a purchase or service, usually electronic.',
+            uz: 'Xarid yoki xizmat uchun pul yechish, ko\'pincha naqd pulsiz.',
+            kk: 'Сатып алу немесе қызмет үшін ақшаны шегеру, көбінесе қолма-қол ақшасыз.'
+        },
+        riskLevel: 'safe',
+        riskLabel: { ru: 'Безналичный расчет', en: 'Electronic Payment', uz: 'Naqd pulsiz to\'lov', kk: 'Қолма-қол ақшасыз төлем' }
+    },
+    {
+        id: 'fin_6h',
+        category: { ru: 'Оплата и Скидки', en: 'Payments & Discounts', uz: 'To\'lovlar va chegirmalar', kk: 'Төлемдер мен жеңілдіктер' },
+        termKo: '내역 (Nae-yeok)',
+        termTrans: { ru: 'История / Детализация', en: 'History / Breakdown', uz: 'Tarix / Tafsilotlar', kk: 'Тарих / Бөлшектеу' },
+        meaning: {
+            ru: 'История ваших платежей, звонков или детализация счета. Очень важно проверять 소액결제 내역 (историю микроплатежей).',
+            en: 'Your payment or call history/breakdown. Crucial to check microtransaction history.',
+            uz: 'Sizning to\'lovlar, qo\'ng\'iroqlar tarixi yoki hisob tafsilotlari.',
+            kk: 'Сіздің төлемдер, қоңыраулар тарихыңыз немесе шоттың бөлшектері.'
+        },
+        riskLevel: 'info',
+        riskLabel: { ru: 'Проверка истории', en: 'Check History', uz: 'Tarixni tekshirish', kk: 'Тарихты тексеру' }
+    },
+    {
+        id: 'bas_1a',
+        category: { ru: 'База', en: 'Basics', uz: 'Asosiy', kk: 'Негізгі' },
+        termKo: '잔액조회 (Jan-aek-jo-hoe)',
+        termTrans: { ru: 'Проверка баланса', en: 'Balance Inquiry', uz: 'Balansni tekshirish', kk: 'Теңгерімді тексеру' },
+        meaning: {
+            ru: 'Проверка оставшихся денег на счету (для 가상계좌 или 선불폰).',
+            en: 'Checking the remaining money in your account or prepaid phone.',
+            uz: 'Hisobdagi qolgan pulni tekshirish.',
+            kk: 'Шоттағы қалған ақшаны тексеру.'
+        },
+        riskLevel: 'info',
+        riskLabel: { ru: 'Полезная команда', en: 'Useful Command', uz: 'Foydali buyruq', kk: 'Пайдалы пәрмен' }
+    },
+    {
+        id: 'bas_1b',
+        category: { ru: 'База', en: 'Basics', uz: 'Asosiy', kk: 'Негізгі' },
+        termKo: '잔액이동 (Jan-aek-i-dong)',
+        termTrans: { ru: 'Перевод баланса', en: 'Balance Transfer', uz: 'Balansni o\'tkazish', kk: 'Теңгерімді аудару' },
+        meaning: {
+            ru: 'Перенос оставшихся средств с одного номера/счета на другой.',
+            en: 'Transferring remaining funds from one number/account to another.',
+            uz: 'Qolgan mablag\'larni bir raqamdan/hisobdan boshqasiga o\'tkazish.',
+            kk: 'Қалған қаражатты бір нөмірден/шоттан екіншісіне аудару.'
+        },
+        riskLevel: 'safe',
+        riskLabel: { ru: 'Перевод средств', en: 'Fund Transfer', uz: 'Mablag\' o\'tkazish', kk: 'Қаражат аудару' }
+    },
+    {
+        id: 'bas_1c',
+        category: { ru: 'База', en: 'Basics', uz: 'Asosiy', kk: 'Негізгі' },
+        termKo: '제공 (Je-gong)',
+        termTrans: { ru: 'Предоставление (объем)', en: 'Provided (Allowance)', uz: 'Taqdim etish (Hajm)', kk: 'Беру (Көлем)' },
+        meaning: {
+            ru: 'Объем интернета, минут или смс, который оператор предоставляет вам каждый месяц по тарифу.',
+            en: 'The amount of data, minutes, or SMS the carrier provides you monthly.',
+            uz: 'Operator har oy tarif bo\'yicha taqdim etadigan internet, daqiqalar yoki SMS hajmi.',
+            kk: 'Оператор ай сайын тариф бойынша беретін интернет, минут немесе SMS көлемі.'
+        },
+        riskLevel: 'info',
+        riskLabel: { ru: 'Объем тарифа', en: 'Plan Allowance', uz: 'Tarif hajmi', kk: 'Тариф көлемі' }
+    },
+    {
+        id: 'bas_1d',
+        category: { ru: 'База', en: 'Basics', uz: 'Asosiy', kk: 'Негізгі' },
+        termKo: '사용량 (Sa-yong-ryang)',
+        termTrans: { ru: 'Использованный объем', en: 'Usage Amount', uz: 'Foydalanilgan hajm', kk: 'Пайдаланылған көлем' },
+        meaning: {
+            ru: 'Сколько из 제공 (предоставленного лимита) вы уже потратили в этом месяце.',
+            en: 'How much of your provided limit you have already used this month.',
+            uz: 'Bu oyda qancha limitni ishlatganligingiz.',
+            kk: 'Осы айда берілген лимиттің қаншасын пайдаланғаныңыз.'
+        },
+        riskLevel: 'info',
+        riskLabel: { ru: 'Контроль лимита', en: 'Usage Control', uz: 'Limit nazorati', kk: 'Лимитті бақылау' }
+    },
+    {
+        id: 'bas_1e',
+        category: { ru: 'База', en: 'Basics', uz: 'Asosiy', kk: 'Негізгі' },
+        termKo: '무제한 (Mu-je-han)',
+        termTrans: { ru: 'Безлимит', en: 'Unlimited', uz: 'Cheksiz', kk: 'Шексіз' },
+        meaning: {
+            ru: 'Отсутствие лимита. В Корее 완전 무제한 (полный безлимит на высокой скорости) стоит очень дорого.',
+            en: 'No limits. In Korea, true full-speed unlimited is very expensive.',
+            uz: 'Limitning yo\'qligi. Koreyada yuqori tezlikdagi to\'liq cheksiz internet juda qimmat.',
+            kk: 'Лимиттің жоқтығы. Кореяда жоғары жылдамдықтағы толық шексіздік өте қымбат тұрады.'
+        },
+        riskLevel: 'safe',
+        riskLabel: { ru: 'Без ограничений', en: 'No Limits', uz: 'Cheklovsiz', kk: 'Шектеусіз' }
+    },
+    {
+        id: 'bas_1f',
+        category: { ru: 'База', en: 'Basics', uz: 'Asosiy', kk: 'Негізгі' },
+        termKo: '통신사 (Tong-sin-sa)',
+        termTrans: { ru: 'Оператор связи', en: 'Telecom Carrier', uz: 'Aloqa operatori', kk: 'Байланыс операторы' },
+        meaning: {
+            ru: 'Компания, предоставляющая услуги связи (SKT, KT, LGU+ или Al-tteul-pon).',
+            en: 'The telecommunications company providing service (SKT, KT, LGU+).',
+            uz: 'Aloqa xizmatlarini ko\'rsatuvchi kompaniya.',
+            kk: 'Байланыс қызметтерін көрсететін компания.'
+        },
+        riskLevel: 'safe',
+        riskLabel: { ru: 'Провайдер', en: 'Provider', uz: 'Provayder', kk: 'Провайдер' }
+    },
+    {
         id: 'fin_7',
         category: { ru: 'Оплата и Скидки', en: 'Payments & Discounts', uz: 'To\'lovlar va chegirmalar', kk: 'Төлемдер мен жеңілдіктер' },
         termKo: '징 (Jing)',
