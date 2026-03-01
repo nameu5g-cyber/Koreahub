@@ -103,6 +103,62 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLevel: 'danger',
         riskLabel: { ru: 'ОПАСНОСТЬ', en: 'DANGER', uz: 'XAVF', kk: 'ҚАУІПТІ' }
     },
+    {
+        id: 'dev_7',
+        category: { ru: 'Устройства', en: 'Devices', uz: 'Qurilmalar', kk: 'Құрылғылар' },
+        termKo: '공기계 (Gong-gi-gye)',
+        termTrans: { ru: 'Чистый аппарат (без линии)', en: 'Contract-free / Clean IMEI', uz: 'Ro\'yxatdan o\'tmagan apparat', kk: 'Тіркелмеген құрылғы' },
+        meaning: {
+            ru: 'Смартфон, не привязанный ни к одному номеру. "Пустой" здесь означает, что в базе оператора за ним не числится активная линия. Он полностью готов к вашей SIM-карте и регистрации на ваше имя.',
+            en: 'Smartphones not tied to any number. "Empty" here means no active line is registered for it. Ready for your SIM card and registration.',
+            uz: 'Hech qanday raqamga bog\'lanmagan smartfon. "Bo\'sh" bu yerda operator bazasida faol liniya yo\'qligini anglatadi. SIM-kartangizga va o\'z nomingizga ro\'yxatdan o\'tishga tayyor.',
+            kk: 'Ешқандай нөмірге байланбаған смартфон. "Бос" мұнда оператор базасында белсенді желі жоқтығын білдіреді. Сіздің SIM-картаңызға және өз атыңызға тіркелуге дайын.'
+        },
+        riskLevel: 'safe',
+        riskLabel: { ru: 'Готов к работе', en: 'Ready to Use', uz: 'Ishga tayyor', kk: 'Жұмысқа дайын' }
+    },
+    {
+        id: 'dev_8',
+        category: { ru: 'Устройства', en: 'Devices', uz: 'Qurilmalar', kk: 'Құрылғылар' },
+        termKo: '미사용 (Mi-sa-yong)',
+        termTrans: { ru: 'Неиспользованный', en: 'Unused', uz: 'Ishlatilmagan', kk: 'Қолданылмаған' },
+        meaning: {
+            ru: 'Телефон, который не использовался. Коробка может быть вскрыта, но сам аппарат не включали и не активировали.',
+            en: 'A phone that has not been used. The box may be opened, but the device itself has not been turned on or activated.',
+            uz: 'Ishlatilmagan telefon. Quti ochilgan bo\'lishi mumkin, lekin apparatning o\'zi yoqilmagan va faollashtirilmagan.',
+            kk: 'Қолданылмаған телефон. Қорап ашылған болуы мүмкін, бірақ құрылғының өзі қосылмаған және іске қосылмаған.'
+        },
+        riskLevel: 'safe',
+        riskLabel: { ru: 'Состояние нового', en: 'New Condition', uz: 'Yangi holatda', kk: 'Жаңа күйде' }
+    },
+    {
+        id: 'dev_9',
+        category: { ru: 'Устройства', en: 'Devices', uz: 'Qurilmalar', kk: 'Құрылғылар' },
+        termKo: '새제품 (Sae-je-pum)',
+        termTrans: { ru: 'Новый товар', en: 'New Product', uz: 'Yangi mahsulot', kk: 'Жаңа өнім' },
+        meaning: {
+            ru: 'Абсолютно новый товар. Обычно подразумевает заводскую запечатку и полный комплект.',
+            en: 'Brand new product. Usually implies factory sealing and a full set of accessories.',
+            uz: 'Butunlay yangi mahsulot. Odatda zavod muhri va to\'liq to\'plamni anglatadi.',
+            kk: 'Мүлдем жаңа өнім. Әдетте зауыттық мөр мен толық жиынтықты білдіреді.'
+        },
+        riskLevel: 'safe',
+        riskLabel: { ru: 'Заводской сбор', en: 'Factory Sealed', uz: 'Zavod muhrlangan', kk: 'Зауыттық мөр' }
+    },
+    {
+        id: 'dev_10',
+        category: { ru: 'Устройства', en: 'Devices', uz: 'Qurilmalar', kk: 'Құрылғылар' },
+        termKo: '신상품 (Sin-sang-pum)',
+        termTrans: { ru: 'Свежая модель', en: 'Latest Model', uz: 'Yangi model', kk: 'Жаңа модель' },
+        meaning: {
+            ru: 'Новинка на рынке. Самая актуальная модель в линейке производителя.',
+            en: 'New arrival on the market. The most current model in the manufacturer\'s lineup.',
+            uz: 'Bozordagi yangilik. Ishlab chiqaruvchi qatoridagi eng so\'nggi model.',
+            kk: 'Нарықтағы жаңалық. Өндіруші қатарындағы ең соңғы модель.'
+        },
+        riskLevel: 'safe',
+        riskLabel: { ru: 'Актуально', en: 'Current', uz: 'Dolzarb', kk: 'Өзекті' }
+    },
 
     // --- Состояние экрана ---
     {
@@ -163,7 +219,6 @@ export const telecomLexicon: LexiconTerm[] = [
     },
 
     // --- Сделки и Скидки ---
-    {
     {
         id: 'fin_1',
         category: { ru: 'Оплата и Скидки', en: 'Payments & Discounts', uz: 'To\'lovlar va chegirmalar', kk: 'Төлемдер мен жеңілдіктер' },
