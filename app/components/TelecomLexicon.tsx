@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { Search, ShieldAlert, AlertTriangle, AlertCircle, Info, CheckCircle2, BookOpen, Volume2 } from 'lucide-react';
 import { telecomLexicon, RiskLevel } from '../../lib/data/lexicon';
 
@@ -25,6 +25,16 @@ export function TelecomLexicon({ t, uiLang }: TelecomLexiconProps) {
         setExpandedId(prev => prev === id ? null : id);
     };
 
+    // Pre-load voices for better reliability
+    useEffect(() => {
+        if (typeof window !== 'undefined' && window.speechSynthesis) {
+            window.speechSynthesis.getVoices();
+            const handleVoices = () => window.speechSynthesis.getVoices();
+            window.speechSynthesis.addEventListener('voiceschanged', handleVoices);
+            return () => window.speechSynthesis.removeEventListener('voiceschanged', handleVoices);
+        }
+    }, []);
+
     const handleUnlock = () => {
         if (secretCode === 'b8h@er0K') {
             setIsExpertMode(true);
@@ -38,6 +48,11 @@ export function TelecomLexicon({ t, uiLang }: TelecomLexiconProps) {
     const speak = (e: React.MouseEvent, text: string) => {
         e.stopPropagation();
 
+        if (typeof window === 'undefined' || !window.speechSynthesis) {
+            alert("Ваш браузер не поддерживает озвучку.");
+            return;
+        }
+
         // Cancel any ongoing speech
         window.speechSynthesis.cancel();
 
@@ -45,14 +60,29 @@ export function TelecomLexicon({ t, uiLang }: TelecomLexiconProps) {
         const hangulOnly = text.split('(')[0].trim();
 
         const utterance = new SpeechSynthesisUtterance(hangulOnly);
+
+        // Try to find a specific Korean voice
+        const voices = window.speechSynthesis.getVoices();
+        const koVoice = voices.find(v => v.lang.toLowerCase().includes('ko'));
+        if (koVoice) {
+            utterance.voice = koVoice;
+        }
+
         utterance.lang = 'ko-KR';
-        utterance.rate = 0.9; // Slightly slower for better clarity
+        utterance.rate = 0.85; // Slightly slower for better clarity
 
         utterance.onstart = () => setIsSpeaking(text);
         utterance.onend = () => setIsSpeaking(null);
-        utterance.onerror = () => setIsSpeaking(null);
+        utterance.onerror = () => {
+            setIsSpeaking(null);
+            // On some mobile devices, speechSynthesis can hang. resume() might help.
+            window.speechSynthesis.resume();
+        };
 
-        window.speechSynthesis.speak(utterance);
+        // Small delay to ensure cancel() worked properly before starting new speech
+        setTimeout(() => {
+            window.speechSynthesis.speak(utterance);
+        }, 100);
     };
 
     // Extract unique categories (using English as internal keys) filtering based on expert mode
