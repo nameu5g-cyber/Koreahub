@@ -316,8 +316,8 @@ export const telecomLexicon: LexiconTerm[] = [
     {
         id: 'sec_5',
         category: { ru: 'Безопасность', en: 'Security', uz: 'Xavfsizlik', kk: 'Қауіпсіздік' },
-        termKo: 'IMEI (아이디)',
-        termTrans: { ru: 'Международный идентификатор', en: 'IMEI ID', uz: 'IMEI raqami', kk: 'IMEI нөмірі' },
+        termKo: 'IMEI (단말기식별번호)',
+        termTrans: { ru: 'IMEI (Идентификатор)', en: 'IMEI (Identifier)', uz: 'IMEI raqami', kk: 'IMEI нөмірі' },
         meaning: {
             ru: '15-значный уникальный номер телефона. По нему на сайте IMEI.kr проверяется всё: от кражи до наличия скидки 25% (선택약정).',
             en: '15-digit unique phone code used to check theft reports or 25% discount eligibility at IMEI.kr.',
