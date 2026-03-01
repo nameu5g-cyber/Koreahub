@@ -216,88 +216,200 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Учите матчасть', en: 'Know the Grades', uz: 'Grade-ni biling', kk: 'Grade-ті біліңіз' }
     },
     {
-        id: 'dev_15',
+        id: 'con_1',
         category: { ru: 'Контракты', en: 'Contracts', uz: 'Shartnomalar', kk: 'Келісімшарттар' },
         termKo: '위약금 (Wi-yak-geum)',
-        termTrans: { ru: 'Штраф за расторжение (Неустойка)', en: 'Contract Termination Penalty', uz: 'Shartnomani bekor qilish jarimasi', kk: 'Келісімшартты бұзу айыппұлы' },
+        termTrans: { ru: 'Штраф за расторжение', en: 'Termination Penalty', uz: 'Shartnomani bekor qilish jarimasi', kk: 'Келісімшартты бұзу айыппұлы' },
         meaning: {
-            ru: 'Штраф за досрочный разрыв контракта. Бывает двух видов: 공시지원 반환금 (возврат скидки на телефон) и 선택약정 할인반환금 (возврат накопленных скидок на тариф). При покупке Б/У может "висеть" на IMEI.',
-            en: 'Penalty for breaking a contract early. Two types: Subsidy refund (Gong-si-ji-won) or Discount refund (Seon-taek-yak-jeong). Can be "stuck" to the IMEI on used phones.',
-            uz: 'Shartnomani muddatidan oldin bekor qilganlik uchun jarima. Ikki turi bor: telefon chegirmasini qaytarish va tarif chegirmasini qaytarish. Ishlatilgan telefonlarda IMEI-ga bog\'liq bo\'lishi mumkin.',
-            kk: 'Келісімшартты мерзімінен бұрын бұзғаны үшін айыппұл. Екі түрі бар: телефон жеңілдігін қайтару және тариф жеңілдігін қайтару. Қолданылған телефондарда IMEI-ге байланған болуы мүмкін.'
+            ru: 'Штраф за досрочный разрыв контракта. Бывает двух видов: возврат скидки на телефон (공시지원 반환금) и возврат накопленных скидок на тариф (선택약정 할인반환금). Это главный риск при покупке Б/У телефонов, не прошедших 정상해지.',
+            en: 'Penalty for breaking a contract early. Two types: Subsidy refund or Discount refund. Major risk when buying used phones that aren\'t properly terminated.',
+            uz: 'Shartnomani muddatidan oldin bekor qilganlik uchun jarima. Ikki turi bor: telefon chegirmasini va tarif chegirmasini qaytarish.',
+            kk: 'Келісімшартты мерзімінен бұрын бұзғаны үшін айыппұл. Екі түрі бар: телефон жеңілдігін және тариф жеңілдігін қайтару.'
         },
         riskLevel: 'danger',
         riskLabel: { ru: 'ФИНАНСОВЫЙ РИСК', en: 'FINANCIAL RISK', uz: 'MOLIYAVIY XAVF', kk: 'ҚАРЖЫЛЫҚ ҚАУІП' }
     },
     {
-        id: 'dev_16',
+        id: 'con_2',
         category: { ru: 'Контракты', en: 'Contracts', uz: 'Shartnomalar', kk: 'Келісімшарттар' },
-        termKo: '공시지원금 (Gong-si-ji-won-geum)',
-        termTrans: { ru: 'Официальная субсидия', en: 'Device Subsidy (Device Discount)', uz: 'Rasmiy subsidiya (telefon chegirmasi)', kk: 'Ресми субсидия (телефон жеңілдігі)' },
+        termKo: '공시지원금 (Gong-si-ji-won)',
+        termTrans: { ru: 'Официальная субсидия', en: 'Device Subsidy', uz: 'Rasmiy subsidiya (telefon chegirmasi)', kk: 'Ресми субсидия (телефон жеңілдігі)' },
         meaning: {
-            ru: 'Единоразовая скидка на покупку телефона от оператора. В обмен вы подписываете контракт на 2 года. При досрочном разрыве придется вернуть остаток субсидии (위약금).',
-            en: 'One-time discount on phone price from carrier. Requires a 2-year contract. If canceled early, you must pay back the remaining subsidy (penalty).',
-            uz: 'Operator tomonidan telefon narxiga bir martalik chegirma. Buning evaziga siz 2 yillik shartnoma imzolaysiz. Muddatidan oldin bekor qilinganda subsidiyaning qolgan qismini (jarimani) qaytarishingiz kerak.',
-            kk: 'Оператордың телефон бағасына берген бір реттік жеңілдігі. Бұл үшін сіз 2 жылдық келісімшартқа отырасыз. Мерзімінен бұрын бұзған жағдайда субсидияның қалған бөлігін (айыппұлды) қайтаруыңыз керек.'
+            ru: 'Единоразовая скидка на покупку телефона от оператора. В обмен вы подписываете контракт на 2 года. Чем дороже тариф, тем больше субсидия.',
+            en: 'One-time discount on phone price from carrier in exchange for a 2-year contract. Higher plans get higher subsidies.',
+            uz: 'Operator tomonidan telefon narxiga bir martalik chegirma. Buning evaziga siz 2 yillik shartnoma imzolaysiz.',
+            kk: 'Оператордың телефон бағасына берген бір реттік жеңілдігі. Бұл үшін сіз 2 жылдық келісімшартқа отырасыз.'
         },
         riskLevel: 'neutral',
         riskLabel: { ru: 'Скидка на телефон', en: 'Device Discount', uz: 'Telefon chegirmasi', kk: 'Телефон жеңілдігі' }
     },
     {
-        id: 'dev_17',
+        id: 'con_3',
         category: { ru: 'Контракты', en: 'Contracts', uz: 'Shartnomalar', kk: 'Келісімшарттар' },
         termKo: '선택약정 (Seon-taek-yak-jeong)',
         termTrans: { ru: 'Скидка 25% на тариф', en: '25% Service Discount', uz: 'Tarifga 25% chegirma', kk: 'Тарифке 25% жеңілдік' },
         meaning: {
-            ru: 'Ежемесячная скидка 25% на абонентскую плату. Прямая альтернатива субсидии (공시지원). Можно подключить на 자급제 или контрактные телефоны (если прошел срок субсидии).',
-            en: 'Monthly 25% discount on the service fee. Alternative to device subsidy. Available for Jagapje or contract phones (after subsidy period ends).',
-            uz: 'Abonent to\'lovidan har oylik 25% chegirma. Subsidiya (Gong-si-ji-won) ga muqobil. Jagapje yoki shartnomali telefonlar (subsidiya muddati tugagan bo\'lsa) uchun mavjud.',
-            kk: 'Абоненттік төлемнен ай сайынғы 25% жеңілдік. Субсидияға (Gong-si-ji-won) балама. Jagapje немесе келісімшарттық телефондар (субсидия мерзімі өткен болса) үшін қолжетімді.'
+            ru: 'Ежемесячная скидка 25% на абонентскую плату. Прямая альтернатива субсидии. Если вы берете 자급제 (чистый аппарат), всегда подключайте эту скидку.',
+            en: 'Monthly 25% discount on service fee. Alternative to device subsidy. Always activate this for unlocked (Jagapje) devices.',
+            uz: 'Abonent to\'lovidan har oylik 25% chegirma. Subsidiya sa muqobil.',
+            kk: 'Абоненттік төлемнен ай сайынғы 25% жеңілдік. Субсидияға балама.'
         },
         riskLevel: 'safe',
         riskLabel: { ru: 'Экономия связи', en: 'Save on Plan', uz: 'Aloqada tejash', kk: 'Байланысты үнемдеу' }
     },
     {
-        id: 'dev_18',
+        id: 'sec_1',
         category: { ru: 'Безопасность', en: 'Security', uz: 'Xavfsizlik', kk: 'Қауіпсіздік' },
         termKo: '확정기변 (Hwak-jeong-gi-byeon)',
         termTrans: { ru: 'Полная перерегистрация владельца', en: 'Confirmed Ownership Transfer', uz: 'Egasining to\'liq qayta ro\'yxatdan o\'tishi', kk: 'Иесінің толық қайта тіркелуі' },
         meaning: {
-            ru: 'Юридическая смена владельца телефона в базе оператора. Только после этого вы — 100% хозяин. Если продавец не делает 확정기변, он может объявить телефон в розыск.',
-            en: 'Official transfer of phone ownership in the carrier\'s database. Only after this are you the 100% legal owner. Essential to prevent fraud by the seller.',
-            uz: 'Operator bazasida telefon egasining rasmiy o\'zgarishi. Shundan keyingina siz 100% qonuniy egasiz. Sotuvchi tomonidan firibgarlikning oldini olish uchun zarur.',
-            kk: 'Оператор базасында телефон иесінің ресми өзгеруі. Осыдан кейін ғана сіз 100% заңды иесісіз. Сатушы тарапынан алаяқтықтың алдын алу үшін қажет.'
+            ru: 'Юридическая смена владельца телефона в базе оператора. Только после этого вы — 100% хозяин в глазах закона. Без этого продавец может объявить телефон в розыск.',
+            en: 'Official transfer of phone ownership in the carrier database. Only after this are you the 100% legal owner.',
+            uz: 'Operator bazasida telefon egasining rasmiy o\'zgarishi.',
+            kk: 'Оператор базасында телефон иесінің ресми өзгеруі.'
         },
         riskLevel: 'safe',
         riskLabel: { ru: 'Юридически чисто', en: 'Legally Clean', uz: 'Huquqiy toza', kk: 'Құқықтық таза' }
     },
     {
-        id: 'dev_19',
+        id: 'sec_2',
         category: { ru: 'Безопасность', en: 'Security', uz: 'Xavfsizlik', kk: 'Қауіпсіздік' },
         termKo: '정상해지 (Jeong-sang-hae-ji)',
-        termTrans: { ru: 'Нормальное расторжение (Чистый статус)', en: 'Proper Termination (Clear ID)', uz: 'To\'g\'ri bekor qilish (toza status)', kk: 'Дұрыс тоқтату (таза статус)' },
+        termTrans: { ru: 'Чистый юридический статус', en: 'Proper Termination (Clear ID)', uz: 'To\'g\'ri bekor qilish (toza status)', kk: 'Дұрыс тоқтату (таза статус)' },
         meaning: {
-            ru: 'Статус телефона, по которому полностью закрыт предыдущий контракт и выплачены все долги и 위약금. Только "чистый" аппарат позволяет сделать 확정기변 и 선택약정.',
-            en: 'Status showing the previous contract is fully closed and all debts/penalties are paid. Only a "clear" device allows official ownership transfer.',
-            uz: 'Oldingi shartnoma to\'liq yopilgan va barcha qarzlar/jarimalar to\'langan telefon statusi. Faqat "toza" apparat rasmiy egalik huquqini o\'tkazishga imkon beradi.',
-            kk: 'Алдыңғы келісімшарт толық жабылған және барлық қарыздар/айыппұлдар төленген телефон статусы. Тек "таза" құрылғы ресми иелік ету құқығын беруге мүмкіндік береді.'
+            ru: 'Статус аппарата, по которому закрыт контракт и выплачены все долги. Только такой телефон можно "переписать" на себя полностью (확정기변).',
+            en: 'Status showing the previous contract is fully closed and debt-free. Essential for ownership transfer.',
+            uz: 'Oldingi shartnoma to\'liq yopilgan va barcha qarzlar to\'langan telefon statusi.',
+            kk: 'Алдыңғы келісімшарт толық жабылған және барлық қарыздар төленген телефон статусы.'
         },
         riskLevel: 'safe',
         riskLabel: { ru: 'Без долгов', en: 'No Debts', uz: 'Qarzsiz', kk: 'Қарызсыз' }
     },
     {
-        id: 'dev_20',
+        id: 'sec_3',
         category: { ru: 'Безопасность', en: 'Security', uz: 'Xavfsizlik', kk: 'Қауіпсіздік' },
         termKo: '유심기변 (U-sim-gi-byeon)',
         termTrans: { ru: 'Простая перестановка SIM (Риск)', en: 'SIM-only Change (Risk)', uz: 'Oddiy SIM almashtirish (xavf)', kk: 'Қарапайым SIM ауыстыру (қауіп)' },
         meaning: {
-            ru: 'Когда вы просто вставили свою SIM в купленный телефон без 확정기변. Юридически телефон еще у продавца. Если он перестанет платить кредит, телефон заблокируют у вас.',
-            en: 'Using your SIM in a bought phone without official ownership transfer. Legally, the seller still owns it. If they default on payments, your phone will be blocked.',
-            uz: 'Rasmiy egalik huquqini o\'tkazmasdan sotib olingan telefonda SIM-kartangizdan foydalanish. Qonuniy ravishda, sotuvchi hali ham unga egalik qiladi. Agar ular to\'lovlarni to\'xtatsa, telefoningiz bloklanadi.',
-            kk: 'Ресми иелік ету құқығын бермей, сатып алынған телефонда SIM-картаңызды пайдалану. Заңды түрде сатушы әлі де оған иелік етеді. Егер олар төлемдерді тоқтатса, телефоныңыз бұғатталады.'
+            ru: 'Использование своей SIM-карты в купленном Б/У телефоне без регистрации в базе. Юридически аппарат остается у продавца. Если он перестанет платить за него, телефон заблокируют у вас.',
+            en: 'Using your SIM in a bought phone without ownership transfer. If the seller defaults on payments, your device will be blocked.',
+            uz: 'Rasmiy egalik huquqini o\'tkazmasdan SIM-kartangizdan foydalanish.',
+            kk: 'Ресми иелік ету құқығын бермей SIM-картаңызды пайдалану.'
         },
         riskLevel: 'warning',
         riskLabel: { ru: 'ОГРАНИЧЕННЫЕ ПРАВА', en: 'LIMITED RIGHTS', uz: 'CHEKLANGAN HUQUQLAR', kk: 'ШЕКТЕУЛІ ҚҰҚЫҚТАР' }
+    },
+    {
+        id: 'sec_4',
+        category: { ru: 'Безопасность', en: 'Security', uz: 'Xavfsizlik', kk: 'Қауіпсіздік' },
+        termKo: '구글락 / FRP (Account Lock)',
+        termTrans: { ru: 'Блокировка активации', en: 'Activation Lock', uz: 'Aktivizatsiya blokirovkasi', kk: 'Белсендіру құлпы' },
+        meaning: {
+            ru: 'Защита от кражи. Если прошлый владелец не вышел из Google или iCloud аккаунта, вы получите "кирпич". Всегда проверяйте чистоту аккаунтов перед покупкой.',
+            en: 'Theft protection. If the previous owner didn\'t sign out of Google or iCloud, you get a "brick". Always check before buying.',
+            uz: 'O\'g\'irlikdan himoya. Agar oldingi egasi Google yoki iCloud-dan chiqmagan bo\'lsa, siz "g\'isht" olasiz.',
+            kk: 'Ұрлықтан қорғау. Егер өткен иесі Google немесе iCloud-тан шықпаса, сіз "кірпіш" аласыз.'
+        },
+        riskLevel: 'danger',
+        riskLabel: { ru: 'РИСК БЛОКИРОВКИ', en: 'LOCK RISK', uz: 'BLOK XAVFI', kk: 'БҰҒАТТАУ ҚАУПІ' }
+    },
+    {
+        id: 'sec_5',
+        category: { ru: 'Безопасность', en: 'Security', uz: 'Xavfsizlik', kk: 'Қауіпсіздік' },
+        termKo: 'IMEI (아이디)',
+        termTrans: { ru: 'Международный идентификатор', en: 'IMEI ID', uz: 'IMEI raqami', kk: 'IMEI нөмірі' },
+        meaning: {
+            ru: '15-значный уникальный номер телефона. По нему на сайте IMEI.kr проверяется всё: от кражи до наличия скидки 25% (선택약정).',
+            en: '15-digit unique phone code used to check theft reports or 25% discount eligibility at IMEI.kr.',
+            uz: 'Telefonning 15 xonali noyob raqami. IMEI.kr saytida hamma narsani tekshirish uchun ishlatiladi.',
+            kk: 'Телефонның 15 таңбалы бірегей нөмірі. IMEI.kr сайтында барлығын тексеру үшін қолданылады.'
+        },
+        riskLevel: 'info',
+        riskLabel: { ru: 'Код для проверки', en: 'Check Code', uz: 'Tekshirish kodi', kk: 'Тексеру коды' }
+    },
+    {
+        id: 'ser_1',
+        category: { ru: 'Сервис', en: 'Service', uz: 'Xizmatlar', kk: 'Қызметтер' },
+        termKo: '일시정지 (Il-si-jeong-ji)',
+        termTrans: { ru: 'Поставить номер на стоп', en: 'Temporary Suspension', uz: 'Vaqtincha to\'xtatib turish', kk: 'Уақытша тоқтату' },
+        meaning: {
+            ru: 'Добровольная пауза. Способ сохранить свой номер, когда вы уезжаете из Кореи надолго (отпуск, армия). Стоит ~4000 вон в месяц: связь не работает, но номер остается за вами.',
+            en: 'Voluntary pause to keep your number while away from Korea. Costs ~4000 KRW/month. Services off, but number stays yours.',
+            uz: 'Ixtiyoriy tanaffus. Koreyadan uzoq vaqtga ketganda raqamingizni saqlab qolish usuli.',
+            kk: 'Ерікті үзіліс. Кореядан ұзақ уақытқа кеткенде нөміріңізді сақтап қалу тәсілі.'
+        },
+        riskLevel: 'safe',
+        riskLabel: { ru: 'Сохранение номера', en: 'Keep Number', uz: 'Raqamni saqlash', kk: 'Нөмірді сақтау' }
+    },
+    {
+        id: 'ser_2',
+        category: { ru: 'Сервис', en: 'Service', uz: 'Xizmatlar', kk: 'Қызметтер' },
+        termKo: '부가서비스 (Bu-ga-seo-bi-seu)',
+        termTrans: { ru: 'Доп. услуги / Опции', en: 'Add-on Services', uz: 'Qo\'shimcha xizmatlar', kk: 'Қосымша қызметтер' },
+        meaning: {
+            ru: 'Дополнительные опции (страховка, медиа-сервисы, мелодии). Часто обязательны к использованию на 3-6 месяцев (период M+3) для получения начальной скидки на аппарат.',
+            en: 'Extra features (insurance, media, tones). Often mandatory for 3-6 months to secure initial device discounts.',
+            uz: 'Qo\'shimcha variantlar (sug\'urta, media). Ko\'pincha chegirma olish uchun 3-6 oy davomida majburiy bo\'ladi.',
+            kk: 'Қосымша опциялар (сақтандыру, медиа). Көбінесе жеңілдік алу үшін 3-6 ай бойы міндетті болады.'
+        },
+        riskLevel: 'neutral',
+        riskLabel: { ru: 'Обязательный период', en: 'Mandatory Period', uz: 'Majburiy muddat', kk: 'Міндетті мерзім' }
+    },
+    {
+        id: 'ser_3',
+        category: { ru: 'Сервис', en: 'Service', uz: 'Xizmatlar', kk: 'Қызметтер' },
+        termKo: '리필 서비스 (Refill)',
+        termTrans: { ru: 'Пополнение (Seonbul)', en: 'Prepaid Refill (Chung-jeon)', uz: 'Balansni to\'ldirish', kk: 'Толтыру қызметі' },
+        meaning: {
+            ru: 'Пополнение баланса (충전) на предоплатных картах. Можно сделать через приложение, платежные сервисы, банковским переводом, ARS или персональный виртуальный счет.',
+            en: 'Topping up balance or data on prepaid cards. Can be done via app, payment services, bank transfer, ARS, or virtual account.',
+            uz: 'Oldindan to\'lov kartalari balansini to\'ldirish (Chung-jeon).',
+            kk: 'Алдын ала төлем карталарының теңгерімін толтыру (Chung-jeon).'
+        },
+        riskLevel: 'safe',
+        riskLabel: { ru: 'Пополнение счета', en: 'Top-up Balance', uz: 'Balansni to\'ldirish', kk: 'Теңгерімді толтыру' }
+    },
+    {
+        id: 'ser_4',
+        category: { ru: 'Сервис', en: 'Service', uz: 'Xizmatlar', kk: 'Қызметтер' },
+        termKo: '배터리 성능 (Battery Health)',
+        termTrans: { ru: 'Здоровье аккумулятора', en: 'Battery Efficiency', uz: 'Akkumulyator holati', kk: 'Аккумулятордың күйі' },
+        meaning: {
+            ru: 'Состояние износа аккумулятора в %. Важнейший показатель при покупке Б/У айфонов и флагманов. Если ниже 80% — батарея под замену.',
+            en: 'Wear level of the battery in %. Crucial metric for used flagships/iPhones. Below 80% means it needs replacement.',
+            uz: 'Akkumulyatorning eskirish holati %. Ishlatilgan ayfonlarni sotib olishda muhim ko\'rsatkich.',
+            kk: 'Аккумулятордың тозу күйі %. Қолданылған айфондарды сатып алудағы маңызды көрсеткіш.'
+        },
+        riskLevel: 'info',
+        riskLabel: { ru: 'Проверять в настройках', en: 'Check Settings', uz: 'Sozlamalarda tekshiring', kk: 'Параметрлерде тексеріңіз' }
+    },
+    {
+        id: 'fin_7',
+        category: { ru: 'Оплата и Скидки', en: 'Payments & Discounts', uz: 'To\'lovlar va chegirmalar', kk: 'Төлемдер мен жеңілдіктер' },
+        termKo: '할부원금 (Hal-bu-won-geum)',
+        termTrans: { ru: '«Тело» долга / Реальная цена', en: 'Installment Principal', uz: 'Asosiy qarz miqdori', kk: 'Негізгі қарыз сомасы' },
+        meaning: {
+            ru: 'Чистая цена телефона после всех скидок (Цена - Субсидия). Именно на эту сумму начисляется процент 5.9%. Это самая важная цифра в вашем договоре.',
+            en: 'Pure device price after all discounts. This is the base amount that incurs the 5.9% interest fee. Most important figure in your contract.',
+            uz: 'Barcha chegirmalardan keyingi telefonning sof narxi. Aynan shu summaga 5.9% foiz hisoblanadi.',
+            kk: 'Барлық жеңілдіктерден кейінгі телефонның таза бағасы. Дәл осы сомаға 5.9% пайыз есептеледі.'
+        },
+        riskLevel: 'danger',
+        riskLabel: { ru: 'СМОТРИТЕ ЭТУ ЦИФРУ', en: 'TOTAL DEVICE DEBT', uz: 'ASOSIY QARZNI KO\'RING', kk: 'НЕГІЗГІ ҚАРЫЗДЫ ҚАРАҢЫЗ' }
+    },
+    {
+        id: 'fin_8',
+        category: { ru: 'Оплата и Скидки', en: 'Payments & Discounts', uz: 'To\'lovlar va chegirmalar', kk: 'Төлемдер мен жеңілдіктер' },
+        termKo: '유심비 (SIM Fee)',
+        termTrans: { ru: 'Стоимость SIM-карты', en: 'SIM Card Cost', uz: 'SIM-karta narxi', kk: 'SIM-карта құны' },
+        meaning: {
+            ru: 'Разовый платеж за саму SIM-карту при открытии линии или смене оператора. Обычно составляет от 7,700 до 8,800 вон.',
+            en: 'One-time fee for the physical SIM card when opening a line or switching carriers. Usually 7.7k–8.8k KRW.',
+            uz: 'Liniya ochishda yoki operatorni almashtirishda SIM-karta uchun bir martalik to\'lov.',
+            kk: 'Желіні ашқанда немесе операторды ауыстырғанда SIM-карта үшін бір реттік төлем.'
+        },
+        riskLevel: 'info',
+        riskLabel: { ru: 'Разовый платеж', en: 'One-time Fee', uz: 'Bir martalik to\'lov', kk: 'Бір реттік төлем' }
     },
 
     // --- Состояние экрана ---
@@ -667,261 +779,262 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLevel: 'warning',
         riskLabel: { ru: 'РИСК ОБМАНА', en: 'SCAM RISK', uz: 'FIRIBGARLIK XAVFI', kk: 'АЛАЯҚТЫҚ ҚАУПІ' }
     },
-    id: 'fin_7',
-    category: { ru: 'Сделки', en: 'Deals', uz: 'Kelishuvlar', kk: 'Мәмілелер' },
-    termKo: '페이백 (Payback)',
-    termTrans: { ru: 'Возврат наличных', en: 'Cashback', uz: 'Keshbek', kk: 'Кэшбэк' },
-    meaning: {
-        ru: 'Обещание продавца перевести вам субсидию на счет после оформления. Часто обманывают.',
-        en: 'Seller promises to transfer subsidy after closing the deal. Often a scam.',
-        uz: 'Sotuvchi subsidiyani hisobga o\'tkazishni va\'da qiladi. Ko\'pincha firibgarlik.',
-        kk: 'Сатушы жеңілдікті шотқа аударуға уәде береді. Жиі алдайды.'
-    },
-    riskLevel: 'warning',
-    riskLabel: { ru: 'РИСК ОБМАНА', en: 'SCAM RISK', uz: 'FIRIBGARLIK XAVFI', kk: 'АЛАЯҚТЫҚ ҚАУПІ' }
+    {
+        id: 'fin_9',
+        category: { ru: 'Оплата и Скидки', en: 'Payments & Discounts', uz: 'To\'lovlar va chegirmalar', kk: 'Төлемдер мен жеңілдіктер' },
+        termKo: '페이백 (Payback)',
+        termTrans: { ru: 'Возврат наличных', en: 'Cashback', uz: 'Keshbek', kk: 'Кэшбэк' },
+        meaning: {
+            ru: 'Обещание продавца перевести вам часть субсидии на личный счет после оформления. Самый распространенный вид обмана в телекоме.',
+            en: 'Seller promise to transfer cash after closing the deal. High risk of fraud.',
+            uz: 'Sotuvchi subsidiyani hisobga o\'tkazishni va\'da qiladi. Ko\'pincha firibgarlik.',
+            kk: 'Сатушы жеңілдікті шотқа аударуға уәде береді. Жиі алдайды.'
+        },
+        riskLevel: 'danger',
+        riskLabel: { ru: 'РИСК ОБМАНА', en: 'SCAM RISK', uz: 'FIRIBGARLIK XAVFI', kk: 'АЛАЯҚТЫҚ ҚАУПІ' }
     },
 
-// --- Ловушки и Развод ---
-{
-    id: 'trap_1',
+    // --- Ловушки и Развод ---
+    {
+        id: 'trap_1',
         category: { ru: 'Развод', en: 'Traps & Scams', uz: 'Tuzoq va firib', kk: 'Тұзақтар' },
-    termKo: '실구매가 (Sil-gu-mae-ga)',
+        termKo: '실구매가 (Sil-gu-mae-ga)',
         termTrans: { ru: 'Цена владения', en: 'Cost of Ownership', uz: 'Egalik narxi', kk: 'Иелену құны' },
-    meaning: {
-        ru: 'Уловка: вычитают 25% скидку на связь и говорят, что это скидка на сам телефон. В итоге вы платите полную цену.',
+        meaning: {
+            ru: 'Уловка: вычитают 25% скидку на связь и говорят, что это скидка на сам телефон. В итоге вы платите полную цену.',
             en: 'Scam: deducting the 25% plan discount and claiming it\'s a device discount.',
-                uz: 'Hiyla: 25% tarif chegirmasini chiqarib tashlab, buni telefon uchun chegirma deyish.',
-                    kk: 'Айла: 25% тарифтік жеңілдікті шегеріп, оны телефон жеңілдігі деп айту.'
-    },
-    riskLevel: 'danger',
+            uz: 'Hiyla: 25% tarif chegirmasini chiqarib tashlab, buni telefon uchun chegirma deyish.',
+            kk: 'Айла: 25% тарифтік жеңілдікті шегеріп, оны телефон жеңілдігі деп айту.'
+        },
+        riskLevel: 'danger',
         riskLabel: { ru: 'МАРКЕТИНГОВЫЙ РАЗВОД', en: 'MARKETING SCAM', uz: 'MARKETING FIRIB', kk: 'МАРКЕТИНГ АЛАЯҚТЫҒЫ' }
-},
-{
-    id: 'trap_2',
+    },
+    {
+        id: 'trap_2',
         category: { ru: 'Развод', en: 'Traps & Scams', uz: 'Tuzoq va firib', kk: 'Тұзақтар' },
-    termKo: '48개월 할부 (48-gae-wol)',
+        termKo: '48개월 할부 (48-gae-wol)',
         termTrans: { ru: 'Рассрочка на 48', en: '48M Installment', uz: '48M To\'lov', kk: '48A Бөліп төлеу' },
-    meaning: {
-        ru: 'Разбивают платеж на 4 года с 5.9% годовыми, делая вас "рабом" контракта.',
+        meaning: {
+            ru: 'Разбивают платеж на 4 года с 5.9% годовыми, делая вас "рабом" контракта.',
             en: 'Splitting payment into 4 years with 5.9% interest, making you a contract "slave".',
-                uz: 'To\'lovni 5.9% foiz bilan 4 yilga bo\'lish, shartnoma quliga aylantiradi.',
-                    kk: 'Төлемді 5.9% пайызбен 4 жылға бөлу, келісімшарт құлына айналдырады.'
-    },
-    riskLevel: 'danger',
+            uz: 'To\'lovni 5.9% foiz bilan 4 yilga bo\'lish, shartnoma quliga aylantiradi.',
+            kk: 'Төлемді 5.9% пайызбен 4 жылға бөлу, келісімшарт құлына айналдырады.'
+        },
+        riskLevel: 'danger',
         riskLabel: { ru: 'ДОЛГОВОЙ КАПКАН', en: 'DEBT TRAP', uz: 'QARZ TUZOG\'I', kk: 'ҚАРЫЗ ТҰЗАҒЫ' }
-},
-{
-    id: 'trap_3',
+    },
+    {
+        id: 'trap_3',
         category: { ru: 'Развод', en: 'Traps & Scams', uz: 'Tuzoq va firib', kk: 'Тұзақтар' },
-    termKo: '반납조건 (Ban-nap-jo-geon)',
+        termKo: '반납조건 (Ban-nap-jo-geon)',
         termTrans: { ru: 'Обмен через 2 года', en: 'Return Setup', uz: '2 yildan keyin qaytarish', kk: '2 жылдан соң қайтару' },
-    meaning: {
-        ru: 'Нужно вернуть телефон через 2 года в идеальном состоянии для списания долга. На практике находят царапины и не списывают.',
+        meaning: {
+            ru: 'Нужно вернуть телефон через 2 года в идеальном состоянии для списания долга. На практике находят царапины и не списывают.',
             en: 'Must return device in perfect condition in 2 years to waive debt. They usually find scratches.',
-                uz: 'Qarzni o\'chirish uchun yomonsiz telefonni 2 yildan keyin qaytarish kerak. Odatda tirnalgan joylarni topib, o\'chirmaydilar.',
-                    kk: 'Қарызды өшіру үшін мінсіз телефонды 2 жылдан кейін қайтару керек. Көбінесе сызаттар тауып, өшірмейді.'
-    },
-    riskLevel: 'danger',
+            uz: 'Qarzni o\'chirish uchun yomonsiz telefonni 2 yildan keyin qaytarish kerak. Odatda tirnalgan joylarni topib, o\'chirmaydilar.',
+            kk: 'Қарызды өшіру үшін мінсіз телефонды 2 жылдан кейін қайтару керек. Көбінесе сызаттар тауып, өшірмейді.'
+        },
+        riskLevel: 'danger',
         riskLabel: { ru: 'ОБМАН (FRAUD)', en: 'FRAUD Risk', uz: 'FIRIBGAR QILISH', kk: 'АЛАЯҚТЫҚ' }
-},
-{
-    id: 'trap_4',
+    },
+    {
+        id: 'trap_4',
         category: { ru: 'Развод', en: 'Traps & Scams', uz: 'Tuzoq va firib', kk: 'Тұзақтар' },
-    termKo: '카드결합 (Card-gyeol-hap)',
+        termKo: '카드결합 (Card-gyeol-hap)',
         termTrans: { ru: 'Кредитная карта', en: 'Credit Card Link', uz: 'Kredit karta', kk: 'Несие картасы' },
-    meaning: {
-        ru: 'Скидка действительна только если вы откроете новую кредитную карту и будете тратить от 300к вон ежемесячно.',
+        meaning: {
+            ru: 'Скидка действительна только если вы откроете новую кредитную карту и будете тратить от 300к вон ежемесячно.',
             en: 'Discount is only valid if you open a new credit card and spend ~300k KRW monthly.',
-                uz: 'Chegirma faqat yangi kredit karta ochib, oylik kamida 300k KRW ishlatsangiz ishlaydi.',
-                    kk: 'Жеңілдік тек жаңа несие картасын ашып, ай сайын кемінде 300k KRW жұмсасаңыз ғана жарамды.'
-    },
-    riskLevel: 'warning',
+            uz: 'Chegirma faqat yangi kredit karta ochib, oylik kamida 300k KRW ishlatsangiz ishlaydi.',
+            kk: 'Жеңілдік тек жаңа несие картасын ашып, ай сайын кемінде 300k KRW жұмсасаңыз ғана жарамды.'
+        },
+        riskLevel: 'warning',
         riskLabel: { ru: 'ЛОВУШКА', en: 'FINANCIAL TRAP', uz: 'MOLIYAVIY TUZOQ', kk: 'ҚАРЖЫЛЫҚ ТҰЗАҚ' }
-},
-{
-    id: 'trap_5',
+    },
+    {
+        id: 'trap_5',
         category: { ru: 'Развод', en: 'Traps & Scams', uz: 'Tuzoq va firib', kk: 'Тұзақтар' },
-    termKo: '부가서비스 (Bu-ga-seo-bi-seu)',
+        termKo: '부가서비스 (Bu-ga-seo-bi-seu)',
         termTrans: { ru: 'Навязанные опции', en: 'Add-on Services', uz: 'Qo\'shimcha xizmatlar', kk: 'Қосымша қызметтер' },
-    meaning: {
-        ru: 'Дорогие подписки и страховки, которые продавец заставляет держать 3-6 месяцев для скидки.',
+        meaning: {
+            ru: 'Дорогие подписки и страховки, которые продавец заставляет держать 3-6 месяцев для скидки.',
             en: 'Expensive subscriptions and insurance that the seller forces you to keep for 3-6 months.',
-                uz: 'Sotuvchi sizni 3-6 oy ushlab turishga majbur qiladigan qimmat obunalar.',
-                    kk: 'Сатушы сізді 3-6 ай ұстауға мәжбүр ететін қымбат жазылымдар.'
-    },
-    riskLevel: 'warning',
+            uz: 'Sotuvchi sizni 3-6 oy ushlab turishga majbur qiladigan qimmat obunalar.',
+            kk: 'Сатушы сізді 3-6 ай ұстауға мәжбүр ететін қымбат жазылымдар.'
+        },
+        riskLevel: 'warning',
         riskLabel: { ru: 'Скрытые расходы', en: 'Hidden Costs', uz: 'Yashirin xarajatlar', kk: 'Жасырын шығындар' }
-},
-{
-    id: 'trap_6',
+    },
+    {
+        id: 'trap_6',
         category: { ru: 'Развод', en: 'Traps & Scams', uz: 'Tuzoq va firib', kk: 'Тұзақтар' },
-    termKo: '폰테크 (Phone-tech)',
+        termKo: '폰테크 (Phone-tech)',
         termTrans: { ru: 'Мобильная пирамида', en: 'Phone-tech Scam', uz: 'Telefon-firibgarligi', kk: 'Телефон алаяқтығы' },
-    meaning: {
-        ru: 'Опасная схема обнала. Берут телефоны на ваше имя в обмен на "наличные" и исчезают.',
+        meaning: {
+            ru: 'Опасная схема обнала. Берут телефоны на ваше имя в обмен на "наличные" и исчезают.',
             en: 'Dangerous scam. Fraudsters open phone lines in your name for cash and disappear.',
-                uz: 'Xavfli sxem. Firibgarlar nomingizga naqd pul uchun telefonlar ochadi va yo\'qoladi.',
-                    kk: 'Қауіпті алаяқтық. Алаяқтар қолма-қол ақша үшін сіздің атыңызға телефондар ашады да, жоғалады.'
-    },
-    riskLevel: 'danger',
+            uz: 'Xavfli sxem. Firibgarlar nomingizga naqd pul uchun telefonlar ochadi va yo\'qoladi.',
+            kk: 'Қауіпті алаяқтық. Алаяқтар қолма-қол ақша үшін сіздің атыңызға телефондар ашады да, жоғалады.'
+        },
+        riskLevel: 'danger',
         riskLabel: { ru: 'КРИМИНАЛ / ДОЛГИ', en: 'CRIMINAL / DEBT', uz: 'JINOYAT / QARZ', kk: 'ҚЫЛМЫС / ҚАРЫЗ' }
-},
+    },
 
-// --- Связь и Операторы ---
-{
-    id: 'op_1',
+    // --- Связь и Операторы ---
+    {
+        id: 'op_1',
         category: { ru: 'Операторы', en: 'Carriers', uz: 'Operatorlar', kk: 'Операторлар' },
-    termKo: '번호이동 (번이)',
+        termKo: '번호이동 (번이)',
         termTrans: { ru: 'Перенос (MNP)', en: 'Porting (MNP)', uz: 'Raqamni o\'tkazish', kk: 'Нөмірді көшіру' },
-    meaning: {
-        ru: 'Переход к другому оператору связи с полным сохранением вашего текущего номера.',
+        meaning: {
+            ru: 'Переход к другому оператору связи с полным сохранением вашего текущего номера.',
             en: 'Moving to another carrier while keeping your current phone number.',
-                uz: 'Hozirgi telefon raqamingizni saqlab, boshqa operatorga o\'tish.',
-                    kk: 'Ағымдағы телефон нөміріңізді сақтай отырып, басқа операторға ауысу.'
-    },
-    riskLevel: 'safe',
+            uz: 'Hozirgi telefon raqamingizni saqlab, boshqa operatorga o\'tish.',
+            kk: 'Ағымдағы телефон нөміріңізді сақтай отырып, басқа операторға ауысу.'
+        },
+        riskLevel: 'safe',
         riskLabel: { ru: 'Наибольшая выгода', en: 'Max Benefit', uz: 'Eng katta foyda', kk: 'Максималды пайда' }
-},
-{
-    id: 'op_2',
+    },
+    {
+        id: 'op_2',
         category: { ru: 'Операторы', en: 'Carriers', uz: 'Operatorlar', kk: 'Операторлар' },
-    termKo: '기기변경 (기변)',
+        termKo: '기기변경 (기변)',
         termTrans: { ru: 'Смена телефона', en: 'Device Upgrade', uz: 'Qurilmani o\'zgartirish', kk: 'Құрылғыны ауыстыру' },
-    meaning: {
-        ru: 'Покупка нового телефона без смены оператора. Субсидии обычно меньше.',
+        meaning: {
+            ru: 'Покупка нового телефона без смены оператора. Субсидии обычно меньше.',
             en: 'Buying a new phone without changing carrier. Subsidies are usually lower.',
-                uz: 'Operatoringizni o\'zgartirmasdan yangi telefon sotib olish. Subsidiyalar kichikroq.',
-                    kk: 'Операторды өзгертпей жаңа телефон сатып алу. Жеңілдіктер әдетте төмен болады.'
-    },
-    riskLevel: 'neutral',
+            uz: 'Operatoringizni o\'zgartirmasdan yangi telefon sotib olish. Subsidiyalar kichikroq.',
+            kk: 'Операторды өзгертпей жаңа телефон сатып алу. Жеңілдіктер әдетте төмен болады.'
+        },
+        riskLevel: 'neutral',
         riskLabel: { ru: 'Сохранение скидок', en: 'Keep Discounts', uz: 'Chegirmalarni saqlash', kk: 'Жеңілдіктерді сақтау' }
-},
-{
-    id: 'op_3',
+    },
+    {
+        id: 'op_3',
         category: { ru: 'Операторы', en: 'Carriers', uz: 'Operatorlar', kk: 'Операторлар' },
-    termKo: '알뜰폰 (Al-tteul-pon)',
+        termKo: '알뜰폰 (Al-tteul-pon)',
         termTrans: { ru: 'Виртуальный (MVNO)', en: 'Budget MVNO', uz: 'Byudjet operatori', kk: 'Бюджеттік оператор' },
-    meaning: {
-        ru: 'Бюджетные операторы. Арендуют вышки у большой тройки. Качество 1-в-1, цена в 3 раза ниже.',
+        meaning: {
+            ru: 'Бюджетные операторы. Арендуют вышки у большой тройки. Качество 1-в-1, цена в 3 раза ниже.',
             en: 'Budget carriers using top 3 networks. Exact same quality, 3x cheaper.',
-                uz: 'Byudjetli operatorlar. Kalta tarmoqli sifat, 3 baravar arzon.',
-                    kk: 'Бюджеттік операторлар. Сапасы бірдей, 3 есе арзан.'
-    },
-    riskLevel: 'safe',
+            uz: 'Byudjetli operatorlar. Kalta tarmoqli sifat, 3 baravar arzon.',
+            kk: 'Бюджеттік операторлар. Сапасы бірдей, 3 есе арзан.'
+        },
+        riskLevel: 'safe',
         riskLabel: { ru: 'Выбор для экономии', en: 'Budget Choice', uz: 'Tejamkor tanlov', kk: 'Үнемдеу үшін таңдау' }
-},
-{
-    id: 'op_4',
+    },
+    {
+        id: 'op_4',
         category: { ru: 'Операторы', en: 'Carriers', uz: 'Operatorlar', kk: 'Операторлар' },
-    termKo: '신규가입 (Sin-gyu)',
+        termKo: '신규가입 (Sin-gyu)',
         termTrans: { ru: 'Новый номер', en: 'New Number', uz: 'Yangi raqam', kk: 'Жаңа нөмір' },
-    meaning: {
-        ru: 'Покупка полностью новой сим-карты с новым номером. На нее дают меньше всего бонусов.',
+        meaning: {
+            ru: 'Покупка полностью новой сим-карты с новым номером. На нее дают меньше всего бонусов.',
             en: 'Purchasing a completely new SIM with a new number. Smallest bonuses.',
-                uz: 'Yangi raqam bilan mutlaqo yangi SIM lita olish. Eng kam bonus beriladi.',
-                    kk: 'Жаңа нөмірмен мүлдем жаңа SIM картаны сатып алу. Ең аз бонустар беріледі.'
-    },
-    riskLevel: 'neutral',
+            uz: 'Yangi raqam bilan mutlaqo yangi SIM lita olish. Eng kam bonus beriladi.',
+            kk: 'Жаңа нөмірмен мүлдем жаңа SIM картаны сатып алу. Ең аз бонустар беріледі.'
+        },
+        riskLevel: 'neutral',
         riskLabel: { ru: 'Меньше скидок', en: 'Fewer Discounts', uz: 'Kam chegirmalar', kk: 'Аз жеңілдіктер' }
-},
+    },
 
-// --- Базовые Понятия ---
-{
-    id: 'bas_1',
+    // --- Базовые Понятия ---
+    {
+        id: 'bas_1',
         category: { ru: 'База', en: 'Basics', uz: 'Asosiy', kk: 'Негізгі' },
-    termKo: '요금제 (Yo-geum-je)',
+        termKo: '요금제 (Yo-geum-je)',
         termTrans: { ru: 'Тарифный план', en: 'Tariff Plan', uz: 'Tarif rejasi', kk: 'Тарифтік жоспар' },
-    meaning: {
-        ru: 'Ваш ежемесячный тариф на связь и интернет. Обычно оплачивается в конце месяца.',
+        meaning: {
+            ru: 'Ваш ежемесячный тариф на связь и интернет. Обычно оплачивается в конце месяца.',
             en: 'Your monthly cell and data plan. Usually billed at the end of the month.',
-                uz: 'Sizning oylik aloqa va internet tarifi. Odatda oy oxirida to\'lanadi.',
-                    kk: 'Сіздің ай сайынғы байланыс және интернет тарифіңіз. Әдетте айдың соңында төленеді.'
-    },
-    riskLevel: 'safe',
+            uz: 'Sizning oylik aloqa va internet tarifi. Odatda oy oxirida to\'lanadi.',
+            kk: 'Сіздің ай сайынғы байланыс және интернет тарифіңіз. Әдетте айдың соңында төленеді.'
+        },
+        riskLevel: 'safe',
         riskLabel: { ru: 'Основа', en: 'Foundation', uz: 'Asos', kk: 'Негіз' }
-},
-{
-    id: 'bas_2',
+    },
+    {
+        id: 'bas_2',
         category: { ru: 'База', en: 'Basics', uz: 'Asosiy', kk: 'Негізгі' },
-    termKo: '약정 (Yak-jeong)',
+        termKo: '약정 (Yak-jeong)',
         termTrans: { ru: 'Договор (Срок)', en: 'Contract Period', uz: 'Shartnoma (Muddat)', kk: 'Келісімшарт (Мерзім)' },
-    meaning: {
-        ru: 'Обязательный срок контракта (обычно 1 или 2 года), за который вам дают скидку на телефон или тариф.',
+        meaning: {
+            ru: 'Обязательный срок контракта (обычно 1 или 2 года), за который вам дают скидку на телефон или тариф.',
             en: 'Mandatory contract period (usually 1/2 years) in exchange for device or plan discounts.',
-                uz: 'Telefon yoki tarifga chegirma beriladigan majburiy shartnoma muddati (odatda 1-2 yil).',
-                    kk: 'Телефонға немесе тарифке жеңілдік берілетін міндетті келісімшарт мерзімі (әдетте 1 немесе 2 жыл).'
-    },
-    riskLevel: 'neutral',
+            uz: 'Telefon yoki tarifga chegirma beriladigan majburiy shartnoma muddati (odatda 1-2 yil).',
+            kk: 'Телефонға немесе тарифке жеңілдік берілетін міндетті келісімшарт мерзімі (әдетте 1 немесе 2 жыл).'
+        },
+        riskLevel: 'neutral',
         riskLabel: { ru: 'Срок контракта', en: 'Contract Length', uz: 'Shartnoma muddati', kk: 'Келісімшарт мерзімі' }
-},
-{
-    id: 'bas_3',
+    },
+    {
+        id: 'bas_3',
         category: { ru: 'База', en: 'Basics', uz: 'Asosiy', kk: 'Негізгі' },
-    termKo: '위약금 (Wi-yak-geum)',
+        termKo: '위약금 (Wi-yak-geum)',
         termTrans: { ru: 'Неустойка (Штраф)', en: 'Cancellation Penalty', uz: 'Jarima (Bekor qilish uchun)', kk: 'Айыппұл (Шартты бұзғаны үшін)' },
-    meaning: {
-        ru: 'Штраф, который вы платите оператору, если расторгаете контракт (약정) раньше оговоренного срока.',
-            en: 'Penalty fee you must pay to the carrier if you cancel your contract early.',
-                uz: 'Shartnomani belgilangan muddatdan oldin bekor qilsangiz, operatorga to\'lanadigan jarima.',
-                    kk: 'Келісімшарт мерзімінен бұрын бұзылған жағдайда операторға төленетін айыппұл.'
+        meaning: {
+            ru: 'Штраф за досрочное расторжение контракта. Подробно расписан в разделе "Контракты".',
+            en: 'Early termination fee. Detailed in the "Contracts" section.',
+            uz: 'Shartnomani muddatidan oldin bekor qilish jarimasi.',
+            kk: 'Келісімшартты мерзімінен бұрын бұзғаны үшін айыппұл.'
+        },
+        riskLevel: 'warning',
+        riskLabel: { ru: 'См. раздел Контракты', en: 'See Contracts Section', uz: 'Shartnomalar bo\'limiga qarang', kk: 'Келісімшарттар бөлімін қараңыз' }
     },
-    riskLevel: 'warning',
-        riskLabel: { ru: 'Дополнительные расходы', en: 'Extra Costs', uz: 'Qo\'shimcha xarajatlar', kk: 'Қосымша шығындар' }
-},
-{
-    id: 'bas_4',
+    {
+        id: 'bas_4',
         category: { ru: 'База', en: 'Basics', uz: 'Asosiy', kk: 'Негізгі' },
-    termKo: '부가세 (Bu-ga-se)',
+        termKo: '부가세 (Bu-ga-se)',
         termTrans: { ru: 'НДС (Налог 10%)', en: 'VAT (10% Tax)', uz: 'QQS (10% Soliq)', kk: 'ҚҚС (10% Салық)' },
-    meaning: {
-        ru: 'Налог на добавленную стоимость. Часто продавцы называют сумму тарифа "до" налога. Всегда прибавляйте 10%.',
+        meaning: {
+            ru: 'Налог на добавленную стоимость. Часто продавцы называют сумму тарифа "до" налога. Всегда прибавляйте 10%.',
             en: 'Value Added Tax. Sellers often quote prices without it. Always add 10%.',
-                uz: 'Qo\'shilgan qiymat solig\'i. Ko\'pincha soliqsiz narx aytiladi. Doim 10% qo\'shing.',
-                    kk: 'Қосылған құн салығы. Сатушылар жиі салықсыз бағаны атайды. Әрқашан 10% қосыңыз.'
-    },
-    riskLevel: 'info',
+            uz: 'Qo\'shilgan qiymat solig\'i. Ko\'pincha soliqsiz narx aytiladi. Doim 10% qo\'shing.',
+            kk: 'Қосылған құн салығы. Сатушылар жиі салықсыз бағаны атайды. Әрқашан 10% қосыңыз.'
+        },
+        riskLevel: 'info',
         riskLabel: { ru: 'Обратите внимание', en: 'Take Note', uz: 'E\'tibor bering', kk: 'Назар аударыңыз' }
-},
-{
-    id: 'bas_5',
+    },
+    {
+        id: 'bas_5',
         category: { ru: 'База', en: 'Basics', uz: 'Asosiy', kk: 'Негізгі' },
-    termKo: '데이터 무제한 (De-i-teo Mu-je-han)',
+        termKo: '데이터 무제한 (De-i-teo Mu-je-han)',
         termTrans: { ru: 'Безлимитный интернет', en: 'Unlimited Data', uz: 'Cheksiz internet', kk: 'Шексіз интернет' },
-    meaning: {
-        ru: 'Тариф, где после исчерпания основного трафика на высокой скорости, скорость падает (например до 1Mbps-5Mbps), но интернет не отключается и доплаты нет.',
+        meaning: {
+            ru: 'Тариф, где после исчерпания основного трафика на высокой скорости, скорость падает (например до 1Mbps-5Mbps), но интернет не отключается и доплаты нет.',
             en: 'Plan where after high-speed data runs out, speed drops but internet remains free and unlimited.',
-                uz: 'Asosiy trafik tugagach tezlik pasayadi, lekin internet o\'chmaydi va bepul qoladi.',
-                    kk: 'Негізгі трафик таусылғаннан кейін жылдамдық төмендейтін, бірақ интернет өшпейтін және тегін қалатын тариф.'
-    },
-    riskLevel: 'safe',
+            uz: 'Asosiy trafik tugagach tezlik pasayadi, lekin internet o\'chmaydi va bepul qoladi.',
+            kk: 'Негізгі трафик таусылғаннан кейін жылдамдық төмендейтін, бірақ интернет өшпейтін және тегін қалатын тариф.'
+        },
+        riskLevel: 'safe',
         riskLabel: { ru: 'Без доплат', en: 'No Extra Fees', uz: 'Qo\'shimcha to\'lovsiz', kk: 'Қосымша төлемсіз' }
-},
-{
-    id: 'bas_6',
+    },
+    {
+        id: 'bas_6',
         category: { ru: 'База', en: 'Basics', uz: 'Asosiy', kk: 'Негізгі' },
-    termKo: '선불폰 (Seon-bul-pon)',
+        termKo: '선불폰 (Seon-bul-pon)',
         termTrans: { ru: 'Предоплата (Prepaid)', en: 'Prepaid Phone', uz: 'Oldindan to\'lov (Prepaid)', kk: 'Күні бұрын төлеу (Prepaid)' },
-    meaning: {
-        ru: 'Вы кладете деньги на счет заранее (как дорожный билет). Идеально для туристов, нелегалов или людей с плохой кредиткой.',
+        meaning: {
+            ru: 'Вы кладете деньги на счет заранее (как дорожный билет). Идеально для туристов, нелегалов или людей с плохой кредиткой.',
             en: 'You pay upfront for texts/data. Ideal for tourists, or people without credit history.',
-                uz: 'Siz oldindan pul kiritasiz. Turistlar, vizasizlar yoki kredit tarixi yomonlar uchun mos.',
-                    kk: 'Ақшаны алдын ала саласыз. Туристерге, заңсыз жүргендерге немесе несие тарихы нашар адамдарға қолайлы.'
-    },
-    riskLevel: 'neutral',
+            uz: 'Siz oldindan pul kiritasiz. Turistlar, vizasizlar yoki kredit tarixi yomonlar uchun mos.',
+            kk: 'Ақшаны алдын ала саласыз. Туристерге, заңсыз жүргендерге немесе несие тарихы нашар адамдарға қолайлы.'
+        },
+        riskLevel: 'neutral',
         riskLabel: { ru: 'Всем доступно', en: 'Accessible to All', uz: 'Barchaga ochiq', kk: 'Барлығына қолжетімді' }
-},
-{
-    id: 'bas_7',
-        category: { ru: 'База', en: 'Basics', uz: 'Asosiy', kk: 'Негізгі' },
-    termKo: '가족결합 (Ga-jok-gyeol-hap)',
-        termTrans: { ru: 'Семейная скидка', en: 'Family Discount', uz: 'Oila chegirmasi', kk: 'Отбасылық жеңілдік' },
-    meaning: {
-        ru: 'Привязка номеров и интернета членов семьи к одному оператору (SK, KT, LG). Дает мощную скидку (до 50%) всем участникам.',
-            en: 'Linking family lines/internet to one carrier for huge combined discounts (up to 50%).',
-                uz: 'Oila a\'zolari raqamlarini bitta operatorga bog\'lash orqali barchaga katta chegirma (50% gacha).',
-                    kk: 'Отбасы мүшелерінің телефондары мен интернеттерін бір операторға біріктіру (SK, KT, LG). Бәріне үлкен жеңілдік береді (50%-ға дейін).'
     },
-    riskLevel: 'safe',
+    {
+        id: 'bas_7',
+        category: { ru: 'База', en: 'Basics', uz: 'Asosiy', kk: 'Негізгі' },
+        termKo: '가족결합 (Ga-jok-gyeol-hap)',
+        termTrans: { ru: 'Семейная скидка', en: 'Family Discount', uz: 'Oila chegirmasi', kk: 'Отбасылық жеңілдік' },
+        meaning: {
+            ru: 'Привязка номеров и интернета членов семьи к одному оператору (SK, KT, LG). Дает мощную скидку (до 50%) всем участникам.',
+            en: 'Linking family lines/internet to one carrier for huge combined discounts (up to 50%).',
+            uz: 'Oila a\'zolari raqamlarini bitta operatorga bog\'lash orqali barchaga katta chegirma (50% gacha).',
+            kk: 'Отбасы мүшелерінің телефондары мен интернеттерін бір операторға біріктіру (SK, KT, LG). Бәріне үлкен жеңілдік береді (50%-ға дейін).'
+        },
+        riskLevel: 'safe',
         riskLabel: { ru: 'Очень выгодно', en: 'Highly Profitable', uz: 'Juda foydali', kk: 'Өте тиімді' }
-}
+    }
 ];
