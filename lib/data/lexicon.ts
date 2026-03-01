@@ -107,12 +107,12 @@ export const telecomLexicon: LexiconTerm[] = [
         id: 'dev_7',
         category: { ru: 'Устройства', en: 'Devices', uz: 'Qurilmalar', kk: 'Құрылғылар' },
         termKo: '공기계 (Gong-gi-gye)',
-        termTrans: { ru: 'Чистый аппарат (без линии)', en: 'Contract-free / Clean IMEI', uz: 'Ro\'yxatdan o\'tmagan apparat', kk: 'Тіркелмеген құрылғы' },
+        termTrans: { ru: 'Чистый статус (может быть лого оператора)', en: 'Clean Status (May have carrier logo)', uz: 'To\'za status (operator logotipi bo\'lishi mumkin)', kk: 'Таза статус (оператор логотипі болуы мүмкін)' },
         meaning: {
-            ru: 'Смартфон, не привязанный ни к одному номеру. "Пустой" здесь означает, что в базе оператора за ним не числится активная линия. Он полностью готов к вашей SIM-карте и регистрации на ваше имя.',
-            en: 'Smartphones not tied to any number. "Empty" here means no active line is registered for it. Ready for your SIM card and registration.',
-            uz: 'Hech qanday raqamga bog\'lanmagan smartfon. "Bo\'sh" bu yerda operator bazasida faol liniya yo\'qligini anglatadi. SIM-kartangizga va o\'z nomingizga ro\'yxatdan o\'tishga tayyor.',
-            kk: 'Ешқандай нөмірге байланбаған смартфон. "Бос" мұнда оператор базасында белсенді желі жоқтығын білдіреді. Сіздің SIM-картаңызға және өз атыңызға тіркелуге дайын.'
+            ru: 'Смартфон без активной регистрации на номер. Если он был контрактным, при включении вы увидите логотип (KT/SK/LG), в отличие от 자급제. Главное — на нем нет долгов и он готов к новой SIM.',
+            en: 'Smartphone without active number registration. If it was on contract, you\'ll see a logo (KT/SK/LG) at boot, unlike Jagapje. Most importantly, it\'s debt-free and SIM-ready.',
+            uz: 'Raqamga bog\'lanmagan smartfon. Agar u shartnomada bo\'lgan bo\'lsa, yoqilganda Jagapjedan farqli o\'laroq logotipni (KT/SK/LG) ko\'rasiz. Asosiysi — unda qarz yo\'q va yangi SIM-ga tayyor.',
+            kk: 'Нөмірге тіркелмеген смартфон. Егер ол келісімшартта болса, Jagapje-ден айырмашылығы, іске қосу кезінде логотипті (KT/SK/LG) көресіз. Ең бастысы — онда қарыз жоқ және жаңа SIM-ге дайын.'
         },
         riskLevel: 'safe',
         riskLabel: { ru: 'Готов к работе', en: 'Ready to Use', uz: 'Ishga tayyor', kk: 'Жұмысқа дайын' }
@@ -121,12 +121,12 @@ export const telecomLexicon: LexiconTerm[] = [
         id: 'dev_8',
         category: { ru: 'Устройства', en: 'Devices', uz: 'Qurilmalar', kk: 'Құрылғылар' },
         termKo: '미사용 (Mi-sa-yong)',
-        termTrans: { ru: 'Неиспользованный', en: 'Unused', uz: 'Ishlatilmagan', kk: 'Қолданылмаған' },
+        termTrans: { ru: 'Неиспользованный (вскрыт)', en: 'Unused (Opened)', uz: 'Ishlatilmagan (ochilgan)', kk: 'Қолданылмаған (ашылған)' },
         meaning: {
-            ru: 'Телефон, который не использовался. Коробка может быть вскрыта, но сам аппарат не включали и не активировали.',
-            en: 'A phone that has not been used. The box may be opened, but the device itself has not been turned on or activated.',
-            uz: 'Ishlatilmagan telefon. Quti ochilgan bo\'lishi mumkin, lekin apparatning o\'zi yoqilmagan va faollashtirilmagan.',
-            kk: 'Қолданылмаған телефон. Қорап ашылған болуы мүмкін, бірақ құрылғының өзі қосылмаған және іске қосылмаған.'
+            ru: 'Телефон вскрыт (например, для проверки), но им не пользовались. Сюда часто относятся витринные образцы. Может иметь логотип оператора при включении.',
+            en: 'Phone is opened (e.g., for checking) but never used. Often includes display models. May show a carrier logo at startup.',
+            uz: 'Telefon ochilgan (masalan, tekshirish uchun), lekin ishlatilmagan. Ko\'pincha vitrina namunalarini o\'z ichiga oladi. Yoqilganda operator logotipi bo\'lishi mumkin.',
+            kk: 'Телефон ашылған (мысалы, тексеру үшін), бірақ қолданылмаған. Жиі витриналық үлгілерді қамтиды. Қосылған кезде оператор логотипі болуы мүмкін.'
         },
         riskLevel: 'safe',
         riskLabel: { ru: 'Состояние нового', en: 'New Condition', uz: 'Yangi holatda', kk: 'Жаңа күйде' }
@@ -135,15 +135,15 @@ export const telecomLexicon: LexiconTerm[] = [
         id: 'dev_9',
         category: { ru: 'Устройства', en: 'Devices', uz: 'Qurilmalar', kk: 'Құрылғылар' },
         termKo: '새제품 (Sae-je-pum)',
-        termTrans: { ru: 'Новый товар', en: 'New Product', uz: 'Yangi mahsulot', kk: 'Жаңа өнім' },
+        termTrans: { ru: 'Новый в упаковке', en: 'New in Box', uz: 'Qutidagi yangi', kk: 'Қораптағы жаңа' },
         meaning: {
-            ru: 'Абсолютно новый товар. Обычно подразумевает заводскую запечатку и полный комплект.',
-            en: 'Brand new product. Usually implies factory sealing and a full set of accessories.',
-            uz: 'Butunlay yangi mahsulot. Odatda zavod muhri va to\'liq to\'plamni anglatadi.',
-            kk: 'Мүлдем жаңа өнім. Әдетте зауыттық мөр мен толық жиынтықты білдіреді.'
+            ru: 'Полностью новый, запечатанный товар (в заводских пленках). Может быть как операторской версии (с логотипом), так и чистым 자급제.',
+            en: 'Completely new, sealed product (factory film). Can be either carrier version (with logo) or clean Jagapje.',
+            uz: 'Butunlay yangi, muhrlangan mahsulot (zavod plyonkasida). Ham operator versiyasi (logotip bilan), ham toza Jagapje bo\'lishi mumkin.',
+            kk: 'Мүлдем жаңа, мөрленген өнім (зауыттық пленкада). Операторлық нұсқа (логотиппен) да, таза Jagapje де болуы мүмкін.'
         },
         riskLevel: 'safe',
-        riskLabel: { ru: 'Заводской сбор', en: 'Factory Sealed', uz: 'Zavod muhrlangan', kk: 'Зауыттық мөр' }
+        riskLabel: { ru: 'Запечатан', en: 'Sealed', uz: 'Muhrlangan', kk: 'Мөрленген' }
     },
     {
         id: 'dev_10',
@@ -151,13 +151,69 @@ export const telecomLexicon: LexiconTerm[] = [
         termKo: '신상품 (Sin-sang-pum)',
         termTrans: { ru: 'Свежая модель', en: 'Latest Model', uz: 'Yangi model', kk: 'Жаңа модель' },
         meaning: {
-            ru: 'Новинка на рынке. Самая актуальная модель в линейке производителя.',
-            en: 'New arrival on the market. The most current model in the manufacturer\'s lineup.',
-            uz: 'Bozordagi yangilik. Ishlab chiqaruvchi qatoridagi eng so\'nggi model.',
-            kk: 'Нарықтағы жаңалық. Өндіруші қатарындағы ең соңғы модель.'
+            ru: 'Новинка на рынке. Описание года/поколения модели, а не состояния конкретной коробки. Всегда самая мощная/актуальная на текущий момент.',
+            en: 'New arrival on the market. Describes the model generation, not the condition of a specific unit. Always the most current.',
+            uz: 'Bozordagi yangilik. Aniq qutining holati emas, model avlodining tavsifi. Har doim hozirgi vaqtdagi eng dolzarbi.',
+            kk: 'Нарықтағы жаңалық. Нақты қораптың күйі емес, модель ұрпағының сипаттамасы. Әрқашан қазіргі уақыттағы ең өзектісі.'
         },
         riskLevel: 'safe',
         riskLabel: { ru: 'Актуально', en: 'Current', uz: 'Dolzarb', kk: 'Өзекті' }
+    },
+    {
+        id: 'dev_11',
+        category: { ru: 'Устройства', en: 'Devices', uz: 'Qurilmalar', kk: 'Құрылғылар' },
+        termKo: '중고폰 (Jung-go-pon)',
+        termTrans: { ru: 'Б/У телефон (Подержанный)', en: 'Used Phone', uz: 'Ishlatilgan telefon', kk: 'Қолданылған телефон' },
+        meaning: {
+            ru: 'Телефон, который был в использовании. Обязательно проверяйте Grade: SS (идеал), S (как новый), A (мелкие коцки), B (заметные царапины), C-F (дефекты/лом).',
+            en: 'A phone that has been in use. Always check the Grade: SS (Mint), S (Like new), A (Minor wear), B (Noticeable scratches), C-F (Defects/Junk).',
+            uz: 'Ishlatilgan telefon. Har doim Grade-ni tekshiring: SS (ideal), S (yangidek), A (kichik chiziqlar), B (sezilarli chiziqlar), C-F (nuqsonlar).',
+            kk: 'Қолданыста болған телефон. Әрқашан Grade-ті тексеріңіз: SS (идеал), S (жаңа сияқты), A (кішкене сызаттар), B (айқын сызаттар), C-F (ақаулар).'
+        },
+        riskLevel: 'neutral',
+        riskLabel: { ru: 'Проверять грейд', en: 'Check Grade', uz: 'Grade-ni tekshiring', kk: 'Grade-ті тексеріңіз' }
+    },
+    {
+        id: 'dev_12',
+        category: { ru: 'Устройства', en: 'Devices', uz: 'Qurilmalar', kk: 'Құрылғылар' },
+        termKo: '리퍼폰 (Ri-peo-pon)',
+        termTrans: { ru: 'Восстановленный (Refurbished)', en: 'Refurbished Phone', uz: 'Qayta tiklangan telefon', kk: 'Қалпына келтірілген телефон' },
+        meaning: {
+            ru: 'Телефон, прошедший ремонт или замену деталей. Бывает официальный (Refurbished by Samsung/Apple) или неофициальный (сборка в мастерской). Состояние зависит от грейда.',
+            en: 'A phone that has undergone repair or parts replacement. Can be official (Refurbished by Samsung/Apple) or unofficial (shop-refurbished). Condition depends on grade.',
+            uz: 'Ta\'mirdan o\'tgan yoki qismlari almashtirilgan telefon. Rasmiy (Samsung/Apple tomonidan qayta tiklangan) yoki norasmiy (ustaxonada yig\'ilgan) bo\'lishi mumkin.',
+            kk: 'Жөндеуден өткен немесе бөлшектері ауыстырылған телефон. Ресми (Samsung/Apple қалпына келтірген) немесе бейресми (шеберханада жиналған) болуы мүмкін.'
+        },
+        riskLevel: 'warning',
+        riskLabel: { ru: 'Уточняйте тип рефа', en: 'Verify Refurb Type', uz: 'Tiklash turini aniqlang', kk: 'Қалпына келтіру түрін анықтаңыз' }
+    },
+    {
+        id: 'dev_13',
+        category: { ru: 'Устройства', en: 'Devices', uz: 'Qurilmalar', kk: 'Құрылғылар' },
+        termKo: '진열상품 (Jin-yeol-sang-pum)',
+        termTrans: { ru: 'Витринный образец', en: 'Display Model', uz: 'Vitrina namunasi', kk: 'Витриналық үлгі' },
+        meaning: {
+            ru: 'Выставочный экземпляр, который стоял на полке в магазине. Часто продается как "미사용", но может иметь следы от рук или постоянной зарядки. Обычно имеет лого оператора.',
+            en: 'A display unit that stood on a shop shelf. Often sold as "Unused," but may have fingerprints or signs of constant charging. Usually carrier-branded.',
+            uz: 'Do\'kon peshtaxtasida turgan namuna. Ko\'pincha "ishlatilmagan" sifatida sotiladi, lekin qo\'l izlari yoki doimiy quvvatlash belgilari bo\'lishi mumkin.',
+            kk: 'Дүкен сөресінде тұрған үлгі. Жиі "қолданылмаған" ретінде сатылады, бірақ қол іздері немесе тұрақты зарядтау белгілері болуы мүмкін.'
+        },
+        riskLevel: 'neutral',
+        riskLabel: { ru: 'Среднее состояние', en: 'Fair Condition', uz: 'O\'rtacha holat', kk: 'Орташа күй' }
+    },
+    {
+        id: 'dev_14',
+        category: { ru: 'Устройства', en: 'Devices', uz: 'Qurilmalar', kk: 'Құрылғылар' },
+        termKo: 'Grade (SS, S, A, B, C, D, E, F)',
+        termTrans: { ru: 'Шкала состояния (Грейды)', en: 'Condition Scale (Grades)', uz: 'Holat shkalasi (Grade)', kk: 'Күй шкаласы (Grade)' },
+        meaning: {
+            ru: 'SS: идеал (пленки); S: как новый; A: рабочее (царапины); B: вмятины; C: выгорание/трещины; D-F: хлам на запчасти. Грейд A — это НЕ идеальное состояние!',
+            en: 'SS: Mint (sealed); S: Like new; A: Working (scratches); B: Dents; C: Burn-in/cracks; D-F: Junk for parts. Grade A is NOT mint condition!',
+            uz: 'SS: ideal (plyonkalar); S: yangidek; A: ishchi holat (chiziqlar); B: egilgan joylar; C: kuyish/yorilish; D-F: ehtiyot qismlar uchun. Grade A ideal emas!',
+            kk: 'SS: идеал (пленкалар); S: жаңа сияқты; A: жұмыс күйі (сызаттар); B: майысқан жерлер; C: күю/жарылу; D-F: қосалқы бөлшектер үшін. Grade A идеал емес!'
+        },
+        riskLevel: 'warning',
+        riskLabel: { ru: 'Учите матчасть', en: 'Know the Grades', uz: 'Grade-ni biling', kk: 'Grade-ті біліңіз' }
     },
 
     // --- Состояние экрана ---
