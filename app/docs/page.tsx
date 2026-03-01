@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { ResourcesRegistry } from '../components/ResourcesRegistry';
-import { TelecomLexicon } from '../components/TelecomLexicon';
+import { LexiconRegistry } from '../components/LexiconRegistry';
 import { translations } from '../../lib/translations';
 
 export default function DocsPage() {
@@ -43,7 +43,7 @@ export default function DocsPage() {
                     <ResourcesRegistry t={t} uiLang={uiLang} />
                 </div>
                 <div className={`absolute inset-0 transition-opacity duration-300 ${activeTab === 'lexicon' ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'}`}>
-                    <TelecomLexicon t={t} uiLang={uiLang} />
+                    <LexiconRegistry t={t} uiLang={uiLang} />
                 </div>
             </div>
         </div>

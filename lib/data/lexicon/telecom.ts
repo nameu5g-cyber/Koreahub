@@ -1,25 +1,9 @@
-export type RiskLevel = 'safe' | 'neutral' | 'warning' | 'danger' | 'info';
+import { LexiconTerm } from './types';
 
-export type LocalizedString = {
-    ru: string;
-    en: string;
-    uz: string;
-    kk: string;
-};
-
-export interface LexiconTerm {
-    id: string;
-    category: LocalizedString;
-    termKo: string;
-    termTrans: LocalizedString;
-    meaning: LocalizedString;
-    riskLevel: RiskLevel;
-    riskLabel: LocalizedString;
-}
-
-export const telecomLexicon: LexiconTerm[] = [
+export const telecomData: LexiconTerm[] = [
     // --- Состояние телефона ---
     {
+        domain: 'telecom',
         id: 'dev_1',
         category: { ru: 'Устройства', en: 'Devices', uz: 'Qurilmalar', kk: 'Құрылғылар' },
         termKo: '자급제 (Ja-geup-je)',
@@ -34,6 +18,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Полностью безопасен', en: 'Completely Safe', uz: 'To\'liq xavfsiz', kk: 'Толық қауіпсіз' }
     },
     {
+        domain: 'telecom',
         id: 'dev_2',
         category: { ru: 'Устройства', en: 'Devices', uz: 'Qurilmalar', kk: 'Құрылғылар' },
         termKo: '정상해지 (Jeong-sang-hae-ji)',
@@ -48,6 +33,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Переоформление прав', en: 'Ownership Transfer', uz: 'Egalik huquqini o\'tkazish', kk: 'Құқықтарды беру' }
     },
     {
+        domain: 'telecom',
         id: 'dev_3',
         category: { ru: 'Устройства', en: 'Devices', uz: 'Qurilmalar', kk: 'Құрылғылар' },
         termKo: '미개봉 (Mi-gae-bong)',
@@ -62,6 +48,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Как новый', en: 'Like New', uz: 'Yangi kabi', kk: 'Жаңа сияқты' }
     },
     {
+        domain: 'telecom',
         id: 'dev_4',
         category: { ru: 'Устройства', en: 'Devices', uz: 'Qurilmalar', kk: 'Құрылғылар' },
         termKo: '가개통 (Ga-gae-tong)',
@@ -76,6 +63,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'КРИТИЧЕСКИЙ РИСК', en: 'CRITICAL RISK', uz: 'KRITIK XAVF', kk: 'АСА ҚАУІПТІ' }
     },
     {
+        domain: 'telecom',
         id: 'dev_5',
         category: { ru: 'Устройства', en: 'Devices', uz: 'Qurilmalar', kk: 'Құрылғылар' },
         termKo: '유심기변 (U-sim-gi-byeon)',
@@ -90,6 +78,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'ВЫСОКИЙ РИСК', en: 'HIGH RISK', uz: 'YUQORI XAVF', kk: 'ЖОҒАРЫ ҚАУІП' }
     },
     {
+        domain: 'telecom',
         id: 'dev_6',
         category: { ru: 'Устройства', en: 'Devices', uz: 'Qurilmalar', kk: 'Құрылғылар' },
         termKo: '분실·도난 (Bun-shil·Do-nan)',
@@ -104,6 +93,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'ОПАСНОСТЬ', en: 'DANGER', uz: 'XAVF', kk: 'ҚАУІПТІ' }
     },
     {
+        domain: 'telecom',
         id: 'dev_7',
         category: { ru: 'Устройства', en: 'Devices', uz: 'Qurilmalar', kk: 'Құрылғылар' },
         termKo: '공기계 (Gong-gi-gye)',
@@ -118,6 +108,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Готов к работе', en: 'Ready to Use', uz: 'Ishga tayyor', kk: 'Жұмысқа дайын' }
     },
     {
+        domain: 'telecom',
         id: 'dev_8',
         category: { ru: 'Устройства', en: 'Devices', uz: 'Qurilmalar', kk: 'Құрылғылар' },
         termKo: '미사용 (Mi-sa-yong)',
@@ -132,6 +123,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Состояние нового', en: 'New Condition', uz: 'Yangi holatda', kk: 'Жаңа күйде' }
     },
     {
+        domain: 'telecom',
         id: 'dev_9',
         category: { ru: 'Устройства', en: 'Devices', uz: 'Qurilmalar', kk: 'Құрылғылар' },
         termKo: '새제품 (Sae-je-pum)',
@@ -146,6 +138,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Запечатан', en: 'Sealed', uz: 'Muhrlangan', kk: 'Мөрленген' }
     },
     {
+        domain: 'telecom',
         id: 'dev_10',
         category: { ru: 'Устройства', en: 'Devices', uz: 'Qurilmalar', kk: 'Құрылғылар' },
         termKo: '신상품 (Sin-sang-pum)',
@@ -160,6 +153,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Актуально', en: 'Current', uz: 'Dolzarb', kk: 'Өзекті' }
     },
     {
+        domain: 'telecom',
         id: 'dev_11',
         category: { ru: 'Устройства', en: 'Devices', uz: 'Qurilmalar', kk: 'Құрылғылар' },
         termKo: '중고폰 (Jung-go-pon)',
@@ -174,6 +168,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Проверять грейд', en: 'Check Grade', uz: 'Grade-ni tekshiring', kk: 'Grade-ті тексеріңіз' }
     },
     {
+        domain: 'telecom',
         id: 'dev_12',
         category: { ru: 'Устройства', en: 'Devices', uz: 'Qurilmalar', kk: 'Құрылғылар' },
         termKo: '리퍼폰 (Ri-peo-pon)',
@@ -188,6 +183,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Уточняйте тип рефа', en: 'Verify Refurb Type', uz: 'Tiklash turini aniqlang', kk: 'Қалпына келтіру түрін анықтаңыз' }
     },
     {
+        domain: 'telecom',
         id: 'dev_13',
         category: { ru: 'Устройства', en: 'Devices', uz: 'Qurilmalar', kk: 'Құрылғылар' },
         termKo: '진열상품 (Jin-yeol-sang-pum)',
@@ -202,6 +198,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Среднее состояние', en: 'Fair Condition', uz: 'O\'rtacha holat', kk: 'Орташа күй' }
     },
     {
+        domain: 'telecom',
         id: 'dev_14',
         category: { ru: 'Устройства', en: 'Devices', uz: 'Qurilmalar', kk: 'Құрылғылар' },
         termKo: 'Grade (SS, S, A, B, C, D, E, F)',
@@ -216,6 +213,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Учите матчасть', en: 'Know the Grades', uz: 'Grade-ni biling', kk: 'Grade-ті біліңіз' }
     },
     {
+        domain: 'telecom',
         id: 'con_1',
         category: { ru: 'Контракты', en: 'Contracts', uz: 'Shartnomalar', kk: 'Келісімшарттар' },
         termKo: '위약금 (Wi-yak-geum)',
@@ -230,6 +228,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'ФИНАНСОВЫЙ РИСК', en: 'FINANCIAL RISK', uz: 'MOLIYAVIY XAVF', kk: 'ҚАРЖЫЛЫҚ ҚАУІП' }
     },
     {
+        domain: 'telecom',
         id: 'con_2',
         category: { ru: 'Контракты', en: 'Contracts', uz: 'Shartnomalar', kk: 'Келісімшарттар' },
         termKo: '공시지원금 (Gong-si-ji-won)',
@@ -244,6 +243,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Скидка на телефон', en: 'Device Discount', uz: 'Telefon chegirmasi', kk: 'Телефон жеңілдігі' }
     },
     {
+        domain: 'telecom',
         id: 'con_3',
         category: { ru: 'Контракты', en: 'Contracts', uz: 'Shartnomalar', kk: 'Келісімшарттар' },
         termKo: '선택약정 (Seon-taek-yak-jeong)',
@@ -258,6 +258,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Экономия связи', en: 'Save on Plan', uz: 'Aloqada tejash', kk: 'Байланысты үнемдеу' }
     },
     {
+        domain: 'telecom',
         id: 'sec_1',
         category: { ru: 'Безопасность', en: 'Security', uz: 'Xavfsizlik', kk: 'Қауіпсіздік' },
         termKo: '확정기변 (Hwak-jeong-gi-byeon)',
@@ -272,6 +273,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Юридически чисто', en: 'Legally Clean', uz: 'Huquqiy toza', kk: 'Құқықтық таза' }
     },
     {
+        domain: 'telecom',
         id: 'sec_2',
         category: { ru: 'Безопасность', en: 'Security', uz: 'Xavfsizlik', kk: 'Қауіпсіздік' },
         termKo: '정상해지 (Jeong-sang-hae-ji)',
@@ -286,6 +288,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Без долгов', en: 'No Debts', uz: 'Qarzsiz', kk: 'Қарызсыз' }
     },
     {
+        domain: 'telecom',
         id: 'sec_3',
         category: { ru: 'Безопасность', en: 'Security', uz: 'Xavfsizlik', kk: 'Қауіпсіздік' },
         termKo: '유심기변 (U-sim-gi-byeon)',
@@ -300,6 +303,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'ОГРАНИЧЕННЫЕ ПРАВА', en: 'LIMITED RIGHTS', uz: 'CHEKLANGAN HUQUQLAR', kk: 'ШЕКТЕУЛІ ҚҰҚЫҚТАР' }
     },
     {
+        domain: 'telecom',
         id: 'sec_4',
         category: { ru: 'Безопасность', en: 'Security', uz: 'Xavfsizlik', kk: 'Қауіпсіздік' },
         termKo: '구글락 / FRP (Account Lock)',
@@ -314,6 +318,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'РИСК БЛОКИРОВКИ', en: 'LOCK RISK', uz: 'BLOK XAVFI', kk: 'БҰҒАТТАУ ҚАУПІ' }
     },
     {
+        domain: 'telecom',
         id: 'sec_5',
         category: { ru: 'Безопасность', en: 'Security', uz: 'Xavfsizlik', kk: 'Қауіпсіздік' },
         termKo: 'IMEI (단말기식별번호)',
@@ -328,6 +333,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Код для проверки', en: 'Check Code', uz: 'Tekshirish kodi', kk: 'Тексеру коды' }
     },
     {
+        domain: 'telecom',
         id: 'ser_1',
         category: { ru: 'Сервис', en: 'Service', uz: 'Xizmatlar', kk: 'Қызметтер' },
         termKo: '일시정지 (Il-si-jeong-ji)',
@@ -342,6 +348,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Сохранение номера', en: 'Keep Number', uz: 'Raqamni saqlash', kk: 'Нөмірді сақтау' }
     },
     {
+        domain: 'telecom',
         id: 'ser_2',
         category: { ru: 'Сервис', en: 'Service', uz: 'Xizmatlar', kk: 'Қызметтер' },
         termKo: '부가서비스 (Bu-ga-seo-bi-seu)',
@@ -356,6 +363,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Обязательный период', en: 'Mandatory Period', uz: 'Majburiy muddat', kk: 'Міндетті мерзім' }
     },
     {
+        domain: 'telecom',
         id: 'ser_3',
         category: { ru: 'Сервис', en: 'Service', uz: 'Xizmatlar', kk: 'Қызметтер' },
         termKo: '리필 서비스 (Refill)',
@@ -370,6 +378,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Пополнение счета', en: 'Top-up Balance', uz: 'Balansni to\'ldirish', kk: 'Теңгерімді толтыру' }
     },
     {
+        domain: 'telecom',
         id: 'ser_4',
         category: { ru: 'Сервис', en: 'Service', uz: 'Xizmatlar', kk: 'Қызметтер' },
         termKo: '배터리 성능 (Battery Health)',
@@ -384,6 +393,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Проверять в настройках', en: 'Check Settings', uz: 'Sozlamalarda tekshiring', kk: 'Параметрлерде тексеріңіз' }
     },
     {
+        domain: 'telecom',
         id: 'fin_7',
         category: { ru: 'Оплата и Скидки', en: 'Payments & Discounts', uz: 'To\'lovlar va chegirmalar', kk: 'Төлемдер мен жеңілдіктер' },
         termKo: '할부원금 (Hal-bu-won-geum)',
@@ -398,6 +408,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'СМОТРИТЕ ЭТУ ЦИФРУ', en: 'TOTAL DEVICE DEBT', uz: 'ASOSIY QARZNI KO\'RING', kk: 'НЕГІЗГІ ҚАРЫЗДЫ ҚАРАҢЫЗ' }
     },
     {
+        domain: 'telecom',
         id: 'fin_8',
         category: { ru: 'Оплата и Скидки', en: 'Payments & Discounts', uz: 'To\'lovlar va chegirmalar', kk: 'Төлемдер мен жеңілдіктер' },
         termKo: '유심비 (SIM Fee)',
@@ -414,6 +425,7 @@ export const telecomLexicon: LexiconTerm[] = [
 
     // --- Состояние экрана ---
     {
+        domain: 'telecom',
         id: 'scr_1',
         category: { ru: 'Экраны', en: 'Screens', uz: 'Ekranlar', kk: 'Экрандар' },
         termKo: '약잔상 (Yak-jan-sang)',
@@ -428,6 +440,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Допустимо', en: 'Acceptable', uz: 'Qabul qilinadi', kk: 'Рұқсат етіледі' }
     },
     {
+        domain: 'telecom',
         id: 'scr_2',
         category: { ru: 'Экраны', en: 'Screens', uz: 'Ekranlar', kk: 'Экрандар' },
         termKo: '강잔상 (Gang-jan-sang)',
@@ -442,6 +455,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Внимание', en: 'Caution', uz: 'Diqqat', kk: 'Назар аударыңыз' }
     },
     {
+        domain: 'telecom',
         id: 'scr_3',
         category: { ru: 'Экраны', en: 'Screens', uz: 'Ekranlar', kk: 'Экрандар' },
         termKo: '흑잔상 (Heuk-jan-sang)',
@@ -456,6 +470,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Избегать', en: 'Avoid', uz: 'Saqlaning', kk: 'Аулақ болыңыз' }
     },
     {
+        domain: 'telecom',
         id: 'scr_4',
         category: { ru: 'Экраны', en: 'Screens', uz: 'Ekranlar', kk: 'Экрандар' },
         termKo: '백잔상 (Baek-jan-sang)',
@@ -472,6 +487,7 @@ export const telecomLexicon: LexiconTerm[] = [
 
     // --- Сделки и Скидки ---
     {
+        domain: 'telecom',
         id: 'fin_1',
         category: { ru: 'Оплата и Скидки', en: 'Payments & Discounts', uz: 'To\'lovlar va chegirmalar', kk: 'Төлемдер мен жеңілдіктер' },
         termKo: '완납 (현금완납)',
@@ -486,6 +502,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Рекомендуется', en: 'Recommended', uz: 'Tavsiya etiladi', kk: 'Ұсынылады' }
     },
     {
+        domain: 'telecom',
         id: 'fin_2',
         category: { ru: 'Оплата и Скидки', en: 'Payments & Discounts', uz: 'To\'lovlar va chegirmalar', kk: 'Төлемдер мен жеңілдіктер' },
         termKo: '할부 (Hal-bu)',
@@ -500,6 +517,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: '+5.9% годовых', en: '+5.9% APR', uz: '+5.9% yillik', kk: '+5.9% жылдық' }
     },
     {
+        domain: 'telecom',
         id: 'fin_3',
         category: { ru: 'Оплата и Скидки', en: 'Payments & Discounts', uz: 'To\'lovlar va chegirmalar', kk: 'Төлемдер мен жеңілдіктер' },
         termKo: '잔액 / 할부잔액',
@@ -514,6 +532,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Долг за аппарат', en: 'Device Debt', uz: 'Qurilma qarzi', kk: 'Құрылғы қарызы' }
     },
     {
+        domain: 'telecom',
         id: 'fin_4',
         category: { ru: 'Оплата и Скидки', en: 'Payments & Discounts', uz: 'To\'lovlar va chegirmalar', kk: 'Төлемдер мен жеңілдіктер' },
         termKo: '선택약정 (선약)',
@@ -528,6 +547,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Длительная выгода', en: 'Long-term Benefit', uz: 'Uzoq muddatli foyda', kk: 'Ұзақ мерзімді пайда' }
     },
     {
+        domain: 'telecom',
         id: 'fin_5',
         category: { ru: 'Оплата и Скидки', en: 'Payments & Discounts', uz: 'To\'lovlar va chegirmalar', kk: 'Төлемдер мен жеңілдіктер' },
         termKo: '공시지원금 (지원금)',
@@ -542,6 +562,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Разовая скидка', en: 'One-time Discount', uz: 'Bir martalik chegirma', kk: 'Бір реттік жеңілдік' }
     },
     {
+        domain: 'telecom',
         id: 'fin_6',
         category: { ru: 'Оплата и Скидки', en: 'Payments & Discounts', uz: 'To\'lovlar va chegirmalar', kk: 'Төлемдер мен жеңілдіктер' },
         termKo: '할인 (Hal-in)',
@@ -556,6 +577,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Общий термин', en: 'General Term', uz: 'Umumiy atama', kk: 'Жалпы термин' }
     },
     {
+        domain: 'telecom',
         id: 'fin_6a',
         category: { ru: 'Оплата и Скидки', en: 'Payments & Discounts', uz: 'To\'lovlar va chegirmalar', kk: 'Төлемдер мен жеңілдіктер' },
         termKo: '후불 (Hu-bul)',
@@ -570,6 +592,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Стандарт', en: 'Standard', uz: 'Standart', kk: 'Стандартты' }
     },
     {
+        domain: 'telecom',
         id: 'fin_6b',
         category: { ru: 'Оплата и Скидки', en: 'Payments & Discounts', uz: 'To\'lovlar va chegirmalar', kk: 'Төлемдер мен жеңілдіктер' },
         termKo: '충전 (Chung-jeon)',
@@ -584,6 +607,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Для предоплаты', en: 'For Prepaid', uz: 'Oldindan to\'lov uchun', kk: 'Алдын ала төлеуге арналған' }
     },
     {
+        domain: 'telecom',
         id: 'fin_6c',
         category: { ru: 'Оплата и Скидки', en: 'Payments & Discounts', uz: 'To\'lovlar va chegirmalar', kk: 'Төлемдер мен жеңілдіктер' },
         termKo: '환불 (Hwan-bul)',
@@ -598,6 +622,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Знать свои права', en: 'Know Your Rights', uz: 'Huquqlarni bilish', kk: 'Құқықтарды білу' }
     },
     {
+        domain: 'telecom',
         id: 'fin_6d',
         category: { ru: 'Оплата и Скидки', en: 'Payments & Discounts', uz: 'To\'lovlar va chegirmalar', kk: 'Төлемдер мен жеңілдіктер' },
         termKo: '가상계좌 (Ga-sang-gye-jwa)',
@@ -612,6 +637,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Для оплаты', en: 'For Payment', uz: 'To\'lov uchun', kk: 'Төлем үшін' }
     },
     {
+        domain: 'telecom',
         id: 'fin_6e',
         category: { ru: 'Оплата и Скидки', en: 'Payments & Discounts', uz: 'To\'lovlar va chegirmalar', kk: 'Төлемдер мен жеңілдіктер' },
         termKo: '입금 (Ip-geum)',
@@ -626,6 +652,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Оплата', en: 'Payment', uz: 'To\'lov', kk: 'Төлем' }
     },
     {
+        domain: 'telecom',
         id: 'fin_6f',
         category: { ru: 'Оплата и Скидки', en: 'Payments & Discounts', uz: 'To\'lovlar va chegirmalar', kk: 'Төлемдер мен жеңілдіктер' },
         termKo: '납부 (Nap-bu)',
@@ -640,6 +667,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Оплата счетов', en: 'Bill Payment', uz: 'Hisob to\'lovi', kk: 'Шот төлемі' }
     },
     {
+        domain: 'telecom',
         id: 'fin_6g',
         category: { ru: 'Оплата и Скидки', en: 'Payments & Discounts', uz: 'To\'lovlar va chegirmalar', kk: 'Төлемдер мен жеңілдіктер' },
         termKo: '결제 (Gyeol-je)',
@@ -654,6 +682,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Безналичный расчет', en: 'Electronic Payment', uz: 'Naqd pulsiz to\'lov', kk: 'Қолма-қол ақшасыз төлем' }
     },
     {
+        domain: 'telecom',
         id: 'fin_6h',
         category: { ru: 'Оплата и Скидки', en: 'Payments & Discounts', uz: 'To\'lovlar va chegirmalar', kk: 'Төлемдер мен жеңілдіктер' },
         termKo: '내역 (Nae-yeok)',
@@ -668,6 +697,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Проверка истории', en: 'Check History', uz: 'Tarixni tekshirish', kk: 'Тарихты тексеру' }
     },
     {
+        domain: 'telecom',
         id: 'bas_1a',
         category: { ru: 'База', en: 'Basics', uz: 'Asosiy', kk: 'Негізгі' },
         termKo: '잔액조회 (Jan-aek-jo-hoe)',
@@ -682,6 +712,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Полезная команда', en: 'Useful Command', uz: 'Foydali buyruq', kk: 'Пайдалы пәрмен' }
     },
     {
+        domain: 'telecom',
         id: 'bas_1b',
         category: { ru: 'База', en: 'Basics', uz: 'Asosiy', kk: 'Негізгі' },
         termKo: '잔액이동 (Jan-aek-i-dong)',
@@ -696,6 +727,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Перевод средств', en: 'Fund Transfer', uz: 'Mablag\' o\'tkazish', kk: 'Қаражат аудару' }
     },
     {
+        domain: 'telecom',
         id: 'bas_1c',
         category: { ru: 'База', en: 'Basics', uz: 'Asosiy', kk: 'Негізгі' },
         termKo: '제공 (Je-gong)',
@@ -710,6 +742,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Объем тарифа', en: 'Plan Allowance', uz: 'Tarif hajmi', kk: 'Тариф көлемі' }
     },
     {
+        domain: 'telecom',
         id: 'bas_1d',
         category: { ru: 'База', en: 'Basics', uz: 'Asosiy', kk: 'Негізгі' },
         termKo: '사용량 (Sa-yong-ryang)',
@@ -724,6 +757,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Контроль лимита', en: 'Usage Control', uz: 'Limit nazorati', kk: 'Лимитті бақылау' }
     },
     {
+        domain: 'telecom',
         id: 'bas_1e',
         category: { ru: 'База', en: 'Basics', uz: 'Asosiy', kk: 'Негізгі' },
         termKo: '무제한 (Mu-je-han)',
@@ -738,6 +772,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Без ограничений', en: 'No Limits', uz: 'Cheklovsiz', kk: 'Шектеусіз' }
     },
     {
+        domain: 'telecom',
         id: 'bas_1f',
         category: { ru: 'База', en: 'Basics', uz: 'Asosiy', kk: 'Негізгі' },
         termKo: '통신사 (Tong-sin-sa)',
@@ -752,6 +787,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Провайдер', en: 'Provider', uz: 'Provayder', kk: 'Провайдер' }
     },
     {
+        domain: 'telecom',
         id: 'fin_7',
         category: { ru: 'Оплата и Скидки', en: 'Payments & Discounts', uz: 'To\'lovlar va chegirmalar', kk: 'Төлемдер мен жеңілдіктер' },
         termKo: '징 (Jing)',
@@ -766,6 +802,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Скрытая скидка', en: 'Hidden Discount', uz: 'Yashirin chegirma', kk: 'Жасырын жеңілдік' }
     },
     {
+        domain: 'telecom',
         id: 'fin_8',
         category: { ru: 'Оплата и Скидки', en: 'Payments & Discounts', uz: 'To\'lovlar va chegirmalar', kk: 'Төлемдер мен жеңілдіктер' },
         termKo: '차비 (Cha-bi)',
@@ -780,6 +817,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'РИСК ОБМАНА', en: 'SCAM RISK', uz: 'FIRIBGARLIK XAVFI', kk: 'АЛАЯҚТЫҚ ҚАУПІ' }
     },
     {
+        domain: 'telecom',
         id: 'fin_9',
         category: { ru: 'Оплата и Скидки', en: 'Payments & Discounts', uz: 'To\'lovlar va chegirmalar', kk: 'Төлемдер мен жеңілдіктер' },
         termKo: '페이백 (Payback)',
@@ -796,6 +834,7 @@ export const telecomLexicon: LexiconTerm[] = [
 
     // --- Ловушки и Развод ---
     {
+        domain: 'telecom',
         id: 'trap_1',
         category: { ru: 'Развод', en: 'Traps & Scams', uz: 'Tuzoq va firib', kk: 'Тұзақтар' },
         termKo: '실구매가 (Sil-gu-mae-ga)',
@@ -810,6 +849,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'МАРКЕТИНГОВЫЙ РАЗВОД', en: 'MARKETING SCAM', uz: 'MARKETING FIRIB', kk: 'МАРКЕТИНГ АЛАЯҚТЫҒЫ' }
     },
     {
+        domain: 'telecom',
         id: 'trap_2',
         category: { ru: 'Развод', en: 'Traps & Scams', uz: 'Tuzoq va firib', kk: 'Тұзақтар' },
         termKo: '48개월 할부 (48-gae-wol)',
@@ -824,6 +864,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'ДОЛГОВОЙ КАПКАН', en: 'DEBT TRAP', uz: 'QARZ TUZOG\'I', kk: 'ҚАРЫЗ ТҰЗАҒЫ' }
     },
     {
+        domain: 'telecom',
         id: 'trap_3',
         category: { ru: 'Развод', en: 'Traps & Scams', uz: 'Tuzoq va firib', kk: 'Тұзақтар' },
         termKo: '반납조건 (Ban-nap-jo-geon)',
@@ -838,6 +879,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'ОБМАН (FRAUD)', en: 'FRAUD Risk', uz: 'FIRIBGAR QILISH', kk: 'АЛАЯҚТЫҚ' }
     },
     {
+        domain: 'telecom',
         id: 'trap_4',
         category: { ru: 'Развод', en: 'Traps & Scams', uz: 'Tuzoq va firib', kk: 'Тұзақтар' },
         termKo: '카드결합 (Card-gyeol-hap)',
@@ -852,6 +894,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'ЛОВУШКА', en: 'FINANCIAL TRAP', uz: 'MOLIYAVIY TUZOQ', kk: 'ҚАРЖЫЛЫҚ ТҰЗАҚ' }
     },
     {
+        domain: 'telecom',
         id: 'trap_5',
         category: { ru: 'Развод', en: 'Traps & Scams', uz: 'Tuzoq va firib', kk: 'Тұзақтар' },
         termKo: '부가서비스 (Bu-ga-seo-bi-seu)',
@@ -866,6 +909,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Скрытые расходы', en: 'Hidden Costs', uz: 'Yashirin xarajatlar', kk: 'Жасырын шығындар' }
     },
     {
+        domain: 'telecom',
         id: 'trap_6',
         category: { ru: 'Развод', en: 'Traps & Scams', uz: 'Tuzoq va firib', kk: 'Тұзақтар' },
         termKo: '폰테크 (Phone-tech)',
@@ -882,6 +926,7 @@ export const telecomLexicon: LexiconTerm[] = [
 
     // --- Связь и Операторы ---
     {
+        domain: 'telecom',
         id: 'op_1',
         category: { ru: 'Операторы', en: 'Carriers', uz: 'Operatorlar', kk: 'Операторлар' },
         termKo: '번호이동 (번이)',
@@ -896,6 +941,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Наибольшая выгода', en: 'Max Benefit', uz: 'Eng katta foyda', kk: 'Максималды пайда' }
     },
     {
+        domain: 'telecom',
         id: 'op_2',
         category: { ru: 'Операторы', en: 'Carriers', uz: 'Operatorlar', kk: 'Операторлар' },
         termKo: '기기변경 (기변)',
@@ -910,6 +956,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Сохранение скидок', en: 'Keep Discounts', uz: 'Chegirmalarni saqlash', kk: 'Жеңілдіктерді сақтау' }
     },
     {
+        domain: 'telecom',
         id: 'op_3',
         category: { ru: 'Операторы', en: 'Carriers', uz: 'Operatorlar', kk: 'Операторлар' },
         termKo: '알뜰폰 (Al-tteul-pon)',
@@ -924,6 +971,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Выбор для экономии', en: 'Budget Choice', uz: 'Tejamkor tanlov', kk: 'Үнемдеу үшін таңдау' }
     },
     {
+        domain: 'telecom',
         id: 'op_4',
         category: { ru: 'Операторы', en: 'Carriers', uz: 'Operatorlar', kk: 'Операторлар' },
         termKo: '신규가입 (Sin-gyu)',
@@ -940,6 +988,7 @@ export const telecomLexicon: LexiconTerm[] = [
 
     // --- Базовые Понятия ---
     {
+        domain: 'telecom',
         id: 'bas_1',
         category: { ru: 'База', en: 'Basics', uz: 'Asosiy', kk: 'Негізгі' },
         termKo: '요금제 (Yo-geum-je)',
@@ -954,6 +1003,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Основа', en: 'Foundation', uz: 'Asos', kk: 'Негіз' }
     },
     {
+        domain: 'telecom',
         id: 'bas_2',
         category: { ru: 'База', en: 'Basics', uz: 'Asosiy', kk: 'Негізгі' },
         termKo: '약정 (Yak-jeong)',
@@ -968,6 +1018,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Срок контракта', en: 'Contract Length', uz: 'Shartnoma muddati', kk: 'Келісімшарт мерзімі' }
     },
     {
+        domain: 'telecom',
         id: 'bas_3',
         category: { ru: 'База', en: 'Basics', uz: 'Asosiy', kk: 'Негізгі' },
         termKo: '위약금 (Wi-yak-geum)',
@@ -982,6 +1033,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'См. раздел Контракты', en: 'See Contracts Section', uz: 'Shartnomalar bo\'limiga qarang', kk: 'Келісімшарттар бөлімін қараңыз' }
     },
     {
+        domain: 'telecom',
         id: 'bas_4',
         category: { ru: 'База', en: 'Basics', uz: 'Asosiy', kk: 'Негізгі' },
         termKo: '부가세 (Bu-ga-se)',
@@ -996,6 +1048,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Обратите внимание', en: 'Take Note', uz: 'E\'tibor bering', kk: 'Назар аударыңыз' }
     },
     {
+        domain: 'telecom',
         id: 'bas_5',
         category: { ru: 'База', en: 'Basics', uz: 'Asosiy', kk: 'Негізгі' },
         termKo: '데이터 무제한 (De-i-teo Mu-je-han)',
@@ -1010,6 +1063,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Без доплат', en: 'No Extra Fees', uz: 'Qo\'shimcha to\'lovsiz', kk: 'Қосымша төлемсіз' }
     },
     {
+        domain: 'telecom',
         id: 'bas_6',
         category: { ru: 'База', en: 'Basics', uz: 'Asosiy', kk: 'Негізгі' },
         termKo: '선불폰 (Seon-bul-pon)',
@@ -1024,6 +1078,7 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLabel: { ru: 'Всем доступно', en: 'Accessible to All', uz: 'Barchaga ochiq', kk: 'Барлығына қолжетімді' }
     },
     {
+        domain: 'telecom',
         id: 'bas_7',
         category: { ru: 'База', en: 'Basics', uz: 'Asosiy', kk: 'Негізгі' },
         termKo: '가족결합 (Ga-jok-gyeol-hap)',

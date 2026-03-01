@@ -1,0 +1,144 @@
+{
+    "code": "medical",
+    "name": {
+        "ru": "Медицина",
+        "en": "Medical",
+        "ko": "의료",
+        "kk": "Медицина",
+        "uz": "Tibbiyot"
+    },
+    "icon": "Activity",
+    "color": "#E53935",
+    "entityName": {
+        "ru": "Клиника",
+        "en": "Clinic",
+        "kk": "Клиника",
+        "uz": "Klinika"
+    },
+    "koreaSpecific": {
+        "insuranceTypes": [
+            "NHIS",
+            "private",
+            "none"
+        ],
+        "emergencyNumber": "119",
+        "pharmacyRequired": true
+    },
+    "fields": [
+        {
+            "code": "name",
+            "type": "translated_string",
+            "required": true,
+            "showInCard": true
+        },
+        {
+            "code": "nameKo",
+            "type": "string",
+            "required": true,
+            "showInDetail": true,
+            "label": {
+                "ru": "Название на корейском",
+                "en": "Name in Korean",
+                "kk": "Корей тіліндегі атауы",
+                "uz": "Koreys tilidagi nomi"
+            }
+        },
+        {
+            "code": "specialization",
+            "type": "multiselect",
+            "options": [
+                "internal_medicine",
+                "family_medicine",
+                "pediatrics",
+                "dentistry",
+                "dermatology",
+                "gynecology",
+                "orthopedics",
+                "ent",
+                "ophthalmology",
+                "mental_health",
+                "traditional_korean"
+            ],
+            "filterable": true,
+            "showInCard": true,
+            "display": "chips"
+        },
+        {
+            "code": "languages",
+            "type": "multiselect",
+            "options": [
+                "russian",
+                "english",
+                "korean",
+                "chinese",
+                "uzbek",
+                "kazakh",
+                "mongolian",
+                "vietnamese",
+                "arabic",
+                "japanese"
+            ],
+            "filterable": true,
+            "showInCard": true,
+            "display": "flags"
+        },
+        {
+            "code": "acceptsNhis",
+            "type": "boolean",
+            "filterable": true,
+            "showInCard": true,
+            "label": {
+                "ru": "Принимает NHIS",
+                "en": "Accepts NHIS",
+                "kk": "NHIS қабылдайды",
+                "uz": "NHIS qabul qiladi"
+            }
+        },
+        {
+            "code": "phone",
+            "type": "phone",
+            "callable": true,
+            "showInCard": true
+        },
+        {
+            "code": "naverMapUrl",
+            "type": "url",
+            "showInDetail": true,
+            "label": "Naver Map"
+        },
+        {
+            "code": "kakaoId",
+            "type": "string",
+            "showInDetail": true,
+            "label": "KakaoTalk ID"
+        },
+        {
+            "code": "description",
+            "type": "translated_text",
+            "showInDetail": true,
+            "label": {
+                "ru": "О координаторах и клинике",
+                "en": "About Clinic & Coordinators",
+                "kk": "Клиника мен үйлестірушілер туралы",
+                "uz": "Klinika va koordinatorlar haqida"
+            }
+        }
+    ],
+    "filters": [
+        "specialization",
+        "languages",
+        "acceptsNhis"
+    ],
+    "sortOptions": [
+        {
+            "code": "name",
+            "label": "По названию",
+            "default": true
+        }
+    ],
+    "actions": [
+        "call",
+        "kakao",
+        "naver_map"
+    ]
+}

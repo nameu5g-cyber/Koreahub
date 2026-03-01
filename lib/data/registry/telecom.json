@@ -1,0 +1,80 @@
+{
+    "code": "telecom",
+    "name": {
+        "ru": "Мобильная связь",
+        "en": "Mobile Communication",
+        "ko": "모바일 통신",
+        "kk": "Мобильді байланыс",
+        "uz": "Mobil aloqa"
+    },
+    "icon": "Phone",
+    "color": "#E53E3E",
+    "entityName": {
+        "ru": "Офис",
+        "en": "Office",
+        "kk": "Офис",
+        "uz": "Ofis"
+    },
+    "fields": [
+        {
+            "code": "name",
+            "type": "translated_string",
+            "required": true,
+            "showInCard": true
+        },
+        {
+            "code": "nameKo",
+            "type": "string",
+            "required": true,
+            "showInDetail": true,
+            "label": "Название по-корейски"
+        },
+        {
+            "code": "address",
+            "type": "translated_string",
+            "showInDetail": true
+        },
+        {
+            "code": "addressKo",
+            "type": "string",
+            "showInDetail": true,
+            "label": "Адрес по-корейски"
+        },
+        {
+            "code": "phone",
+            "type": "phone",
+            "callable": true,
+            "showInCard": true
+        },
+        {
+            "code": "messenger",
+            "type": "string",
+            "showInCard": true,
+            "label": "KakaoTalk ID"
+        },
+        {
+            "code": "availableServices",
+            "type": "multiselect",
+            "options": [
+                "prepaid",
+                "postpaid",
+                "consult",
+                "identification"
+            ],
+            "showInDetail": true,
+            "label": "Услуги"
+        }
+    ],
+    "filters": [],
+    "sortOptions": [
+        {
+            "code": "name",
+            "label": "По названию",
+            "default": true
+        }
+    ],
+    "actions": [
+        "call",
+        "naver_map"
+    ]
+}

@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { Phone, MessageSquare } from 'lucide-react';
+import { Phone, MessageSquare, MapPin } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 import { PLANS_DATA } from '../../lib/data/constants';
 
 interface LifeHubProps {
@@ -16,6 +17,7 @@ interface LifeHubProps {
 }
 
 export function LifeHub({ t, doc, setDoc, sim, setSim, setActiveTab, setIsSimExpertChat, onSosOpen }: LifeHubProps) {
+    const router = useRouter();
     const [planIdx, setPlanIdx] = useState(0);
     const [vPlanIdx, setVPlanIdx] = useState(0);
     const [term, setTerm] = useState(1); // 1, 6, 12 months
@@ -71,34 +73,35 @@ export function LifeHub({ t, doc, setDoc, sim, setSim, setActiveTab, setIsSimExp
     return (
         <div className="h-full overflow-y-auto no-scrollbar p-5 space-y-6 pb-12">
             {/* SOS Button */}
+            {/* SOS Button (Compact) */}
             <button
                 onClick={onSosOpen}
-                className="w-full bg-red-50 border-2 border-red-100 p-5 rounded-[32px] flex items-center justify-between active:scale-95 transition-all shadow-sm group"
+                className="w-full bg-red-50 border-2 border-red-100 p-3 rounded-[28px] flex items-center justify-between active:scale-95 transition-all shadow-sm group"
             >
-                <div className="flex items-center gap-4 text-left">
-                    <div className="text-3xl bg-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-inner group-hover:rotate-12 transition-transform">🚨</div>
+                <div className="flex items-center gap-3 text-left">
+                    <div className="text-2xl bg-white w-12 h-12 rounded-xl flex items-center justify-center shadow-inner group-hover:rotate-12 transition-transform">🚨</div>
                     <div>
-                        <p className="text-[10px] font-black text-red-500 uppercase tracking-[0.2em]">Emergency</p>
-                        <p className="text-lg font-extrabold text-red-600 leading-tight tracking-tight">{t('sos')}</p>
+                        <p className="text-[9px] font-black text-red-500 uppercase tracking-[0.2em]">Emergency</p>
+                        <p className="text-base font-extrabold text-red-600 leading-tight tracking-tight">{t('sos')}</p>
                     </div>
                 </div>
-                <div className="bg-red-600 text-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg shadow-red-200">
-                    <Phone size={18} />
+                <div className="bg-red-600 text-white rounded-full w-9 h-9 flex items-center justify-center shadow-lg shadow-red-200">
+                    <Phone size={16} />
                 </div>
             </button>
 
             {/* Selection Grid */}
             <div className="space-y-3">
-                <div className="bg-white p-1 rounded-3xl border border-gray-100 shadow-sm flex">
+                <div className="bg-white p-1 rounded-[22px] border border-gray-100 shadow-sm flex">
                     <button
                         onClick={() => setDoc('passport')}
-                        className={`flex-1 py-3.5 rounded-[22px] text-[11px] font-black uppercase transition-all duration-300 ${doc === 'passport' ? 'bg-blue-600 text-white shadow-lg scale-100' : 'text-gray-400 hover:text-gray-600 hover:bg-gray-50'}`}
+                        className={`flex-1 py-2.5 rounded-[18px] text-[10px] font-black uppercase transition-all duration-300 ${doc === 'passport' ? 'bg-blue-600 text-white shadow-lg scale-100' : 'text-gray-400 hover:text-gray-600 hover:bg-gray-50'}`}
                     >
                         {t('passport')}
                     </button>
                     <button
                         onClick={() => setDoc('arc')}
-                        className={`flex-1 py-3.5 rounded-[22px] text-[11px] font-black uppercase transition-all duration-300 ${doc === 'arc' ? 'bg-blue-600 text-white shadow-lg scale-100' : 'text-gray-400 hover:text-gray-600 hover:bg-gray-50'}`}
+                        className={`flex-1 py-2.5 rounded-[18px] text-[10px] font-black uppercase transition-all duration-300 ${doc === 'arc' ? 'bg-blue-600 text-white shadow-lg scale-100' : 'text-gray-400 hover:text-gray-600 hover:bg-gray-50'}`}
                     >
                         {t('arc')}
                     </button>
@@ -106,12 +109,12 @@ export function LifeHub({ t, doc, setDoc, sim, setSim, setActiveTab, setIsSimExp
 
                 {/* Term Selector - ONLY for ARC (Voice only) */}
                 {doc === 'arc' && sim !== 'data' && (
-                    <div className="bg-gray-100 p-1.5 rounded-full flex gap-1 shadow-inner border border-gray-200/50">
+                    <div className="bg-gray-100 p-1 rounded-full flex gap-0.5 shadow-inner border border-gray-200/50">
                         {[1, 6, 12].map((m) => (
                             <button
                                 key={m}
                                 onClick={() => setTerm(m)}
-                                className={`flex-1 py-3 rounded-full text-[9px] font-black uppercase transition-all flex items-center justify-center ${term === m ? 'bg-gray-900 text-white shadow-xl' : 'text-gray-400 hover:text-gray-600'}`}
+                                className={`flex-1 py-2 rounded-full text-[9px] font-black uppercase transition-all flex items-center justify-center ${term === m ? 'bg-gray-900 text-white shadow-xl' : 'text-gray-400 hover:text-gray-600'}`}
                             >
                                 {(t as any)(`term_${m}m`)}
                             </button>
@@ -122,11 +125,11 @@ export function LifeHub({ t, doc, setDoc, sim, setSim, setActiveTab, setIsSimExp
                 {/* Passport specific: Arrival Date & Stay Duration */}
                 {doc === 'passport' && sim !== 'data' && !selectedPlan?.name.includes('396') && !selectedPlan?.name.includes('459') && (
                     <div className="space-y-3 animate-in fade-in slide-in-from-top-4 duration-500">
-                        <div className="bg-white p-4 rounded-[28px] border border-gray-100 shadow-sm space-y-4">
-                            <div className="flex justify-between items-center">
+                        <div className="bg-white p-3 rounded-[24px] border border-gray-100 shadow-sm space-y-3">
+                            <div className="flex justify-between items-center px-1">
                                 <div className="flex flex-col">
-                                    <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest leading-none mb-1">{t('arrival_date')}</span>
-                                    <span className="text-[8px] text-blue-500/50 font-bold italic">Calculation reset on 1st</span>
+                                    <span className="text-[9px] font-black text-gray-400 uppercase tracking-widest leading-none mb-1">{t('arrival_date')}</span>
+                                    <span className="text-[7px] text-blue-500/50 font-bold italic">Calculation reset on 1st</span>
                                 </div>
                                 <input
                                     type="number"
@@ -134,7 +137,7 @@ export function LifeHub({ t, doc, setDoc, sim, setSim, setActiveTab, setIsSimExp
                                     max={daysInMonth}
                                     value={arrivalDay}
                                     onChange={(e) => setArrivalDay(parseInt(e.target.value) || 1)}
-                                    className="w-16 bg-gray-50 border-none rounded-xl px-3 py-1.5 text-xs font-black text-blue-600 text-center shadow-inner"
+                                    className="w-14 bg-gray-50 border-none rounded-lg px-2 py-1 text-xs font-black text-blue-600 text-center shadow-inner"
                                 />
                             </div>
 
@@ -161,16 +164,16 @@ export function LifeHub({ t, doc, setDoc, sim, setSim, setActiveTab, setIsSimExp
 
                 {/* SIM Type Selection - Only for 1m */}
                 {term === 1 && (
-                    <div className="bg-white p-1.5 rounded-full flex gap-1 shadow-sm border border-gray-100 animate-in slide-in-from-top-2">
+                    <div className="bg-white p-1 rounded-full flex gap-1 shadow-sm border border-gray-100 animate-in slide-in-from-top-2">
                         <button
                             onClick={() => setSim('data')}
-                            className={`flex-1 py-4 rounded-full text-[11px] font-black uppercase transition-all flex items-center justify-center ${sim === 'data' ? 'bg-blue-50 text-blue-600 border border-blue-100' : 'text-gray-400 hover:text-gray-600'}`}
+                            className={`flex-1 py-2.5 rounded-full text-[10px] font-black uppercase transition-all flex items-center justify-center ${sim === 'data' ? 'bg-blue-50 text-blue-600 border border-blue-100' : 'text-gray-400 hover:text-gray-600'}`}
                         >
                             {t('sim_type_data')}
                         </button>
                         <button
                             onClick={() => setSim('voice')}
-                            className={`flex-1 py-4 rounded-full text-[11px] font-black uppercase transition-all flex items-center justify-center ${sim === 'voice' ? 'bg-blue-50 text-blue-600 border border-blue-100' : 'text-gray-400 hover:text-gray-600'}`}
+                            className={`flex-1 py-2.5 rounded-full text-[10px] font-black uppercase transition-all flex items-center justify-center ${sim === 'voice' ? 'bg-blue-50 text-blue-600 border border-blue-100' : 'text-gray-400 hover:text-gray-600'}`}
                         >
                             {t('sim_type_voice')}
                         </button>
@@ -178,14 +181,14 @@ export function LifeHub({ t, doc, setDoc, sim, setSim, setActiveTab, setIsSimExp
                 )}
             </div>
 
-            {/* Plans Section */}
-            <div className="bg-white rounded-[40px] border border-gray-100 shadow-xl overflow-hidden animate-in zoom-in-95">
-                <div className="p-6 space-y-5">
+            {/* Plans Section (Dense) */}
+            <div className="bg-white rounded-[32px] border border-gray-100 shadow-xl overflow-hidden animate-in zoom-in-95">
+                <div className="p-4 space-y-4">
                     <div className="flex justify-between items-center px-1">
-                        <span className="text-[10px] font-black text-blue-600 uppercase tracking-widest">{sim === 'data' ? 'Internet' : 'Voice + Data'}</span>
-                        <div className="flex items-center gap-2">
-                            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                            <span className="text-[9px] font-black text-gray-400 uppercase tracking-tighter">Verified 2026</span>
+                        <span className="text-[9px] font-black text-blue-600 uppercase tracking-widest">{sim === 'data' ? 'Internet' : 'Voice + Data'}</span>
+                        <div className="flex items-center gap-1.5">
+                            <div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse" />
+                            <span className="text-[8px] font-black text-gray-400 uppercase tracking-tighter">Verified 2026</span>
                         </div>
                     </div>
 
@@ -196,37 +199,37 @@ export function LifeHub({ t, doc, setDoc, sim, setSim, setActiveTab, setIsSimExp
                                 <button
                                     key={i}
                                     onClick={() => sim === 'data' ? setPlanIdx(i) : setVPlanIdx(i)}
-                                    className={`p-4 rounded-3xl text-left transition-all duration-300 border-2 flex flex-col justify-center hover:shadow-md active:scale-95 ${(sim === 'data' ? planIdx : vPlanIdx) === i ? 'border-blue-600 bg-blue-50/50' : 'border-gray-50 bg-gray-50/30 hover:border-blue-200'} ${currentPlans.length % 2 !== 0 && i === currentPlans.length - 1 ? 'col-span-2' : ''}`}
+                                    className={`p-2.5 rounded-2xl text-left transition-all duration-300 border-2 flex flex-col justify-center hover:shadow-md active:scale-95 ${(sim === 'data' ? planIdx : vPlanIdx) === i ? 'border-blue-600 bg-blue-50/50' : 'border-gray-50 bg-gray-50/30 hover:border-blue-200'} ${currentPlans.length % 2 !== 0 && i === currentPlans.length - 1 ? 'col-span-2' : ''}`}
                                 >
-                                    <div className="flex justify-between items-center mb-1">
-                                        <div className="text-[9px] font-black text-gray-400 uppercase truncate pr-1">
+                                    <div className="flex justify-between items-center mb-0.5">
+                                        <div className="text-[8px] font-black text-gray-400 uppercase truncate pr-1">
                                             {displayName.includes(' + QoS') ? (
                                                 <>
-                                                    {displayName.split(' + QoS')[0]} <span className="text-blue-500 opacity-60 text-[7px] shrink-0">+{displayName.split(' + QoS')[1]}</span>
+                                                    {displayName.split(' + QoS')[0]} <span className="text-blue-500 opacity-60 text-[6px] shrink-0">+{displayName.split(' + QoS')[1]}</span>
                                                 </>
                                             ) : displayName}
                                         </div>
                                         {p.provider && (
-                                            <span className={`text-[7px] font-black text-white px-1.5 py-0.5 rounded-full shrink-0 ${p.provider === 'KT' ? 'bg-red-500' : (p.provider === 'U+' ? 'bg-pink-500' : 'bg-gradient-to-r from-red-500 to-pink-500')}`}>
+                                            <span className={`text-[6px] font-black text-white px-1 py-0.5 rounded-full shrink-0 ${p.provider === 'KT' ? 'bg-red-500' : (p.provider === 'U+' ? 'bg-pink-500' : 'bg-gradient-to-r from-red-500 to-pink-500')}`}>
                                                 {p.provider}
                                             </span>
                                         )}
                                     </div>
-                                    <div className="text-xs font-black text-gray-900 uppercase">{calculatePrice(p).split(' ')[0]} <span className="text-[8px] opacity-40 italic">KRW</span></div>
+                                    <div className="text-[11px] font-black text-gray-900 uppercase">{calculatePrice(p).split(' ')[0]} <span className="text-[7px] opacity-40 italic">KRW</span></div>
                                 </button>
                             );
                         })}
                     </div>
 
-                    <div className="p-6 bg-gray-900 rounded-[32px] text-white shadow-2xl relative overflow-hidden group">
-                        <div className="absolute top-0 right-0 w-32 h-32 bg-blue-600/10 rounded-full -mr-16 -mt-16 blur-2xl group-hover:scale-150 transition-transform"></div>
+                    <div className="p-4 bg-gray-900 rounded-[24px] text-white shadow-2xl relative overflow-hidden group">
+                        <div className="absolute top-0 right-0 w-24 h-24 bg-blue-600/10 rounded-full -mr-12 -mt-12 blur-2xl group-hover:scale-150 transition-transform"></div>
                         <div className="flex justify-between items-end relative z-10">
                             <div>
-                                <div className="text-[9px] font-black opacity-30 uppercase tracking-widest mb-1">Selected Plan</div>
-                                <div className="text-xl font-black tracking-tight">{selectedPlan?.name}</div>
+                                <div className="text-[8px] font-black opacity-30 uppercase tracking-widest mb-0.5">Selected Plan</div>
+                                <div className="text-lg font-black tracking-tight">{selectedPlan?.name}</div>
                             </div>
                             <div className="text-right">
-                                <div className="text-lg font-black text-blue-400">{currentPrice}</div>
+                                <div className="text-base font-black text-blue-400">{currentPrice}</div>
                             </div>
                         </div>
                     </div>
@@ -234,7 +237,7 @@ export function LifeHub({ t, doc, setDoc, sim, setSim, setActiveTab, setIsSimExp
                     {selectedPlan?.note && (
                         <div className="p-4 bg-blue-50/50 rounded-2xl border border-blue-100/50 animate-in slide-in-from-top-1">
                             <p className="text-[10px] font-bold text-blue-800 leading-tight flex gap-2 italic">
-                                <span>ℹ️</span> {selectedPlan.note}
+                                <span>ℹ️</span> {(t as any)(selectedPlan.note)}
                             </p>
                         </div>
                     )}
@@ -252,9 +255,9 @@ export function LifeHub({ t, doc, setDoc, sim, setSim, setActiveTab, setIsSimExp
                     <div className="flex gap-2">
                         <a
                             href={`tel:${t('sim_consult_phone')}`}
-                            className="flex-grow bg-blue-600 text-white py-5 rounded-[24px] font-black text-xs uppercase shadow-xl shadow-blue-100 active:scale-95 transition-all flex items-center justify-center gap-3 group"
+                            className="flex-grow bg-blue-600 text-white py-3.5 rounded-[20px] font-black text-[11px] uppercase shadow-xl shadow-blue-100 active:scale-95 transition-all flex items-center justify-center gap-2 group"
                         >
-                            <Phone size={18} className="group-hover:animate-shake" />
+                            <Phone size={16} className="group-hover:animate-shake" />
                             {t('sim_consult_phone')}
                         </a>
                         <button
@@ -262,12 +265,20 @@ export function LifeHub({ t, doc, setDoc, sim, setSim, setActiveTab, setIsSimExp
                                 setIsSimExpertChat(true);
                                 setActiveTab('chat');
                             }}
-                            className="px-6 bg-gray-900 text-white py-5 rounded-[24px] font-black text-xs uppercase shadow-xl active:scale-95 transition-all flex items-center justify-center gap-3 group"
+                            className="px-5 bg-gray-900 text-white py-3.5 rounded-[20px] font-black text-[11px] uppercase shadow-xl active:scale-95 transition-all flex items-center justify-center gap-2 group"
                         >
-                            <MessageSquare size={18} className="text-blue-400 group-hover:rotate-12" />
+                            <MessageSquare size={16} className="text-blue-400 group-hover:rotate-12" />
                             AI
                         </button>
                     </div>
+
+                    <button
+                        onClick={() => router.push('/docs?v=telecom')}
+                        className="w-full bg-blue-50 text-blue-600 py-3.5 rounded-[20px] font-black text-[11px] uppercase border border-blue-100 active:scale-95 transition-all flex items-center justify-center gap-2 group mt-2"
+                    >
+                        <MapPin size={16} className="group-hover:bounce" />
+                        {t('find_office')}
+                    </button>
                 </div>
             </div>
         </div>

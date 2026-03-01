@@ -1,0 +1,124 @@
+{
+    "code": "jobs",
+    "name": {
+        "ru": "Работа",
+        "en": "Jobs",
+        "ko": "구인",
+        "kk": "Жұмыс",
+        "uz": "Ish"
+    },
+    "icon": "Briefcase",
+    "color": "#1976D2",
+    "entityName": {
+        "ru": "Вакансия",
+        "en": "Job",
+        "kk": "Бос жұмыс орны",
+        "uz": "Vakansiya"
+    },
+    "koreaSpecific": {
+        "visaTypes": [
+            "E-7",
+            "F-2",
+            "F-5",
+            "F-6",
+            "D-2",
+            "D-10",
+            "H-1"
+        ],
+        "jobPlatforms": [
+            "Saramin",
+            "JobKorea",
+            "LinkedIn",
+            "Wanted"
+        ]
+    },
+    "fields": [
+        {
+            "code": "title",
+            "type": "translated_string",
+            "required": true,
+            "showInCard": true
+        },
+        {
+            "code": "companyName",
+            "type": "string",
+            "required": true,
+            "showInCard": true
+        },
+        {
+            "code": "jobType",
+            "type": "select",
+            "options": [
+                "full_time",
+                "contract",
+                "part_time",
+                "freelance",
+                "internship"
+            ],
+            "filterable": true,
+            "showInCard": true
+        },
+        {
+            "code": "koreanLevel",
+            "type": "select",
+            "options": [
+                "none",
+                "basic",
+                "conversational",
+                "business",
+                "native"
+            ],
+            "filterable": true,
+            "showInCard": true,
+            "highlightIf": "none",
+            "label": {
+                "ru": "Уровень корейского",
+                "en": "Korean Level",
+                "kk": "Корей тілінің деңгейі",
+                "uz": "Koreys tili darajasi"
+            }
+        },
+        {
+            "code": "visaSponsored",
+            "type": "boolean",
+            "filterable": true,
+            "showInCard": true,
+            "highlight": true,
+            "label": {
+                "ru": "Виза спонсируется",
+                "en": "Visa Sponsored",
+                "kk": "Визалық демеушілік",
+                "uz": "Viza homiyligi"
+            }
+        },
+        {
+            "code": "salary",
+            "type": "salary_range",
+            "currency": "KRW",
+            "period": "monthly",
+            "showInDetail": true
+        },
+        {
+            "code": "description",
+            "type": "translated_text",
+            "required": true,
+            "showInDetail": true
+        }
+    ],
+    "filters": [
+        "jobType",
+        "koreanLevel",
+        "visaSponsored"
+    ],
+    "sortOptions": [
+        {
+            "code": "postedAt",
+            "label": "Сначала новые",
+            "default": true
+        }
+    ],
+    "actions": [
+        "apply_email",
+        "kakao"
+    ]
+}

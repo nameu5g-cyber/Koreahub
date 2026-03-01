@@ -1,0 +1,80 @@
+{
+    "code": "general",
+    "name": {
+        "ru": "Информация",
+        "en": "Information",
+        "ko": "정보",
+        "kk": "Ақпарат",
+        "uz": "Ma'lumot"
+    },
+    "icon": "Info",
+    "color": "#4A5568",
+    "entityName": {
+        "ru": "Ресурс",
+        "en": "Resource",
+        "kk": "Ресурс",
+        "uz": "Resurs"
+    },
+    "fields": [
+        {
+            "code": "name",
+            "type": "string",
+            "required": true,
+            "showInCard": true
+        },
+        {
+            "code": "desc",
+            "type": "translated_string",
+            "required": true,
+            "showInCard": true
+        },
+        {
+            "code": "langs",
+            "type": "multiselect",
+            "options": [
+                "ru",
+                "en",
+                "ko",
+                "uz",
+                "kz"
+            ],
+            "showInCard": true,
+            "display": "flags"
+        },
+        {
+            "code": "link",
+            "type": "url",
+            "showInDetail": true
+        },
+        {
+            "code": "phone",
+            "type": "phone",
+            "callable": true,
+            "showInCard": true
+        },
+        {
+            "code": "location",
+            "type": "string",
+            "showInCard": true
+        },
+        {
+            "code": "tags",
+            "type": "multiselect",
+            "display": "chips"
+        }
+    ],
+    "filters": [
+        "langs"
+    ],
+    "sortOptions": [
+        {
+            "code": "name",
+            "label": "По названию",
+            "default": true
+        }
+    ],
+    "actions": [
+        "call",
+        "visit"
+    ]
+}

@@ -1,0 +1,145 @@
+{
+    "code": "visa",
+    "name": {
+        "ru": "Визы",
+        "en": "Visas",
+        "ko": "비자",
+        "kk": "Виза",
+        "uz": "Viza"
+    },
+    "icon": "Passport",
+    "color": "#4A90E2",
+    "entityName": {
+        "ru": "Офис",
+        "en": "Office",
+        "kk": "Офис",
+        "uz": "Ofis"
+    },
+    "koreaSpecific": {
+        "emergencyNumber": "1345",
+        "portalUrl": "https://www.hikorea.go.kr"
+    },
+    "fields": [
+        {
+            "code": "name",
+            "type": "translated_string",
+            "required": true,
+            "showInCard": true
+        },
+        {
+            "code": "nameKo",
+            "type": "string",
+            "required": true,
+            "showInDetail": true,
+            "label": {
+                "ru": "Название на корейском",
+                "en": "Name in Korean",
+                "kk": "Корей тіліндегі атауы",
+                "uz": "Koreys tilidagi nomi"
+            }
+        },
+        {
+            "code": "address",
+            "type": "translated_string",
+            "showInDetail": true
+        },
+        {
+            "code": "addressKo",
+            "type": "string",
+            "showInDetail": true,
+            "label": {
+                "ru": "Адрес на корейском",
+                "en": "Address in Korean",
+                "kk": "Корей тіліндегі мекенжайы",
+                "uz": "Koreys tilidagi manzili"
+            }
+        },
+        {
+            "code": "phone",
+            "type": "phone",
+            "callable": true,
+            "showInCard": true
+        },
+        {
+            "code": "website",
+            "type": "url",
+            "showInDetail": true
+        },
+        {
+            "code": "bookingRequired",
+            "type": "boolean",
+            "filterable": true,
+            "showInCard": true,
+            "highlight": true,
+            "label": {
+                "ru": "Требуется запись",
+                "en": "Booking Required",
+                "kk": "Алдын ала жазылу қажет",
+                "uz": "Oldindan yozilish shart"
+            }
+        },
+        {
+            "code": "services",
+            "type": "multiselect",
+            "options": [
+                "extension",
+                "change",
+                "registration",
+                "reentry",
+                "permanent"
+            ],
+            "showInDetail": true,
+            "label": {
+                "ru": "Услуги",
+                "en": "Services",
+                "kk": "Қызметтер",
+                "uz": "Xizmatlar"
+            }
+        },
+        {
+            "code": "languages",
+            "type": "multiselect",
+            "options": [
+                "ko",
+                "en",
+                "ru",
+                "zh"
+            ],
+            "showInCard": true,
+            "display": "flags"
+        },
+        {
+            "code": "tips",
+            "type": "translated_text",
+            "showInDetail": true,
+            "label": {
+                "ru": "Советы экспертов",
+                "en": "Expert Tips",
+                "kk": "Сарапшылардың кеңестері",
+                "uz": "Mutaxassis maslahatlari"
+            }
+        },
+        {
+            "code": "naverMapUrl",
+            "type": "url",
+            "showInDetail": true,
+            "label": "Naver Map"
+        }
+    ],
+    "filters": [
+        "bookingRequired",
+        "languages"
+    ],
+    "sortOptions": [
+        {
+            "code": "distance",
+            "label": "Рядом с вами",
+            "default": true
+        }
+    ],
+    "actions": [
+        "call",
+        "naver_map",
+        "booking"
+    ]
+}
