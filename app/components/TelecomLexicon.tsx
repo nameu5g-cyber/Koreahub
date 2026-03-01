@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useMemo } from 'react';
-import { Search, ShieldAlert, AlertTriangle, AlertCircle, Info, CheckCircle2, BookOpen } from 'lucide-react';
+import { Search, ShieldAlert, AlertTriangle, AlertCircle, Info, CheckCircle2, BookOpen, Volume2 } from 'lucide-react';
 import { telecomLexicon, RiskLevel } from '../../lib/data/lexicon';
 
 interface TelecomLexiconProps {
@@ -16,6 +16,7 @@ export function TelecomLexicon({ t, uiLang }: TelecomLexiconProps) {
     const [isExpertMode, setIsExpertMode] = useState(false);
     const [secretCode, setSecretCode] = useState('');
     const [codeError, setCodeError] = useState(false);
+    const [isSpeaking, setIsSpeaking] = useState<string | null>(null);
 
     // Map UI language code to the keys used in lexicon.ts
     const langKey = uiLang === 'kz' ? 'kk' : uiLang;
@@ -32,6 +33,26 @@ export function TelecomLexicon({ t, uiLang }: TelecomLexiconProps) {
         } else {
             setCodeError(true);
         }
+    };
+
+    const speak = (e: React.MouseEvent, text: string) => {
+        e.stopPropagation();
+
+        // Cancel any ongoing speech
+        window.speechSynthesis.cancel();
+
+        // Extract only the Korean part (remove text in parentheses)
+        const hangulOnly = text.split('(')[0].trim();
+
+        const utterance = new SpeechSynthesisUtterance(hangulOnly);
+        utterance.lang = 'ko-KR';
+        utterance.rate = 0.9; // Slightly slower for better clarity
+
+        utterance.onstart = () => setIsSpeaking(text);
+        utterance.onend = () => setIsSpeaking(null);
+        utterance.onerror = () => setIsSpeaking(null);
+
+        window.speechSynthesis.speak(utterance);
     };
 
     // Extract unique categories (using English as internal keys) filtering based on expert mode
@@ -166,10 +187,19 @@ export function TelecomLexicon({ t, uiLang }: TelecomLexiconProps) {
                                                 >
                                                     {/* Header Row */}
                                                     <div className="flex justify-between items-start">
-                                                        <div className="flex flex-col pr-8">
-                                                            <h4 className="font-black text-gray-900 text-lg leading-tight tracking-tight">
-                                                                {item.termKo}
-                                                            </h4>
+                                                        <div className="flex flex-col pr-8 group/term">
+                                                            <div className="flex items-center gap-2">
+                                                                <h4 className="font-black text-gray-900 text-lg leading-tight tracking-tight">
+                                                                    {item.termKo}
+                                                                </h4>
+                                                                <button
+                                                                    onClick={(e) => speak(e, item.termKo)}
+                                                                    className={`p-1.5 rounded-full transition-all ${isSpeaking === item.termKo ? 'bg-blue-100 text-blue-600 animate-pulse' : 'bg-gray-50 text-gray-400 hover:bg-blue-50 hover:text-blue-500'}`}
+                                                                    title="Listen"
+                                                                >
+                                                                    <Volume2 size={16} />
+                                                                </button>
+                                                            </div>
                                                             <span className="text-sm font-bold text-gray-500 mt-1">
                                                                 {termTrans}
                                                             </span>
