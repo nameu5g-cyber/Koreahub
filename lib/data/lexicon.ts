@@ -23,7 +23,7 @@ export const telecomLexicon: LexiconTerm[] = [
         id: 'dev_1',
         category: { ru: 'Устройства', en: 'Devices', uz: 'Qurilmalar', kk: 'Құрылғылар' },
         termKo: '자급제 (Ja-geup-je)',
-        termTrans: { ru: 'Аппарат без контракта и привязки к оператору (разлоченный)', en: 'Unlocked', uz: 'Qulfksiz', kk: 'Бұғатталмаған' },
+        termTrans: { ru: 'Аппарат без контракта и привязки к оператору (разлоченный)', en: 'Factory Unlocked (Carrier-free)', uz: "Shartnomasiz / Operatorga bog'lanmagan", kk: 'Келісімшартсыз және операторға байланбаған' },
         meaning: {
             ru: 'Официально разблокированный смартфон, купленный напрямую у Apple, Samsung. Без привязки к оператору. 100% безопасен.',
             en: 'Officially unlocked smartphone bought directly from Apple, Samsung. No carrier locks. 100% safe.',
