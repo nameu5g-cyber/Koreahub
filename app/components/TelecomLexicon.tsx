@@ -17,6 +17,7 @@ export function TelecomLexicon({ t, uiLang }: TelecomLexiconProps) {
     const [secretCode, setSecretCode] = useState('');
     const [codeError, setCodeError] = useState(false);
     const [isSpeaking, setIsSpeaking] = useState<string | null>(null);
+    const [voicesLoaded, setVoicesLoaded] = useState(false);
 
     // Map UI language code to the keys used in lexicon.ts
     const langKey = uiLang === 'kz' ? 'kk' : uiLang;
@@ -28,10 +29,29 @@ export function TelecomLexicon({ t, uiLang }: TelecomLexiconProps) {
     // Pre-load voices for better reliability
     useEffect(() => {
         if (typeof window !== 'undefined' && window.speechSynthesis) {
-            window.speechSynthesis.getVoices();
-            const handleVoices = () => window.speechSynthesis.getVoices();
-            window.speechSynthesis.addEventListener('voiceschanged', handleVoices);
-            return () => window.speechSynthesis.removeEventListener('voiceschanged', handleVoices);
+            const loadVoices = () => {
+                const availableVoices = window.speechSynthesis.getVoices();
+                if (availableVoices.length > 0) {
+                    setVoicesLoaded(true);
+                }
+            };
+
+            loadVoices();
+            window.speechSynthesis.onvoiceschanged = loadVoices;
+
+            // Background retry as some browsers take time
+            const timer = setInterval(() => {
+                const v = window.speechSynthesis.getVoices();
+                if (v.length > 0) {
+                    setVoicesLoaded(true);
+                    clearInterval(timer);
+                }
+            }, 1000);
+
+            return () => {
+                clearInterval(timer);
+                if (window.speechSynthesis) window.speechSynthesis.onvoiceschanged = null;
+            };
         }
     }, []);
 
@@ -49,40 +69,62 @@ export function TelecomLexicon({ t, uiLang }: TelecomLexiconProps) {
         e.stopPropagation();
 
         if (typeof window === 'undefined' || !window.speechSynthesis) {
-            alert("Ваш браузер не поддерживает озвучку.");
+            alert("Ваш браузер не поддерживает синтез речи.");
             return;
         }
 
-        // Cancel any ongoing speech
+        // Cancel any pending speech
         window.speechSynthesis.cancel();
 
-        // Extract only the Korean part (remove text in parentheses)
         const hangulOnly = text.split('(')[0].trim();
-
         const utterance = new SpeechSynthesisUtterance(hangulOnly);
 
-        // Try to find a specific Korean voice
+        // Find best voice
         const voices = window.speechSynthesis.getVoices();
-        const koVoice = voices.find(v => v.lang.toLowerCase().includes('ko'));
-        if (koVoice) {
-            utterance.voice = koVoice;
+        if (voices.length === 0) {
+            // If still no voices, try to warm up and try again in 250ms
+            window.speechSynthesis.getVoices();
+            setTimeout(() => {
+                const retryVoices = window.speechSynthesis.getVoices();
+                if (retryVoices.length > 0) {
+                    playUtterance(retryVoices, utterance, text);
+                } else {
+                    alert("Голосовые движки не найдены. Проверьте настройки TTS в Windows/Chrome.");
+                }
+            }, 250);
+            return;
+        }
+
+        playUtterance(voices, utterance, text);
+    };
+
+    const playUtterance = (voices: SpeechSynthesisVoice[], utterance: SpeechSynthesisUtterance, term: string) => {
+        // 1. Try Korean
+        let voice = voices.find(v => v.lang.startsWith('ko'));
+
+        // 2. Fallback to any Asian voice (sometimes covers KR)
+        if (!voice) voice = voices.find(v => v.lang.includes('KR'));
+
+        // 3. Fallback to default
+        if (voice) {
+            utterance.voice = voice;
         }
 
         utterance.lang = 'ko-KR';
-        utterance.rate = 0.85; // Slightly slower for better clarity
+        utterance.rate = 0.85;
 
-        utterance.onstart = () => setIsSpeaking(text);
+        utterance.onstart = () => setIsSpeaking(term);
         utterance.onend = () => setIsSpeaking(null);
-        utterance.onerror = () => {
+        utterance.onerror = (e) => {
+            console.error('TTS Error:', e);
             setIsSpeaking(null);
-            // On some mobile devices, speechSynthesis can hang. resume() might help.
             window.speechSynthesis.resume();
         };
 
-        // Small delay to ensure cancel() worked properly before starting new speech
+        // Execution with safety timeout
         setTimeout(() => {
             window.speechSynthesis.speak(utterance);
-        }, 100);
+        }, 50);
     };
 
     // Extract unique categories (using English as internal keys) filtering based on expert mode
