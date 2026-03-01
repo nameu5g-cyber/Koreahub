@@ -215,6 +215,90 @@ export const telecomLexicon: LexiconTerm[] = [
         riskLevel: 'warning',
         riskLabel: { ru: 'Учите матчасть', en: 'Know the Grades', uz: 'Grade-ni biling', kk: 'Grade-ті біліңіз' }
     },
+    {
+        id: 'dev_15',
+        category: { ru: 'Контракты', en: 'Contracts', uz: 'Shartnomalar', kk: 'Келісімшарттар' },
+        termKo: '위약금 (Wi-yak-geum)',
+        termTrans: { ru: 'Штраф за расторжение (Неустойка)', en: 'Contract Termination Penalty', uz: 'Shartnomani bekor qilish jarimasi', kk: 'Келісімшартты бұзу айыппұлы' },
+        meaning: {
+            ru: 'Штраф за досрочный разрыв контракта. Бывает двух видов: 공시지원 반환금 (возврат скидки на телефон) и 선택약정 할인반환금 (возврат накопленных скидок на тариф). При покупке Б/У может "висеть" на IMEI.',
+            en: 'Penalty for breaking a contract early. Two types: Subsidy refund (Gong-si-ji-won) or Discount refund (Seon-taek-yak-jeong). Can be "stuck" to the IMEI on used phones.',
+            uz: 'Shartnomani muddatidan oldin bekor qilganlik uchun jarima. Ikki turi bor: telefon chegirmasini qaytarish va tarif chegirmasini qaytarish. Ishlatilgan telefonlarda IMEI-ga bog\'liq bo\'lishi mumkin.',
+            kk: 'Келісімшартты мерзімінен бұрын бұзғаны үшін айыппұл. Екі түрі бар: телефон жеңілдігін қайтару және тариф жеңілдігін қайтару. Қолданылған телефондарда IMEI-ге байланған болуы мүмкін.'
+        },
+        riskLevel: 'danger',
+        riskLabel: { ru: 'ФИНАНСОВЫЙ РИСК', en: 'FINANCIAL RISK', uz: 'MOLIYAVIY XAVF', kk: 'ҚАРЖЫЛЫҚ ҚАУІП' }
+    },
+    {
+        id: 'dev_16',
+        category: { ru: 'Контракты', en: 'Contracts', uz: 'Shartnomalar', kk: 'Келісімшарттар' },
+        termKo: '공시지원금 (Gong-si-ji-won-geum)',
+        termTrans: { ru: 'Официальная субсидия', en: 'Device Subsidy (Device Discount)', uz: 'Rasmiy subsidiya (telefon chegirmasi)', kk: 'Ресми субсидия (телефон жеңілдігі)' },
+        meaning: {
+            ru: 'Единоразовая скидка на покупку телефона от оператора. В обмен вы подписываете контракт на 2 года. При досрочном разрыве придется вернуть остаток субсидии (위약금).',
+            en: 'One-time discount on phone price from carrier. Requires a 2-year contract. If canceled early, you must pay back the remaining subsidy (penalty).',
+            uz: 'Operator tomonidan telefon narxiga bir martalik chegirma. Buning evaziga siz 2 yillik shartnoma imzolaysiz. Muddatidan oldin bekor qilinganda subsidiyaning qolgan qismini (jarimani) qaytarishingiz kerak.',
+            kk: 'Оператордың телефон бағасына берген бір реттік жеңілдігі. Бұл үшін сіз 2 жылдық келісімшартқа отырасыз. Мерзімінен бұрын бұзған жағдайда субсидияның қалған бөлігін (айыппұлды) қайтаруыңыз керек.'
+        },
+        riskLevel: 'neutral',
+        riskLabel: { ru: 'Скидка на телефон', en: 'Device Discount', uz: 'Telefon chegirmasi', kk: 'Телефон жеңілдігі' }
+    },
+    {
+        id: 'dev_17',
+        category: { ru: 'Контракты', en: 'Contracts', uz: 'Shartnomalar', kk: 'Келісімшарттар' },
+        termKo: '선택약정 (Seon-taek-yak-jeong)',
+        termTrans: { ru: 'Скидка 25% на тариф', en: '25% Service Discount', uz: 'Tarifga 25% chegirma', kk: 'Тарифке 25% жеңілдік' },
+        meaning: {
+            ru: 'Ежемесячная скидка 25% на абонентскую плату. Прямая альтернатива субсидии (공시지원). Можно подключить на 자급제 или контрактные телефоны (если прошел срок субсидии).',
+            en: 'Monthly 25% discount on the service fee. Alternative to device subsidy. Available for Jagapje or contract phones (after subsidy period ends).',
+            uz: 'Abonent to\'lovidan har oylik 25% chegirma. Subsidiya (Gong-si-ji-won) ga muqobil. Jagapje yoki shartnomali telefonlar (subsidiya muddati tugagan bo\'lsa) uchun mavjud.',
+            kk: 'Абоненттік төлемнен ай сайынғы 25% жеңілдік. Субсидияға (Gong-si-ji-won) балама. Jagapje немесе келісімшарттық телефондар (субсидия мерзімі өткен болса) үшін қолжетімді.'
+        },
+        riskLevel: 'safe',
+        riskLabel: { ru: 'Экономия связи', en: 'Save on Plan', uz: 'Aloqada tejash', kk: 'Байланысты үнемдеу' }
+    },
+    {
+        id: 'dev_18',
+        category: { ru: 'Безопасность', en: 'Security', uz: 'Xavfsizlik', kk: 'Қауіпсіздік' },
+        termKo: '확정기변 (Hwak-jeong-gi-byeon)',
+        termTrans: { ru: 'Полная перерегистрация владельца', en: 'Confirmed Ownership Transfer', uz: 'Egasining to\'liq qayta ro\'yxatdan o\'tishi', kk: 'Иесінің толық қайта тіркелуі' },
+        meaning: {
+            ru: 'Юридическая смена владельца телефона в базе оператора. Только после этого вы — 100% хозяин. Если продавец не делает 확정기변, он может объявить телефон в розыск.',
+            en: 'Official transfer of phone ownership in the carrier\'s database. Only after this are you the 100% legal owner. Essential to prevent fraud by the seller.',
+            uz: 'Operator bazasida telefon egasining rasmiy o\'zgarishi. Shundan keyingina siz 100% qonuniy egasiz. Sotuvchi tomonidan firibgarlikning oldini olish uchun zarur.',
+            kk: 'Оператор базасында телефон иесінің ресми өзгеруі. Осыдан кейін ғана сіз 100% заңды иесісіз. Сатушы тарапынан алаяқтықтың алдын алу үшін қажет.'
+        },
+        riskLevel: 'safe',
+        riskLabel: { ru: 'Юридически чисто', en: 'Legally Clean', uz: 'Huquqiy toza', kk: 'Құқықтық таза' }
+    },
+    {
+        id: 'dev_19',
+        category: { ru: 'Безопасность', en: 'Security', uz: 'Xavfsizlik', kk: 'Қауіпсіздік' },
+        termKo: '정상해지 (Jeong-sang-hae-ji)',
+        termTrans: { ru: 'Нормальное расторжение (Чистый статус)', en: 'Proper Termination (Clear ID)', uz: 'To\'g\'ri bekor qilish (toza status)', kk: 'Дұрыс тоқтату (таза статус)' },
+        meaning: {
+            ru: 'Статус телефона, по которому полностью закрыт предыдущий контракт и выплачены все долги и 위약금. Только "чистый" аппарат позволяет сделать 확정기변 и 선택약정.',
+            en: 'Status showing the previous contract is fully closed and all debts/penalties are paid. Only a "clear" device allows official ownership transfer.',
+            uz: 'Oldingi shartnoma to\'liq yopilgan va barcha qarzlar/jarimalar to\'langan telefon statusi. Faqat "toza" apparat rasmiy egalik huquqini o\'tkazishga imkon beradi.',
+            kk: 'Алдыңғы келісімшарт толық жабылған және барлық қарыздар/айыппұлдар төленген телефон статусы. Тек "таза" құрылғы ресми иелік ету құқығын беруге мүмкіндік береді.'
+        },
+        riskLevel: 'safe',
+        riskLabel: { ru: 'Без долгов', en: 'No Debts', uz: 'Qarzsiz', kk: 'Қарызсыз' }
+    },
+    {
+        id: 'dev_20',
+        category: { ru: 'Безопасность', en: 'Security', uz: 'Xavfsizlik', kk: 'Қауіпсіздік' },
+        termKo: '유심기변 (U-sim-gi-byeon)',
+        termTrans: { ru: 'Простая перестановка SIM (Риск)', en: 'SIM-only Change (Risk)', uz: 'Oddiy SIM almashtirish (xavf)', kk: 'Қарапайым SIM ауыстыру (қауіп)' },
+        meaning: {
+            ru: 'Когда вы просто вставили свою SIM в купленный телефон без 확정기변. Юридически телефон еще у продавца. Если он перестанет платить кредит, телефон заблокируют у вас.',
+            en: 'Using your SIM in a bought phone without official ownership transfer. Legally, the seller still owns it. If they default on payments, your phone will be blocked.',
+            uz: 'Rasmiy egalik huquqini o\'tkazmasdan sotib olingan telefonda SIM-kartangizdan foydalanish. Qonuniy ravishda, sotuvchi hali ham unga egalik qiladi. Agar ular to\'lovlarni to\'xtatsa, telefoningiz bloklanadi.',
+            kk: 'Ресми иелік ету құқығын бермей, сатып алынған телефонда SIM-картаңызды пайдалану. Заңды түрде сатушы әлі де оған иелік етеді. Егер олар төлемдерді тоқтатса, телефоныңыз бұғатталады.'
+        },
+        riskLevel: 'warning',
+        riskLabel: { ru: 'ОГРАНИЧЕННЫЕ ПРАВА', en: 'LIMITED RIGHTS', uz: 'CHEKLANGAN HUQUQLAR', kk: 'ШЕКТЕУЛІ ҚҰҚЫҚТАР' }
+    },
 
     // --- Состояние экрана ---
     {
