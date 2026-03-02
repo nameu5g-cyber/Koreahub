@@ -132,7 +132,13 @@
     "sortOptions": [
         {
             "code": "name",
-            "label": "По названию",
+            "label": {
+                "ru": "По названию",
+                "en": "By Name",
+                "ko": "이름순",
+                "kk": "Атауы бойынша",
+                "uz": "Nomi bo'yicha"
+            },
             "default": true
         }
     ],

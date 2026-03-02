@@ -37,12 +37,26 @@
             "code": "title",
             "type": "translated_string",
             "required": true,
+            "label": {
+                "ru": "Заголовок",
+                "en": "Title",
+                "ko": "제목",
+                "kk": "Тақырып",
+                "uz": "Sarlavha"
+            },
             "showInCard": true
         },
         {
             "code": "companyName",
             "type": "string",
             "required": true,
+            "label": {
+                "ru": "Компания",
+                "en": "Company",
+                "ko": "회사명",
+                "kk": "Компания",
+                "uz": "Kompaniya"
+            },
             "showInCard": true
         },
         {
@@ -55,6 +69,13 @@
                 "freelance",
                 "internship"
             ],
+            "label": {
+                "ru": "Тип занятости",
+                "en": "Job Type",
+                "ko": "고용 형태",
+                "kk": "Жұмыс түрі",
+                "uz": "Ish turi"
+            },
             "filterable": true,
             "showInCard": true
         },
@@ -96,12 +117,26 @@
             "type": "salary_range",
             "currency": "KRW",
             "period": "monthly",
+            "label": {
+                "ru": "Зарплата",
+                "en": "Salary",
+                "ko": "급여",
+                "kk": "Жалақы",
+                "uz": "Oylik"
+            },
             "showInDetail": true
         },
         {
             "code": "description",
             "type": "translated_text",
             "required": true,
+            "label": {
+                "ru": "Описание",
+                "en": "Description",
+                "ko": "설명",
+                "kk": "Сипаттама",
+                "uz": "Tavsif"
+            },
             "showInDetail": true
         }
     ],
@@ -113,7 +148,13 @@
     "sortOptions": [
         {
             "code": "postedAt",
-            "label": "Сначала новые",
+            "label": {
+                "ru": "Сначала новые",
+                "en": "Newest First",
+                "ko": "최신순",
+                "kk": "Алдымен жаңалары",
+                "uz": "Avval yangilari"
+            },
             "default": true
         }
     ],

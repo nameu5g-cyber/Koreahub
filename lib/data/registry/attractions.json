@@ -1,0 +1,127 @@
+{
+    "code": "attractions",
+    "name": {
+        "ru": "Достоприме-\nчательности",
+        "en": "Attractions",
+        "ko": "명소",
+        "kk": "Көрікті жерлер",
+        "uz": "Diqqatga sazovor joylar"
+    },
+    "icon": "Map",
+    "color": "#4CAF50",
+    "entityName": {
+        "ru": "Место",
+        "en": "Place",
+        "kk": "Орын",
+        "uz": "Joy"
+    },
+    "fields": [
+        {
+            "code": "name",
+            "type": "translated_string",
+            "required": true,
+            "showInCard": true
+        },
+        {
+            "code": "nameKo",
+            "type": "string",
+            "required": true,
+            "showInDetail": true,
+            "label": {
+                "ru": "Название на корейском",
+                "en": "Name in Korean",
+                "kk": "Корей тіліндегі атауы",
+                "uz": "Koreys tilidagi nomi"
+            }
+        },
+        {
+            "code": "category",
+            "type": "select",
+            "options": [
+                "palace",
+                "museum",
+                "park",
+                "neighborhood",
+                "temple",
+                "landmark",
+                "market",
+                "cafe",
+                "restaurant",
+                "theme_park",
+                "zoo",
+                "aquarium"
+            ],
+            "filterable": true,
+            "showInCard": true,
+            "display": "chips",
+            "label": {
+                "ru": "Категория",
+                "en": "Category",
+                "kk": "Санат",
+                "uz": "Toifa"
+            }
+        },
+        {
+            "code": "region",
+            "type": "string",
+            "filterable": true,
+            "showInCard": false
+        },
+        {
+            "code": "address",
+            "type": "translated_string",
+            "showInDetail": true,
+            "label": {
+                "ru": "Адрес",
+                "en": "Address",
+                "kk": "Мекенжай",
+                "uz": "Manzil"
+            }
+        },
+        {
+            "code": "addressKo",
+            "type": "string",
+            "showInDetail": true,
+            "label": {
+                "ru": "Адрес (KO)",
+                "en": "Address (KO)"
+            }
+        },
+        {
+            "code": "naverMapUrl",
+            "type": "url",
+            "showInDetail": true,
+            "label": "Naver Map"
+        },
+        {
+            "code": "description",
+            "type": "translated_text",
+            "showInDetail": true,
+            "label": {
+                "ru": "Описание",
+                "en": "Description",
+                "kk": "Сипаттама",
+                "uz": "Tavsif"
+            }
+        }
+    ],
+    "filters": [
+        "category"
+    ],
+    "sortOptions": [
+        {
+            "code": "name",
+            "label": {
+                "ru": "По названию",
+                "en": "By Name",
+                "ko": "이름순",
+                "kk": "Атауы бойынша",
+                "uz": "Nomi bo'yicha"
+            },
+            "default": true
+        }
+    ],
+    "actions": [
+        "naver_map"
+    ]
+}

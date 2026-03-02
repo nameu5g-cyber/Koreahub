@@ -1,7 +1,7 @@
 {
     "code": "telecom",
     "name": {
-        "ru": "Мобильная связь",
+        "ru": "Мобильная\nсвязь",
         "en": "Mobile Communication",
         "ko": "모바일 통신",
         "kk": "Мобильді байланыс",
@@ -27,7 +27,13 @@
             "type": "string",
             "required": true,
             "showInDetail": true,
-            "label": "Название по-корейски"
+            "label": {
+                "ru": "Название (KO)",
+                "en": "Name (KO)",
+                "ko": "한국어 명칭",
+                "kk": "Корей тіліндегі атауы",
+                "uz": "Koreys tilidagi nomi"
+            }
         },
         {
             "code": "address",
@@ -38,7 +44,13 @@
             "code": "addressKo",
             "type": "string",
             "showInDetail": true,
-            "label": "Адрес по-корейски"
+            "label": {
+                "ru": "Адрес (KO)",
+                "en": "Address (KO)",
+                "ko": "한국어 주소",
+                "kk": "Корей тіліндегі мекенжайы",
+                "uz": "Koreys tilidagi manzili"
+            }
         },
         {
             "code": "phone",
@@ -50,7 +62,13 @@
             "code": "messenger",
             "type": "string",
             "showInCard": true,
-            "label": "KakaoTalk ID"
+            "label": {
+                "ru": "KakaoTalk ID",
+                "en": "KakaoTalk ID",
+                "ko": "카카오톡 ID",
+                "kk": "KakaoTalk ID",
+                "uz": "KakaoTalk ID"
+            }
         },
         {
             "code": "availableServices",
@@ -62,14 +80,26 @@
                 "identification"
             ],
             "showInDetail": true,
-            "label": "Услуги"
+            "label": {
+                "ru": "Услуги",
+                "en": "Services",
+                "ko": "서비스",
+                "kk": "Қызметтер",
+                "uz": "Xizmatlar"
+            }
         }
     ],
     "filters": [],
     "sortOptions": [
         {
             "code": "name",
-            "label": "По названию",
+            "label": {
+                "ru": "По названию",
+                "en": "By Name",
+                "ko": "이름순",
+                "kk": "Атауы бойынша",
+                "uz": "Nomi bo'yicha"
+            },
             "default": true
         }
     ],

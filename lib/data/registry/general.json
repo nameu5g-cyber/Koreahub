@@ -20,12 +20,26 @@
             "code": "name",
             "type": "string",
             "required": true,
+            "label": {
+                "ru": "Название",
+                "en": "Name",
+                "ko": "이름",
+                "kk": "Атауы",
+                "uz": "Nomi"
+            },
             "showInCard": true
         },
         {
             "code": "desc",
             "type": "translated_string",
             "required": true,
+            "label": {
+                "ru": "Описание",
+                "en": "Description",
+                "ko": "설명",
+                "kk": "Сипаттама",
+                "uz": "Tavsif"
+            },
             "showInCard": true
         },
         {
@@ -44,6 +58,13 @@
         {
             "code": "link",
             "type": "url",
+            "label": {
+                "ru": "Ссылка",
+                "en": "Link",
+                "ko": "링크",
+                "kk": "Сілтеме",
+                "uz": "Havola"
+            },
             "showInDetail": true
         },
         {
@@ -55,11 +76,25 @@
         {
             "code": "location",
             "type": "string",
+            "label": {
+                "ru": "Локация",
+                "en": "Location",
+                "ko": "위치",
+                "kk": "Орналасқан жері",
+                "uz": "Manzil"
+            },
             "showInCard": true
         },
         {
             "code": "tags",
             "type": "multiselect",
+            "label": {
+                "ru": "Теги",
+                "en": "Tags",
+                "ko": "태그",
+                "kk": "Тегтер",
+                "uz": "Teglar"
+            },
             "display": "chips"
         }
     ],
@@ -69,7 +104,13 @@
     "sortOptions": [
         {
             "code": "name",
-            "label": "По названию",
+            "label": {
+                "ru": "По названию",
+                "en": "By Name",
+                "ko": "이름순",
+                "kk": "Атауы бойынша",
+                "uz": "Nomi bo'yicha"
+            },
             "default": true
         }
     ],

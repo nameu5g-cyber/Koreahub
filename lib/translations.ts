@@ -78,6 +78,8 @@ export const translations = {
         visa_registration: "Регистрация (ARC)",
         visa_reentry: "Повторный въезд",
         visa_permanent: "ПМЖ (F-5)",
+        all_regions: "Все регионы",
+        all_categories: "Любые",
         lang_ru: "Русский",
         lang_en: "Английский",
         lang_ko: "Корейский",
@@ -162,6 +164,8 @@ export const translations = {
         lang_en: "Ағылшын тілі",
         lang_ko: "Корей тілі",
         lang_zh: "Қытай тілі",
+        all_regions: "Барлық аймақтар",
+        all_categories: "Кез келген",
         registry_general: "Ақпарат",
         registry_medical: "Медицина",
         registry_jobs: "Жұмыс",
@@ -246,6 +250,8 @@ export const translations = {
         lang_en: "Ingliz tili",
         lang_ko: "Koreys tili",
         lang_zh: "Xitoy tili",
+        all_regions: "Barcha hududlar",
+        all_categories: "Ixtiyoriy",
         registry_general: "Ma'lumot",
         registry_medical: "Tibbiyot",
         registry_jobs: "Ish",
@@ -334,6 +340,8 @@ export const translations = {
         registry_medical: "Medical",
         registry_jobs: "Jobs",
         registry_visa: "Visas",
+        all_regions: "All Regions",
+        all_categories: "All Categories",
     }
 };
 

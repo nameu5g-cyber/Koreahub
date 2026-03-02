@@ -186,10 +186,21 @@ export function LexiconRegistry({ t, uiLang }: LexiconRegistryProps) {
                         <button
                             key={dom.id}
                             onClick={() => setActiveDomain(dom.id)}
-                            className={`flex flex-col items-center gap-1 pb-2 transition-all flex-1 min-w-[70px] ${activeDomain === dom.id ? 'text-blue-600' : 'text-gray-300 hover:text-gray-500'}`}
+                            className={`flex flex-col items-center gap-1 pb-2 transition-all flex-1 min-w-[65px] overflow-visible ${activeDomain === dom.id ? 'text-blue-600' : 'text-gray-300 hover:text-gray-500'}`}
                         >
-                            <dom.icon size={20} strokeWidth={activeDomain === dom.id ? 2.5 : 2} className={activeDomain === dom.id ? 'animate-in fade-in zoom-in duration-300' : ''} />
-                            <span className="text-[9px] font-black uppercase tracking-tighter">{dom.label}</span>
+                            <dom.icon size={16} strokeWidth={activeDomain === dom.id ? 3 : 2} className={activeDomain === dom.id ? 'animate-in fade-in zoom-in duration-300' : ''} />
+                            <div className="w-full flex justify-center items-center min-h-[22px] overflow-visible">
+                                <span
+                                    className="font-bold uppercase tracking-tighter text-center whitespace-pre-line inline-block"
+                                    style={{
+                                        fontSize: '8px',
+                                        lineHeight: '1.1',
+                                        flexShrink: 0
+                                    }}
+                                >
+                                    {dom.label}
+                                </span>
+                            </div>
                         </button>
                     ))}
 

@@ -1,8 +1,9 @@
+import attractions from './attractions.json';
+import general from './general.json';
+import visa from './visa.json';
+import telecom from './telecom.json';
 import medical from './medical.json';
 import jobs from './jobs.json';
-import visa from './visa.json';
-import general from './general.json';
-import telecom from './telecom.json';
 import { VerticalConfig, RegistryEntity } from './types';
 
 export const VERTICALS: Record<string, VerticalConfig> = {
@@ -11,6 +12,7 @@ export const VERTICALS: Record<string, VerticalConfig> = {
     telecom: { ...telecom, icon: 'Phone' } as any,
     medical: medical as any,
     jobs: jobs as any,
+    attractions: attractions as any,
 };
 
 export const REGISTRY_DATA: RegistryEntity[] = [
@@ -63,7 +65,7 @@ export const REGISTRY_DATA: RegistryEntity[] = [
                 uz: 'Seul, Jongno-gu, Jong-ro 38'
             },
             addressKo: '서울특별시 종로구 종로 38 (서린동)',
-            phone: '02-731-1760',
+            phone: '02-731-1799',
             website: 'https://www.hikorea.go.kr',
             bookingRequired: true,
             services: ['extension', 'registration'],
@@ -150,7 +152,7 @@ export const REGISTRY_DATA: RegistryEntity[] = [
                 uz: 'Seul, Gangseo-gu, Magok-so 1-ro 48'
             },
             addressKo: '서울특별시 강서구 마곡서1로 48',
-            phone: '02-2650-6211',
+            phone: '02-6980-4813',
             bookingRequired: true,
             services: ['extension', 'registration'],
             naverMapUrl: 'https://naver.me/seoul_nambu'
@@ -615,7 +617,7 @@ export const REGISTRY_DATA: RegistryEntity[] = [
             region: 'seoul',
             address: { ru: 'Сеул, Гандон-гу, Соннэ-дон 449-15', en: '449-15 Seongnae-dong, Gangdong-gu, Seoul', kk: 'Сеул, Кандон-гу, Соннэ-дон 449-15', uz: 'Seul, Gangdong-gu, Sonnae-dong 449-15' },
             addressKo: '서울특별시 강동구 성내동 449-15',
-            phone: '010-9988-8175',
+            phone: '02-474-3010',
             messenger: 'ntelecom7',
             availableServices: ['prepaid', 'consult', 'identification'],
             tips: { ru: 'Быстрая активация для экспатов. Говорят по-простому.', en: 'Fast activation for expats. Very helpful staff.' },
@@ -1788,6 +1790,594 @@ export const REGISTRY_DATA: RegistryEntity[] = [
             availableServices: ['prepaid', 'postpaid', 'consult'],
             tips: { ru: 'Официальный партнерский центр Ntelecom (BP).', en: 'Official Ntelecom Partner Center (BP).' },
             naverMapUrl: 'https://map.naver.com/v5/search/제주특별자치도%20제주시%20삼봉로%20137%20(도련일동,%20도련한양아파트)%20101호'
+        }
+    },
+    {
+        id: 'attr_gyeongbokgung',
+        verticalCode: 'attractions',
+        data: {
+            name: { ru: 'Дворец Кёнбоккун', en: 'Gyeongbokgung Palace', ko: '경복궁', kk: 'Кёнбоккун сарайы', uz: 'Kyungbokkung saroyi' },
+            nameKo: '경복궁',
+            category: 'palace',
+            region: 'seoul',
+            address: { ru: 'Сеул, Чонно-гу, Саджик-ро 161', en: '161 Sajik-ro, Jongno-gu, Seoul' },
+            addressKo: '서울특별시 종로구 사직로 161',
+            naverMapUrl: 'https://naver.me/G8tS9W1Y',
+            description: { ru: 'Главный и крупнейший дворец династии Чосон.', en: 'The main royal palace of the Joseon dynasty.' }
+        }
+    },
+    {
+        id: 'attr_bukchon',
+        verticalCode: 'attractions',
+        data: {
+            name: { ru: 'Деревня Букчон', en: 'Bukchon Hanok Village', ko: '북촌한옥마을', kk: 'Букчон ауылы', uz: 'Bukchon qishlog\'i' },
+            nameKo: '북촌한옥마을',
+            category: 'neighborhood',
+            region: 'seoul',
+            address: { ru: 'Сеул, Чонно-гу, Ге-дон', en: 'Gye-dong, Jongno-gu, Seoul' },
+            addressKo: '서울특별시 종로구 계동',
+            naverMapUrl: 'https://naver.me/FfM9I9v9',
+            description: { ru: 'Традиционная корейская деревня с домами "ханок".', en: 'A traditional Korean village with hanok houses.' }
+        }
+    },
+    {
+        id: 'attr_seoul_tower',
+        verticalCode: 'attractions',
+        data: {
+            name: { ru: 'Башня Намсан (N Seoul Tower)', en: 'N Seoul Tower', ko: 'N서울타워', kk: 'Намсан мұнарасы', uz: 'Namsan minorasi' },
+            nameKo: 'N서울타워',
+            category: 'landmark',
+            region: 'seoul',
+            address: { ru: 'Сеул, Йонсан-гу, Намсангонвон-гил 105', en: '105 Namsangongwon-gil, Yongsan-gu, Seoul' },
+            addressKo: '서울특별시 용산구 남산공원길 105',
+            naverMapUrl: 'https://naver.me/xw6qC9S0',
+            description: { ru: 'Символ Сеула с панорамным видом на город.', en: 'A landmark of Seoul with panoramic city views.' }
+        }
+    },
+    {
+        id: 'attr_lotte_world',
+        verticalCode: 'attractions',
+        data: {
+            name: { ru: 'Лотте Ворлд', en: 'Lotte World', ko: '롯데월드', kk: 'Лотте Ворлд', uz: 'Lotte World' },
+            nameKo: '롯데월드',
+            category: 'theme_park',
+            region: 'seoul',
+            address: { ru: 'Сеул, Сонпа-гу, Олимлик-ро 240', en: '240 Olympic-ro, Songpa-gu, Seoul' },
+            addressKo: '서울특별시 송па구 올림픽로 240',
+            naverMapUrl: 'https://naver.me/5L3X7vR2',
+            description: { ru: 'Крупнейший крытый парк развлечений в мире.', en: 'One of the largest indoor theme parks in the world.' }
+        }
+    },
+    {
+        id: 'attr_gamcheon',
+        verticalCode: 'attractions',
+        data: {
+            name: { ru: 'Культурная деревня Камчхон', en: 'Gamcheon Culture Village', ko: '감천문화마을', kk: 'Камчхон мәдени ауылы', uz: 'Gamcheon madaniyat qishlog\'i' },
+            nameKo: '감천문화마을',
+            category: 'neighborhood',
+            region: 'busan',
+            address: { ru: 'Пусан, Саха-гу, Камнэ 2-ро 203', en: '203 Gamnae 2-ro, Saha-gu, Busan' },
+            addressKo: '부산광역시 사하구 감내2로 203',
+            naverMapUrl: 'https://naver.me/F9V1S8X1',
+            description: { ru: "Корейский Санторини — яркие домики на склоне холма.", en: "Known as the Santorini of Korea for its colorful houses on a hill." }
+        }
+    },
+    {
+        id: 'attr_haeundae',
+        verticalCode: 'attractions',
+        data: {
+            name: { ru: 'Пляж Хэундэ', en: 'Haeundae Beach', ko: '해운대해수욕장', kk: 'Хэундэ жағажайы', uz: 'Haeundae plyaji' },
+            nameKo: '해운대해수욕장',
+            category: 'park',
+            region: 'busan',
+            address: { ru: 'Пусан, Хэундэ-гу, Хэундэ-хэбён-ло 264', en: '264 Haeundaehaebyeon-ro, Haeundae-gu, Busan' },
+            addressKo: '부산광역시 해운대구 해운대해변로 264',
+            naverMapUrl: 'https://naver.me/xk6C6C6C',
+            description: { ru: 'Самый известный пляж в Южной Корее.', en: 'The most famous beach in South Korea.' }
+        }
+    },
+    {
+        id: 'attr_hallasan',
+        verticalCode: 'attractions',
+        data: {
+            name: { ru: 'Гора Халласан', en: 'Hallasan Mountain', ko: '한라산', kk: 'Халласан тауы', uz: 'Hallasan tog\'i' },
+            nameKo: '한라산국립공원',
+            category: 'park',
+            region: 'jeju',
+            address: { ru: 'Чеджу, Чеджу-си, Халласан', en: 'Hallasan, Jeju-si, Jeju' },
+            addressKo: '제주특별자치도 제주시 한라산',
+            naverMapUrl: 'https://naver.me/xw6qC9S0',
+            description: { ru: 'Самая высокая гора в Южной Корее, потухший вулкан.', en: 'The highest mountain in South Korea, a shield volcano.' }
+        }
+    },
+    {
+        id: 'attr_bulguksa',
+        verticalCode: 'attractions',
+        data: {
+            name: { ru: 'Храм Пульгукса', en: 'Bulguksa Temple', ko: '불국사', kk: 'Пульгукса храмы', uz: 'Bulguksa ibodatxonasi' },
+            nameKo: '불국사',
+            category: 'temple',
+            region: 'gyeongbuk',
+            address: { ru: 'Кёнджу, Бульгук-ро 385', en: '385 Bulguk-ro, Gyeongju' },
+            addressKo: '경상북도 경주시 불국로 385',
+            naverMapUrl: 'https://naver.me/FfM9I9v9',
+            description: { ru: 'Объект всемирного наследия ЮНЕСКО, шедевр буддийского искусства.', en: 'A UNESCO World Heritage site and a masterpiece of Buddhist art.' }
+        }
+    },
+    {
+        id: 'attr_everland',
+        verticalCode: 'attractions',
+        data: {
+            name: { ru: 'Эверленд', en: 'Everland', ko: '에버랜드', kk: 'Эверленд', uz: 'Everland' },
+            nameKo: '에버랜드',
+            category: 'theme_park',
+            region: 'gyeonggi',
+            address: { ru: 'Кёнгидо, Йонъин, Эверленд-ро 199', en: '199 Everland-ro, Yongin, Gyeonggi-do' },
+            addressKo: '경기도 용인시 처인구 포곡읍 에버랜드로 199',
+            naverMapUrl: 'https://naver.me/xX6qC9S0',
+            description: { ru: 'Крупнейший тематический парк в Корее.', en: 'The largest theme park in South Korea.' }
+        }
+    },
+    {
+        id: 'attr_seongsan',
+        verticalCode: 'attractions',
+        data: {
+            name: { ru: 'Пик Сонсан Ильчхульбон', en: 'Seongsan Ilchulbong', ko: '성산일출봉', kk: 'Сонсан Ильчхульбон', uz: 'Seongsan Ilchulbong' },
+            nameKo: '성산일출봉',
+            category: 'landmark',
+            region: 'jeju',
+            address: { ru: 'Чеджу, Сонсан-ып, Ильчхуль-ро 284-6', en: '284-6 Ilchul-ro, Seongsan-eup, Seogwipo, Jeju' },
+            addressKo: '제주특별자치도 서귀포시 성산읍 일출로 284-6',
+            naverMapUrl: 'https://naver.me/FfM9I9v9',
+            description: { ru: 'Холм Восхода солнца, образованный вулканической активностью.', en: 'Sunrise Peak, formed by volcanic eruptions.' }
+        }
+    },
+    {
+        id: 'attr_insadong',
+        verticalCode: 'attractions',
+        data: {
+            name: { ru: 'Инсадон', en: 'Insadong', ko: '인사동', kk: 'Инсадон', uz: 'Insadong' },
+            nameKo: '인사동',
+            category: 'neighborhood',
+            region: 'seoul',
+            address: { ru: 'Сеул, Чонно-гу, Инсадон', en: 'Insadong, Jongno-gu, Seoul' },
+            addressKo: '서울특별시 종로구 인사동',
+            naverMapUrl: 'https://naver.me/xw6qC9S0',
+            description: { ru: 'Район антиквариата, чайных домов и традиционного искусства.', en: 'A district known for antiques, traditional tea houses, and art.' }
+        }
+    },
+    {
+        id: 'attr_myeongdong',
+        verticalCode: 'attractions',
+        data: {
+            name: { ru: 'Мёндон', en: 'Myeongdong', ko: '명동', kk: 'Мёндон', uz: 'Myeongdong' },
+            nameKo: '명동',
+            category: 'neighborhood',
+            region: 'seoul',
+            address: { ru: 'Сеул, Чун-гу, Мёндон', en: 'Myeong-dong, Jung-gu, Seoul' },
+            addressKo: '서울특별시 중구 명동',
+            naverMapUrl: 'https://naver.me/FfM9I9v9',
+            description: { ru: 'Главный торговый район Кореи, рай для любителей косметики.', en: "Korea's primary shopping district, a paradise for cosmetics and street food." }
+        }
+    },
+    {
+        id: 'attr_gwangjang',
+        verticalCode: 'attractions',
+        data: {
+            name: { ru: 'Рынок Квангджанг', en: 'Gwangjang Market', ko: '광장시장', kk: 'Квангджанг базары', uz: 'Gwangjang bozori' },
+            nameKo: '광장시장',
+            category: 'market',
+            region: 'seoul',
+            address: { ru: 'Сеул, Чонно-гу, Чангёнгун-ло 88', en: '88 Changgyeonggung-ro, Jongno-gu, Seoul' },
+            addressKo: '서울특별시 종로구 창경궁로 88',
+            naverMapUrl: 'https://naver.me/xw6qC9S0',
+            description: { ru: 'Один из старейших рынков, знаменитый своей уличной едой.', en: 'One of the oldest traditional markets, famous for its street food.' }
+        }
+    },
+    {
+        id: 'attr_nami_island',
+        verticalCode: 'attractions',
+        data: {
+            name: { ru: 'Остров Нами', en: 'Nami Island', ko: '남이섬', kk: 'Нами аралы', uz: 'Nami oroli' },
+            nameKo: '남이섬',
+            category: 'park',
+            region: 'gangwon',
+            address: { ru: 'Канвондо, Чхунчхон, Намисон-гил 1', en: '1 Namisum-gil, Chuncheon, Gangwon-do' },
+            addressKo: '강원특별자치도 춘천시 남산면 남이섬길 1',
+            naverMapUrl: 'https://naver.me/xw6qC9S0',
+            description: { ru: 'Живописный остров, ставший популярным после дорам.', en: 'A picturesque island made famous by Korean dramas.' }
+        }
+    },
+    {
+        id: 'attr_seoraksan',
+        verticalCode: 'attractions',
+        data: {
+            name: { ru: 'Горы Сораксан', en: 'Seoraksan National Park', ko: '설악산국립공원', kk: 'Сораксан таулары', uz: 'Seoraksan tog\'lari' },
+            nameKo: '설악산국립공원',
+            category: 'park',
+            region: 'gangwon',
+            address: { ru: 'Канвондо, Сокчхо, Сорак-ро 833', en: '833 Seorak-ro, Sokcho, Gangwon-do' },
+            addressKo: '강원특별자치도 속초시 설악동 설악로 833',
+            naverMapUrl: 'https://naver.me/FfM9I9v9',
+            description: { ru: 'Национальный парк с самыми красивыми горами в Корее.', en: 'A national park featuring some of the most beautiful mountains in Korea.' }
+        }
+    },
+    {
+        id: 'attr_hwaseong',
+        verticalCode: 'attractions',
+        data: {
+            name: { ru: 'Крепость Хвасон', en: 'Hwaseong Fortress', ko: '수원 화성', kk: 'Хвасон бекінісі', uz: 'Hwaseong qal\'asi' },
+            nameKo: '수원 화성',
+            category: 'landmark',
+            region: 'gyeonggi',
+            address: { ru: 'Кёнгидо, Сувон, Хаенггунг-ро 11', en: '11 Haenggung-ro, Suwon, Gyeonggi-do' },
+            addressKo: '경기도 수원시 팔달구 행궁로 11',
+            naverMapUrl: 'https://naver.me/xw6qC9S0',
+            description: { ru: 'Уникальная крепость XVIII века, объект ЮНЕСКО.', en: 'A unique 18th-century fortress and a UNESCO World Heritage site.' }
+        }
+    },
+    {
+        id: 'attr_jeonju_village',
+        verticalCode: 'attractions',
+        data: {
+            name: { ru: 'Деревня ханоков Чонджу', en: 'Jeonju Hanok Village', ko: '전주한옥마을', kk: 'Чонджу ханок ауылы', uz: 'Jeonju hanok qishlog\'i' },
+            nameKo: '전주한옥마을',
+            category: 'neighborhood',
+            region: 'jeolla',
+            address: { ru: 'Чолла-пукто, Чонджу, Гринэ-ро 99', en: '99 Girin-daero, Wansan-gu, Jeonju, Jeollabuk-do' },
+            addressKo: '전북특별자치도 전주시 완산구 기린대로 99',
+            naverMapUrl: 'https://naver.me/FfM9I9v9',
+            description: { ru: 'Крупнейшая деревня ханоков, столица корейской кухни.', en: 'The largest hanok village and the capital of Korean cuisine.' }
+        }
+    },
+    {
+        id: 'attr_jagalchi',
+        verticalCode: 'attractions',
+        data: {
+            name: { ru: 'Рынок Чагальчхи', en: 'Jagalchi Market', ko: '자갈치시장', kk: 'Чагальчхи базары', uz: 'Jagalchi bozori' },
+            nameKo: '자갈치시장',
+            category: 'market',
+            region: 'busan',
+            address: { ru: 'Пусан, Чун-гу, Чагальчхи-ро 52', en: '52 Jagalchi-ro, Jung-gu, Busan' },
+            addressKo: '부산광역시 중구 자갈치로 52',
+            naverMapUrl: 'https://naver.me/xw6qC9S0',
+            description: { ru: 'Крупнейший рыбный рынок в Корее.', en: "The largest seafood market in Korea." }
+        }
+    },
+    {
+        id: 'attr_seokguram',
+        verticalCode: 'attractions',
+        data: {
+            name: { ru: 'Грот Соккурам', en: 'Seokguram Grotto', ko: '석굴암', kk: 'Соккурам үңгірі', uz: 'Seokguram g\'ori' },
+            nameKo: '석굴암',
+            category: 'temple',
+            region: 'gyeongbuk',
+            address: { ru: 'Кёнджу, Бульгук-ро 873-243', en: '873-243 Bulguk-ro, Gyeongju' },
+            addressKo: '경상북도 경주시 불국로 873-243',
+            naverMapUrl: 'https://naver.me/xw6qC9S0',
+            description: { ru: 'Искусственный гранитный грот с монументальной статуей Будды.', en: 'An artificial granite grotto with a monumental Buddha statue.' }
+        }
+    },
+    {
+        id: 'attr_hwaseong_haenggung',
+        verticalCode: 'attractions',
+        data: {
+            name: { ru: 'Дворец Хвасон Хэнгун', en: 'Hwaseong Haenggung', ko: '화성행궁', kk: 'Хвасон Хэнгун сарайы', uz: 'Hwaseong Haenggung saroyi' },
+            nameKo: '화성행궁',
+            category: 'palace',
+            region: 'gyeonggi',
+            address: { ru: 'Кёнгидо, Сувон, Хаенггунг-ро 82', en: '82 Haenggung-ro, Suwon, Gyeonggi-do' },
+            addressKo: '경기도 수원시 팔달구 행궁로 82',
+            naverMapUrl: 'https://naver.me/FfM9I9v9',
+            description: { ru: 'Временный дворец, где останавливались короли во время поездок.', en: 'A temporary palace where kings stayed during their travels.' }
+        }
+    },
+    {
+        id: 'attr_maritime_museum',
+        verticalCode: 'attractions',
+        data: {
+            name: { ru: 'Национальный морской музей', en: 'National Maritime Museum', ko: '국립해양박물관', kk: 'Ұлттық теңіз мұражайы', uz: 'Milliy dengiz muzeyi' },
+            nameKo: '국립해양박물관',
+            category: 'museum',
+            region: 'busan',
+            address: { ru: 'Пусан, Йондо-гу, Хэмёнг-ло 301번길 45', en: '45 Haemyang-ro 301beon-gil, Yeongdo-gu, Busan' },
+            addressKo: '부산광역시 영도구 해양로301번길 45',
+            naverMapUrl: 'https://naver.me/xw6qC9S0',
+            description: { ru: 'Крупнейший морской музей в Корее с океанариумом.', en: "Korea's representative maritime museum with an aquarium." }
+        }
+    },
+    {
+        id: 'attr_bijarim',
+        verticalCode: 'attractions',
+        data: {
+            name: { ru: 'Лес Биджарим', en: 'Bijarim Forest', ko: '비자림', kk: 'Биджарим орманы', uz: 'Bijarim o\'rmoni' },
+            nameKo: '비자림',
+            category: 'park',
+            region: 'jeju',
+            address: { ru: 'Чеджу, Гуджва-ып, Биджасуп-гил 15', en: '15 Bijasup-gil, Gujwa-eup, Jeju' },
+            addressKo: '제주특별자치도 제주시 구좌읍 비자숲길 15',
+            naverMapUrl: 'https://naver.me/FfM9I9v9',
+            description: { ru: 'Уникальный лес с тысячелетними деревьями мускатного ореха.', en: 'A unique forest with thousand-year-old nutmeg trees.' }
+        }
+    },
+    {
+        id: 'attr_hahoe',
+        verticalCode: 'attractions',
+        data: {
+            name: { ru: 'Деревня Хахве', en: 'Hahoe Folk Village', ko: '안동하회마을', kk: 'Хахве ауылы', uz: 'Hahoe qishlog\'i' },
+            nameKo: '안동하회마을',
+            category: 'neighborhood',
+            region: 'gyeongbuk',
+            address: { ru: 'Кёнсан-пукто, Андонг, Хахведжонг-гил 40', en: '40 Hahoenamchone-gil, Pungcheon-myeon, Andong, Gyeongsangbuk-do' },
+            addressKo: '경상북도 안동시 풍천면 하회남촌길 40',
+            naverMapUrl: 'https://naver.me/xw6qC9S0',
+            description: { ru: 'Традиционная клановая деревня периода Чосон.', en: 'A traditional clan village from the Joseon period.' }
+        }
+    },
+    {
+        id: 'attr_incheon_chinatown',
+        verticalCode: 'attractions',
+        data: {
+            name: { ru: 'Чайнатаун Инчхона', en: 'Incheon Chinatown', ko: '인천 차이나타운', kk: 'Инчхон Чайнатаун', uz: 'Incheon Chinatown' },
+            nameKo: '인천 차이나타운',
+            category: 'neighborhood',
+            region: 'incheon',
+            address: { ru: 'Инчхон, Чун-гу, Чайнатаун-ло 26-ро 12-1', en: '12-1 Chinatown-ro 26beon-gil, Jung-gu, Incheon' },
+            addressKo: '인천광역시 중구 차이나타운로26번길 12-1',
+            naverMapUrl: 'https://naver.me/FfM9I9v9',
+            description: { ru: 'Единственный официальный Чайнатаун в Корее, родина Чачжанмёна.', en: "Korea's only official Chinatown and the birthplace of Jajangmyeon." }
+        }
+    },
+    {
+        id: 'attr_83_tower',
+        verticalCode: 'attractions',
+        data: {
+            name: { ru: 'Башня 83 (Тэгу)', en: '83 Tower (Daegu)', ko: '83타워', kk: '83 мұнарасы', uz: '83 minorasi' },
+            nameKo: '83타워',
+            category: 'landmark',
+            region: 'daegu',
+            address: { ru: 'Тэгу, Дальсо-гу, Дулюгонгвон-ло 200', en: '200 Duryugongwon-ro, Dalseo-gu, Daegu' },
+            addressKo: '대구광역시 달서구 두류공원로 200',
+            naverMapUrl: 'https://naver.me/xw6qC9S0',
+            description: { ru: 'Символ Тэгу с вращающимся рестораном и панорамным видом.', en: 'A symbol of Daegu with a revolving restaurant and views.' }
+        }
+    },
+    {
+        id: 'attr_518_park',
+        verticalCode: 'attractions',
+        data: {
+            name: { ru: 'Парк 5.18', en: '5.18 Memorial Park', ko: '5.18기념공원', kk: '5.18 мемориалдық паркі', uz: '5.18 memorial bog\'i' },
+            nameKo: '5.18기념공원',
+            category: 'park',
+            region: 'gwangju',
+            address: { ru: 'Кванджу, Сео-гу, Нэбанг-ло 111', en: '111 Naebang-ro, Seo-gu, Gwangju' },
+            addressKo: '광주광역시 서구 내방로 111',
+            naverMapUrl: 'https://naver.me/FfM9I9v9',
+            description: { ru: 'Парк в память о движении за демократизацию в Кванджу.', en: 'A park commemorating the Gwangju Democratization Movement.' }
+        }
+    },
+    {
+        id: 'attr_dongdaemun',
+        verticalCode: 'attractions',
+        data: {
+            name: { ru: 'Тондэмун (DDP)', en: 'Dongdaemun (DDP)', ko: '동대문/DDP', kk: 'Тондэмун', uz: 'Dongdaemun' },
+            nameKo: '동대문 디자인 플라자 (DDP)',
+            category: 'neighborhood',
+            region: 'seoul',
+            address: { ru: 'Сеул, Чун-гу, Ыльджи-ро 281', en: '281 Eulji-ro, Jung-gu, Seoul' },
+            addressKo: '서울특별시 중구 을지로 281',
+            naverMapUrl: 'https://naver.me/xw6qC9S0',
+            description: { ru: 'Центр моды и дизайна, футуристичное здание DDP.', en: 'The center of fashion and design, featuring the futuristic DDP building.' }
+        }
+    },
+    {
+        id: 'attr_namdaemun',
+        verticalCode: 'attractions',
+        data: {
+            name: { ru: 'Рынок Намдэмун', en: 'Namdaemun Market', ko: '남대문시장', kk: 'Намдэмун базары', uz: 'Namdaemun bozori' },
+            nameKo: '남대문시장',
+            category: 'market',
+            region: 'seoul',
+            address: { ru: 'Сеул, Чун-гу, Намдэмун-сиджанг-гил 21', en: '21 Namdaemunsijang-gil, Jung-gu, Seoul' },
+            addressKo: '서울특별시 중구 남대문시장길 21',
+            naverMapUrl: 'https://naver.me/FfM9I9v9',
+            description: { ru: 'Старейший и крупнейший традиционный рынок Кореи.', en: "Korea's oldest and largest traditional market." }
+        }
+    },
+    {
+        id: 'attr_itaewon',
+        verticalCode: 'attractions',
+        data: {
+            name: { ru: 'Итэвон', en: 'Itaewon', ko: '이태원', kk: 'Итэвон', uz: 'Itaewon' },
+            nameKo: '이태원관광특구',
+            category: 'neighborhood',
+            region: 'seoul',
+            address: { ru: 'Сеул, Йонсан-гу, Итэвон', en: 'Itaewon, Yongsan-gu, Seoul' },
+            addressKo: '서울특별시 용산구 이태원동',
+            naverMapUrl: 'https://naver.me/xw6qC9S0',
+            description: { ru: 'Самый интернациональный район Сеула, центр ночной жизни.', en: "Seoul's most international district, a hub for nightlife and global cuisine." }
+        }
+    },
+    {
+        id: 'attr_myeongdong_kyoja',
+        verticalCode: 'attractions',
+        data: {
+            name: { ru: 'Мёндон Кёджа', en: 'Myeongdong Kyoja', ko: '명동교자', kk: 'Мёндон Кёджа', uz: 'Myeongdong Kyoja' },
+            nameKo: '명동교자 본점',
+            category: 'restaurant',
+            region: 'seoul',
+            address: { ru: 'Сеул, Чун-гу, Мёндон 10-гил 29', en: '29 Myeongdong 10-gil, Jung-gu, Seoul' },
+            addressKo: '서울특별시 중구 명동10길 29',
+            naverMapUrl: 'https://naver.me/xw6qC9S0',
+            description: { ru: 'Легендарный ресторан калгуксу и манду в Мёндоне, отмеченный Мишлен.', en: 'Michelin-guide restaurant famous for Kal-guksu and Mandu in Myeongdong.' }
+        }
+    },
+    {
+        id: 'attr_tosokchon',
+        verticalCode: 'attractions',
+        data: {
+            name: { ru: 'Тосокчон Самгетхан', en: 'Tosokchon Samgyetang', ko: '토속촌 삼계탕', kk: 'Тосокчон Самгетхан', uz: 'Tosokchon Samgyetang' },
+            nameKo: '토속촌 삼계탕',
+            category: 'restaurant',
+            region: 'seoul',
+            address: { ru: 'Сеул, Чонно-гу, Джахамун-ло 5-гил 5', en: '5 Jahamun-ro 5-gil, Jongno-gu, Seoul' },
+            addressKo: '서울특별시 종ро구 자하문로5길 5',
+            naverMapUrl: 'https://naver.me/FfM9I9v9',
+            description: { ru: 'Самый известный ресторан самгетхана (суп из цыпленка с женьшенем).', en: 'The most legendary restaurant for Samgyetang (ginseng chicken soup).' }
+        }
+    },
+    {
+        id: 'attr_bukchon_mandu',
+        verticalCode: 'attractions',
+        data: {
+            name: { ru: 'Букчон Сон Манду', en: 'Bukchon Son Mandu', ko: '북촌손만두', kk: 'Букчон Сон Манду', uz: 'Bukchon Son Mandu' },
+            nameKo: '북촌손만두 인사본점',
+            category: 'restaurant',
+            region: 'seoul',
+            address: { ru: 'Сеул, Чонно-гу, Инсадон-гил 42-2', en: '42-2 Insadong-gil, Jongno-gu, Seoul' },
+            addressKo: '서울특별시 종로구 인사동길 42-2',
+            naverMapUrl: 'https://naver.me/xw6qC9S0',
+            description: { ru: 'Знаменитые домашние манду в Инсадоне.', en: 'Famous handmade dumplings in the heart of Insadong.' }
+        }
+    },
+    {
+        id: 'attr_coffee_hanyakbang',
+        verticalCode: 'attractions',
+        data: {
+            name: { ru: 'Кофе Ханьякбанг', en: 'Coffee Hanyakbang', ko: '커피한약방', kk: 'Кофе Ханьякбанг', uz: 'Coffee Hanyakbang' },
+            nameKo: '커피한약방',
+            category: 'cafe',
+            region: 'seoul',
+            address: { ru: 'Сеул, Чун-гу, Сэммунан-ло 2-ро 16-3', en: '16-3 Samil-daero 12-gil, Jung-gu, Seoul' },
+            addressKo: '서울특별시 중구 삼일대로12길 16-3',
+            naverMapUrl: 'https://naver.me/FfM9I9v9',
+            description: { ru: 'Атмосферное ретро-кафе в узком переулке Ыльджиро.', en: 'Atmospheric retro cafe hidden in a narrow Euljiro alley.' }
+        }
+    },
+    {
+        id: 'attr_sanmotoonge',
+        verticalCode: 'attractions',
+        data: {
+            name: { ru: 'Кафе Санмотунге', en: 'Sanmotoonge Cafe', ko: '산모퉁이', kk: 'Санмотунге кафесі', uz: 'Sanmotoonge kafesi' },
+            nameKo: '산모퉁이',
+            category: 'cafe',
+            region: 'seoul',
+            address: { ru: 'Сеул, Чонно-гу, Пэксокдонг-гил 153', en: '153 Baekseokdong-gil, Jongno-gu, Seoul' },
+            addressKo: '서울특별시 종로구 백석동길 153',
+            naverMapUrl: 'https://naver.me/xw6qC9S0',
+            description: { ru: 'Место съемок "Первое кафе Принц" с потрясающим видом.', en: 'Filming location of "Coffee Prince" with stunning mountain views.' }
+        }
+    },
+    {
+        id: 'attr_seoul_land',
+        verticalCode: 'attractions',
+        data: {
+            name: { ru: 'Сеул Лэнд', en: 'Seoul Land', ko: '서울랜드', kk: 'Сеул Лэнд', uz: 'Seoul Land' },
+            nameKo: '서울랜드',
+            category: 'theme_park',
+            region: 'gyeonggi',
+            address: { ru: 'Кёнгидо, Квачхон, Гванмёнг-ло 181', en: '181 Gwangmyeong-ro, Gwacheon, Gyeonggi-do' },
+            addressKo: '경기도 과천시 광명로 181',
+            naverMapUrl: 'https://naver.me/xw6qC9S0',
+            description: { ru: 'Первый тематический парк в Корее, отлично подходит для детей.', en: "Korea's first theme park, excellent for families with children." }
+        }
+    },
+    {
+        id: 'attr_gyeongju_world',
+        verticalCode: 'attractions',
+        data: {
+            name: { ru: 'Кёнджу Ворлд', en: 'Gyeongju World', ko: '경주월д', kk: 'Кёнджу Ворлд', uz: 'Gyeongju World' },
+            nameKo: '경주월드',
+            category: 'theme_park',
+            region: 'gyeongbuk',
+            address: { ru: 'Кёнджу, Бомун-ло 544', en: '544 Bomun-ro, Gyeongju' },
+            addressKo: '경상북도 경주시 보문로 544',
+            naverMapUrl: 'https://naver.me/FfM9I9v9',
+            description: { ru: 'Главный парк развлечений в южном регионе с экстремальными горками.', en: 'The main theme park in the southern region with extreme roller coasters.' }
+        }
+    },
+    {
+        id: 'attr_seoul_zoo',
+        verticalCode: 'attractions',
+        data: {
+            name: { ru: 'Сеульский зоопарк', en: 'Seoul Zoo', ko: '서울동물원', kk: 'Сеул хайуанаттар бағы', uz: 'Seul hayvonot bog\'i' },
+            nameKo: '서울동물원',
+            category: 'zoo',
+            region: 'gyeonggi',
+            address: { ru: 'Кёнгидо, Квачхон, Дэгонвон-гвангджанг-ло 102', en: '102 Daegongwon-gwangjang-ro, Gwacheon, Gyeonggi-do' },
+            addressKo: '경기도 과천시 대공원광장로 102',
+            naverMapUrl: 'https://naver.me/xw6qC9S0',
+            description: { ru: 'Крупнейший зоопарк в Корее, расположенный в Seoul Grand Park.', en: "Korea's largest zoo, located within the Seoul Grand Park complex." }
+        }
+    },
+    {
+        id: 'attr_coex_aquarium',
+        verticalCode: 'attractions',
+        data: {
+            name: { ru: 'Океанариум COEX', en: 'COEX Aquarium', ko: '코엑스 아쿠아리움', kk: 'COEX океанариумы', uz: 'COEX okeanariumi' },
+            nameKo: '코엑스 아쿠아리움',
+            category: 'aquarium',
+            region: 'seoul',
+            address: { ru: 'Сеул, Каннам-гу, Йонгдонг-дэло 513', en: '513 Yeongdong-daero, Gangnam-gu, Seoul' },
+            addressKo: '서울특별시 강남구 영동대로 513',
+            naverMapUrl: 'https://naver.me/FfM9I9v9',
+            description: { ru: 'Один из крупнейших океанариумов Сеула в торговом центре COEX.', en: "One of Seoul's largest aquariums located in the COEX Mall." }
+        }
+    },
+    {
+        id: 'attr_lotte_aquarium',
+        verticalCode: 'attractions',
+        data: {
+            name: { ru: 'Океанариум Лотте Ворлд', en: 'Lotte World Aquarium', ko: '롯데월드 아쿠아리움', kk: 'Лотте Ворлд океанариумы', uz: 'Lotte World okeanariumi' },
+            nameKo: '롯데월드 아쿠а리움',
+            category: 'aquarium',
+            region: 'seoul',
+            address: { ru: 'Сеул, Сонпа-гу, Олимлик-ро 300', en: '300 Olympic-ro, Songpa-gu, Seoul' },
+            addressKo: '서울특별시 송파구 올림픽로 300',
+            naverMapUrl: 'https://naver.me/xw6qC9S0',
+            description: { ru: 'Современный океанариум в башне Lotte World Tower.', en: 'A modern aquarium located in the Lotte World Tower.' }
+        }
+    },
+    {
+        id: 'attr_aqua_planet_jeju',
+        verticalCode: 'attractions',
+        data: {
+            name: { ru: 'Aqua Planet Чеджу', en: 'Aqua Planet Jeju', ko: '아쿠아플라넷 제주', kk: 'Aqua Planet Чеджу', uz: 'Aqua Planet Jeju' },
+            nameKo: '아쿠아플라넷 제주',
+            category: 'aquarium',
+            region: 'jeju',
+            address: { ru: 'Чеджу, Сонсан-ып, Сопджикодзи-ло 95', en: '95 Seopjikoji-ro, Seongsan-eup, Seogwipo, Jeju' },
+            addressKo: '제주특별자치도 서귀포시 성산읍 섭지코지로 95',
+            naverMapUrl: 'https://naver.me/FfM9I9v9',
+            description: { ru: 'Крупнейший океанариум в Восточной Азии с панорамным видом.', en: 'The largest aquarium in East Asia with a massive viewing tank.' }
+        }
+    },
+    {
+        id: 'attr_aqua_planet_yeosu',
+        verticalCode: 'attractions',
+        data: {
+            name: { ru: 'Aqua Planet Йосу', en: 'Aqua Planet Yeosu', ko: '아쿠아플라넷 여수', kk: 'Aqua Planet Йосу', uz: 'Aqua Planet Yeosu' },
+            nameKo: '아쿠아플라넷 여수',
+            category: 'aquarium',
+            region: 'jeolla',
+            address: { ru: 'Чолла-намдо, Йосу, Одонгдо-ло 61-11', en: '61-11 Odongdo-ro, Yeosu, Jeollanam-do' },
+            addressKo: '전라남도 여수시 오동도로 61-11',
+            naverMapUrl: 'https://naver.me/xw6qC9S0',
+            description: { ru: 'Известный океанариум, построенный к EXPO 2012.', en: 'A famous aquarium built for the 2012 World Expo.' }
+        }
+    },
+    {
+        id: 'attr_busan_aquarium',
+        verticalCode: 'attractions',
+        data: {
+            name: { ru: 'SEA LIFE Пусан', en: 'SEA LIFE Busan Aquarium', ko: 'SEA LIFE 부산아쿠아리움', kk: 'SEA LIFE Пусан', uz: 'SEA LIFE Busan' },
+            nameKo: 'SEA LIFE 부산아쿠아리움',
+            category: 'aquarium',
+            region: 'busan',
+            address: { ru: 'Пусан, Хэундэ-гу, Хэундэ-хэбён-ло 266', en: '266 Haeundaehaebyeon-ro, Haeundae-gu, Busan' },
+            addressKo: '부산광역시 해운대구 해운대해변로 266',
+            naverMapUrl: 'https://naver.me/FfM9I9v9',
+            description: { ru: 'Океанариум на пляже Хэундэ с подводным туннелем.', en: 'An aquarium at Haeundae Beach featuring an underwater tunnel.' }
         }
     }
 ];

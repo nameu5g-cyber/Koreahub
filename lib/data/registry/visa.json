@@ -133,7 +133,13 @@
     "sortOptions": [
         {
             "code": "distance",
-            "label": "Рядом с вами",
+            "label": {
+                "ru": "Рядом с вами",
+                "en": "Nearby",
+                "ko": "내 주변",
+                "kk": "Жақын жерде",
+                "uz": "Yaqin atrofda"
+            },
             "default": true
         }
     ],
