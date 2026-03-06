@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useState, useMemo } from 'react';
-import { Search, Phone, ExternalLink, MapPin, Calendar, Star, Info, MessageSquare, ShieldCheck, Globe, Briefcase, Landmark, Activity, ChevronDown, Check, Languages, Map } from 'lucide-react';
+import React, { useState, useMemo, useRef, useEffect } from 'react';
+import { Search, Phone, ExternalLink, MapPin, Calendar, Star, Info, MessageSquare, ShieldCheck, Globe, Briefcase, Landmark, Activity, ChevronDown, Check, Languages, Map, Store } from 'lucide-react';
 import { useSearchParams } from 'next/navigation';
 import { VERTICALS, MOCK_ENTITIES } from '../../lib/data/registry';
 import { VerticalConfig, RegistryEntity, FieldConfig } from '../../lib/data/registry/types';
@@ -18,6 +18,16 @@ const getLabel = (field: FieldConfig, lang: string) => {
     return labels[lang] || labels.en || labels.ru || field.code;
 };
 
+const getMappedRegion = (region: string | undefined): string => {
+    if (!region) return 'seoul';
+    const regionMap: Record<string, string> = {
+        'chungnam': 'chungcheong', 'chungbuk': 'chungcheong',
+        'gyeongnam': 'gyeongsang', 'gyeongbuk': 'gyeongsang',
+        'jeonnam': 'jeolla', 'jeonbuk': 'jeolla'
+    };
+    return regionMap[region] || region;
+};
+
 export function ResourcesRegistry({ t, uiLang }: ResourcesRegistryProps) {
     const searchParams = useSearchParams();
     const initialVertical = searchParams.get('v') || 'visa';
@@ -28,6 +38,10 @@ export function ResourcesRegistry({ t, uiLang }: ResourcesRegistryProps) {
     const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
     const [showSuggestions, setShowSuggestions] = useState(false);
     const [copiedId, setCopiedId] = useState<string | null>(null);
+    const tabsRef = useRef<Record<string, HTMLButtonElement | null>>({});
+    const regionTabsRef = useRef<Record<string, HTMLButtonElement | null>>({});
+    const scrollContainerRef = useRef<HTMLDivElement>(null);
+    const regionScrollContainerRef = useRef<HTMLDivElement>(null);
 
     const vertical = VERTICALS[activeVertical] || VERTICALS.general;
     const langKey = (uiLang === 'kz' ? 'kk' : uiLang) as string;
@@ -38,7 +52,8 @@ export function ResourcesRegistry({ t, uiLang }: ResourcesRegistryProps) {
         daegu: { ru: 'Тэгу', en: 'Daegu', ko: '대гу', kk: 'Тэгу', uz: 'Daegu' },
         incheon: { ru: 'Инчхон', en: 'Incheon', ko: '인천', kk: 'Инчхон', uz: 'Incheon' },
         gwangju: { ru: 'Кванджу', en: 'Gwangju', ko: '광주', kk: 'Кванджу', uz: 'Gwangju' },
-        daejeon: { ru: 'Тэджун', en: 'Daejeon', ko: '대전', kk: 'Тэджун', uz: 'Daejeon' },
+        daejeon: { ru: 'Тэджон', en: 'Daejeon', ko: '대전', kk: 'Тэджон', uz: 'Daejeon' },
+        ulsan: { ru: 'Ульсан', en: 'Ulsan', ko: '울산', kk: 'Ульсан', uz: 'Ulsan' },
         gyeonggi: { ru: 'Кёнгидо', en: 'Gyeonggi', ko: '경기', kk: 'Кёнгидо', uz: 'Kyonggido' },
         gangwon: { ru: 'Канвондо', en: 'Gangwon', ko: '강원', kk: 'Канвондо', uz: 'Kangvondo' },
         chungcheong: { ru: 'Чхунчхон', en: 'Chungcheong', ko: '충청', kk: 'Чхунчхон', uz: 'Chungcheong' },
@@ -70,13 +85,7 @@ export function ResourcesRegistry({ t, uiLang }: ResourcesRegistryProps) {
     const filteredEntities = useMemo(() => {
         return MOCK_ENTITIES.filter(entity => {
             const matchesVertical = entity.verticalCode === activeVertical;
-            // Map sub-regions to main regions for filtering
-            const regionMap: Record<string, string> = {
-                'chungnam': 'chungcheong', 'chungbuk': 'chungcheong',
-                'gyeongnam': 'gyeongsang', 'gyeongbuk': 'gyeongsang',
-                'jeonnam': 'jeolla', 'jeonbuk': 'jeolla'
-            };
-            const mappedRegion = regionMap[entity.data.region as string] || entity.data.region;
+            const mappedRegion = getMappedRegion(entity.data.region as string);
             const matchesRegion = !selectedRegion || mappedRegion === selectedRegion;
             const matchesCategory = !selectedCategory || entity.data.category === selectedCategory;
 
@@ -100,12 +109,7 @@ export function ResourcesRegistry({ t, uiLang }: ResourcesRegistryProps) {
         const categories = new Set<string>();
         MOCK_ENTITIES.forEach(entity => {
             if (entity.verticalCode === activeVertical && entity.data.category) {
-                const regionMap: Record<string, string> = {
-                    'chungnam': 'chungcheong', 'chungbuk': 'chungcheong',
-                    'gyeongnam': 'gyeongsang', 'gyeongbuk': 'gyeongsang',
-                    'jeonnam': 'jeolla', 'jeonbuk': 'jeolla'
-                };
-                const mappedRegion = regionMap[entity.data.region as string] || entity.data.region;
+                const mappedRegion = getMappedRegion(entity.data.region as string);
                 if (!selectedRegion || mappedRegion === selectedRegion) {
                     categories.add(entity.data.category as string);
                 }
@@ -114,18 +118,42 @@ export function ResourcesRegistry({ t, uiLang }: ResourcesRegistryProps) {
         return Array.from(categories);
     }, [activeVertical, selectedRegion]);
 
+    const regionCounts = useMemo(() => {
+        const counts: Record<string, number> = {};
+        MOCK_ENTITIES.forEach(entity => {
+            if (entity.verticalCode === activeVertical) {
+                const mappedRegion = getMappedRegion(entity.data.region as string);
+                if (mappedRegion) {
+                    counts[mappedRegion] = (counts[mappedRegion] || 0) + 1;
+                }
+            }
+        });
+        return counts;
+    }, [activeVertical]);
+
+    useEffect(() => {
+        const activeRegionBtn = regionTabsRef.current[selectedRegion || 'all'];
+        if (activeRegionBtn) {
+            activeRegionBtn.scrollIntoView({
+                behavior: 'smooth',
+                block: 'nearest',
+                inline: 'center'
+            });
+        }
+    }, [selectedRegion]);
+
     const renderField = (field: FieldConfig, value: any) => {
         if (!value) return null;
 
         // Dynamic Support Badge logic:
         // Shows "(Language) Support" if the entity supports the current UI language.
         // We only show this for international-oriented languages (excluding Korean itself as a 'support' badge).
-        if (field.code === 'languages' && field.display === 'flags' && Array.isArray(value)) {
+        if (field.code === 'langs' && field.display === 'flags' && Array.isArray(value)) {
             const currentLangMap: Record<string, string> = {
-                'ru': 'russian',
-                'en': 'english',
-                'kk': 'kazakh',
-                'uz': 'uzbek'
+                'ru': 'ru',
+                'en': 'en',
+                'kk': 'kk',
+                'uz': 'uz'
             };
             const targetLang = currentLangMap[uiLang] || currentLangMap['ru'];
 
@@ -243,15 +271,29 @@ export function ResourcesRegistry({ t, uiLang }: ResourcesRegistryProps) {
         }
     };
 
-    // V4-Logic: Vertical Mapping (Fixed Order for UI)
+    // V4-Logic: Vertical Mapping (Fixed Order for UI as requested by user)
     const verticalTabs = [
-        { code: 'general', icon: Info },
         { code: 'visa', icon: Landmark },
-        { code: 'attractions', icon: Map },
-        { code: 'telecom', icon: Phone },
         { code: 'medical', icon: Activity },
         { code: 'jobs', icon: Briefcase },
+        { code: 'finance', icon: Landmark },
+        { code: 'telecom', icon: Phone },
+        { code: 'general', icon: Info },
+        { code: 'services', icon: Globe },
+        { code: 'food', icon: Store },
+        { code: 'attractions', icon: Map },
     ];
+
+    useEffect(() => {
+        const activeTab = tabsRef.current[activeVertical];
+        if (activeTab) {
+            activeTab.scrollIntoView({
+                behavior: 'smooth',
+                block: 'nearest',
+                inline: 'center'
+            });
+        }
+    }, [activeVertical]);
 
     const activeIndex = verticalTabs.findIndex(v => v.code === activeVertical);
 
@@ -259,7 +301,10 @@ export function ResourcesRegistry({ t, uiLang }: ResourcesRegistryProps) {
         <div className="flex flex-col h-full bg-gray-50/50">
             {/* Header: Vertical Tabs (Sliding Indicator) */}
             <div className="bg-white border-b border-gray-100 relative z-20 shadow-sm">
-                <div className="px-4 pt-2.5 flex relative gap-0 overflow-x-auto no-scrollbar">
+                <div
+                    ref={scrollContainerRef}
+                    className="px-4 pt-2.5 flex relative gap-0 overflow-x-auto no-scrollbar scroll-smooth"
+                >
                     {verticalTabs.map(tab => {
                         const v = VERTICALS[tab.code];
                         if (!v) return null;
@@ -268,20 +313,23 @@ export function ResourcesRegistry({ t, uiLang }: ResourcesRegistryProps) {
                         return (
                             <button
                                 key={tab.code}
+                                ref={el => { tabsRef.current[tab.code] = el; }}
                                 onClick={() => {
                                     setActiveVertical(tab.code);
                                     setSelectedCategory(null);
                                 }}
-                                className={`flex flex-col items-center gap-1 pb-2 transition-all flex-1 min-w-[50px] max-w-[85px] overflow-visible ${activeVertical === tab.code ? 'text-blue-600' : 'text-gray-300 hover:text-gray-500'}`}
+                                className={`flex flex-col items-center gap-0.5 pb-2 transition-all flex-1 min-w-[64px] max-w-[80px] ${activeVertical === tab.code ? 'text-blue-600' : 'text-gray-300 hover:text-gray-500'}`}
                             >
-                                <tab.icon size={16} strokeWidth={activeVertical === tab.code ? 3 : 2} className={activeVertical === tab.code ? 'animate-in fade-in zoom-in duration-300' : ''} />
-                                <div className="w-full flex justify-center items-center min-h-[22px] overflow-visible">
+                                <tab.icon size={15} strokeWidth={activeVertical === tab.code ? 3 : 2} className={activeVertical === tab.code ? 'animate-in fade-in zoom-in duration-300' : ''} />
+                                <div className="w-full flex justify-center items-center min-h-[18px]">
                                     <span
-                                        className="font-bold uppercase tracking-tighter text-center whitespace-pre-line inline-block"
+                                        className="font-black uppercase tracking-tighter text-center leading-none px-1"
                                         style={{
-                                            fontSize: '8px',
-                                            lineHeight: '1.1',
-                                            flexShrink: 0
+                                            fontSize: '6.5px',
+                                            display: '-webkit-box',
+                                            WebkitLineClamp: 2,
+                                            WebkitBoxOrient: 'vertical',
+                                            overflow: 'hidden'
                                         }}
                                     >
                                         {label}
@@ -291,16 +339,14 @@ export function ResourcesRegistry({ t, uiLang }: ResourcesRegistryProps) {
                         );
                     })}
 
-                    {/* Sliding Indicator (Pixel Perfect) */}
-                    <div className="absolute bottom-0 left-4 right-4 h-[3px]">
-                        <div
-                            className="h-full bg-blue-600 transition-all duration-300 ease-out rounded-t-full"
-                            style={{
-                                marginLeft: `${(activeIndex * 100) / verticalTabs.length}%`,
-                                width: `${100 / verticalTabs.length}%`
-                            }}
-                        />
-                    </div>
+                    {/* Indicator using border-bottom logic for better scroll support */}
+                    <div
+                        className="absolute bottom-0 h-[3px] bg-blue-600 transition-all duration-300 ease-out rounded-t-full"
+                        style={{
+                            left: tabsRef.current[activeVertical]?.offsetLeft || 16,
+                            width: tabsRef.current[activeVertical]?.offsetWidth || 0
+                        }}
+                    />
                 </div>
             </div>
 
@@ -349,22 +395,44 @@ export function ResourcesRegistry({ t, uiLang }: ResourcesRegistryProps) {
                 </div>
 
                 {/* Quick Filters (Regions) */}
-                <div className="flex items-center gap-2 overflow-x-auto no-scrollbar px-1 py-0.5">
+                <div
+                    ref={regionScrollContainerRef}
+                    className="flex items-center gap-2 overflow-x-auto no-scrollbar px-1 py-0.5 scroll-smooth"
+                >
                     <button
+                        ref={el => { regionTabsRef.current['all'] = el; }}
                         onClick={() => setSelectedRegion(null)}
-                        className={`px-2.5 py-1 rounded-lg text-[9px] font-black uppercase tracking-tight whitespace-nowrap transition-all ${!selectedRegion ? 'bg-blue-600 text-white shadow-sm' : 'bg-gray-100/80 text-gray-400 hover:bg-gray-200'}`}
+                        className={`px-2.5 py-1 rounded-lg text-[9px] font-black uppercase tracking-tight whitespace-nowrap transition-all flex items-center gap-1.5 ${!selectedRegion ? 'bg-blue-600 text-white shadow-sm' : 'bg-gray-100/80 text-gray-400 hover:bg-gray-200'}`}
                     >
                         {t('all_regions') || 'Все'}
+                        <span className={`px-1 rounded-full text-[8px] ${!selectedRegion ? 'bg-white/20 text-white' : 'bg-gray-200 text-gray-400'}`}>
+                            {MOCK_ENTITIES.filter(e => e.verticalCode === activeVertical).length}
+                        </span>
                     </button>
-                    {Object.entries(REGIONS).map(([code, names]: [string, any]) => (
-                        <button
-                            key={code}
-                            onClick={() => setSelectedRegion(code)}
-                            className={`px-2.5 py-1 rounded-lg text-[9px] font-black uppercase tracking-tight whitespace-nowrap transition-all ${selectedRegion === code ? 'bg-blue-600 text-white shadow-sm' : 'bg-gray-100/80 text-gray-400 hover:bg-gray-200'}`}
-                        >
-                            {names[langKey] || names.en}
-                        </button>
-                    ))}
+                    {Object.entries(REGIONS).map(([code, names]: [string, any]) => {
+                        const count = regionCounts[code] || 0;
+                        const isActive = selectedRegion === code;
+                        const hasData = count > 0;
+
+                        return (
+                            <button
+                                key={code}
+                                ref={el => { regionTabsRef.current[code] = el; }}
+                                onClick={() => setSelectedRegion(code)}
+                                className={`px-2.5 py-1 rounded-lg text-[9px] font-black uppercase tracking-tight whitespace-nowrap transition-all flex items-center gap-1.5 ${isActive ? 'bg-blue-600 text-white shadow-sm' :
+                                    hasData ? 'bg-white border border-gray-100 text-gray-600 shadow-sm' :
+                                        'bg-gray-50/50 text-gray-300 opacity-60'
+                                    }`}
+                            >
+                                {names[langKey] || names.en}
+                                {hasData && (
+                                    <span className={`px-1 rounded-full text-[8px] ${isActive ? 'bg-white/20 text-white' : 'bg-blue-50 text-blue-500'}`}>
+                                        {count}
+                                    </span>
+                                )}
+                            </button>
+                        );
+                    })}
                 </div>
 
                 {/* Category Tags */}

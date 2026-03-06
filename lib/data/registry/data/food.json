@@ -1,0 +1,1426 @@
+[
+    {
+        "id": "food_baemin_배달의민족",
+        "verticalCode": "food",
+        "data": {
+            "name": {
+                "ru": "Baemin (배달의민족)",
+                "en": "Baemin (배달의민족)",
+                "ko": "Baemin (배달의민족)"
+            },
+            "desc": {
+                "ru": "№1 приложение для доставки еды в Корее.",
+                "en": "Main food delivery app in Korea.",
+                "ko": "Main food delivery app in Korea."
+            },
+            "langs": [
+                "ko"
+            ],
+            "region": "seoul",
+            "link": "https://www.baemin.com",
+            "tags": [
+                "Доставка",
+                "Топ 1"
+            ]
+        }
+    },
+    {
+        "id": "food_coupang_eats",
+        "verticalCode": "food",
+        "data": {
+            "name": {
+                "ru": "Coupang Eats",
+                "en": "Coupang Eats",
+                "ko": "Coupang Eats"
+            },
+            "desc": {
+                "ru": "Быстрая доставка еды от Coupang.",
+                "en": "Fast delivery by Coupang.",
+                "ko": "Fast delivery by Coupang."
+            },
+            "langs": [
+                "ru",
+                "en",
+                "ko"
+            ],
+            "region": "seoul",
+            "link": "https://www.coupangeats.com",
+            "tags": [
+                "Быстрая доставка"
+            ]
+        }
+    },
+    {
+        "id": "food_shuttle_delivery",
+        "verticalCode": "food",
+        "data": {
+            "name": {
+                "ru": "Shuttle Delivery",
+                "en": "Shuttle Delivery",
+                "ko": "Shuttle Delivery"
+            },
+            "desc": {
+                "ru": "Доставка из ресторанов (EN).",
+                "en": "Expat-friendly food delivery.",
+                "ko": "Expat-friendly food delivery."
+            },
+            "langs": [
+                "en"
+            ],
+            "region": "seoul",
+            "link": "https://www.shuttledelivery.co.kr",
+            "tags": [
+                "На английском",
+                "Доставка"
+            ]
+        }
+    },
+    {
+        "id": "food_vo_blin_во_блин",
+        "verticalCode": "food",
+        "data": {
+            "region": "incheon",
+            "name": {
+                "ru": "Vo, blin! (Во, блин!)",
+                "en": "Vo, blin! (Во, блин!)",
+                "ko": "Vo, blin! (Во, блин!)"
+            },
+            "desc": {
+                "ru": "Популярное кафе с корейской и СНГ кухней. Специализируется на блинах.",
+                "en": "CIS-friendly cafe specialized in pancakes.",
+                "ko": "CIS-friendly cafe specialized in pancakes."
+            },
+            "langs": [
+                "ru"
+            ],
+            "location": "Incheon",
+            "tags": [
+                "Кафе",
+                "СНГ Кухня",
+                "Блины"
+            ]
+        }
+    },
+    {
+        "id": "food_pizza_taki_пицца_таки",
+        "verticalCode": "food",
+        "data": {
+            "region": "gyeonggi",
+            "name": {
+                "ru": "Pizza Taki (Пицца Таки)",
+                "en": "Pizza Taki (Пицца Таки)",
+                "ko": "Pizza Taki (Пицца Таки)"
+            },
+            "desc": {
+                "ru": "Популярная пиццерия. Доставка по Ансану (Сонбудон, Теколь и др.).",
+                "en": "Popular pizza spot in Ansan.",
+                "ko": "Popular pizza spot in Ansan."
+            },
+            "langs": [
+                "ru"
+            ],
+            "location": "Ansan",
+            "tags": [
+                "Пицца",
+                "Фастфуд",
+                "Доставка"
+            ]
+        }
+    },
+    {
+        "id": "food_family_семья",
+        "verticalCode": "food",
+        "data": {
+            "region": "gwangju",
+            "name": {
+                "ru": "Family (Семья)",
+                "en": "Family (Семья)",
+                "ko": "Family (Семья)"
+            },
+            "desc": {
+                "ru": "Ресторан русской кухни в Кванджу (Корё-ин маыль).",
+                "en": "Russian restaurant in Gwangju village.",
+                "ko": "Russian restaurant in Gwangju village."
+            },
+            "langs": [
+                "ru"
+            ],
+            "location": "Gwangju (Wolkok-dong)",
+            "tags": [
+                "Ресторан",
+                "Русская кухня"
+            ]
+        }
+    },
+    {
+        "id": "food_samarkand_кванджу",
+        "verticalCode": "food",
+        "data": {
+            "region": "gwangju",
+            "name": {
+                "ru": "Samarkand (Кванджу)",
+                "en": "Samarkand (Кванджу)",
+                "ko": "Samarkand (Кванджу)"
+            },
+            "desc": {
+                "ru": "Узбекская кухня, лагман и плов.",
+                "en": "Uzbek cuisine in Gwangju.",
+                "ko": "Uzbek cuisine in Gwangju."
+            },
+            "langs": [
+                "ru",
+                "uz"
+            ],
+            "location": "Gwangju (Wolkok-dong)",
+            "tags": [
+                "Узбекская кухня",
+                "Плов",
+                "Халяль"
+            ]
+        }
+    },
+    {
+        "id": "food_troika_итхэвон",
+        "verticalCode": "food",
+        "data": {
+            "region": "seoul",
+            "name": {
+                "ru": "Troika (Итхэвон)",
+                "en": "Troika (Итхэвон)",
+                "ko": "Troika (Итхэвон)"
+            },
+            "desc": {
+                "ru": "Русская кухня в Сеуле.",
+                "en": "Russian restaurant.",
+                "ko": "Russian restaurant."
+            },
+            "langs": [
+                "ru",
+                "en",
+                "ko"
+            ],
+            "location": "Seoul",
+            "tags": [
+                "Ресторан",
+                "Сеул"
+            ]
+        }
+    },
+    {
+        "id": "food_melnitsa_мельница",
+        "verticalCode": "food",
+        "data": {
+            "region": "gyeongsang",
+            "name": {
+                "ru": "Melnitsa (Мельница)",
+                "en": "Melnitsa (Мельница)",
+                "ko": "Melnitsa (Мельница)"
+            },
+            "desc": {
+                "ru": "Крупнейшая сеть и онлайн-магазин продуктов СНГ.",
+                "en": "Leading CIS grocery chain & online store.",
+                "ko": "Leading CIS grocery chain & online store."
+            },
+            "langs": [
+                "ru"
+            ],
+            "link": "https://melnitsa.store",
+            "location": "Gimhae / Online",
+            "tags": [
+                "Доставка по Корее",
+                "Онлайн"
+            ]
+        }
+    },
+    {
+        "id": "food_imperia_foods",
+        "verticalCode": "food",
+        "data": {
+            "region": "gyeonggi",
+            "name": {
+                "ru": "IMPERIA FOODS",
+                "en": "IMPERIA FOODS",
+                "ko": "IMPERIA FOODS"
+            },
+            "desc": {
+                "ru": "СНГ-продукты, собственное производство.",
+                "en": "CIS grocery & production.",
+                "ko": "CIS grocery & production."
+            },
+            "langs": [
+                "ru"
+            ],
+            "link": "https://www.instagram.com/imperiafoods",
+            "location": "Ansan / Online",
+            "tags": [
+                "Свое производство",
+                "Доставка"
+            ]
+        }
+    },
+    {
+        "id": "food_assorti_ассорти",
+        "verticalCode": "food",
+        "data": {
+            "region": "incheon",
+            "name": {
+                "ru": "Assorti (Ассорти)",
+                "en": "Assorti (Ассорти)",
+                "ko": "Assorti (Ассорти)"
+            },
+            "desc": {
+                "ru": "Сеть магазинов «Ассорти»: продукты и опт.",
+                "en": "Assorti chain: groceries & wholesale.",
+                "ko": "Assorti chain: groceries & wholesale."
+            },
+            "langs": [
+                "ru"
+            ],
+            "phone": "010-8001-4470",
+            "location": "Incheon / Ansan",
+            "tags": [
+                "Опт и розница"
+            ]
+        }
+    },
+    {
+        "id": "food_medovik_медовик",
+        "verticalCode": "food",
+        "data": {
+            "region": "seoul",
+            "name": {
+                "ru": "Medovik (Медовик)",
+                "en": "Medovik (Медовик)",
+                "ko": "Medovik (Медовик)"
+            },
+            "desc": {
+                "ru": "Гастроном в Сеуле: торты, хлеб, колбасы.",
+                "en": "Seoul gourmet: cakes & bread.",
+                "ko": "Seoul gourmet: cakes & bread."
+            },
+            "langs": [
+                "ru"
+            ],
+            "phone": "02-2285-4700",
+            "location": "Seoul (Jung-gu)",
+            "tags": [
+                "Кондитерские изделия",
+                "Колбасы"
+            ]
+        }
+    },
+    {
+        "id": "food_maria_bakery_dream_bakery",
+        "verticalCode": "food",
+        "data": {
+            "region": "incheon",
+            "name": {
+                "ru": "Maria Bakery (Dream Bakery)",
+                "en": "Maria Bakery (Dream Bakery)",
+                "ko": "Maria Bakery (Dream Bakery)"
+            },
+            "desc": {
+                "ru": "Популярная пекарня в Хамбаке (Инчхон).",
+                "en": "Famous bakery in Hambak district.",
+                "ko": "Famous bakery in Hambak district."
+            },
+            "langs": [
+                "ru"
+            ],
+            "location": "Incheon (Hambak)",
+            "tags": [
+                "Выпечка",
+                "Хлеб"
+            ]
+        }
+    },
+    {
+        "id": "food_lepeshka_лепёшка",
+        "verticalCode": "food",
+        "data": {
+            "region": "gyeongsang",
+            "name": {
+                "ru": "Lepeshka (Лепёшка)",
+                "en": "Lepeshka (Лепёшка)",
+                "ko": "Lepeshka (Лепёшка)"
+            },
+            "desc": {
+                "ru": "Сеть узбекских пекарен: свежие лепешки и самса.",
+                "en": "Uzbek bakery network: fresh bread & samsa.",
+                "ko": "Uzbek bakery network: fresh bread & samsa."
+            },
+            "langs": [
+                "ru"
+            ],
+            "location": "Gimhae / Incheon / Ansan",
+            "tags": [
+                "Узбекская кухня",
+                "Самса"
+            ]
+        }
+    },
+    {
+        "id": "food_masters_ансан",
+        "verticalCode": "food",
+        "data": {
+            "region": "gyeonggi",
+            "name": {
+                "ru": "Master's (Ансан)",
+                "en": "Master's (Ансан)",
+                "ko": "Master's (Ансан)"
+            },
+            "desc": {
+                "ru": "Российские продукты и выпечка в районе Вонгок.",
+                "en": "CIS products & bakery in Wongok.",
+                "ko": "CIS products & bakery in Wongok."
+            },
+            "langs": [
+                "ru"
+            ],
+            "location": "Ansan (Wongok)",
+            "tags": [
+                "Магазин"
+            ]
+        }
+    },
+    {
+        "id": "food_mulgogi_cafe",
+        "verticalCode": "food",
+        "data": {
+            "name": {
+                "ru": "Cafe Mulgogi (물고기 카페)",
+                "en": "Cafe Mulgogi (물고기 카페)",
+                "ko": "물고기 카페"
+            },
+            "desc": {
+                "ru": "Атмосферное кафе в традиционном стиле в районе Дэпён. Известно своими видами и уютным интерьером.",
+                "en": "Atmospheric traditional-style cafe in Daepyeong area. Known for scenic views and cozy interior.",
+                "ko": "대평리의 분위기 좋은 전통 스타일 카페."
+            },
+            "langs": [
+                "ko",
+                "en",
+                "ru"
+            ],
+            "region": "jeju",
+            "location": {
+                "lat": 33.244576,
+                "lng": 126.449647
+            },
+            "tags": [
+                "Кафе",
+                "Атмосфера",
+                "Вид на море"
+            ]
+        }
+    },
+    {
+        "id": "food_may_flower_cafe",
+        "verticalCode": "food",
+        "data": {
+            "name": {
+                "ru": "May Flower Cafe (카페 오월의 꽃)",
+                "en": "May Flower Cafe (카페 오월의 꽃)",
+                "ko": "카페 오월의 꽃"
+            },
+            "desc": {
+                "ru": "Знаменитое беспилотное кафе, где посетители сами готовят напитки. Очень необычное и уютное место.",
+                "en": "Famous unmanned cafe where visitors prepare their own drinks. Unique and cozy atmosphere.",
+                "ko": "직접 음료를 만들어 마시는 유명한 무인 카페."
+            },
+            "langs": [
+                "ko",
+                "en",
+                "ru"
+            ],
+            "region": "jeju",
+            "location": {
+                "lat": 33.382466,
+                "lng": 126.840770
+            },
+            "tags": [
+                "Кафе",
+                "Беспилотное",
+                "Уникальное"
+            ]
+        }
+    },
+    {
+        "id": "food_may_flower_pizza",
+        "verticalCode": "food",
+        "data": {
+            "name": {
+                "ru": "May Flower Organic Pizza",
+                "en": "May Flower Organic Pizza",
+                "ko": "오월의 꽃 유기농 피자"
+            },
+            "desc": {
+                "ru": "Пиццерия рядом с кафе May Flower, специализирующаяся на органической пицце (Nature Pizza).",
+                "en": "Organic pizza shop next to May Flower Cafe, famous for its Nature Pizza.",
+                "ko": "오월의 꽃 카페 옆 유기농 피자 전문점."
+            },
+            "langs": [
+                "ko",
+                "en",
+                "ru"
+            ],
+            "region": "jeju",
+            "location": {
+                "lat": 33.382466,
+                "lng": 126.840770
+            },
+            "tags": [
+                "Пицца",
+                "Органическая еда"
+            ]
+        }
+    },
+    {
+        "id": "food_heugyeonsomaru",
+        "verticalCode": "food",
+        "data": {
+            "name": {
+                "ru": "Tojong Heugyeonsomaru (토종 흑염소마루)",
+                "en": "Tojong Heugyeonsomaru (토종 흑염소마루)",
+                "ko": "토종 흑염소마루"
+            },
+            "desc": {
+                "ru": "Специализированный ресторан по приготовлению целебного мяса черной козы. Один из лучших на Чеджу.",
+                "en": "Specialty restaurant for black goat dishes, known for health benefits. One of the best in Jeju.",
+                "ko": "제주 최고의 흑염소 요리 전문점."
+            },
+            "langs": [
+                "ko",
+                "en",
+                "ru"
+            ],
+            "region": "jeju",
+            "location": {
+                "lat": 33.384691,
+                "lng": 126.801325
+            },
+            "tags": [
+                "Ресторан",
+                "Черная коза",
+                "Здоровье"
+            ]
+        }
+    },
+    {
+        "id": "food_spirited_garden_rest",
+        "verticalCode": "food",
+        "data": {
+            "name": {
+                "ru": "Spirited Garden Restaurant",
+                "en": "Spirited Garden Restaurant",
+                "ko": "분재예술원 식당"
+            },
+            "desc": {
+                "ru": "Ресторан при Саду Размышлений, предлагающий традиционные корейские обеды в формате шведского стола.",
+                "en": "Restaurant at Spirited Garden offering traditional Korean buffet lunch.",
+                "ko": "분재예술원 내 전통 한국식 뷔페 식당."
+            },
+            "langs": [
+                "ko",
+                "en",
+                "ru"
+            ],
+            "region": "jeju",
+            "location": {
+                "lat": 33.327,
+                "lng": 126.248
+            },
+            "tags": [
+                "Ресторан",
+                "Традиционная кухня",
+                "Обед"
+            ]
+        }
+    },
+    {
+        "id": "food_cheonjitgol",
+        "verticalCode": "food",
+        "data": {
+            "name": {
+                "ru": "Cheon Jit Gol (천짓골식당)",
+                "en": "Cheon Jit Gol (천짓골식당)",
+                "ko": "천짓골식당"
+            },
+            "desc": {
+                "ru": "Знаменитый ресторан в Согвипо, специализирующийся на Домбэ Коги (вареная свинина на доске).",
+                "en": "Famous Seogwipo restaurant specializing in Dombae Gogi (boiled pork on a board).",
+                "ko": "서귀포 최고의 돔베고기 맛집."
+            },
+            "langs": [
+                "ko",
+                "en",
+                "ru"
+            ],
+            "region": "jeju",
+            "location": {
+                "lat": 33.254120,
+                "lng": 126.560076
+            },
+            "tags": [
+                "Ресторан",
+                "Свинина",
+                "Согвипо"
+            ]
+        }
+    },
+    {
+        "id": "food_seogwipean_bakery",
+        "verticalCode": "food",
+        "data": {
+            "name": {
+                "ru": "Seogwipean Bakery (서귀피안 베이커리)",
+                "en": "Seogwipean Bakery (서귀피안 베이커리)",
+                "ko": "서귀피안 베이커리"
+            },
+            "desc": {
+                "ru": "Культовая пекарня в Согвипо с панорамным видом на океан и огромным выбором авторской выпечки.",
+                "en": "Iconic Seogwipo bakery with panoramic ocean views and a wide variety of artisanal bread.",
+                "ko": "아름다운 오션뷰를 자랑하는 서귀포의 대형 베이커리."
+            },
+            "langs": [
+                "ko",
+                "en",
+                "ru"
+            ],
+            "region": "jeju",
+            "location": {
+                "lat": 33.426,
+                "lng": 126.924
+            },
+            "tags": [
+                "Пекарня",
+                "Вид на море",
+                "Популярное"
+            ]
+        }
+    },
+    {
+        "id": "food_ojo_haenyeo",
+        "verticalCode": "food",
+        "data": {
+            "name": {
+                "ru": "Ojo Haenyeo's House (오조 해녀의 집)",
+                "en": "Ojo Haenyeo's House (오조 해녀의 집)",
+                "ko": "오조 해녀의 집"
+            },
+            "desc": {
+                "ru": "Аутентичный ресторан, управляемый ныряльщицами хэнё. Лучшая каша из морского ушка (Abalone Porridge).",
+                "en": "Authentic restaurant run by Haenyeo divers. Best known for abalone porridge.",
+                "ko": "해녀들이 직접 운영하는 전복죽 맛집."
+            },
+            "langs": [
+                "ko",
+                "en",
+                "ru"
+            ],
+            "region": "jeju",
+            "location": {
+                "lat": 33.473,
+                "lng": 126.914
+            },
+            "tags": [
+                "Ресторан",
+                "Морепродукты",
+                "Хэнё"
+            ]
+        }
+    },
+    {
+        "id": "food_seogwipo_olle_market",
+        "verticalCode": "food",
+        "data": {
+            "name": {
+                "ru": "Seogwipo Maeil Olle Market (서귀포 매일 올레시장)",
+                "en": "Seogwipo Maeil Olle Market (서귀포 매일 올레시장)",
+                "ko": "서귀포 매일 올레시장"
+            },
+            "desc": {
+                "ru": "Главный рынок Согвипо. Огромный выбор уличной еды: джерки из черного кабана, роллы со свининой и морепродукты.",
+                "en": "Seogwipo's main market. Huge variety of street food: black pork jerky, pork rolls, and fresh seafood.",
+                "ko": "서귀포 최대의 전통시장. 흑돼지 강정 등 다양한 먹거리가 가득함."
+            },
+            "langs": [
+                "ko",
+                "en",
+                "ru"
+            ],
+            "region": "jeju",
+            "location": {
+                "lat": 33.249,
+                "lng": 126.564
+            },
+            "tags": [
+                "Рынок",
+                "Уличная еда",
+                "Согвипо"
+            ]
+        }
+    },
+    {
+        "id": "food_dongmun_market",
+        "verticalCode": "food",
+        "data": {
+            "name": {
+                "ru": "Jeju Dongmun Market (제주 동문시장)",
+                "en": "Jeju Dongmun Market (제주 동문시장)",
+                "ko": "제주 동문시장"
+            },
+            "desc": {
+                "ru": "Крупнейший и старейший рынок в городе Чеджу. Ночной рынок славится своими яркими фуд-шоу и деликатесами.",
+                "en": "Largest and oldest market in Jeju City. The night market is famous for food shows and delicacies.",
+                "ko": "제주 시내에서 가장 크고 오래된 전통시장. 야시장이 유명함."
+            },
+            "langs": [
+                "ko",
+                "en",
+                "ru"
+            ],
+            "region": "jeju",
+            "location": {
+                "lat": 33.513,
+                "lng": 126.526
+            },
+            "tags": [
+                "Рынок",
+                "Ночной рынок",
+                "Чеджу Сити"
+            ]
+        }
+    },
+    {
+        "id": "food_tosokchon",
+        "verticalCode": "food",
+        "data": {
+            "name": {
+                "ru": "Tosokchon Samgyetang (토속촌 삼계탕)",
+                "en": "Tosokchon Samgyetang (토속촌 삼계탕)",
+                "ko": "토속촌 삼계탕"
+            },
+            "desc": {
+                "ru": "Самый известный ресторан самгётана (суп из цыпленка с женьшенем) в Сеуле, расположенный в традиционном ханоке.",
+                "en": "Seoul's most famous Samgyetang (ginseng chicken soup) restaurant, located in a traditional hanok.",
+                "ko": "경복궁 인근의 유명한 삼계탕 전문점."
+            },
+            "langs": [
+                "ko",
+                "en",
+                "ru"
+            ],
+            "region": "seoul",
+            "location": {
+                "lat": 37.5751,
+                "lng": 126.9739
+            },
+            "tags": [
+                "Ресторан",
+                "Самгётан",
+                "Ханок"
+            ]
+        }
+    },
+    {
+        "id": "food_dawon_tea_house",
+        "verticalCode": "food",
+        "data": {
+            "name": {
+                "ru": "Dawon Traditional Tea House (다원)",
+                "en": "Dawon Traditional Tea House (다원)",
+                "ko": "다원"
+            },
+            "desc": {
+                "ru": "Уютная чайная в Инсадоне, расположенная в саду музея Кён-ин. Прекрасное место для отдыха за чашкой чая.",
+                "en": "Cozy tea house in Insadong, located inside the Kyung-In Museum garden. Perfect for a tea break.",
+                "ko": "인사동 경인미술관 내 전통 찻집."
+            },
+            "langs": [
+                "ko",
+                "en",
+                "ru"
+            ],
+            "region": "seoul",
+            "location": {
+                "lat": 37.574,
+                "lng": 126.985
+            },
+            "tags": [
+                "Чайная",
+                "Инсадон",
+                "Спокойствие"
+            ]
+        }
+    },
+    {
+        "id": "food_moon_bird",
+        "verticalCode": "food",
+        "data": {
+            "name": {
+                "ru": "Moon Bird Only Thinks of the Moon",
+                "en": "Moon Bird Only Thinks of the Moon",
+                "ko": "달새는 달만 생각한다"
+            },
+            "desc": {
+                "ru": "Арт-чайная в Инсадоне с уникальным интерьером и домашними рисовыми пирожками. Популярна среди местных.",
+                "en": "Artistic tea house in Insadong with unique decor and handmade rice cakes. Popular with locals.",
+                "ko": "인사동 골목 안의 정겨운 전통 찻집."
+            },
+            "langs": [
+                "ko",
+                "en",
+                "ru"
+            ],
+            "region": "seoul",
+            "location": {
+                "lat": 37.574,
+                "lng": 126.985
+            },
+            "tags": [
+                "Чайная",
+                "Инсадон",
+                "Уникальное"
+            ]
+        }
+    },
+    {
+        "id": "food_noryangjin",
+        "verticalCode": "food",
+        "data": {
+            "name": {
+                "ru": "Noryangjin Fish Market (노량진수산물도매시장)",
+                "en": "Noryangjin Fish Market (노량진수산물도매시장)",
+                "ko": "노량진수산물도매시장"
+            },
+            "desc": {
+                "ru": "Крупнейший рыбный рынок Сеула. Можно купить свежие морепродукты и приготовить их в ресторанах на втором этаже.",
+                "en": "Seoul's largest fish market. Buy fresh seafood on the 1st floor and eat it at 2nd floor restaurants.",
+                "ko": "서울 최대의 수산물 시장. 신선한 회를 즐길 수 있음."
+            },
+            "langs": [
+                "ko",
+                "en",
+                "ru"
+            ],
+            "region": "seoul",
+            "location": {
+                "lat": 37.514,
+                "lng": 126.938
+            },
+            "tags": [
+                "Рынок",
+                "Морепродукты",
+                "Сеул"
+            ]
+        }
+    },
+    {
+        "id": "food_gwangjang",
+        "verticalCode": "food",
+        "data": {
+            "name": {
+                "ru": "Gwangjang Market (광장시장)",
+                "en": "Gwangjang Market (광장시장)",
+                "ko": "광장시장"
+            },
+            "desc": {
+                "ru": "Мекка уличной еды: биндитток (блины из маша), кальгуксу и «наркотический» кимбап. Обязательно к посещению.",
+                "en": "Street food mecca: bindaetteok (mung bean pancakes), kalguksu, and 'mayak' kimbap. A must-visit.",
+                "ko": "빈대떡, 육회 등 한국 전통 길거리 음식의 천국."
+            },
+            "langs": [
+                "ko",
+                "en",
+                "ru"
+            ],
+            "region": "seoul",
+            "location": {
+                "lat": 37.570,
+                "lng": 126.999
+            },
+            "tags": [
+                "Рынок",
+                "Уличная еда",
+                "Топ"
+            ]
+        }
+    },
+    {
+        "id": "food_tongin",
+        "verticalCode": "food",
+        "data": {
+            "name": {
+                "ru": "Tongin Market (통인시장)",
+                "en": "Tongin Market (통인시장)",
+                "ko": "통인시장"
+            },
+            "desc": {
+                "ru": "Рынок, знаменитый своим «Досирак-кафе», где за традиционные монетки можно собрать себе обед из разных блюд.",
+                "en": "Market famous for its 'Dosirak Cafe' where you use traditional coins to build your own lunch box.",
+                "ko": "전통 엽전으로 도시락을 만들어 먹는 이색 시장."
+            },
+            "langs": [
+                "ko",
+                "en",
+                "ru"
+            ],
+            "region": "seoul",
+            "location": {
+                "lat": 37.581,
+                "lng": 126.970
+            },
+            "tags": [
+                "Рынок",
+                "Досирак",
+                "Уникальное"
+            ]
+        }
+    },
+    {
+        "id": "food_haeundae_galbi",
+        "verticalCode": "food",
+        "data": {
+            "name": {
+                "ru": "Haeundae Amsogalbi-jip (해운대암소갈비집)",
+                "en": "Haeundae Amsogalbi-jip (해운대암소갈비집)",
+                "ko": "해운대암소갈비집"
+            },
+            "desc": {
+                "ru": "Легендарный ресторан в Пусане, специализирующийся на говяжьих ребрах Хану высшего качества.",
+                "en": "Legendary Busan restaurant specializing in premium Hanwoo beef ribs.",
+                "ko": "60년 전통의 부산 해운대 소갈비 맛집."
+            },
+            "langs": [
+                "ko",
+                "en",
+                "ru"
+            ],
+            "region": "busan",
+            "location": {
+                "lat": 35.163,
+                "lng": 129.165
+            },
+            "tags": [
+                "Ресторан",
+                "Гальби",
+                "Пусан"
+            ]
+        }
+    },
+    {
+        "id": "food_rendeja_vous",
+        "verticalCode": "food",
+        "data": {
+            "name": {
+                "ru": "Rendeja-vous Haeundae (랑데자뷰)",
+                "en": "Rendeja-vous Haeundae (랑데자뷰)",
+                "ko": "랑데자뷰 해운대"
+            },
+            "desc": {
+                "ru": "Эстетичное кафе с видом на море, вдохновленное природой острова Чеджу. Очень популярно для фотосессий.",
+                "en": "Aesthetic ocean-view cafe inspired by Jeju Island nature. Very popular for photos.",
+                "ko": "제주 감성을 담은 해운대 오션뷰 카페."
+            },
+            "langs": [
+                "ko",
+                "en",
+                "ru"
+            ],
+            "region": "busan",
+            "location": {
+                "lat": 35.158,
+                "lng": 129.172
+            },
+            "tags": [
+                "Кафе",
+                "Океан",
+                "Инстаграмное"
+            ]
+        }
+    },
+    {
+        "id": "food_jagalchi",
+        "verticalCode": "food",
+        "data": {
+            "name": {
+                "ru": "Jagalchi Market (자갈치시장)",
+                "en": "Jagalchi Market (자갈치시장)",
+                "ko": "자갈치시장"
+            },
+            "desc": {
+                "ru": "Самый большой рыбный рынок в Корее. Символ Пусана, где можно попробовать любые дары моря.",
+                "en": "Largest fish market in Korea. A symbol of Busan, offering every kind of seafood imaginable.",
+                "ko": "대한민국 최대 규모의 수산물 시장."
+            },
+            "langs": [
+                "ko",
+                "en",
+                "ru"
+            ],
+            "region": "busan",
+            "location": {
+                "lat": 35.0913,
+                "lng": 129.0247
+            },
+            "tags": [
+                "Рынок",
+                "Пусан",
+                "Морепродукты"
+            ]
+        }
+    },
+    {
+        "id": "food_andong_jjimdak",
+        "verticalCode": "food",
+        "data": {
+            "name": {
+                "ru": "Wonjo Andong Jjimdak (원조안동찜닭)",
+                "en": "Wonjo Andong Jjimdak (원조안동찜닭)",
+                "ko": "원조안동찜닭"
+            },
+            "desc": {
+                "ru": "Место рождения знаменитого блюда Чимдак (тушеная курица). Расположен на рынке Андона.",
+                "en": "The birthplace of Jjimdak (braised chicken). Located in Andong Market.",
+                "ko": "안동찜닭의 발상지이자 원조 맛집."
+            },
+            "langs": [
+                "ko",
+                "en",
+                "ru"
+            ],
+            "region": "andong",
+            "location": {
+                "lat": 36.5654,
+                "lng": 128.7278
+            },
+            "tags": [
+                "Ресторан",
+                "Чимдак",
+                "Андон"
+            ]
+        }
+    },
+    {
+        "id": "food_gyodong_ssambap",
+        "verticalCode": "food",
+        "data": {
+            "name": {
+                "ru": "Byeolchaeban Gyodong Ssambap (별채반 교동쌈밥)",
+                "en": "Byeolchaeban Gyodong Ssambap (별채반 교동쌈밥)",
+                "ko": "별채반 교동쌈밥"
+            },
+            "desc": {
+                "ru": "Традиционный ресторан в Кёнджу, знаменитый своими сетами с огромным выбором зелени для обертывания (Ssambap).",
+                "en": "Traditional Gyeongju restaurant famous for its Ssambap (leaf wrap) sets with many side dishes.",
+                "ko": "경주 황남동의 유명한 쌈밥 전문점."
+            },
+            "langs": [
+                "ko",
+                "en",
+                "ru"
+            ],
+            "region": "gyeongju",
+            "location": {
+                "lat": 35.8353,
+                "lng": 129.2638
+            },
+            "tags": [
+                "Ресторан",
+                "Ссамбап",
+                "Кёнджу"
+            ]
+        }
+    },
+    {
+        "id": "food_sokcho_market",
+        "verticalCode": "food",
+        "data": {
+            "name": {
+                "ru": "Sokcho Jungang Market (속초 중앙시장)",
+                "en": "Sokcho Jungang Market (속초 중앙시장)",
+                "ko": "속초 중앙시장"
+            },
+            "desc": {
+                "ru": "Рынок, который нельзя пропустить. Славится своей острой курочкой дакканджон и фаршированными кальмарами.",
+                "en": "A must-visit market in Sokcho. Famous for its Dakgangjeong and stuffed squid.",
+                "ko": "닭강정과 오징어순대가 유명한 속초의 대표 시장."
+            },
+            "langs": [
+                "ko",
+                "en",
+                "ru"
+            ],
+            "region": "gangwon",
+            "location": {
+                "lat": 38.204,
+                "lng": 128.590
+            },
+            "tags": [
+                "Рынок",
+                "Сокчхо",
+                "Уличная еда"
+            ]
+        }
+    },
+    {
+        "id": "food_gonghwachun",
+        "verticalCode": "food",
+        "data": {
+            "name": {
+                "ru": "Gong Hwa Chun (공화춘)",
+                "en": "Gong Hwa Chun (공화춘)",
+                "ko": "공화춘"
+            },
+            "desc": {
+                "ru": "Легендарный ресторан, считающийся родиной чачжанмёна в Корее. Находится в инчхонском Чайна-тауне.",
+                "en": "Legendary restaurant considered the birthplace of Jajangmyeon in Korea. Located in Incheon Chinatown.",
+                "ko": "대한민국 자장면의 발상지인 인천 차이나타운의 명소."
+            },
+            "langs": [
+                "ko",
+                "en",
+                "ru"
+            ],
+            "region": "incheon",
+            "location": {
+                "lat": 37.4770,
+                "lng": 126.6133
+            },
+            "tags": [
+                "Ресторан",
+                "Чачжанмён",
+                "Инчхон"
+            ]
+        }
+    },
+    {
+        "id": "food_shinpo_market",
+        "verticalCode": "food",
+        "data": {
+            "name": {
+                "ru": "Shinpo International Market (신포국제시장)",
+                "en": "Shinpo International Market (신포국제시장)",
+                "ko": "신포국제시장"
+            },
+            "desc": {
+                "ru": "Исторический рынок в Чемульпхо. Самый вкусный дакканджон в стране и знаменитые булочки гонгальбан.",
+                "en": "Historical market in Chemulpo. Best Dakgangjeong in the country and famous 'bubble bread'.",
+                "ko": "닭강정과 공갈빵이 유명한 인천의 유서 깊은 시장."
+            },
+            "langs": [
+                "ko",
+                "en",
+                "ru"
+            ],
+            "region": "incheon",
+            "location": {
+                "lat": 37.471,
+                "lng": 126.628
+            },
+            "tags": [
+                "Рынок",
+                "Инчхон",
+                "История"
+            ]
+        }
+    },
+    {
+        "id": "food_sorae_pogu",
+        "verticalCode": "food",
+        "data": {
+            "name": {
+                "ru": "Sorae Pogu Fish Market (소래포구 종합어시장)",
+                "en": "Sorae Pogu Fish Market (소래포구 종합어시장)",
+                "ko": "소래포구 종합어시장"
+            },
+            "desc": {
+                "ru": "Оживленный рыбный рынок в Инчхоне, где можно попробовать свежайшие суши и сашими прямо у порта.",
+                "en": "Bustling fish market in Incheon where you can eat fresh sushi and sashimi right by the port.",
+                "ko": "신선한 해산물을 즐길 수 있는 인천의 대표 포구 시장."
+            },
+            "langs": [
+                "ko",
+                "en",
+                "ru"
+            ],
+            "region": "incheon",
+            "location": {
+                "lat": 37.3879,
+                "lng": 126.7370
+            },
+            "tags": [
+                "Рынок",
+                "Инчхон",
+                "Морепродукты"
+            ]
+        }
+    },
+    {
+        "id": "food_caisson24",
+        "verticalCode": "food",
+        "data": {
+            "name": {
+                "ru": "Caisson 24 (케이슨24)",
+                "en": "Caisson 24 (케이슨24)",
+                "ko": "케이슨24"
+            },
+            "desc": {
+                "ru": "Арт-кафе и культурное пространство в Сондо с потрясающими видами на море и закат.",
+                "en": "Art cafe and cultural space in Songdo with stunning ocean and sunset views.",
+                "ko": "송도 솔찬공원의 석양이 아름다운 복합문화공간."
+            },
+            "langs": [
+                "ko",
+                "en",
+                "ru"
+            ],
+            "region": "incheon",
+            "location": {
+                "lat": 37.365,
+                "lng": 126.627
+            },
+            "tags": [
+                "Кафе",
+                "Сондо",
+                "Закат"
+            ]
+        }
+    },
+    {
+        "id": "food_myeongwoljip",
+        "verticalCode": "food",
+        "data": {
+            "name": {
+                "ru": "Myeongwoljip (명월집)",
+                "en": "Myeongwoljip (명월집)",
+                "ko": "명월집"
+            },
+            "desc": {
+                "ru": "Легендарный ресторан Кимчи-чжигаэ в историческом Чемульпхо. Готовится на традиционных углях.",
+                "en": "Legendary Kimchi-jjigae spot in historical Chemulpo. Cooked using traditional charcoal.",
+                "ko": "인천 신포동의 유서 깊은 김치찌개 노포."
+            },
+            "langs": [
+                "ko",
+                "en",
+                "ru"
+            ],
+            "region": "incheon",
+            "location": {
+                "lat": 37.474,
+                "lng": 126.623
+            },
+            "tags": [
+                "Ресторан",
+                "Чемульпхо",
+                "История"
+            ]
+        }
+    },
+    {
+        "id": "food_pyongyangok",
+        "verticalCode": "food",
+        "data": {
+            "name": {
+                "ru": "Pyongyangok (평양옥)",
+                "en": "Pyongyangok (평양옥)",
+                "ko": "평양옥"
+            },
+            "desc": {
+                "ru": "Исторический ресторан, работающий с 1945 года. Знаменит своим похмельным супом Хэджангук.",
+                "en": "Historical restaurant running since 1945. Famous for its Haejangguk (hangover soup).",
+                "ko": "1945년부터 이어져 온 인천의 대표 해장국 명가."
+            },
+            "langs": [
+                "ko",
+                "en",
+                "ru"
+            ],
+            "region": "incheon",
+            "location": {
+                "lat": 37.464,
+                "lng": 126.634
+            },
+            "tags": [
+                "Ресторан",
+                "Чемульпхо",
+                "Хэджангук"
+            ]
+        }
+    },
+    {
+        "id": "food_yeongyeong",
+        "verticalCode": "food",
+        "data": {
+            "name": {
+                "ru": "Yeongyeong (연경)",
+                "en": "Yeongyeong (연경)",
+                "ko": "연경"
+            },
+            "desc": {
+                "ru": "Знаменитый ресторан в Чайна-тауне, известный своим уникальным «белым чачжанмёном».",
+                "en": "Famous restaurant in Incheon Chinatown, renowned for its unique 'white Jajangmyeon'.",
+                "ko": "하얀 짜장면으로 유명한 인천 차이나타운의 대표 맛집."
+            },
+            "langs": [
+                "ko",
+                "en",
+                "ru"
+            ],
+            "region": "incheon",
+            "location": {
+                "lat": 37.476,
+                "lng": 126.621
+            },
+            "tags": [
+                "Ресторан",
+                "Чайна-таун",
+                "Белый чачжанмён"
+            ]
+        }
+    },
+    {
+        "id": "food_costco_national",
+        "verticalCode": "food",
+        "data": {
+            "name": {
+                "ru": "Costco Wholesale",
+                "en": "Costco Wholesale",
+                "ko": "코스트코"
+            },
+            "desc": {
+                "ru": "Крупнейшая сеть оптовых магазинов (требуется членство).",
+                "en": "Major warehouse club chain (membership required)."
+            },
+            "langs": [
+                "en",
+                "ko"
+            ],
+            "region": "national",
+            "tags": [
+                "Оптовый магазин",
+                "Продукты",
+                "Member-only"
+            ],
+            "branches": [
+                {
+                    "name": "Yangjae (Seoul)",
+                    "address": "서울특별시 서초구 양재대로 159"
+                },
+                {
+                    "name": "Songdo (Incheon)",
+                    "address": "인천 연수구 컨벤시아대로230번길 60"
+                },
+                {
+                    "name": "Busan",
+                    "address": "부산광역시 수영구 구락로 137"
+                },
+                {
+                    "name": "Daegu",
+                    "address": "대구광역시 북구 검단로 97"
+                },
+                {
+                    "name": "Daejeon",
+                    "address": "대전광역시 중구 오류로 41"
+                }
+            ]
+        }
+    },
+    {
+        "id": "food_traders_national",
+        "verticalCode": "food",
+        "data": {
+            "name": {
+                "ru": "Emart Traders",
+                "en": "Emart Traders",
+                "ko": "이마트 트레이더스"
+            },
+            "desc": {
+                "ru": "Складской формат Emart без членских взносов.",
+                "en": "Warehouse-style store by Emart, no membership fee required."
+            },
+            "langs": [
+                "en",
+                "ko"
+            ],
+            "region": "national",
+            "tags": [
+                "Оптовый магазин",
+                "No membership",
+                "Emart"
+            ],
+            "branches": [
+                {
+                    "name": "Wolgye (Seoul)",
+                    "address": "서울특별시 노원구 마들로3길 15"
+                },
+                {
+                    "name": "Guwol (Incheon)",
+                    "address": "인천 남동구 매소홀로 759"
+                },
+                {
+                    "name": "Seomyeon (Busan)",
+                    "address": "부산 부산진구 시민공원로 31"
+                },
+                {
+                    "name": "Bisan (Daegu)",
+                    "address": "대구 서구 팔달로 54"
+                },
+                {
+                    "name": "Wolpyeong (Daejeon)",
+                    "address": "대전 서구 한밭대로 580"
+                }
+            ]
+        }
+    },
+    {
+        "id": "food_nobrand_national",
+        "verticalCode": "food",
+        "data": {
+            "name": {
+                "ru": "No-Brand",
+                "en": "No-Brand",
+                "ko": "노브랜드"
+            },
+            "desc": {
+                "ru": "Магазины с доступными ценами и продуктами собственной марки Emart.",
+                "en": "Affordable stores featuring Emart's private label products."
+            },
+            "langs": [
+                "en",
+                "ko",
+                "ru"
+            ],
+            "region": "national",
+            "tags": [
+                "Эконом",
+                "Бакалея",
+                "Emart"
+            ],
+            "branches": [
+                {
+                    "name": "Doota (Dongdaemun)",
+                    "address": "서울 중구 장충단로 275 (4F)"
+                },
+                {
+                    "name": "Sinchon (Seoul)",
+                    "address": "서울 서대문구 명물길 32"
+                },
+                {
+                    "name": "Dadae (Busan)",
+                    "address": "부산 사하구 다대로 447"
+                },
+                {
+                    "name": "Wolbae (Daegu)",
+                    "address": "대구 달서구 월배로24길 13"
+                },
+                {
+                    "name": "Munji (Daejeon)",
+                    "address": "대전 문지로299번길 66"
+                }
+            ]
+        }
+    }
+]

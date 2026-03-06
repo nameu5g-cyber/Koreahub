@@ -1,0 +1,94 @@
+[
+    {
+        "id": "finance_samsung_life_elena",
+        "verticalCode": "finance",
+        "data": {
+            "category": "insurance",
+            "name": {
+                "ru": "Samsung Life (Елена Иловская)",
+                "en": "Samsung Life (Elena Ilovskaya)",
+                "ko": "Samsung Life (Елена Иловская)"
+            },
+            "desc": {
+                "ru": "Частное страхование (Silbi), консультации.",
+                "en": "Private insurance & claims.",
+                "ko": "Private insurance & claims."
+            },
+            "langs": [
+                "ru"
+            ],
+            "link": "https://www.instagram.com/elena.ilovskaya.samsung",
+            "region": "seoul"
+        }
+    },
+    {
+        "id": "finance_mega_center_korea",
+        "verticalCode": "finance",
+        "data": {
+            "category": "insurance",
+            "name": {
+                "ru": "Mega Center Korea",
+                "en": "Mega Center Korea",
+                "ko": "Mega Center Korea"
+            },
+            "desc": {
+                "ru": "Страхование (RU): авто, медицина, жизнь.",
+                "en": "Insurance: auto, medical, life 24/7.",
+                "ko": "Insurance: auto, medical, life 24/7."
+            },
+            "langs": [
+                "ru"
+            ],
+            "link": "https://megacentrekorea.com",
+            "region": "seoul"
+        }
+    },
+    {
+        "id": "finance_woori_bank_global",
+        "verticalCode": "finance",
+        "data": {
+            "category": "bank",
+            "name": {
+                "ru": "Woori Bank Global",
+                "en": "Woori Bank Global",
+                "ko": "Woori Bank Global"
+            },
+            "desc": {
+                "ru": "Отделения с поддержкой иностранцев (RU).",
+                "en": "Expat-friendly branches.",
+                "ko": "Expat-friendly branches."
+            },
+            "langs": [
+                "ru",
+                "en",
+                "ko"
+            ],
+            "link": "https://www.wooribank.com",
+            "region": "seoul"
+        }
+    },
+    {
+        "id": "finance_wowpass",
+        "verticalCode": "finance",
+        "data": {
+            "category": "card",
+            "name": {
+                "ru": "WowPASS",
+                "en": "WowPASS",
+                "ko": "WowPASS"
+            },
+            "desc": {
+                "ru": "Карта для оплат и транспорта (T-money).",
+                "en": "Payment & T-money card.",
+                "ko": "Payment & T-money card."
+            },
+            "langs": [
+                "ru",
+                "en",
+                "ko"
+            ],
+            "link": "https://www.wowpass.io",
+            "region": "seoul"
+        }
+    }
+]

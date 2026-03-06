@@ -1,0 +1,122 @@
+{
+    "code": "services",
+    "name": {
+        "ru": "Услуги",
+        "en": "Services",
+        "ko": "서비스",
+        "kk": "Қызметтер",
+        "uz": "Xizmatlar"
+    },
+    "icon": "Briefcase",
+    "color": "#3182CE",
+    "entityName": {
+        "ru": "Сервис",
+        "en": "Service",
+        "kk": "Қызмет",
+        "uz": "Xizmat"
+    },
+    "fields": [
+        {
+            "code": "name",
+            "type": "string",
+            "required": true,
+            "label": {
+                "ru": "Название",
+                "en": "Name",
+                "ko": "이름",
+                "kk": "Атауы",
+                "uz": "Nomi"
+            },
+            "showInCard": true
+        },
+        {
+            "code": "desc",
+            "type": "translated_string",
+            "required": true,
+            "label": {
+                "ru": "Описание",
+                "en": "Description",
+                "ko": "설명",
+                "kk": "Сипаттама",
+                "uz": "Tavsif"
+            },
+            "showInCard": true
+        },
+        {
+            "code": "langs",
+            "type": "multiselect",
+            "options": [
+                "ru",
+                "en",
+                "ko",
+                "uz",
+                "kz"
+            ],
+            "showInCard": true,
+            "display": "flags"
+        },
+        {
+            "code": "link",
+            "type": "url",
+            "label": {
+                "ru": "Ссылка",
+                "en": "Link",
+                "ko": "링크",
+                "kk": "Сілтеме",
+                "uz": "Havola"
+            },
+            "showInDetail": true
+        },
+        {
+            "code": "phone",
+            "type": "phone",
+            "callable": true,
+            "showInCard": true
+        },
+        {
+            "code": "location",
+            "type": "string",
+            "label": {
+                "ru": "Локация",
+                "en": "Location",
+                "ko": "위치",
+                "kk": "Орналасқан жері",
+                "uz": "Manzil"
+            },
+            "showInCard": true
+        },
+        {
+            "code": "tags",
+            "type": "multiselect",
+            "label": {
+                "ru": "Теги",
+                "en": "Tags",
+                "ko": "태그",
+                "kk": "Тегтер",
+                "uz": "Teglar"
+            },
+            "display": "chips"
+        }
+    ],
+    "filters": [
+        "region",
+        "langs"
+    ],
+    "sortOptions": [
+        {
+            "code": "name",
+            "label": {
+                "ru": "По названию",
+                "en": "By Name",
+                "ko": "이름순",
+                "kk": "Атауы бойынша",
+                "uz": "Nomi bo'yicha"
+            },
+            "default": true
+        }
+    ],
+    "actions": [
+        "call",
+        "visit"
+    ]
+}

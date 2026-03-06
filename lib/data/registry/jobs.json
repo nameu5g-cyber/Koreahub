@@ -141,6 +141,7 @@
         }
     ],
     "filters": [
+        "region",
         "jobType",
         "koreanLevel",
         "visaSponsored"

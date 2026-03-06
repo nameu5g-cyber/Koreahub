@@ -1,0 +1,88 @@
+[
+    {
+        "id": "services_kompass_дунпо_инчхон_синчанг",
+        "verticalCode": "services",
+        "data": {
+            "region": "incheon",
+            "name": {
+                "ru": "KOMPASS (Дунпо/Инчхон/Синчанг)",
+                "en": "KOMPASS (Дунпо/Инчхон/Синчанг)",
+                "ko": "KOMPASS (Дунпо/Инчхон/Синчанг)"
+            },
+            "desc": {
+                "ru": "Визы, Переводы, Нотариус, Апостиль, Открытие ИП.",
+                "en": "Visas, Apostille, Business registration.",
+                "ko": "Visas, Apostille, Business registration."
+            },
+            "langs": [
+                "ru",
+                "uz",
+                "kz"
+            ],
+            "link": "https://www.tiktok.com/@kompass"
+        }
+    },
+    {
+        "id": "services_siberia_consult",
+        "verticalCode": "services",
+        "data": {
+            "region": "online",
+            "name": {
+                "ru": "Siberia Consult",
+                "en": "Siberia Consult",
+                "ko": "Siberia Consult"
+            },
+            "desc": {
+                "ru": "Регистрация ООО/ИП, бухгалтерия, открытие счетов.",
+                "en": "Business registration & accounting.",
+                "ko": "Business registration & accounting."
+            },
+            "langs": [
+                "ru"
+            ],
+            "link": "https://siberiaconsult.ru"
+        }
+    },
+    {
+        "id": "services_cdek_korea",
+        "verticalCode": "services",
+        "data": {
+            "region": "online",
+            "name": {
+                "ru": "CDEK Korea",
+                "en": "CDEK Korea",
+                "ko": "CDEK Korea"
+            },
+            "desc": {
+                "ru": "Посылки и документы в СНГ.",
+                "en": "Express delivery to CIS.",
+                "ko": "Express delivery to CIS."
+            },
+            "langs": [
+                "ru"
+            ],
+            "link": "http://www.cdek.co.kr"
+        }
+    },
+    {
+        "id": "services_cargo_alliance",
+        "verticalCode": "services",
+        "data": {
+            "region": "online",
+            "name": {
+                "ru": "Cargo Alliance",
+                "en": "Cargo Alliance",
+                "ko": "Cargo Alliance"
+            },
+            "desc": {
+                "ru": "Международные перевозки (обычные грузы).",
+                "en": "International cargo services.",
+                "ko": "International cargo services."
+            },
+            "langs": [
+                "ru"
+            ],
+            "link": "https://cargoalliance.ru/korea"
+        }
+    }
+]

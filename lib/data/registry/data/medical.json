@@ -1,0 +1,607 @@
+[
+    {
+        "id": "medical_medical_korea",
+        "verticalCode": "medical",
+        "data": {
+            "name": {
+                "ru": "Medical Korea",
+                "en": "Medical Korea",
+                "ko": "Medical Korea"
+            },
+            "desc": {
+                "ru": "Гос. инфо-центр для пациентов.",
+                "en": "Global medical information center.",
+                "ko": "Global medical information center."
+            },
+            "langs": [
+                "ru",
+                "en",
+                "ko"
+            ],
+            "link": "https://www.medicalkorea.or.kr",
+            "region": "seoul"
+        }
+    },
+    {
+        "id": "medical_asan_medical_center",
+        "verticalCode": "medical",
+        "data": {
+            "name": {
+                "ru": "Asan Medical Center",
+                "en": "Asan Medical Center",
+                "ko": "서울아산병원"
+            },
+            "region": "seoul",
+            "specialization": [
+                "internal_medicine",
+                "family_medicine",
+                "orthopedics"
+            ],
+            "langs": [
+                "ru",
+                "en",
+                "ko",
+                "zh",
+                "ja",
+                "ar",
+                "uz",
+                "kz",
+                "mn",
+                "vi"
+            ],
+            "phone": "02-3410-0200",
+            "naverMapUrl": "https://naver.me/asan_hospital",
+            "description": {
+                "ru": "Один из крупнейших центров в Корее. Сильная диагностика.",
+                "en": "One of the leading medical centers in Korea."
+            }
+        }
+    },
+    {
+        "id": "medical_severance_hospital",
+        "verticalCode": "medical",
+        "data": {
+            "name": {
+                "ru": "Severance Hospital (Sinchon)",
+                "en": "Severance Hospital",
+                "ko": "연세대학교 신촌세브란스병원"
+            },
+            "region": "seoul",
+            "specialization": [
+                "internal_medicine",
+                "pediatrics",
+                "dermatology"
+            ],
+            "langs": [
+                "ru",
+                "en",
+                "ko",
+                "zh",
+                "ja",
+                "ar",
+                "mn",
+                "vi"
+            ],
+            "phone": "1599-1004",
+            "naverMapUrl": "https://naver.me/severance_sinchon",
+            "description": {
+                "ru": "Старейшая клиника западного типа. Есть спец. отдел для иностранцев.",
+                "en": "International Healthcare Center since 1962."
+            }
+        }
+    },
+    {
+        "id": "medical_samsung_medical_center",
+        "verticalCode": "medical",
+        "data": {
+            "name": {
+                "ru": "Samsung Medical Center",
+                "en": "Samsung Medical Center",
+                "ko": "삼성서울병원"
+            },
+            "region": "seoul",
+            "specialization": [
+                "internal_medicine",
+                "family_medicine",
+                "ophthalmology"
+            ],
+            "langs": [
+                "ru",
+                "en",
+                "ko",
+                "zh",
+                "ja",
+                "ar",
+                "mn"
+            ],
+            "phone": "1599-3114",
+            "naverMapUrl": "https://naver.me/samsung_medical",
+            "description": {
+                "ru": "Высочайший уровень сервиса и технологий (Gangnam).",
+                "en": "Top-tier medical service and technology."
+            }
+        }
+    },
+    {
+        "id": "medical_snuh_seoul",
+        "verticalCode": "medical",
+        "data": {
+            "name": {
+                "ru": "SNUH (Seoul National University Hospital)",
+                "en": "Seoul National University Hospital",
+                "ko": "서울대학교병원"
+            },
+            "region": "seoul",
+            "specialization": [
+                "internal_medicine",
+                "family_medicine",
+                "mental_health"
+            ],
+            "langs": [
+                "ru",
+                "en",
+                "ko",
+                "zh",
+                "ja",
+                "ar",
+                "vi"
+            ],
+            "phone": "1577-8588",
+            "naverMapUrl": "https://naver.me/snuh_seoul",
+            "description": {
+                "ru": "Главная государственная больница Кореи.",
+                "en": "Main public hospital of South Korea."
+            }
+        }
+    },
+    {
+        "id": "medical_shihwa_hospital",
+        "verticalCode": "medical",
+        "data": {
+            "name": {
+                "ru": "Shihwa Medical Center",
+                "en": "Shihwa Hospital",
+                "ko": "시화병원"
+            },
+            "region": "gyeonggi",
+            "specialization": [
+                "family_medicine",
+                "internal_medicine",
+                "orthopedics"
+            ],
+            "langs": [
+                "ru",
+                "en",
+                "ko",
+                "uz",
+                "kz"
+            ],
+            "phone": "031-8041-3911",
+            "naverMapUrl": "https://naver.me/shihwa_hospital",
+            "description": {
+                "ru": "Популярна у СНГ пациентов. Есть штатные русскоговорящие координаторы.",
+                "en": "Popular among CIS patients, with RU support."
+            }
+        }
+    },
+    {
+        "id": "medical_sch_bucheon",
+        "verticalCode": "medical",
+        "data": {
+            "name": {
+                "ru": "Sun Chun Hyang University Hospital (Bucheon)",
+                "en": "Soonchunhyang Bucheon Hospital",
+                "ko": "순천향대학교 부천병원"
+            },
+            "region": "gyeonggi",
+            "specialization": [
+                "internal_medicine",
+                "family_medicine",
+                "dermatology"
+            ],
+            "langs": [
+                "ru",
+                "en",
+                "ko",
+                "uz",
+                "kz",
+                "mn"
+            ],
+            "phone": "032-621-5070",
+            "naverMapUrl": "https://naver.me/sch_bucheon",
+            "description": {
+                "ru": "Региональный центр с сильной поддержкой иностранных пациентов.",
+                "en": "Regional medical hub with strong international support."
+            }
+        }
+    },
+    {
+        "id": "medical_hanyang_univ_seoul",
+        "verticalCode": "medical",
+        "data": {
+            "name": {
+                "ru": "Hanyang University Medical Center",
+                "en": "Hanyang University Hospital",
+                "ko": "한양대학교병원"
+            },
+            "region": "seoul",
+            "specialization": [
+                "family_medicine",
+                "internal_medicine"
+            ],
+            "langs": [
+                "ru",
+                "en",
+                "ko",
+                "mn"
+            ],
+            "phone": "02-2290-9553",
+            "naverMapUrl": "https://naver.me/hanyang_seoul",
+            "description": {
+                "ru": "Международный клинический центр в Сеуле.",
+                "en": "International clinic center in Seoul."
+            }
+        }
+    },
+    {
+        "id": "medical_konkuk_univ_seoul",
+        "verticalCode": "medical",
+        "data": {
+            "name": {
+                "ru": "Konkuk University Medical Center",
+                "en": "Konkuk University Medical Center",
+                "ko": "건국대학교병원"
+            },
+            "nameKo": "건국대학교병원",
+            "region": "seoul",
+            "langs": [
+                "ru",
+                "en",
+                "ko"
+            ],
+            "phone": "02-2030-8361",
+            "naverMapUrl": "https://naver.me/konkuk_med",
+            "description": {
+                "ru": "Многопрофильная клиника в районе Гванджин-гу.",
+                "en": "General hospital in Gwangjin-gu."
+            }
+        }
+    },
+    {
+        "id": "medical_ewha_univ_seoul",
+        "verticalCode": "medical",
+        "data": {
+            "name": {
+                "ru": "Ewha Womans University Seoul Hospital",
+                "en": "Ewha Womans University Seoul Hospital",
+                "ko": "이대서울병원"
+            },
+            "nameKo": "이대서울병원",
+            "region": "seoul",
+            "langs": [
+                "ru",
+                "en",
+                "ko"
+            ],
+            "phone": "02-6986-2000",
+            "naverMapUrl": "https://naver.me/ewha_seoul",
+            "description": {
+                "ru": "Современный медицинский центр в Магоке.",
+                "en": "Modern medical center in Magok, Seoul."
+            }
+        }
+    },
+    {
+        "id": "medical_kyunghee_univ_seoul",
+        "verticalCode": "medical",
+        "data": {
+            "name": {
+                "ru": "Kyung Hee University Medical Center",
+                "en": "Kyung Hee University Medical Center",
+                "ko": "경희대학교의료원"
+            },
+            "nameKo": "경희대학교의료원",
+            "region": "seoul",
+            "langs": [
+                "ru",
+                "en",
+                "ko"
+            ],
+            "phone": "02-958-9644",
+            "naverMapUrl": "https://naver.me/kyunghee_med",
+            "description": {
+                "ru": "Университетский госпиталь в районе Тондэмун-гу.",
+                "en": "University hospital in Dongdaemun-gu."
+            }
+        }
+    },
+    {
+        "id": "medical_sch_seoul",
+        "verticalCode": "medical",
+        "data": {
+            "name": {
+                "ru": "Soon Chun Hyang University Hospital Seoul",
+                "en": "Soon Chun Hyang University Hospital Seoul",
+                "ko": "순천향대학교 서울병원",
+                "kk": "Soon Chun Hyang Univ Hospital",
+                "uz": "Soon Chun Hyang Univ Hospital"
+            },
+            "nameKo": "순천향대학교 서울병원",
+            "region": "seoul",
+            "specialization": [
+                "internal_medicine",
+                "family_medicine",
+                "pediatrics"
+            ],
+            "langs": [
+                "ru",
+                "en",
+                "ko"
+            ],
+            "phone": "+82-2-709-9158",
+            "naverMapUrl": "https://naver.me/GfauW8Jp",
+            "description": {
+                "ru": "Крупный медцентр в Сеуле (Ханнам-дон) с международным отделом.",
+                "en": "Major medical center in Seoul (Hannam-dong) with an international clinic."
+            }
+        }
+    },
+    {
+        "id": "medical_gachon_gil",
+        "verticalCode": "medical",
+        "data": {
+            "name": {
+                "ru": "Gachon University Gil Medical Center",
+                "en": "Gachon University Gil Medical Center",
+                "ko": "가천대길병원"
+            },
+            "nameKo": "가천대길병원",
+            "region": "incheon",
+            "specialization": [
+                "internal_medicine",
+                "emergency_medicine",
+                "cardiology"
+            ],
+            "langs": [
+                "ru",
+                "en",
+                "ko",
+                "zh",
+                "mn"
+            ],
+            "phone": "+82-32-460-9074",
+            "naverMapUrl": "https://naver.me/G87W229F",
+            "description": {
+                "ru": "Главный госпиталь Инчхона. Круглосуточная горячая линия на русском: +82-10-6800-9074.",
+                "en": "Major hospital in Incheon. 24h Russian hotline: +82-10-6800-9074."
+            }
+        }
+    },
+    {
+        "id": "medical_pnuh",
+        "verticalCode": "medical",
+        "data": {
+            "name": {
+                "ru": "Pusan National University Hospital (PNUH)",
+                "en": "Pusan National University Hospital (PNUH)",
+                "ko": "부산대학교병원"
+            },
+            "nameKo": "부산대학교병원",
+            "region": "busan",
+            "specialization": [
+                "internal_medicine",
+                "surgery",
+                "emergency_medicine"
+            ],
+            "langs": [
+                "ru",
+                "en",
+                "ko",
+                "zh"
+            ],
+            "phone": "+82-51-240-7866",
+            "naverMapUrl": "https://naver.me/GcjX229A",
+            "description": {
+                "ru": "Ведущая гос. клиника в Пусане с русскоязычными координаторами.",
+                "en": "Leading public hospital in Busan with Russian coordinators."
+            }
+        }
+    },
+    {
+        "id": "medical_dongsan",
+        "verticalCode": "medical",
+        "data": {
+            "name": {
+                "ru": "Keimyung University Dongsan Hospital",
+                "en": "Keimyung University Dongsan Hospital",
+                "ko": "계명대학교 동산병원"
+            },
+            "nameKo": "계명대학교 동산병원",
+            "region": "daegu",
+            "specialization": [
+                "internal_medicine",
+                "orthopedics",
+                "oncology"
+            ],
+            "langs": [
+                "ru",
+                "en",
+                "ko"
+            ],
+            "phone": "+82-53-258-4007",
+            "naverMapUrl": "https://naver.me/GfauW8Jp",
+            "description": {
+                "ru": "Крупнейшая клиника в Тэгу с поддержкой русского языка.",
+                "en": "Largest hospital in Daegu with Russian support."
+            }
+        }
+    },
+    {
+        "id": "medical_sun_medical",
+        "verticalCode": "medical",
+        "data": {
+            "name": {
+                "ru": "Sun Medical Center (Daejeon)",
+                "en": "Sun Medical Center (Daejeon)",
+                "ko": "선병원"
+            },
+            "nameKo": "선병원",
+            "region": "daejeon",
+            "specialization": [
+                "internal_medicine",
+                "dentistry",
+                "health_screening"
+            ],
+            "langs": [
+                "ru",
+                "en",
+                "ko"
+            ],
+            "phone": "+82-42-220-8279",
+            "naverMapUrl": "https://naver.me/GfauW8Jp",
+            "description": {
+                "ru": "Популярный центр в Тэджоне с сильной командой координаторов.",
+                "en": "Popular medical center in Daejeon with Russian coordinators."
+            }
+        }
+    },
+    {
+        "id": "medical_clwh",
+        "verticalCode": "medical",
+        "data": {
+            "name": {
+                "ru": "Creation & Love Women's Hospital (CLWH)",
+                "en": "Creation & Love Women's Hospital (CLWH)",
+                "ko": "문화여성병원"
+            },
+            "nameKo": "문화여성병원",
+            "region": "gwangju",
+            "specialization": [
+                "gynecology",
+                "pediatrics"
+            ],
+            "langs": [
+                "ru",
+                "en",
+                "ko"
+            ],
+            "phone": "+82-62-368-1700",
+            "naverMapUrl": "https://naver.me/GfauW8Jp",
+            "description": {
+                "ru": "Специализированная женская клиника в Кванджу. Линия на русском: +82-10-2235-4489.",
+                "en": "Specialized women hospital in Gwangju. Russian hotline: +82-10-2235-4489."
+            }
+        }
+    },
+    {
+        "id": "medical_jnuh_jeju",
+        "verticalCode": "medical",
+        "data": {
+            "name": {
+                "ru": "Jeju National University Hospital",
+                "en": "Jeju National University Hospital",
+                "ko": "제주대학교병원"
+            },
+            "nameKo": "제주대학교병원",
+            "region": "jeju",
+            "specialization": [
+                "internal_medicine",
+                "emergency_medicine",
+                "pediatrics"
+            ],
+            "langs": [
+                "en",
+                "ko"
+            ],
+            "phone": "064-717-1100",
+            "naverMapUrl": "https://naver.me/jnuh_jeju",
+            "description": {
+                "ru": "Главная государственная больница на острове Чеджу.",
+                "en": "Main public hospital in Jeju Island."
+            }
+        }
+    },
+    {
+        "id": "medical_uuh_ulsan",
+        "verticalCode": "medical",
+        "data": {
+            "name": {
+                "ru": "Ulsan University Hospital",
+                "en": "Ulsan University Hospital",
+                "ko": "울산대학교병원"
+            },
+            "nameKo": "울산대학교병원",
+            "region": "ulsan",
+            "specialization": [
+                "internal_medicine",
+                "surgery",
+                "emergency_medicine"
+            ],
+            "langs": [
+                "en",
+                "ko",
+                "ru"
+            ],
+            "phone": "052-250-7000",
+            "naverMapUrl": "https://naver.me/uuh_ulsan",
+            "description": {
+                "ru": "Ведущий медицинский центр в Ульсане.",
+                "en": "Leading medical center in Ulsan."
+            }
+        }
+    },
+    {
+        "id": "medical_knuh_gangwon",
+        "verticalCode": "medical",
+        "data": {
+            "name": {
+                "ru": "Kangwon National University Hospital",
+                "en": "Kangwon National University Hospital",
+                "ko": "강원대학교병원"
+            },
+            "nameKo": "강원대학교병원",
+            "region": "gangwon",
+            "specialization": [
+                "internal_medicine",
+                "family_medicine"
+            ],
+            "langs": [
+                "en",
+                "ko"
+            ],
+            "phone": "033-258-2000",
+            "naverMapUrl": "https://naver.me/knuh_med",
+            "description": {
+                "ru": "Главный университетский госпиталь провинции Канвондо.",
+                "en": "Main university hospital in Gangwon province."
+            }
+        }
+    },
+    {
+        "id": "medical_cbnu_chungbuk",
+        "verticalCode": "medical",
+        "data": {
+            "name": {
+                "ru": "Chungbuk National University Hospital",
+                "en": "Chungbuk National University Hospital",
+                "ko": "충북대학교병원"
+            },
+            "nameKo": "충북대학교병원",
+            "region": "chungcheong",
+            "specialization": [
+                "internal_medicine",
+                "emergency_medicine"
+            ],
+            "langs": [
+                "en",
+                "ko"
+            ],
+            "phone": "043-269-6114",
+            "naverMapUrl": "https://naver.me/cbnu_med",
+            "description": {
+                "ru": "Крупнейшая государственная клиника в Чхунчхоне.",
+                "en": "Largest public hospital in Chungcheongbuk-do."
+            }
+        }
+    }
+]

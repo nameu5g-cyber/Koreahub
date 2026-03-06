@@ -1,0 +1,66 @@
+[
+    {
+        "id": "jobs_dunpo_samushils",
+        "verticalCode": "jobs",
+        "data": {
+            "region": "chungcheong",
+            "name": {
+                "ru": "Dunpo Samushils",
+                "en": "Dunpo Samushils",
+                "ko": "Dunpo Samushils"
+            },
+            "desc": {
+                "ru": "Кадровые бюро в Дунпо.",
+                "en": "Staffing agencies in Dunpo.",
+                "ko": "Staffing agencies in Dunpo."
+            },
+            "langs": [
+                "ru"
+            ],
+            "location": "Asan/Dunpo"
+        }
+    },
+    {
+        "id": "jobs_kowork",
+        "verticalCode": "jobs",
+        "data": {
+            "name": {
+                "ru": "KoWork",
+                "en": "KoWork",
+                "ko": "KoWork"
+            },
+            "desc": {
+                "ru": "Вакансии для виз E-7/D-10.",
+                "en": "Job portal for visa holders.",
+                "ko": "Job portal for visa holders."
+            },
+            "langs": [
+                "en",
+                "ko"
+            ],
+            "link": "https://kowork.kr/en",
+            "region": "seoul"
+        }
+    },
+    {
+        "id": "jobs_albamon",
+        "verticalCode": "jobs",
+        "data": {
+            "name": {
+                "ru": "Albamon",
+                "en": "Albamon",
+                "ko": "Albamon"
+            },
+            "desc": {
+                "ru": "Поиск подработки (Альба).",
+                "en": "Part-time job portal.",
+                "ko": "Part-time job portal."
+            },
+            "langs": [
+                "ko"
+            ],
+            "link": "https://www.albamon.com",
+            "region": "seoul"
+        }
+    }
+]

@@ -64,19 +64,19 @@
             "display": "chips"
         },
         {
-            "code": "languages",
+            "code": "langs",
             "type": "multiselect",
             "options": [
-                "russian",
-                "english",
-                "korean",
-                "chinese",
-                "uzbek",
-                "kazakh",
-                "mongolian",
-                "vietnamese",
-                "arabic",
-                "japanese"
+                "ru",
+                "en",
+                "ko",
+                "zh",
+                "uz",
+                "kk",
+                "mn",
+                "vn",
+                "ar",
+                "jp"
             ],
             "filterable": true,
             "showInCard": true,
@@ -126,7 +126,7 @@
     ],
     "filters": [
         "specialization",
-        "languages",
+        "langs",
         "acceptsNhis"
     ],
     "sortOptions": [

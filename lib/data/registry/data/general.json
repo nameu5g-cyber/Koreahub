@@ -1,0 +1,281 @@
+[
+    {
+        "id": "general_hikorea",
+        "verticalCode": "general",
+        "data": {
+            "category": "gov",
+            "region": "seoul",
+            "name": {
+                "ru": "HiKorea",
+                "en": "HiKorea",
+                "ko": "HiKorea"
+            },
+            "desc": {
+                "ru": "Главный портал иммиграции (ARC, визы)",
+                "en": "Main immigration portal (ARC, visas)",
+                "ko": "Main immigration portal (ARC, visas)"
+            },
+            "langs": [
+                "ru",
+                "en",
+                "ko"
+            ],
+            "link": "https://www.hikorea.go.kr",
+            "tags": [
+                "Визы",
+                "Запись"
+            ]
+        }
+    },
+    {
+        "id": "general_1345_contact_center",
+        "verticalCode": "general",
+        "data": {
+            "category": "gov",
+            "region": "seoul",
+            "name": {
+                "ru": "1345 Contact Center",
+                "en": "1345 Contact Center",
+                "ko": "1345 Contact Center"
+            },
+            "desc": {
+                "ru": "Справочная иммиграции (есть RU)",
+                "en": "Immigration hotline",
+                "ko": "Immigration hotline"
+            },
+            "langs": [
+                "ru",
+                "en",
+                "ko",
+                "uz",
+                "kz"
+            ],
+            "phone": "1345",
+            "tags": [
+                "Горячая линия",
+                "Помощь"
+            ]
+        }
+    },
+    {
+        "id": "general_danuri_helpline",
+        "verticalCode": "general",
+        "data": {
+            "category": "gov",
+            "region": "seoul",
+            "name": {
+                "ru": "Danuri Helpline",
+                "en": "Danuri Helpline",
+                "ko": "Danuri Helpline"
+            },
+            "desc": {
+                "ru": "Поддержка мигрантов 24/7 (RU)",
+                "en": "Migrant support (24/7)",
+                "ko": "Migrant support (24/7)"
+            },
+            "langs": [
+                "ru",
+                "en",
+                "ko",
+                "uz",
+                "kz"
+            ],
+            "phone": "1577-1366",
+            "tags": [
+                "Круглосуточно"
+            ]
+        }
+    },
+    {
+        "id": "general_seoul_global_center",
+        "verticalCode": "general",
+        "data": {
+            "category": "assistance",
+            "region": "seoul",
+            "name": {
+                "ru": "Seoul Global Center",
+                "en": "Seoul Global Center",
+                "ko": "Seoul Global Center"
+            },
+            "desc": {
+                "ru": "Консультации (RU), курсы, право, бизнес.",
+                "en": "Law, courses, business support.",
+                "ko": "Law, courses, business support."
+            },
+            "langs": [
+                "ru",
+                "en",
+                "ko"
+            ],
+            "phone": "02-2075-4180"
+        }
+    },
+    {
+        "id": "general_incheon_foreigners_center",
+        "verticalCode": "general",
+        "data": {
+            "category": "assistance",
+            "region": "incheon",
+            "name": {
+                "ru": "Incheon Foreigners Center",
+                "en": "Incheon Foreigners Center",
+                "ko": "Incheon Foreigners Center"
+            },
+            "desc": {
+                "ru": "Центр поддержки (Hambak). Обучение, консультации.",
+                "en": "Support in Incheon Area.",
+                "ko": "Support in Incheon Area."
+            },
+            "langs": [
+                "ru",
+                "en",
+                "ko"
+            ],
+            "phone": "1833-6333"
+        }
+    },
+    {
+        "id": "general_busan_counseling_center",
+        "verticalCode": "general",
+        "data": {
+            "category": "assistance",
+            "region": "busan",
+            "name": {
+                "ru": "Busan Counseling Center",
+                "en": "Busan Counseling Center",
+                "ko": "Busan Counseling Center"
+            },
+            "desc": {
+                "ru": "Центр поддержки в Пусане (есть RU).",
+                "en": "Support in Busan area.",
+                "ko": "Support in Busan area."
+            },
+            "langs": [
+                "ru",
+                "en",
+                "ko"
+            ],
+            "phone": "1600-0051"
+        }
+    },
+    {
+        "id": "general_gyeongju_support_center",
+        "verticalCode": "general",
+        "data": {
+            "category": "assistance",
+            "region": "gyeongsang",
+            "name": {
+                "ru": "Gyeongju Support Center",
+                "en": "Gyeongju Support Center",
+                "ko": "Gyeongju Support Center"
+            },
+            "desc": {
+                "ru": "Центр поддержки рабочих в Кёнджу.",
+                "en": "Foreign Workers Support in Gyeongju.",
+                "ko": "Foreign Workers Support in Gyeongju."
+            },
+            "langs": [
+                "ru",
+                "ko"
+            ],
+            "phone": "054-778-2518"
+        }
+    },
+    {
+        "id": "general_gimpo_support_center",
+        "verticalCode": "general",
+        "data": {
+            "category": "assistance",
+            "region": "gyeonggi",
+            "name": {
+                "ru": "Gimpo Support Center",
+                "en": "Gimpo Support Center",
+                "ko": "Gimpo Support Center"
+            },
+            "desc": {
+                "ru": "Центр поддержки мигрантов в Кимпхо.",
+                "en": "Support center in Gimpo.",
+                "ko": "Support center in Gimpo."
+            },
+            "langs": [
+                "ru",
+                "ko"
+            ],
+            "phone": "031-986-7660"
+        }
+    },
+    {
+        "id": "general_russian_consulate_busan",
+        "verticalCode": "general",
+        "data": {
+            "category": "admin",
+            "region": "busan",
+            "name": {
+                "ru": "Russian Consulate (Busan)",
+                "en": "Russian Consulate (Busan)",
+                "ko": "Russian Consulate (Busan)"
+            },
+            "desc": {
+                "ru": "Генконсульство РФ в Пусане.",
+                "en": "Consulate General in Busan.",
+                "ko": "Consulate General in Busan."
+            },
+            "langs": [
+                "ru"
+            ],
+            "phone": "051-441-9904",
+            "location": "Busan (Jung-gu)"
+        }
+    },
+    {
+        "id": "general_raduga_радуга",
+        "verticalCode": "general",
+        "data": {
+            "category": "food",
+            "region": "incheon",
+            "name": {
+                "ru": "Raduga (Радуга)",
+                "en": "Raduga (Радуга)",
+                "ko": "Raduga (Радуга)"
+            },
+            "desc": {
+                "ru": "Продуктовый магазин в районе Хамбак.",
+                "en": "Grocery store in Hambak district.",
+                "ko": "Grocery store in Hambak district."
+            },
+            "langs": [
+                "ru"
+            ],
+            "location": "Incheon (Hambak)",
+            "tags": [
+                "Рядом с домом"
+            ]
+        }
+    },
+    {
+        "id": "general_tandyr_тандыр",
+        "verticalCode": "general",
+        "data": {
+            "category": "food",
+            "region": "gyeongsang",
+            "name": {
+                "ru": "Tandyr (Тандыр)",
+                "en": "Tandyr (Тандыр)",
+                "ko": "Tandyr (Тандыр)"
+            },
+            "desc": {
+                "ru": "Узбекские продукты, свежие лепешки и мясо.",
+                "en": "Uzbek groceries & fresh bread.",
+                "ko": "Uzbek groceries & fresh bread."
+            },
+            "langs": [
+                "ru"
+            ],
+            "location": "Gimhae (Gwangmyeong)",
+            "tags": [
+                "Мясо",
+                "Халяль"
+            ]
+        }
+    }
+]

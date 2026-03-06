@@ -1,0 +1,637 @@
+[
+    {
+        "id": "visa_seoul_mokdong",
+        "verticalCode": "visa",
+        "data": {
+            "name": {
+                "ru": "Иммиграционный центр (Сеул - Mokdong)",
+                "en": "Seoul Immigration Office (Main)",
+                "ko": "서울출입국·외국인청",
+                "kk": "Сеул иммиграциялық орталығы (Мокдон)",
+                "uz": "Seul immigratsiya markazi (Mokdong)"
+            },
+            "nameKo": "서울출입국·외국인청",
+            "region": "seoul",
+            "address": {
+                "ru": "Сеул, Янчхон-гу, Мокдондон-ро 151",
+                "en": "151 Mokdongdong-ro, Yangcheon-gu, Seoul",
+                "kk": "Сеул, Янчхон-гу, Мокдондон-ро 151",
+                "uz": "Seul, Yangcheon-gu, Mokdongdong-ro 151"
+            },
+            "addressKo": "서울특별시 양천구 목동동로 151",
+            "phone": "02-2650-6211",
+            "website": "https://www.hikorea.go.kr",
+            "bookingRequired": true,
+            "services": [
+                "extension",
+                "registration",
+                "change"
+            ],
+            "langs": [
+                "ko",
+                "en"
+            ],
+            "tips": {
+                "ru": "Главный офис. Обязательно записывайтесь за 2-3 недели.",
+                "en": "Main office. Booking 2-3 weeks in advance is mandatory."
+            },
+            "naverMapUrl": "https://naver.me/GGh7K4vE"
+        }
+    },
+    {
+        "id": "visa_seoul_sejong",
+        "verticalCode": "visa",
+        "data": {
+            "name": {
+                "ru": "Иммиграционный центр (Jongno - Sejongno)",
+                "en": "Seoul Immigration (Sejongno Branch)",
+                "ko": "서울출입국 세종로출장소",
+                "kk": "Сеул иммиграциялық кеңсесі (Седжонно)",
+                "uz": "Seul immigratsiya ofisi (Sejongno)"
+            },
+            "nameKo": "서울출입국·외국인청 세종로출장소",
+            "region": "seoul",
+            "address": {
+                "ru": "Сеул, Чонно-гу, Чон-ро 38",
+                "en": "38 Jong-ro, Jongno-gu, Seoul",
+                "kk": "Сеул, Чонно-гу, Чон-ро 38",
+                "uz": "Seul, Jongno-gu, Jong-ro 38"
+            },
+            "addressKo": "서울특별시 종로구 종로 38 (서린동)",
+            "phone": "02-731-1799",
+            "website": "https://www.hikorea.go.kr",
+            "bookingRequired": true,
+            "services": [
+                "extension",
+                "registration"
+            ],
+            "langs": [
+                "ko",
+                "en",
+                "zh"
+            ],
+            "tips": {
+                "ru": "Удобно для тех, кто живет в центре. Очереди могут быть меньше.",
+                "en": "Convenient for central residents. Often slightly faster."
+            },
+            "naverMapUrl": "https://naver.me/FBwP8vWf"
+        }
+    },
+    {
+        "id": "visa_ansan",
+        "verticalCode": "visa",
+        "data": {
+            "name": {
+                "ru": "Иммиграционный центр (Ансан)",
+                "en": "Ansan Immigration Office",
+                "ko": "수원출입국 안산출장소",
+                "kk": "Ансан иммиграциялық кеңсесі",
+                "uz": "Ansan immigratsiya ofisi"
+            },
+            "nameKo": "수원출입국·외국인청 안산출장소",
+            "region": "gyeonggi",
+            "address": {
+                "ru": "Ансан, Данвон-гу, Гвангдек 4-ро 96",
+                "en": "96 Gwangdeok 4-ro, Danwon-gu, Ansan",
+                "kk": "Ансан, Данвон-гу, Гвангдек 4-ро 96",
+                "uz": "Ansan, Danwon-gu, Gwangdeok 4-ro 96"
+            },
+            "addressKo": "경기도 안산시 단원구 광덕4로 96",
+            "phone": "031-364-5700",
+            "website": "https://www.hikorea.go.kr",
+            "bookingRequired": true,
+            "services": [
+                "extension",
+                "change",
+                "registration"
+            ],
+            "langs": [
+                "ko",
+                "ru",
+                "uz"
+            ],
+            "tips": {
+                "ru": "Работает с русскоговорящими. Очень загружен, записывайтесь заранее!",
+                "en": "High volume office. Booking is essential!"
+            },
+            "naverMapUrl": "https://naver.me/FpX1C3nZ"
+        }
+    },
+    {
+        "id": "visa_incheon",
+        "verticalCode": "visa",
+        "data": {
+            "name": {
+                "ru": "Иммиграционный центр (Инчхон)",
+                "en": "Incheon Immigration Office",
+                "ko": "인천출입국·외국인청",
+                "kk": "Инчхон иммиграциялық орталығы",
+                "uz": "Incheon immigratsiya markazi"
+            },
+            "nameKo": "인천출입국·외국인청",
+            "region": "incheon",
+            "address": {
+                "ru": "Инчхон, Чжун-гу, Сохэ-дэро 393",
+                "en": "393 Seohae-daero, Jung-gu, Incheon",
+                "kk": "Инчхон, Чжун-гу, Сохэ-дэро 393",
+                "uz": "Incheon, Jung-gu, Seohae-daero 393"
+            },
+            "addressKo": "인천광역시 중구 서해대로 393",
+            "phone": "032-890-6300",
+            "website": "https://www.hikorea.go.kr",
+            "bookingRequired": true,
+            "services": [
+                "extension",
+                "change"
+            ],
+            "langs": [
+                "ko",
+                "en"
+            ],
+            "tips": {
+                "ru": "Находится рядом с портом. Огромное здание.",
+                "en": "Located near the port area. Large facility."
+            },
+            "naverMapUrl": "https://naver.me/G8UtD9z0"
+        }
+    },
+    {
+        "id": "visa_seoul_nambu",
+        "verticalCode": "visa",
+        "data": {
+            "name": {
+                "ru": "Иммиграционный офис (Сеул - Nambu)",
+                "en": "Seoul Nambu Immigration Office",
+                "ko": "서울남부출입국·외국인사무소",
+                "kk": "Сеул оңтүстік иммиграциялық кеңсесі",
+                "uz": "Seul janubiy immigratsiya ofisi"
+            },
+            "nameKo": "서울남부출입국·외국인사무소",
+            "region": "seoul",
+            "address": {
+                "ru": "Сеул, Гангсео-гу, Магок-со 1-ро 48",
+                "en": "48 Magokseo 1-ro, Gangseo-gu, Seoul",
+                "kk": "Сеул, Кансо-гу, Магок-со 1-ро 48",
+                "uz": "Seul, Gangseo-gu, Magok-so 1-ro 48"
+            },
+            "addressKo": "서울특별시 강서구 마곡서1로 48",
+            "phone": "02-6980-4813",
+            "bookingRequired": true,
+            "services": [
+                "extension",
+                "registration"
+            ],
+            "naverMapUrl": "https://naver.me/seoul_nambu"
+        }
+    },
+    {
+        "id": "visa_suwon",
+        "verticalCode": "visa",
+        "data": {
+            "name": {
+                "ru": "Иммиграционный центр (Сувон)",
+                "en": "Suwon Immigration Office",
+                "ko": "수원출입국·외국인청",
+                "kk": "Сувон иммиграциялық орталығы",
+                "uz": "Suwon immigratsiya markazi"
+            },
+            "nameKo": "수원출입국·외국인청",
+            "region": "gyeonggi",
+            "address": {
+                "ru": "Сувон, Йонтонг-гу, Бандаль-ро 39",
+                "en": "39 Bandal-ro, Yeongtong-gu, Suwon",
+                "kk": "Сувон, Йонтонг-гу, Бандаль-ро 39",
+                "uz": "Suwon, Yeongtong-gu, Bandal-ro 39"
+            },
+            "addressKo": "경기도 수원시 영통구 반달로 39",
+            "phone": "031-695-3817",
+            "bookingRequired": true,
+            "naverMapUrl": "https://naver.me/suwon_visa"
+        }
+    },
+    {
+        "id": "visa_busan",
+        "verticalCode": "visa",
+        "data": {
+            "name": {
+                "ru": "Иммиграционный центр (Пусан)",
+                "en": "Busan Immigration Office",
+                "ko": "부산출입국·외국인청",
+                "kk": "Пусан иммиграциялық орталығы",
+                "uz": "Busan immigratsiya markazi"
+            },
+            "nameKo": "부산출입국·외국인청",
+            "region": "busan",
+            "address": {
+                "ru": "Пусан, Чжун-гу, Чунгджанг-дэро 22-1",
+                "en": "22-1 Chungjang-daero, Jung-gu, Busan",
+                "kk": "Пусан, Чжун-гу, Чунгджанг-дэро 22-1",
+                "uz": "Busan, Jung-gu, Chungjang-daero 22-1"
+            },
+            "addressKo": "부산광역시 중구 충장대로 22-1",
+            "phone": "051-461-3091",
+            "bookingRequired": true,
+            "naverMapUrl": "https://naver.me/busan_visa"
+        }
+    },
+    {
+        "id": "visa_daegu",
+        "verticalCode": "visa",
+        "data": {
+            "name": {
+                "ru": "Иммиграционный центр (Тэгу)",
+                "en": "Daegu Immigration Office",
+                "ko": "대구출입국·외국인사무소",
+                "kk": "Тэгу иммиграциялық орталығы",
+                "uz": "Daegu immigratsiya markazi"
+            },
+            "nameKo": "대구출입국·외국인사무소",
+            "region": "daegu",
+            "address": {
+                "ru": "Тэгу, Дон-гу, Инновенли-ро 345",
+                "en": "345 Innovalley-ro, Dong-gu, Daegu",
+                "kk": "Тэгу, Дон-гу, Инновенли-ро 345",
+                "uz": "Daegu, Dong-gu, Innovalley-ro 345"
+            },
+            "addressKo": "대구광역시 동구 이노밸리로 345",
+            "phone": "053-980-3512",
+            "bookingRequired": true,
+            "naverMapUrl": "https://naver.me/daegu_visa"
+        }
+    },
+    {
+        "id": "visa_yangju",
+        "verticalCode": "visa",
+        "data": {
+            "name": {
+                "ru": "Иммиграционный центр (Янджу)",
+                "en": "Yangju Immigration Office",
+                "ko": "양주출입국·외국인사무소",
+                "kk": "Янджу иммиграциялық орталығы",
+                "uz": "Yangju immigratsiya markazi"
+            },
+            "nameKo": "양주출입국·외국인사무소",
+            "region": "gyeonggi",
+            "address": {
+                "ru": "Янджу, Пхенхва-ро 1475-23",
+                "en": "23 Pyeonghwa-ro 1475beon-gil, Yangju",
+                "kk": "Янджу, Пхенхва-ро 1475-23",
+                "uz": "Yangju, Pyeonghwa-ro 1475-23"
+            },
+            "addressKo": "경기도 양주시 평화로 1475번길 23",
+            "phone": "031-828-9301",
+            "bookingRequired": true,
+            "naverMapUrl": "https://naver.me/yangju_visa"
+        }
+    },
+    {
+        "id": "visa_gwangju",
+        "verticalCode": "visa",
+        "data": {
+            "name": {
+                "ru": "Иммиграционный центр (Кванджу)",
+                "en": "Gwangju Immigration Office",
+                "ko": "광주출입국·외국인사무소",
+                "kk": "Кванджу иммиграциялық орталығы",
+                "uz": "Gwangju immigratsiya markazi"
+            },
+            "nameKo": "광주출입국·외국인사무소",
+            "region": "gwangju",
+            "address": {
+                "ru": "Кванджу, Со-гу, Сангму-дэро 911",
+                "en": "911 Sangmu-daero, Seo-gu, Gwangju",
+                "kk": "Кванджу, Со-гу, Сангму-дэро 911",
+                "uz": "Gwangju, Seo-gu, Sangmu-daero 911"
+            },
+            "addressKo": "광주광역시 서구 상무대로 911",
+            "phone": "062-605-5206",
+            "bookingRequired": true,
+            "naverMapUrl": "https://naver.me/gwangju_visa"
+        }
+    },
+    {
+        "id": "visa_daejeon",
+        "verticalCode": "visa",
+        "data": {
+            "name": {
+                "ru": "Иммиграционный центр (Тэджон)",
+                "en": "Daejeon Immigration Office",
+                "ko": "대전출입국·외국인사무소",
+                "kk": "Тэджон иммиграциялық орталығы",
+                "uz": "Daejeon immigratsiya markazi"
+            },
+            "nameKo": "대전출입국·외국인사무소",
+            "region": "daejeon",
+            "address": {
+                "ru": "Тэджон, Чжун-гу, Чжунгчхон-донг 16-8",
+                "en": "16-8 Jungchon-dong, Jung-gu, Daejeon",
+                "kk": "Тэджон, Чжун-гу, Чжунгчхон-донг 16-8",
+                "uz": "Daejeon, Jung-gu, Jungchon-dong 16-8"
+            },
+            "addressKo": "대전광역시 중구 중촌동 16-8",
+            "phone": "042-220-2101",
+            "bookingRequired": true,
+            "naverMapUrl": "https://naver.me/daejeon_visa"
+        }
+    },
+    {
+        "id": "visa_jeonju",
+        "verticalCode": "visa",
+        "data": {
+            "name": {
+                "ru": "Иммиграционный центр (Чонджу)",
+                "en": "Jeonju Immigration Office",
+                "ko": "전주출입국·외국인사무소",
+                "kk": "Чонджу иммиграциялық орталығы",
+                "uz": "Jeonju immigratsiya markazi"
+            },
+            "nameKo": "전주출입국·외국인사무소",
+            "region": "jeolla",
+            "address": {
+                "ru": "Чонджу, Докджин-гу, Хосон-ро 213",
+                "en": "213 Hoseong-ro, Deokjin-gu, Jeonju",
+                "kk": "Чонджу, Докджин-гу, Хосон-ро 213",
+                "uz": "Jeonju, Dokjin-gu, Xoson-ro 213"
+            },
+            "addressKo": "전라북도 전주시 덕진구 호성로 213",
+            "phone": "063-245-6164",
+            "bookingRequired": true,
+            "naverMapUrl": "https://naver.me/jeonju_visa"
+        }
+    },
+    {
+        "id": "visa_cheongju",
+        "verticalCode": "visa",
+        "data": {
+            "name": {
+                "ru": "Иммиграционный центр (Чхонджу)",
+                "en": "Cheongju Immigration Office",
+                "ko": "청주출입국·외국인사무소",
+                "kk": "Чхонджу иммиграциялық орталығы",
+                "uz": "Cheongju immigratsiya markazi"
+            },
+            "nameKo": "청주출입국·외국인사무소",
+            "region": "chungcheong",
+            "address": {
+                "ru": "Чхонджу, Санг당-гу, Бивон-ро 1",
+                "en": "1 Biwon-ro, Sangdang-gu, Cheongju",
+                "kk": "Чхонджу, Санг당-гу, Бивон-ро 1",
+                "uz": "Cheongju, Sangdang-gu, Biwon-ro 1"
+            },
+            "addressKo": "충청북도 청주시 상당구 비원로 1",
+            "phone": "043-230-9000",
+            "bookingRequired": true,
+            "naverMapUrl": "https://naver.me/cheongju_visa"
+        }
+    },
+    {
+        "id": "visa_jeju",
+        "verticalCode": "visa",
+        "data": {
+            "name": {
+                "ru": "Иммиграционный центр (Чеджу)",
+                "en": "Jeju Immigration Office",
+                "ko": "제주출입국·외국인서비스",
+                "kk": "Чеджу иммиграциялық орталығы",
+                "uz": "Jeju immigratsiya markazi"
+            },
+            "nameKo": "제주출입국·외국인서비스센터",
+            "region": "jeju",
+            "address": {
+                "ru": "Чеджу, Йондам-ро 3",
+                "en": "3 Yongdam-ro, Jeju-si, Jeju-do",
+                "kk": "Чеджу, Йондам-ро 3",
+                "uz": "Jeju, Yongdam-ro 3"
+            },
+            "addressKo": "제주특별자치도 제주시 용담로 3",
+            "phone": "064-722-3494",
+            "bookingRequired": true,
+            "naverMapUrl": "https://naver.me/jeju_visa"
+        }
+    },
+    {
+        "id": "visa_pyeongtaek",
+        "verticalCode": "visa",
+        "data": {
+            "name": {
+                "ru": "Иммиграционный офис (Пхёнтхэк)",
+                "en": "Pyeongtaek Immigration Office",
+                "ko": "수원출입국 평택출장소",
+                "kk": "Пхёнтхэк иммиграциялық кеңсесі",
+                "uz": "Pyeongtaek immigratsiya ofisi"
+            },
+            "nameKo": "수원출입국·외국인청 평택출장소",
+            "region": "gyeonggi",
+            "address": {
+                "ru": "Пхёнтхэк, Би전 5-ро 16",
+                "en": "16 Bijeon 5-ro, Pyeongtaek",
+                "kk": "Пхёнтхэк, Би전 5-ро 16",
+                "uz": "Pyeongtaek, Bijeon 5-ro 16"
+            },
+            "addressKo": "경기도 평택시 비전5로 16",
+            "phone": "031-8053-7000",
+            "bookingRequired": true,
+            "naverMapUrl": "https://naver.me/pyeongtaek_visa"
+        }
+    },
+    {
+        "id": "visa_cheonan",
+        "verticalCode": "visa",
+        "data": {
+            "name": {
+                "ru": "Иммиграционный офис (Чхонан)",
+                "en": "Cheonan Immigration Office",
+                "ko": "대전출입국 천안출장소",
+                "kk": "Чхонан иммиграциялық кеңсесі",
+                "uz": "Cheonan immigratsiya ofisi"
+            },
+            "nameKo": "대전출입국·외국인사무소 천안출장소",
+            "region": "chungcheong",
+            "address": {
+                "ru": "Чхонан, Собу-дэро 82",
+                "en": "82 Seobu-daero, Seobuk-gu, Cheonan",
+                "kk": "Чхонан, Собу-дэро 82",
+                "uz": "Cheonan, Sobu-daero 82"
+            },
+            "addressKo": "충청남도 천안시 서북구 서부대로 82",
+            "phone": "041-621-1347",
+            "bookingRequired": true,
+            "naverMapUrl": "https://naver.me/cheonan_visa"
+        }
+    },
+    {
+        "id": "visa_pohang",
+        "verticalCode": "visa",
+        "data": {
+            "name": {
+                "ru": "Иммиграционный офис (Пхохан)",
+                "en": "Pohang Immigration Office",
+                "ko": "대구출입국 포항출장소",
+                "kk": "Пхохан иммиграциялық кеңсесі",
+                "uz": "Poxan immigratsiya ofisi"
+            },
+            "nameKo": "대구출입국·외국인사무소 포항출장소",
+            "region": "gyeongsang",
+            "address": {
+                "ru": "Пхохан, Учхангдонг-ро 135",
+                "en": "135 Uchangdong-ro, Buk-gu, Pohang",
+                "kk": "Пхохан, Учхангдонг-ро 135",
+                "uz": "Poxan, Ushengdong-ro 135"
+            },
+            "addressKo": "경상북도 포항시 북구 우창동로 135",
+            "phone": "054-247-2971",
+            "bookingRequired": true,
+            "naverMapUrl": "https://naver.me/pohang_visa"
+        }
+    },
+    {
+        "id": "visa_gimhae",
+        "verticalCode": "visa",
+        "data": {
+            "name": {
+                "ru": "Иммиграционный офис (Кимхэ)",
+                "en": "Gimhae Immigration Office",
+                "ko": "부산출입국 김해출장소",
+                "kk": "Кимхэ иммиграциялық кеңсесі",
+                "uz": "Gimhae immigratsiya ofisi"
+            },
+            "nameKo": "부산출입국·외국인청 김해출장소",
+            "region": "gyeongsang",
+            "address": {
+                "ru": "Кимхэ, Гимхэ-дэро 2350",
+                "en": "2350 Daejeo 2-dong, Gangseo-gu, Busan",
+                "kk": "Кимхэ, Гимхэ-дэро 2350",
+                "uz": "Gimhae, Gimhae-daero 2350"
+            },
+            "addressKo": "부산광역시 강서구 대저2동 2350",
+            "phone": "051-979-1300",
+            "bookingRequired": true,
+            "naverMapUrl": "https://naver.me/gimhae_visa"
+        }
+    },
+    {
+        "id": "visa_ulsan",
+        "verticalCode": "visa",
+        "data": {
+            "name": {
+                "ru": "Иммиграционный центр (Ульсан)",
+                "en": "Ulsan Immigration Office",
+                "ko": "울산출입국·외국인사무소",
+                "kk": "Ульсан иммиграциялық орталығы",
+                "uz": "Ulsan immigratsiya markazi"
+            },
+            "nameKo": "울산출입국·외국인사무소",
+            "region": "ulsan",
+            "address": {
+                "ru": "Ульсан, Чжун-гу, Чжонга-ро 405-1",
+                "en": "405-1 Jongga-ro, Jung-gu, Ulsan",
+                "kk": "Ульсан, Чжун-гу, Чжонга-ро 405-1",
+                "uz": "Ulsan, Jung-gu, Jongga-ro 405-1"
+            },
+            "addressKo": "울산광역시 중구 종가로 405-1",
+            "phone": "052-279-8801",
+            "bookingRequired": true,
+            "naverMapUrl": "https://naver.me/ulsan_visa"
+        }
+    },
+    {
+        "id": "visa_changwon",
+        "verticalCode": "visa",
+        "data": {
+            "name": {
+                "ru": "Иммиграционный офис (Чханвон)",
+                "en": "Changwon Immigration Office",
+                "ko": "창원출입국·외국인사무소",
+                "kk": "Чханвон иммиграциялық кеңсесі",
+                "uz": "Changwon immigratsiya ofisi"
+            },
+            "nameKo": "창원출입국·외국인사무소",
+            "region": "gyeongsang",
+            "address": {
+                "ru": "Чханвон, Масанхаппо-гу, Чже-2-буду-ро 30",
+                "en": "30 Je-2-budu-ro, Masanhappo-gu, Changwon",
+                "kk": "Чханвон, Масанхаппо-гу, Чже-2-буду-ро 30",
+                "uz": "Changwon, Masanhappo-gu, Je-2-budu-ro 30"
+            },
+            "addressKo": "경상남도 창원시 마산합포구 제2부두로 30",
+            "phone": "055-981-6000",
+            "bookingRequired": true,
+            "naverMapUrl": "https://naver.me/changwon_visa"
+        }
+    },
+    {
+        "id": "visa_chuncheon",
+        "verticalCode": "visa",
+        "data": {
+            "name": {
+                "ru": "Иммиграционный центр (Чхунчхон)",
+                "en": "Chuncheon Immigration Office",
+                "ko": "춘천출입국·외국인사무소",
+                "kk": "Чхунчхон иммиграциялық орталығы",
+                "uz": "Chuncheon immigratsiya markazi"
+            },
+            "nameKo": "춘천출입국·외국인사무소",
+            "region": "gangwon",
+            "address": {
+                "ru": "Чхунчхон, Саам-гиль 12",
+                "en": "12 Saam-gil, Chuncheon",
+                "kk": "Чхунчхон, Саам-гиль 12",
+                "uz": "Chuncheon, Saam-gil 12"
+            },
+            "addressKo": "강원특별자치도 춘천시 동내면 사암길 12",
+            "phone": "033-269-3210",
+            "bookingRequired": true,
+            "naverMapUrl": "https://naver.me/chuncheon_visa"
+        }
+    },
+    {
+        "id": "visa_sokcho",
+        "verticalCode": "visa",
+        "data": {
+            "name": {
+                "ru": "Иммиграционный офис (Сокчо)",
+                "en": "Sokcho Immigration Branch",
+                "ko": "춘천출입국 속초출장소",
+                "kk": "Сокчо иммиграциялық кеңсесі",
+                "uz": "Sokcho immigratsiya ofisi"
+            },
+            "nameKo": "춘천출입국·외국인사무소 속초출장소",
+            "region": "gangwon",
+            "address": {
+                "ru": "Сокчо, Чхончхохобан-ро 189",
+                "en": "189 Cheongcho-hoban-ro, Sokcho",
+                "kk": "Сокчо, Чхончхохобан-ро 189",
+                "uz": "Sokcho, Cheongcho-hoban-ro 189"
+            },
+            "addressKo": "강원특별자치도 속초시 청초호반로 189",
+            "phone": "033-636-8614",
+            "bookingRequired": true,
+            "naverMapUrl": "https://naver.me/sokcho_visa"
+        }
+    },
+    {
+        "id": "visa_donghae",
+        "verticalCode": "visa",
+        "data": {
+            "name": {
+                "ru": "Иммиграционный офис (Тонхэ)",
+                "en": "Donghae Immigration Branch",
+                "ko": "춘천출입국 동해출장소",
+                "kk": "Тонхэ иммиграциялық кеңсесі",
+                "uz": "Donghae immigratsiya ofisi"
+            },
+            "nameKo": "춘천출입국·외국인사무소 동해출장소",
+            "region": "gangwon",
+            "address": {
+                "ru": "Тонхэ, Хэан-ро 225",
+                "en": "225 Haean-ro, Donghae",
+                "kk": "Тонхэ, Хэан-ро 225",
+                "uz": "Donghae, Haean-ro 225"
+            },
+            "addressKo": "강원특별자치도 동해시 해안로 225",
+            "phone": "033-535-5723",
+            "bookingRequired": true,
+            "naverMapUrl": "https://naver.me/donghae_visa"
+        }
+    }
+]

@@ -1,0 +1,94 @@
+{
+    "code": "finance",
+    "name": {
+        "ru": "Финансы",
+        "en": "Finance",
+        "ko": "금융",
+        "kk": "Қаржы",
+        "uz": "Moliya"
+    },
+    "icon": "Landmark",
+    "color": "#2B6CB0",
+    "entityName": {
+        "ru": "Организация",
+        "en": "Organization",
+        "kk": "Ұйым",
+        "uz": "Tashkilot"
+    },
+    "fields": [
+        {
+            "code": "name",
+            "type": "translated_string",
+            "required": true,
+            "showInCard": true
+        },
+        {
+            "code": "desc",
+            "type": "translated_string",
+            "required": true,
+            "showInCard": true
+        },
+        {
+            "code": "langs",
+            "type": "multiselect",
+            "options": [
+                "ru",
+                "en",
+                "ko",
+                "uz",
+                "kz"
+            ],
+            "showInCard": true,
+            "display": "flags"
+        },
+        {
+            "code": "link",
+            "type": "url",
+            "showInDetail": true,
+            "label": {
+                "ru": "Сайт/Приложение",
+                "en": "Website/App"
+            }
+        },
+        {
+            "code": "phone",
+            "type": "phone",
+            "callable": true,
+            "showInCard": true
+        },
+        {
+            "code": "category",
+            "type": "select",
+            "options": [
+                "bank",
+                "insurance",
+                "card",
+                "remittance"
+            ],
+            "filterable": true,
+            "showInCard": true,
+            "label": {
+                "ru": "Категория",
+                "en": "Category"
+            }
+        }
+    ],
+    "filters": [
+        "category",
+        "langs"
+    ],
+    "sortOptions": [
+        {
+            "code": "name",
+            "label": {
+                "ru": "По названию",
+                "en": "By Name"
+            },
+            "default": true
+        }
+    ],
+    "actions": [
+        "call",
+        "visit"
+    ]
+}
