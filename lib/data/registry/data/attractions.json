@@ -2654,5 +2654,125 @@
                 "en": "One of Seoul's largest technology malls, conveniently located at Sindorim Station."
             }
         }
+    },
+    {
+        "id": "attr_incheon_grand_park",
+        "verticalCode": "attractions",
+        "data": {
+            "name": {
+                "ru": "Большой парк Инчхона",
+                "en": "Incheon Grand Park",
+                "ko": "인천대공원"
+            },
+            "nameKo": "인천대공원",
+            "category": "park",
+            "region": "incheon",
+            "addressKo": "인천광역시 남동구 무네미로 236",
+            "naverMapUrl": "https://naver.me/incheon_grand_park",
+            "description": {
+                "ru": "Огромный городской парк с озером, зоопарком и красивыми аллеями сакуры.",
+                "en": "A massive urban park featuring a lake, botanical gardens, and cherry blossom paths."
+            }
+        }
+    },
+    {
+        "id": "attr_sorae_pogu",
+        "verticalCode": "attractions",
+        "data": {
+            "name": {
+                "ru": "Рыбный рынок Со래 Погу",
+                "en": "Sorae Pogu Fish Market",
+                "ko": "소래포구"
+            },
+            "nameKo": "소래포구 전통어시장",
+            "category": "market",
+            "region": "incheon",
+            "addressKo": "인천광역시 남동구 논현동 111-200",
+            "naverMapUrl": "https://naver.me/sorae_pogu",
+            "description": {
+                "ru": "Знаменитый рынок морепродуктов, где можно попробовать свежайшие деликатесы.",
+                "en": "A famous seafood market where you can enjoy fresh catches right on the spot."
+            }
+        }
+    },
+    {
+        "id": "attr_songdo_park",
+        "verticalCode": "attractions",
+        "data": {
+            "name": {
+                "ru": "Центральный парк Сондо",
+                "en": "Songdo Central Park",
+                "ko": "송도 센트럴파크"
+            },
+            "nameKo": "송도 센트럴파크",
+            "category": "park",
+            "region": "incheon",
+            "addressKo": "인천광역시 연수구 컨벤시아대로 160",
+            "naverMapUrl": "https://naver.me/songdo_park",
+            "description": {
+                "ru": "Футуристический парк в умном городе Сондо с каналом для лодок.",
+                "en": "A futuristic park in Songdo International City featuring a seawater canal for boating."
+            }
+        }
+    },
+    {
+        "id": "attr_chinatown_incheon",
+        "verticalCode": "attractions",
+        "data": {
+            "name": {
+                "ru": "Чайна-таун Инчхона",
+                "en": "Incheon Chinatown",
+                "ko": "인천 차이나타운"
+            },
+            "nameKo": "인천 차이나타운",
+            "category": "neighborhood",
+            "region": "incheon",
+            "addressKo": "인천광역시 중구 차이나타운로 26번길 12-17",
+            "naverMapUrl": "https://naver.me/incheon_chinatown",
+            "description": {
+                "ru": "Единственный официальный Чайна-таун в Корее, родина лапши Чачжанмён.",
+                "en": "Korea's only official Chinatown, birthplace of the Jajangmyeon noodle dish."
+            }
+        }
+    },
+    {
+        "id": "attr_ara_waterway",
+        "verticalCode": "attractions",
+        "data": {
+            "name": {
+                "ru": "Канал Ара (Gyeongin Ara Waterway)",
+                "en": "Gyeongin Ara Waterway",
+                "ko": "경인아라뱃길"
+            },
+            "nameKo": "경인아라뱃길",
+            "category": "landmark",
+            "region": "incheon",
+            "addressKo": "인천광역시 계양구 아라로 41",
+            "naverMapUrl": "https://naver.me/ara_waterway",
+            "description": {
+                "ru": "Экологичный водный путь с велодорожками и смотровыми площадками.",
+                "en": "An eco-friendly canal featuring scenic bike paths and observatory decks."
+            }
+        }
+    },
+    {
+        "id": "attr_natural_ecology_museum",
+        "verticalCode": "attractions",
+        "data": {
+            "name": {
+                "ru": "Музей естественной экологии",
+                "en": "Natural Ecology Museum",
+                "ko": "부천자연생태박물관"
+            },
+            "nameKo": "부천자연생태박물관",
+            "category": "museum",
+            "region": "gyeonggi",
+            "addressKo": "경기도 부천시 원미구 길주로 660",
+            "naverMapUrl": "https://naver.me/bucheon_eco",
+            "description": {
+                "ru": "Музей, посвященный природе и экологии, с ботаническим садом по соседству.",
+                "en": "A museum dedicated to nature and ecology, located next to a botanical garden."
+            }
+        }
     }
 ]

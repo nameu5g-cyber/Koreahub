@@ -1310,8 +1310,24 @@
                     "address": "서울특별시 서초구 양재대로 159"
                 },
                 {
+                    "name": "Yangpyeong (Seoul)",
+                    "address": "서울특별시 영등포구 선유로 156"
+                },
+                {
+                    "name": "Sangbong (Seoul)",
+                    "address": "서울특별시 중랑구 망우로 336"
+                },
+                {
+                    "name": "Gocheok (Seoul)",
+                    "address": "서울특별시 구로구 경인로 43길 49"
+                },
+                {
                     "name": "Songdo (Incheon)",
                     "address": "인천 연수구 컨벤시아대로230번길 60"
+                },
+                {
+                    "name": "Cheongna (Incheon)",
+                    "address": "인천광역시 서구 청라동 1-705"
                 },
                 {
                     "name": "Busan",
@@ -1357,8 +1373,16 @@
                     "address": "서울특별시 노원구 마들로3길 15"
                 },
                 {
+                    "name": "Magok (Seoul)",
+                    "address": "서울특별시 강서구 마곡동 727-86"
+                },
+                {
                     "name": "Guwol (Incheon)",
                     "address": "인천 남동구 매소홀로 759"
+                },
+                {
+                    "name": "Songlim (Incheon)",
+                    "address": "인천광역시 동구 봉수대로 82"
                 },
                 {
                     "name": "Seomyeon (Busan)",
