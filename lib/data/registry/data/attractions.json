@@ -2774,5 +2774,125 @@
                 "en": "A museum dedicated to nature and ecology, located next to a botanical garden."
             }
         }
+    },
+    {
+        "id": "attr_cheonjiyeon_fall",
+        "verticalCode": "attractions",
+        "data": {
+            "name": {
+                "ru": "Водопад Чхонджиён",
+                "en": "Cheonjiyeon Waterfall",
+                "ko": "천지연폭포"
+            },
+            "nameKo": "천지연폭포",
+            "category": "waterfall",
+            "region": "jeju",
+            "addressKo": "제주특별자치도 서귀포시 남성중로 2-15",
+            "naverMapUrl": "https://naver.me/cheonjiyeon",
+            "description": {
+                "ru": "«Связь неба с землей» — живописный водопад, светящийся по ночам.",
+                "en": "Meaning \"Sky connected with land,\" this beautiful waterfall is illuminated at night."
+            }
+        }
+    },
+    {
+        "id": "attr_cheonjeyeon_fall",
+        "verticalCode": "attractions",
+        "data": {
+            "name": {
+                "ru": "Водопад Чхонджеён",
+                "en": "Cheonjeyeon Waterfall",
+                "ko": "천제연폭포"
+            },
+            "nameKo": "천제연폭포",
+            "category": "waterfall",
+            "region": "jeju",
+            "addressKo": "제주특별자치도 서귀포시 천제연로 132",
+            "naverMapUrl": "https://naver.me/cheonjeyeon",
+            "description": {
+                "ru": "«Пруд Господа» — каскад из трех водопадов с легендарным мостом Сенимгё.",
+                "en": "Known as the \"Pond of God,\" it features three tiers and the famous Seonimgyo Bridge."
+            }
+        }
+    },
+    {
+        "id": "attr_jeongbang_fall",
+        "verticalCode": "attractions",
+        "data": {
+            "name": {
+                "ru": "Водопад Чонбанг",
+                "en": "Jeongbang Waterfall",
+                "ko": "정방폭포"
+            },
+            "nameKo": "정방폭포",
+            "category": "waterfall",
+            "region": "jeju",
+            "addressKo": "제주특별자치도 서귀포시 칠십리로214번길 37",
+            "naverMapUrl": "https://naver.me/jeongbang",
+            "description": {
+                "ru": "Единственный водопад в Корее, который падает прямо в океан.",
+                "en": "The only waterfall in Korea that falls directly into the ocean."
+            }
+        }
+    },
+    {
+        "id": "attr_eongtto_fall",
+        "verticalCode": "attractions",
+        "data": {
+            "name": {
+                "ru": "Водопад Онгто",
+                "en": "Eongtto Falls",
+                "ko": "엉또폭포"
+            },
+            "nameKo": "엉또폭포",
+            "category": "waterfall",
+            "region": "jeju",
+            "addressKo": "제주특별자치도 서귀포시 엉또로 104",
+            "naverMapUrl": "https://naver.me/eongtto",
+            "description": {
+                "ru": "Высокий скрытый водопад, который наиболее эффектен после дождя.",
+                "en": "A tall hidden waterfall that becomes most impressive after heavy rainfall."
+            }
+        }
+    },
+    {
+        "id": "attr_wonang_fall",
+        "verticalCode": "attractions",
+        "data": {
+            "name": {
+                "ru": "Водопад Вонанг",
+                "en": "Wonang Waterfall",
+                "ko": "원앙폭포"
+            },
+            "nameKo": "원앙폭포",
+            "category": "waterfall",
+            "region": "jeju",
+            "addressKo": "제주특별자치도 서귀포시 토평동 산5",
+            "naverMapUrl": "https://naver.me/wonang",
+            "description": {
+                "ru": "Живописная пара водопадов в долине Тоннеко с удивительно бирюзовой водой.",
+                "en": "A scenic duo of waterfalls in Donnaeko Valley known for its emerald blue water."
+            }
+        }
+    },
+    {
+        "id": "attr_yongyeon_pond",
+        "verticalCode": "attractions",
+        "data": {
+            "name": {
+                "ru": "Пруд Ёнъён",
+                "en": "Yongyeon Pond",
+                "ko": "용연"
+            },
+            "nameKo": "용연",
+            "category": "landmark",
+            "region": "jeju",
+            "addressKo": "제주특별자치도 제주시 흥운길 73",
+            "naverMapUrl": "https://naver.me/yongyeon",
+            "description": {
+                "ru": "Таинственный пруд, где пресная вода встречается с морем под скалистыми обрывами.",
+                "en": "A mysterious pond where fresh water meets the sea amidst spectacular rock cliffs."
+            }
+        }
     }
 ]
