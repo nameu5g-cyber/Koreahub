@@ -2894,5 +2894,145 @@
                 "en": "A mysterious pond where fresh water meets the sea amidst spectacular rock cliffs."
             }
         }
+    },
+    {
+        "id": "attr_yongduam",
+        "verticalCode": "attractions",
+        "data": {
+            "name": {
+                "ru": "Скала Ёндуам (Голова Дракона)",
+                "en": "Yongduam Rock",
+                "ko": "용두암"
+            },
+            "nameKo": "용두암",
+            "category": "landmark",
+            "region": "jeju",
+            "addressKo": "제주특별자치도 제주시 용두암길 15",
+            "naverMapUrl": "https://naver.me/yongduam",
+            "description": {
+                "ru": "Знаменитая скала, напоминающая голову дракона, вырывающегося из моря.",
+                "en": "A famous volcanic rock formation shaped like a dragon's head emerging from the sea."
+            }
+        }
+    },
+    {
+        "id": "attr_iho_tewoo",
+        "verticalCode": "attractions",
+        "data": {
+            "name": {
+                "ru": "Пляж Ихо Тэу",
+                "en": "Iho Tewoo Beach",
+                "ko": "이호테우해변"
+            },
+            "nameKo": "이호테у해변",
+            "category": "beach",
+            "region": "jeju",
+            "addressKo": "제주특별자치도 제주시 도리로",
+            "naverMapUrl": "https://naver.me/iho_tewoo",
+            "description": {
+                "ru": "Ближайший к аэропорту пляж, знаменитый красным и белым маяками в форме лошадок.",
+                "en": "The closest beach to Jeju Airport, famous for its iconic red and white horse-shaped lighthouses."
+            }
+        }
+    },
+    {
+        "id": "attr_dongmun_market",
+        "verticalCode": "attractions",
+        "data": {
+            "name": {
+                "ru": "Рынок Тонмун",
+                "en": "Dongmun Traditional Market",
+                "ko": "동문재래시장"
+            },
+            "nameKo": "동문재래시장",
+            "category": "market",
+            "region": "jeju",
+            "addressKo": "제주특별자치도 제주시 관덕로14길 20",
+            "naverMapUrl": "https://naver.me/dongmun",
+            "description": {
+                "ru": "Старейший и крупнейший рынок острова Чеджу, центр уличной еды и местных деликатесов.",
+                "en": "Jeju Island's oldest and largest market, a hub for street food and local specialties."
+            }
+        }
+    },
+    {
+        "id": "attr_arario_tapdong",
+        "verticalCode": "attractions",
+        "data": {
+            "name": {
+                "ru": "Музей Arario (Tapdong Cinema)",
+                "en": "Arario Museum Tapdong Cinema",
+                "ko": "아라리오뮤지엄 탑동시네마"
+            },
+            "nameKo": "아라리오뮤지엄 탑동시네마",
+            "category": "museum",
+            "region": "jeju",
+            "addressKo": "제주특별자치도 제주시 탑동로 14",
+            "naverMapUrl": "https://naver.me/arario",
+            "description": {
+                "ru": "Музей современного искусства, расположенный в здании бывшего кинотеатра.",
+                "en": "A contemporary art museum housed in a repurposed old movie theater."
+            }
+        }
+    },
+    {
+        "id": "attr_halla_arboretum",
+        "verticalCode": "attractions",
+        "data": {
+            "name": {
+                "ru": "Дендрарий Халла (Halla Arboretum)",
+                "en": "Halla Arboretum",
+                "ko": "한라수목원"
+            },
+            "nameKo": "한라수목원",
+            "category": "garden",
+            "region": "jeju",
+            "addressKo": "제주특별자치도 제주시 수목원길 72",
+            "naverMapUrl": "https://naver.me/halla_arb",
+            "description": {
+                "ru": "Прекрасный парк с редкими растениями острова и ночным рынком.",
+                "en": "A beautiful arboretum showcasing Jeju's native flora, with a popular night market nearby."
+            }
+        }
+    },
+    {
+        "id": "attr_dodu_rainbow",
+        "verticalCode": "attractions",
+        "data": {
+            "name": {
+                "ru": "Радужная дорога Тоду-дон",
+                "en": "Dodu-dong Rainbow Coastal Road",
+                "ko": "도두동 무지개 해안도로"
+            },
+            "nameKo": "도두동 무지개 해안도로",
+            "category": "landmark",
+            "region": "jeju",
+            "addressKo": "제주특별자치도 제주시 도두일동",
+            "naverMapUrl": "https://naver.me/rainbow_road",
+            "description": {
+                "ru": "Популярная фотозона с радужными ограждениями вдоль живописного побережья.",
+                "en": "A famous photo spot featuring a vibrant rainbow-colored coastal barrier."
+            }
+        }
+    },
+    {
+        "id": "attr_nexon_computer",
+        "verticalCode": "attractions",
+        "data": {
+            "name": {
+                "ru": "Компьютерный музей Nexon",
+                "en": "Nexon Computer Museum",
+                "ko": "넥슨컴퓨터박물관"
+            },
+            "nameKo": "넥슨컴퓨тер박물관",
+            "category": "museum",
+            "region": "jeju",
+            "addressKo": "제주특별자치도 제주시 1100로 3198-8",
+            "naverMapUrl": "https://naver.me/nexon_museum",
+            "description": {
+                "ru": "Первый в Азии специализированный компьютерный музей со множеством интерактивных экспонатов.",
+                "en": "Asia's first specialized computer museum featuring numerous interactive exhibits and vintage hardware."
+            }
+        }
     }
 ]
